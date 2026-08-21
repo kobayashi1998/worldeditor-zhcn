@@ -1,0 +1,241 @@
+// 汉化补丁版本0.3.2
+
+// 适用游戏版本2.0.4
+
+// 条目数量376 
+
+// 通过Ctrl+F进行快速定位
+
+// 布尔值  
+
+// 01 英雄 // 02 音乐 // 03 城镇
+
+// 整数
+
+// 04 命令 // 05 英雄 // 06 音乐 // 07 资源
+// 08 城镇 // 09 单位 // 10 科技
+
+//***************************************************************************
+[AIFunctions]
+// Defines function calls used by the AI Editor
+// Note that this section should match the format of the [TriggerCalls] section
+// in TriggerData.txt, and the strings for these functions are in TriggerStrings.txt.
+//
+// Key: Function name
+// Value 0: first game version in which this function is valid
+// Value 1: flag (0 or 1) indicating if the call can be used in events (meaningless for AI Editor)
+// Value 2: return type
+// Value 3+: argument types
+//
+
+// 布尔值 --- Boolean
+// 01 英雄 - Hero
+
+CaptainIsHome=1,0,boolean
+_CaptainIsHome_DisplayName="攻击队长在基地"
+_CaptainIsHome_Parameters="攻击队长在基地"
+_CaptainIsHome_Category=TC_AI_HERO
+
+CaptainIsFull=1,0,boolean
+_CaptainIsFull_DisplayName="攻击编队满员"
+_CaptainIsFull_Parameters="攻击编队满员"
+_CaptainIsFull_Category=TC_AI_HERO
+
+CaptainIsEmpty=1,0,boolean
+_CaptainIsEmpty_DisplayName="攻击编队为空"
+_CaptainIsEmpty_Parameters="攻击编队为空"
+_CaptainIsEmpty_Category=TC_AI_HERO
+
+CaptainRetreating=1,0,boolean
+_CaptainRetreating_DisplayName="攻击队长撤退中"
+_CaptainRetreating_Parameters="攻击队长撤退中"
+_CaptainRetreating_Category=TC_AI_HERO
+
+CaptainAtGoal=1,0,boolean
+_CaptainAtGoal_DisplayName="攻击队长抵达目标"
+_CaptainAtGoal_Parameters="攻击队长抵达目标"
+_CaptainAtGoal_Category=TC_AI_HERO
+
+CaptainInCombat=1,0,boolean,aicaptaintype
+_CaptainInCombat_DisplayName="队长交战中"
+_CaptainInCombat_Parameters=~队长类型,"交战中"
+_CaptainInCombat_Defaults=AICaptainAttack
+_CaptainInCombat_Category=TC_AI_HERO
+
+// 02 杂项 - Misc
+
+CreepsOnMap=1,0,boolean
+_CreepsOnMap_DisplayName="地图上存在野生单位"
+_CreepsOnMap_Parameters="地图上存在野生单位"
+_CreepsOnMap_Category=TC_AI_MISC
+
+// 03 城镇 - Town
+
+TownThreatened=1,0,boolean
+_TownThreatened_DisplayName="城镇正遭受攻击"
+_TownThreatened_Parameters="城镇正遭受攻击"
+_TownThreatened_Category=TC_AI_TOWN
+
+TownHasMine=1,0,boolean,integer
+_TownHasMine_DisplayName="城镇有金矿"
+_TownHasMine_Parameters="城镇#",~城镇编号,"有金矿"
+_TownHasMine_Category=TC_AI_TOWN
+
+TownHasHall=1,0,boolean,integer
+_TownHasHall_DisplayName="城镇有大厅"
+_TownHasHall_Parameters="城镇#",~城镇编号,"有城镇大厅"
+_TownHasHall_Category=TC_AI_TOWN
+
+ExpansionNeeded=1,0,boolean
+_ExpansionNeeded_DisplayName="需要扩张点"
+_ExpansionNeeded_Parameters="需要扩张点"
+_ExpansionNeeded_Category=TC_AI_TOWN
+
+// 整数 --- Integer
+
+// 04 命令 - Command
+
+CommandsWaiting=1,0,integer
+_CommandsWaiting_DisplayName="等待执行的命令数量"
+_CommandsWaiting_Parameters="等待执行的命令数量"
+_CommandsWaiting_Category=TC_AI_COMMAND
+
+CheckLastCommand=1,0,integer,aicommandpop
+_CheckLastCommand_DisplayName="最后发送的命令"
+_CheckLastCommand_Parameters="最后发送的命令",~选项
+_CheckLastCommand_Defaults=AICommandPop
+_CheckLastCommand_Category=TC_AI_COMMAND
+
+CheckLastCommandData=1,0,integer,aicommandpop
+_CheckLastCommandData_DisplayName="最后发送的命令数据"
+_CheckLastCommandData_Parameters="最后发送的命令数据",~选项
+_CheckLastCommandData_Defaults=AICommandLeave
+_CheckLastCommandData_Category=TC_AI_COMMAND
+
+// 05 英雄 - Hero
+
+CaptainGroupSize=1,0,integer
+_CaptainGroupSize_DisplayName="攻击编队规模"
+_CaptainGroupSize_Parameters="攻击编队规模"
+_CaptainGroupSize_Category=TC_AI_HERO
+
+CaptainReadinessHP=1,0,integer
+_CaptainReadinessHP_DisplayName="攻击编队生命值状态"
+_CaptainReadinessHP_Parameters="攻击编队生命值状态"
+_CaptainReadinessHP_Category=TC_AI_HERO
+
+CaptainReadinessMa=1,0,integer
+_CaptainReadinessMa_DisplayName="攻击编队法力值状态"
+_CaptainReadinessMa_Parameters="攻击编队法力值状态"
+_CaptainReadinessMa_Category=TC_AI_HERO
+
+// 06 音乐 - Misc
+
+CurrentAttackWave=1,0,integer
+_CurrentAttackWave_DisplayName="当前攻击波次"
+_CurrentAttackWave_Parameters="当前攻击波次"
+_CurrentAttackWave_Category=TC_AI_MISC
+
+MeleeDifficulty=1,0,integer
+_MeleeDifficulty_DisplayName="对战难度等级"
+_MeleeDifficulty_Parameters="对战难度等级"
+_MeleeDifficulty_Category=TC_AI_MISC
+
+// 07 资源 - Resources
+
+GetGold=1,0,integer
+_GetGold_DisplayName="当前黄金储量"
+_GetGold_Parameters="当前黄金储量"
+_GetGold_Category=TC_AI_RESOURCES
+
+GetWood=1,0,integer
+_GetWood_DisplayName="当前木材储量"
+_GetWood_Parameters="当前木材储量"
+_GetWood_Category=TC_AI_RESOURCES
+
+GetGoldOwned=1,0,integer
+_GetGoldOwned_DisplayName="未开采黄金总量"
+_GetGoldOwned_Parameters="未开采黄金总量"
+_GetGoldOwned_Category=TC_AI_RESOURCES
+
+FoodUsed=1,0,integer
+_FoodUsed_DisplayName="已占用人口"
+_FoodUsed_Parameters="已占用人口"
+_FoodUsed_Category=TC_AI_RESOURCES
+
+TotalFoodProduced=1,0,integer
+_TotalFoodProduced_DisplayName="人口上限"
+_TotalFoodProduced_Parameters="人口上限"
+_TotalFoodProduced_Category=TC_AI_RESOURCES
+
+GetFoodMade=1,0,integer,unitcode
+_GetFoodMade_DisplayName="单位类型提供的人口"
+_GetFoodMade_Parameters=~单位类型,"提供的人口"
+_GetFoodMade_Category=TC_AI_RESOURCES
+
+// 08 城镇 - Town
+
+GetMinesOwned=1,0,integer
+_GetMinesOwned_DisplayName="拥有金矿数量"
+_GetMinesOwned_Parameters="拥有金矿数量"
+_GetMinesOwned_Category=TC_AI_TOWN
+
+TownWithMine=1,0,integer
+_TownWithMine_DisplayName="含金矿的城镇"
+_TownWithMine_Parameters="含金矿的城镇"
+_TownWithMine_Category=TC_AI_TOWN
+
+GetNextExpansion=1,0,integer
+_GetNextExpansion_DisplayName="下一个扩张点"
+_GetNextExpansion_Parameters="下一个扩张点"
+_GetNextExpansion_Category=TC_AI_TOWN
+
+// 09 单位 - Unit
+
+GetUnitCount=1,0,integer,unitcode
+_GetUnitCount_DisplayName="单位的总数"
+_GetUnitCount_Parameters=~单位类型,"的总数"
+_GetUnitCount_Category=TC_AI_UNIT
+
+GetUnitCountDone=1,0,integer,unitcode
+_GetUnitCountDone_DisplayName="单位的训练完成数量"
+_GetUnitCountDone_Parameters=~单位类型,"训练完成数量"
+_GetUnitCountDone_Category=TC_AI_UNIT
+
+GetTownUnitCount=1,0,integer,unitcode,integer,boolean
+_GetTownUnitCount_DisplayName="单位在城镇的数量"
+_GetTownUnitCount_Parameters=~单位类型,"在城镇#",~城镇编号,"的数量(仅训练完成单位:",~选项,")"
+_GetTownUnitCount_Defaults=_,0,false
+_GetTownUnitCount_Category=TC_AI_UNIT
+
+GetUnitGoldCost=1,0,integer,unitcode
+_GetUnitGoldCost_DisplayName="单位的黄金消耗"
+_GetUnitGoldCost_Parameters=~单位类型,"的黄金消耗"
+_GetUnitGoldCost_Category=TC_AI_UNIT
+
+GetUnitWoodCost=1,0,integer,unitcode
+_GetUnitWoodCost_DisplayName="单位木材消耗"
+_GetUnitWoodCost_Parameters=~单位类型,"的木材消耗"
+_GetUnitWoodCost_Category=TC_AI_UNIT
+
+GetUnitBuildTime=1,0,integer,unitcode
+_GetUnitBuildTime_DisplayName="单位建造时间"
+_GetUnitBuildTime_Parameters=~单位类型,"的建造时间"
+_GetUnitBuildTime_Category=TC_AI_UNIT
+
+// 10 科技 - Upgrade
+
+GetUpgradeLevel=1,0,integer,techcode
+_GetUpgradeLevel_DisplayName="当前科技等级"
+_GetUpgradeLevel_Parameters=~科技类型,"的当前等级"
+_GetUpgradeLevel_Category=TC_AI_UPGRADE
+
+GetUpgradeGoldCost=1,0,integer,techcode
+_GetUpgradeGoldCost_DisplayName="科技黄金消耗"
+_GetUpgradeGoldCost_Parameters="下一级",~科技类型,"的黄金消耗"
+_GetUpgradeGoldCost_Category=TC_AI_UPGRADE
+
+GetUpgradeWoodCost=1,0,integer,techcode
+_GetUpgradeWoodCost_DisplayName="科技木材消耗"
+_GetUpgradeWoodCost_Parameters="下一级",~科技类型,"的木材消耗"
+_GetUpgradeWoodCost_Category=TC_AI_UPGRADE
