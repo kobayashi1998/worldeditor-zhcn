@@ -1,194 +1,170 @@
-// 汉化补丁版本0.3.2
+// All entries in this file correspond to entries in TriggerData.txt
+// with the same key, and define the text to display for a given
+// function.
+//
+// The first value is the name of the function.
+// Following values are the layout of the text description,
+// and each value may either be raw text, or a parameter.
+// Parameters are distinguished from raw text with a '~' as the first
+// character.
+//
+// Any display text to have a comma must be contained in double quotes
 
-// 适用游戏版本2.0.4
-
-// 注释没有完成整理，暂时沿用YDWE的注释，存在一些问题
-
-// 通过Ctrl+F进行快速定位
-
-// 触发器类别 // 触发器类型 // 触发器默认值 // 触发器参数 
-// 触发器事件 // 触发器条件 // 触发器动作 // 触发器参数函数
-// 初始触发器类别 // 初始触发器
-
-// 01 无 // 02 无 // 03 注释 // 04 自定义
-// 05 条件 // 06 等待 // 07 设置变量 // 08 跳过
-// 09 逻辑 // 10 循环 // 11 上一个 // 12 技能
-// 13 AI // 14 动画 // 15 镜头 // 16 电影
-// 17 转换 // 18 计时器 // 19 可破坏物 // 20 对话框
-// 21 环境 // 22 事件响应 // 23 漂浮文本 // 24 游戏
-// 25 游戏缓存 // 26 哈希表 // 27 英雄 // 28 物品
-// 29 图像 // 30 排行榜 // 31 闪电效果 // 32 数学
-// 33 对战 // 34 多面板 // 35 中立建筑 // 36 玩家
-// 37 玩家组 // 38 任务 // 39 区域 // 40 选择
-// 41 声音 // 42 特效 // 43 时间 // 44 触发器
-// 45 单位 // 46 单位组 // 47 地面纹理 // 48 可见度
-
-// 101 返回布尔值 // 102 返回布尔表达式
-// 103 返回整数 // 104 返回实数
-// 105 返回字符串 // 106 返回点
-// 107 返回不规则区域 // 108 返回矩形区域
-// 109 返回单位 // 110 返回单位类型
-// 111 返回单位池 // 112 返回命令串
-// 113 返回装饰物 // 114 返回可破坏物
-// 115 返回可破坏物类型 // 116 返回物品
-// 117 返回物品分类 // 118 返回物品类型
-// 119 返回物品池 // 120 返回科技类型
-// 121 返回技能类型 // 122 返回实例技能
-// 123 返回学习技能类型 // 124 返回玩家
-// 125 返回单位组 // 126 返回玩家组
-// 127 返回种族 // 128 返回镜头
-// 129 返回迷雾状态 // 130 返回可见度修正器
-// 131 返回触发器 // 132 返回触发事件
-// 133 返回触发条件 // 134 返回触发动作
-// 135 返回游戏难度 // 136 返回AI难度
-// 137 返回游戏速度 // 138 返回控制者
-// 139 返回玩家颜色 // 140 返回玩家游戏状态
-// 141 返回特效 // 142 返回按钮特效
-// 143 返回闪电效果 // 144 返回图像
-// 145 返回地面纹理变化 // 146 返回小地图图标
-// 147 返回天气效果 // 148 返回地形变化
-// 149 返回地形纹理 // 150 返回音效
-// 151 返回音乐列表 // 152 返回任务
-// 153 返回任务要求 // 154 返回失败条件
-// 155 返回对话框 // 156 返回对话框按钮
-// 157 返回排行榜 // 158 返回多面板
-// 159 返回多面板项目 // 160 返回可追踪对象
-// 161 返回计时器 // 162 返回计时器窗口
-// 163 返回游戏缓存 // 164 返回哈希表
-// 165 返回漂浮文本
-
-// 无编号
 
 //***************************************************************************
 [TriggerEventStrings]
-// 触发器事件
+TriggerRegisterCommonCommandEventBJHint=当下达特定通用命令时触发。
+TriggerRegisterUpgradeCommandEventBJHint=当下达特定研究命令时触发。
+TriggerRegisterTrainCommandEventBJHint=当下达特定训练命令时触发。
+TriggerRegisterBuildCommandEventBJHint=当下达特定建造命令时触发。
+TriggerRegisterTrainCommandEventBJ="训练命令被下达"
+TriggerRegisterBuildCommandEventBJ="建造命令被下达"
+TriggerRegisterCommandEventHint=当下达特定技能命令时触发。
+TriggerRegisterCommandEvent=技能命令被下达,释放,~技能类型,的,~命令
 
-// 02 无事件 Nothing events
-
+// Special events not defined in common.j,
+// handled internally by the editor
+MapInitializationEvent="地图初始化"
 MapInitializationEvent="地图初始化"
 MapInitializationEventHint="该事件发生在读取地图时."
 
-// 18 计时器事件 Countdown Timer events
 
-TriggerRegisterTimerExpireEventBJ="计时器到期"
-TriggerRegisterTimerExpireEventBJHint=当计时器到0时触发该事件. 循环计时器可以多次触发该事件. 使用'事件响应 - 到期的计时器'来获取该计时器.
-
-// 19 可破坏物事件 Destructible events
-
+// Destructible events
 TriggerRegisterDeathEvent="可破坏物死亡"
+TriggerRegisterDeathEvent=~可破坏物,"死亡"
 TriggerRegisterDeathEventHint=使用'事件响应 - 死亡的可破坏物'来获取死亡物体.
 
-TriggerRegisterDestDeathInRegionEvent="可破坏物在矩形区域内死亡"
+TriggerRegisterDestDeathInRegionEvent="可破坏物在区域内死亡(矩形区域)"
+TriggerRegisterDestDeathInRegionEvent="可破坏物在",~矩形区域,"内死亡"
 TriggerRegisterDestDeathInRegionEventHint=默认该事件只能监视最多64个可破坏物. 可以使用'set bj_destInRegionDiesCount'来设置该值. 不建议新手使用该触发.
 
-// 20 对话框事件 Dialog events
-
+// Dialog events
 TriggerRegisterDialogEventBJ="对话框点击"
+TriggerRegisterDialogEventBJ=~对话框,"被点击"
 TriggerRegisterDialogEventBJHint=
 
-// 24 游戏事件 Game events
 
-TriggerRegisterCommandEvent="技能命令被下达"
-TriggerRegisterCommandEventHint=
-
-TriggerRegisterBuildCommandEventBJ="建造命令被下达"
-TriggerRegisterBuildCommandEventBJHint=
-
-TriggerRegisterTrainCommandEventBJ="训练命令被下达"
-TriggerRegisterTrainCommandEventBJHint=
-
-TriggerRegisterUpgradeCommandEventBJ="研究命令被下达"
-TriggerRegisterUpgradeCommandEventBJHint=
-
-//TriggerRegisterCommonCommandEventBJ="通用命令被下达"
-
+// Game events
 TriggerRegisterGameStateEventTimeOfDay="游戏时间改变"
+TriggerRegisterGameStateEventTimeOfDay="游戏时间变为",~Operation," ",~Time
 TriggerRegisterGameStateEventTimeOfDayHint=游戏时间采用24小时制. 当时间从不成立变为成立时触发事件.
 
 TriggerRegisterVariableEvent="实数变化"
+TriggerRegisterVariableEvent=~实数变量,"变为",~Operation," ",~Value
 TriggerRegisterVariableEventHint="该事件只对非数组实数变量有效. 不考虑变量原值,只要条件成立即触发事件."
 
+TriggerRegisterGameLoadedEventBJ="读取进度"
 TriggerRegisterGameLoadedEventBJ="读取进度"
 TriggerRegisterGameLoadedEventBJHint=指游戏进度读取完毕时.
 
 TriggerRegisterGameSavedEventBJ="保存进度"
+TriggerRegisterGameSavedEventBJ="保存进度"
 TriggerRegisterGameSavedEventBJHint=指游戏进度开始保存时.
 
+TriggerRegisterShowSkillEventBJ="学习技能按钮被点击"
 TriggerRegisterShowSkillEventBJ="学习技能按钮被点击"
 TriggerRegisterShowSkillEventBJHint=该事件仅用于单人游戏.
 
 TriggerRegisterBuildSubmenuEventBJ="建造按钮被点击"
+TriggerRegisterBuildSubmenuEventBJ="建造按钮被点击"
 TriggerRegisterBuildSubmenuEventBJHint=该事件仅用于单人游戏.
 
 TriggerRegisterGameEvent="比赛事件"
+TriggerRegisterGameEvent="游戏将要结束在",~Event Type
 TriggerRegisterGameEventHint=该事件只出现在Battle.net的自动匹配游戏.
 
-// 36 玩家事件 Player events
 
+// Player events
 TriggerRegisterPlayerChatEvent="聊天信息"
+TriggerRegisterPlayerChatEvent=~Player,"输入的聊天信息包含",~文字,"as",匹配方式:
 TriggerRegisterPlayerChatEventHint=使用'事件响应 - 输入/匹配的聊天信息'来获取输入/用于对照的文字. 使用'事件响应 - 触发玩家'来获取输入信息的玩家.
 
-TriggerRegisterPlayerEventEndCinematic="按下Esc键(跳过过场动画)"
-TriggerRegisterPlayerEventEndCinematicHint=
+TriggerRegisterPlayerEventEndCinematic="按下Esc键"
+TriggerRegisterPlayerEventEndCinematic=~Player,"按下Esc键"
+TriggerRegisterPlayerEventEndCinematicHint=0
 
 TriggerRegisterPlayerSelectionEventBJ="选择事件"
+TriggerRegisterPlayerSelectionEventBJ=~Player," ",~Selects/Deselects,"一个单位"
 TriggerRegisterPlayerSelectionEventBJHint=使用'事件响应 - 触发单位'来获取被选择/取消选择的单位.
 
 TriggerRegisterPlayerKeyEventBJ="键盘事件"
+TriggerRegisterPlayerKeyEventBJ=~Player," ",~Presses/Releases,"the",~Key, key
 TriggerRegisterPlayerKeyEventBJHint=
 
 TriggerRegisterPlayerMouseEventBJ="鼠标事件"
+TriggerRegisterPlayerMouseEventBJ=~玩家,"发出",~鼠标上/下/移动,"事件"
 TriggerRegisterPlayerMouseEventBJHint=
 
 TriggerRegisterPlayerStateEvent="属性变化"
+TriggerRegisterPlayerStateEvent=~Player,"的",~Property,"变为",~Operation," ",~Value
 TriggerRegisterPlayerStateEventHint="不考虑原属性值,只要变化后的属性值满足条件即触发."
 
 TriggerRegisterPlayerEventAllianceChanged="结盟状态改变"
+TriggerRegisterPlayerEventAllianceChanged=~Player,"更改联盟状态"
 TriggerRegisterPlayerEventAllianceChangedHint=
 
-TriggerRegisterPlayerAllianceChange="结盟类型改变"
+TriggerRegisterPlayerAllianceChange="结盟状态改变(指定项目)"
+TriggerRegisterPlayerAllianceChange=~Player,"更改",~Alliance Type,"设置"
 TriggerRegisterPlayerAllianceChangeHint=
 
 TriggerRegisterPlayerEventVictory="胜利"
+TriggerRegisterPlayerEventVictory=~Player,"胜利离开游戏"
 TriggerRegisterPlayerEventVictoryHint=
 
 TriggerRegisterPlayerEventDefeat="失败"
+TriggerRegisterPlayerEventDefeat=~Player,"战败离开游戏"
 TriggerRegisterPlayerEventDefeatHint=
 
 TriggerRegisterPlayerEventLeave="离开游戏"
+TriggerRegisterPlayerEventLeave=~Player,"离开游戏"
 TriggerRegisterPlayerEventLeaveHint=该事件不管玩家因为什么原因离开游戏.
 
-// 43 时间事件 Time events
 
-TriggerRegisterTimerEventSingle="经过游戏时间"
+// Timer events
+TriggerRegisterTimerEventSingle="游戏逝去时间"
+TriggerRegisterTimerEventSingle="游戏开始",~Time,"秒"
 TriggerRegisterTimerEventSingleHint=
 
-TriggerRegisterTimerEventPeriodic="周期游戏时间"
+TriggerRegisterTimerEventPeriodic="时间周期事件"
+TriggerRegisterTimerEventPeriodic="每",~Time,"秒触发事件"
 TriggerRegisterTimerEventPeriodicHint=
 
+TriggerRegisterTimerExpireEventBJ="计时器到期"
+TriggerRegisterTimerExpireEventBJ=~计时器,"到期"
+TriggerRegisterTimerExpireEventBJHint=当计时器到0时触发该事件. 循环计时器可以多次触发该事件. 使用'事件响应 - 到期的计时器'来获取该计时器.
+
+
 // Unit events
-TriggerRegisterUnitEvent="单位事件"
+TriggerRegisterUnitEvent="指定单位事件"
+TriggerRegisterUnitEvent=~指定单位," ",~Event
 TriggerRegisterUnitEventHint=
 
 TriggerRegisterPlayerUnitEventSimple="玩家单位事件"
+TriggerRegisterPlayerUnitEventSimple=~Player,"的单位",~Event,~Event
 TriggerRegisterPlayerUnitEventSimpleHint=
 
 TriggerRegisterAnyUnitEventBJ="任意单位事件"
+TriggerRegisterAnyUnitEventBJ="任意单位",~Event
 TriggerRegisterAnyUnitEventBJHint=
 
 TriggerRegisterEnterRectSimple="单位进入矩形区域"
+TriggerRegisterEnterRectSimple="单位进入",~矩形区域
 TriggerRegisterEnterRectSimpleHint="使用'事件响应 - 进入的单位'来响应进入该区域的单位. 事实上是创建不规则区域，并注册单位进入不规则区域事件,所以之后改动该矩形区域对事件不会产生任何影响."
 
 TriggerRegisterLeaveRectSimple="单位离开矩形区域"
+TriggerRegisterLeaveRectSimple="单位离开",~矩形区域
 TriggerRegisterLeaveRectSimpleHint="使用'事件响应 - 离开的单位'来响应离开该区域的单位. 事实上是创建不规则区域，并注册单位进入不规则区域事件,所以之后改动该矩形区域对事件不会产生任何影响."
 
 TriggerRegisterUnitInRangeSimple="接近指定单位"
+TriggerRegisterUnitInRangeSimple="单位进入",~Range,"范围距离",~指定单位
 TriggerRegisterUnitInRangeSimpleHint=使用'事件响应 - 触发单位'来获取接近指定单位的单位.
 
 TriggerRegisterUnitLifeEvent="生命值变化"
+TriggerRegisterUnitLifeEvent=~指定单位,"的生命值变为",~Operation," ",~Value
 TriggerRegisterUnitLifeEventHint="从不成立变为成立时触发该事件. 注意:该参照值在注册事件时即被确定为常量,是不会变动的."
 
 TriggerRegisterUnitManaEvent="魔法值变化"
+TriggerRegisterUnitManaEvent=~指定单位,"的魔法值变为",~Operation," ",~Value
 TriggerRegisterUnitManaEventHint="从不成立变为成立时触发该事件. 注意:该参照值在注册事件时即被确定为常量,是不会变动的."
 
 
@@ -196,142 +172,177 @@ TriggerRegisterUnitManaEventHint="从不成立变为成立时触发该事件. �
 [TriggerConditionStrings]
 
 OperatorCompareBoolean="布尔值"
+OperatorCompareBoolean=~Value," ",~Operator," ",~Value
 OperatorCompareBooleanHint=
 
-OperatorCompareAbilityId="技能代码"
+OperatorCompareAbilityId="技能"
+OperatorCompareAbilityId=~Value," ",~Operator," ",~Value
 OperatorCompareAbilityIdHint=
 
 OperatorCompareBuffId="魔法效果"
+OperatorCompareBuffId=~Value," ",~Operator," ",~Value
 OperatorCompareBuffIdHint=
 
 OperatorCompareDestructible="可破坏物"
+OperatorCompareDestructible=~Value," ",~Operator," ",~Value
 OperatorCompareDestructibleHint=
 
 OperatorCompareDestructableCode="可破坏物类型"
+OperatorCompareDestructableCode=~Value," ",~Operator," ",~Value
 OperatorCompareDestructableCodeHint=
 
 OperatorCompareButton="对话框按钮"
+OperatorCompareButton=~Value," ",~Operator," ",~Value
 OperatorCompareButtonHint=
 
 OperatorCompareGameDifficulty="游戏难度"
+OperatorCompareGameDifficulty=~Value," ",~Operator," ",~Value
 OperatorCompareGameDifficultyHint=
 
 OperatorCompareGameSpeed="游戏速度"
+OperatorCompareGameSpeed=~Value," ",~Operator," ",~Value
 OperatorCompareGameSpeedHint=
 
-OperatorCompareHeroSkill="学习技能类型"
+OperatorCompareHeroSkill="学习技能"
+OperatorCompareHeroSkill=~Value," ",~Operator," ",~Value
 OperatorCompareHeroSkillHint=
 
 OperatorCompareInteger="整数"
+OperatorCompareInteger=~Value," ",~Operator," ",~Value
 OperatorCompareIntegerHint=
 
 OperatorCompareItem="物品"
+OperatorCompareItem=~Value," ",~Operator," ",~Value
 OperatorCompareItemHint=
 
 OperatorCompareItemType="物品分类"
+OperatorCompareItemType=~Value," ",~Operator," ",~Value
 OperatorCompareItemTypeHint=
 
 OperatorCompareItemCode="物品类型"
+OperatorCompareItemCode=~Value," ",~Operator," ",~Value
 OperatorCompareItemCodeHint=
 
-OperatorCompareMouseButton="鼠标按钮类型比较"
-OperatorCompareMouseButtonHint=
-
 OperatorCompareMeleeDifficulty="对战AI难度"
+OperatorCompareMeleeDifficulty=~Value," ",~Operator," ",~Value
 OperatorCompareMeleeDifficultyHint=
 
-OperatorCompareOrderCode="命令串"
+OperatorCompareMouseButton="鼠标按钮类型比较"
+OperatorCompareMouseButton=~Value," ",~操作," ",~Value
+OperatorCompareMouseButtonHint=
+
+OperatorCompareOrderCode="命令ID"
+OperatorCompareOrderCode=~Value," ",~Operator," ",~Value
 OperatorCompareOrderCodeHint=
 
 OperatorComparePlayer="玩家"
+OperatorComparePlayer=~Value," ",~Operator," ",~Value
 OperatorComparePlayerHint=
 
 OperatorComparePlayerColor="玩家颜色"
+OperatorComparePlayerColor=~Value," ",~Operator," ",~Value
 OperatorComparePlayerColorHint=
 
 OperatorComparePlayerControl="玩家控制者"
+OperatorComparePlayerControl=~Value," ",~Operator," ",~Value
 OperatorComparePlayerControlHint=
 
 OperatorComparePlayerSlotStatus="玩家游戏状态"
+OperatorComparePlayerSlotStatus=~Value," ",~Operator," ",~Value
 OperatorComparePlayerSlotStatusHint=
 
 //OperatorComparePoint="Point Comparison"
+//OperatorComparePoint=~Value," ",~Operator," ",~Value
 //OperatorComparePointHint=
 
 OperatorCompareRace="种族"
+OperatorCompareRace=~Value," ",~Operator," ",~Value
 OperatorCompareRaceHint=
 
 OperatorCompareReal="实数"
+OperatorCompareReal=~Value," ",~Operator," ",~Value
 OperatorCompareRealHint=
 
 //OperatorCompareRegion="Region Comparison"
+//OperatorCompareRegion=~Value," ",~Operator," ",~Value
 //OperatorCompareRegionHint=
 
 OperatorCompareString="字符串"
-OperatorCompareStringHint=
+OperatorCompareString=~Value," ",~Operator," ",~Value
+OperatorCompareStringHint=0
 
-OperatorCompareTechCode="科技ID"
+OperatorCompareTechCode="科技研究"
+OperatorCompareTechCode=~Value," ",~Operator," ",~Value
 OperatorCompareTechCodeHint=
 
-OperatorCompareTerrainType="地形类型"
-OperatorCompareTerrainTypeHint=
-
-OperatorCompareTrigger="触发器"
+OperatorCompareTrigger="触发"
+OperatorCompareTrigger=~Value," ",~Operator," ",~Value
 OperatorCompareTriggerHint=
 
 OperatorCompareUnit="单位"
+OperatorCompareUnit=~Value," ",~Operator," ",~Value
 OperatorCompareUnitHint=
 
 OperatorCompareUnitCode="单位类型"
+OperatorCompareUnitCode=~Value," ",~Operator," ",~Value
 OperatorCompareUnitCodeHint=
 
+OperatorCompareTerrainType="地形"
+OperatorCompareTerrainType=~Value," ",~Operator," ",~Value
+OperatorCompareTerrainTypeHint=
+
 GetBooleanAnd="并且"
+GetBooleanAnd=~条件1," and ",~条件2
 GetBooleanAndHint=
 
 GetBooleanOr="或者"
+GetBooleanOr=~条件1," or ",~条件2
 GetBooleanOrHint=
 
-AndMultiple="并且-多个条件同时成立"
-AndMultipleHint=
+AndMultiple="And(多个条件)"
+AndMultiple="所有条件成立"
+AndMultipleHint=0
 
-OrMultiple="或者-任意一个条件成立"
-OrMultipleHint=
+OrMultiple="Or(多个条件)"
+OrMultiple="任一条件成立"
+OrMultipleHint=0
 
 
 //***************************************************************************
 [TriggerActionStrings]
+BlzSetSpecialEffectAnimationHint=.,.
 SaveGameCheckPointHint=本触发器会创建一个地图存档，并弹出一则“游戏保存中”的信息。
 SaveGameCheckPointBJHint=本触发器会创建一个地图存档，并弹出一则,“到达检查点”的信息。上限为5个
-DestroyCommandButtonEffect=Destroy Button Effect,Destroy Button Effect ,~button effect
+DestroyCommandButtonEffect=销毁按钮特效,销毁,~技能
 PlayDialogueFromSpeakerType=~Wait/Don't Wait,~Point,~Sound,~Method,~Time,~Wait/Don't Wait,~Point,~Sound,~Point,~Time,~Sound,~Method,~Method,~Wait/Don't Wait,~Time,~Wait/Don't Wait,~Wait/Don't Wait
 SetDialogueSpeakerNameKey=~Sound,~Name,~Sound,~Name,~Name
 SetDialogueTextKey=~Sound,~Text,~Sound,~Text,~Text
-PlayDialogueFromSpeakerTypeEx=~Player Group, from ,~Player Group,from,~Player,~Sound,~Unit-Type,~Method,~Point, seconds and ,~Sound,.  Modify duration: ,~Method,~Time,~Time,seconds and,~Wait/Don't Wait
+PlayDialogueFromSpeakerTypeEx=~玩家组,，从 ,~玩家组,，来自,~玩家,~音效,~单位类型,~方式,~点,，音效,~音效,，单位类型,~方式,~时间,~时间,，,~等待/不等待
 SaveGameCheckPoint=~Filename, (,~Filename, (,~Show/Hide
-BlzSetUnitSkin=~Unit, to ,~Unit, to ,~Value
-BlzSetItemSkin=~Item, to ,~Item, to ,~Value
+BlzSetUnitSkin=~单位, 的皮肤改为 ,~单位, 的皮肤值，新皮肤为 ,~皮肤值
+BlzSetItemSkin=~物品, 的皮肤改为 ,~物品, 的皮肤值，新皮肤为 ,~皮肤值
 SetPlayerHandicapDamageBJ=设置生命值百分比,Make,~Player,~Percent,~Percent
 BlzCameraSetupGetLabelHint=获取镜头对象的标签
-BlzCameraSetupGetLabel=Get Camera Label,Get the label of ,~Camera Object
+BlzCameraSetupGetLabel=获取镜头标签,获取,~镜头
 BlzCameraSetupSetLabelHint=设置镜头标签，以便在游戏内查看场景转换效果
-BlzCameraSetupSetLabel=Set Camera Label,Set ,~Camera Object, with label ,~Value
+BlzCameraSetupSetLabel=设置镜头标签,将,~镜头,的标签设为 ,~标签
 BlzPlaySpecialEffect=播放特效动画
 BlzSpecialEffectAddSubAnimation=添加特效子动画
 BlzSpecialEffectRemoveSubAnimation=移除特效子动画
 CameraSetupApplyForPlayerSmooth=应用镜头对象（固定时长，简易混入混出）
 CameraSetupApplyForPlayerSmooth="0"
 CameraSetupApplyForPlayerSmooth=~应用方式
-PlayDialogueFromSpeakerEx=Play Dialogue from Speaker,Play Dialogue to,~Player Group,from,~Unit,with type,~Unit-Type,. Play,~Sound,.  Modify duration:,~Method,~Time,~Time,seconds and,~Wait/Don't Wait
-CreateCommandButtonEffectBJ=Create Ability Button Effect,Create Ability Button Effect for,~Ability, and
-CreateCommandButtonEffect=~Ability, and ,~Ability, and 
-CampaignMinimapIconLocBJ=Create Campaign Quest Ping At Point,Create Campaign Quest Icon at,~Location, using ,~Style
-CampaignMinimapIconUnitBJ=Create Campaign Quest Ping On Unit,Create Campaign Quest Icon on,~Unit, using ,~Style
-SaveGameCheckPointBJ=Create Save Checkpoint,Create campaign checkpoint with name ,~Filename, (,~Show/Hide, checkpoint message)
-SetMinimapIconVisible=Set Minimap Icon Visible,Set Minimap Icon Visible for,~Minimap Icon, to
-CreateMinimapIconBJ=Create Minimap Icon,,~X ,",",~Y,,~Red ,",",~Green,",",~Blue,) using,~Model File
-CreateMinimapIconAtLocBJ=Create Minimap Icon At Point,Create Minimap Icon at,~Location,of color (,~Red ,",",~Green,",",~Blue,) using,~Model File
-CreateMinimapIconOnUnitBJ=Create Minimap Icon On Unit,Create Minimap Icon on,~Unit,of color (,~Red ,",",~Green,",",~Blue,) using,~Model File
-SetPlayerHandicapReviveTimeBJ=Set Revive Time Rate,Make,~Player,Heroes' revive time rate to be,~Percent
+PlayDialogueFromSpeakerEx=播放发言者对话,在,~玩家组,中，让,~单位,以,~单位类型,类型播放,~音效,。修改时长：,~方式,~时间,~时间, 秒，,~等待/不等待
+CreateCommandButtonEffectBJ=创建技能按钮特效,为,~技能,创建按钮特效，类型为 
+CreateCommandButtonEffect=~技能, 的按钮特效，路径为 ,~技能,，类型为 
+CampaignMinimapIconLocBJ=在点上创建战役任务标记,在,~点,创建战役任务图标，使用,~样式
+CampaignMinimapIconUnitBJ=在单位上创建战役任务标记,在,~单位,创建战役任务图标，使用,~样式
+SaveGameCheckPointBJ=创建存档检查点,创建名为 ,~文件名, 的战役检查点（,~显示/隐藏, 检查点消息）
+SetMinimapIconVisible=设置小地图图标可见性,将,~小地图图标,的可见性设为 
+CreateMinimapIconBJ=创建小地图图标,,~X ,",",~Y,,~Red ,",",~Green,",",~Blue,) 使用,~Model File
+CreateMinimapIconAtLocBJ=在点创建小地图图标,在,~Location,处使用颜色 (,~Red ,",",~Green,",",~Blue,) 和,~Model File
+CreateMinimapIconOnUnitBJ=在单位创建小地图图标,在,~Unit,处使用颜色 (,~Red ,",",~Green ,",",~Blue,) 和,~Model File
+SetPlayerHandicapReviveTimeBJ=设置复活时间比例,将,~玩家,英雄的复活时间比例设为 ,~百分比
 
 DoNothing="无动作"
 DoNothing="无动作"
@@ -377,10 +388,10 @@ ReturnActionHint="跳过剩余动作,直接中止触发运行. 但是在组动�
 // Specially handled by the editor
 IfThenElseMultiple="If / Then / Else(多个动作)"
 IfThenElseMultiple="如果所有条件成立则做动作1"
-IfThenElseMultipleHint=
+IfThenElseMultipleHint=0
 
 // Specially handled by the editor
-IfThenElse="If / Then / Else"
+IfThenElse="如果 / 那么 / 否则"
 IfThenElse="如果",~条件,"成立则",~做动作1,"否则",~做动作2
 IfThenElseHint=
 
@@ -438,7 +449,7 @@ RemoveAllGuardPositionsHint="单位将不会自动返回原警戒点. 一个很�
 
 RecycleGuardPosition="恢复单位警戒点"
 RecycleGuardPosition="恢复",~单位,"的警戒点"
-RecycleGuardPositionHint=
+RecycleGuardPositionHint=0
 
 LockGuardPosition="锁定单位警戒点"
 LockGuardPosition="锁定",~单位,"的警戒点"
@@ -529,7 +540,7 @@ CameraSetupApplyForPlayerHint=
 
 CameraSetupApplyForPlayerSmooth="Apply Camera Object (Timed with Ease in/out)"
 CameraSetupApplyForPlayerSmooth="~镜头对象",为,"~玩家",，时长为,"~Time",秒，使用简易混入时间: ~简易混入时间,"0","0","0","0","0"
-CameraSetupApplyForPlayerSmoothHint="Camera will accelerate over the specified ease in time, and decelerate over the specified ease out time, smooth factor is the ratio between the Primary coefficient and quadratic coefficient in the velocity equation"
+CameraSetupApplyForPlayerSmoothHint="镜头将在指定的淡入时间内加速，并在指定的淡出时间内减速；平滑系数是速度方程中一次项系数与二次项系数的比值。"
 
 PanCameraToTimedLocForPlayer="平移镜头(指定玩家)"
 PanCameraToTimedLocForPlayer="平移",~Player,"的镜头到",~指定点,"over",使用时间,"~Time"
@@ -579,11 +590,11 @@ CameraResetSmoothingFactorBJ="重置镜头平滑参数"
 CameraResetSmoothingFactorBJ="重置镜头平滑参数为游戏默认值"
 CameraResetSmoothingFactorBJHint="其实就是设置镜头平滑参数为0."
 
-CameraSetFocalDistance="Set Camera Focal Distance"
+CameraSetFocalDistance="设置镜头焦距"
 CameraSetFocalDistance="Set camera focal distance to",~Distance
 CameraSetFocalDistanceHint=
 
-CameraSetDepthOfFieldScale="Set Camera Depth of Field Scale"
+CameraSetDepthOfFieldScale="设置镜头景深范围"
 CameraSetDepthOfFieldScale="Set camera depth of field scale to ",~Scale
 CameraSetDepthOfFieldScaleHint=
 
@@ -619,7 +630,7 @@ SetCameraQuickPositionLocForPlayerHint=按下空格键时镜头转向的位置.
 // Cinematic actions
 BlzEnableTargetIndicator="启用目标提示器"
 BlzEnableTargetIndicator="启用目标提示器",~启用
-BlzEnableTargetIndicatorHint="Target Indicator is normally used in cinematic conversation as blinking circles to indicate who's speaking now"
+BlzEnableTargetIndicatorHint="目标指示器通常用于过场动画对话，以闪烁圆圈标明当前发言者。"
 
 TransmissionFromUnitWithNameBJ="播送单位消息(指定单位)"
 TransmissionFromUnitWithNameBJ="对",~玩家组,"播送信息",发言单位:,"~单位",显示名字:,"~文字",~Sound,"播放音效:",对,"对",对," ",对,"对",对
@@ -695,7 +706,7 @@ SetUserControlForceOnHint=
 
 EnableOcclusionBJ="允许/禁止闭塞(指定玩家组)"
 EnableOcclusionBJ=~Enable/Disable,"闭塞对",~玩家组
-EnableOcclusionBJHint=
+EnableOcclusionBJHint=0
 
 EnableWorldFogBoundaryBJ="允许/禁止边界染色(指定玩家组)"
 EnableWorldFogBoundaryBJ=~Enable/Disable,"边界染色对",~玩家组
@@ -1124,31 +1135,31 @@ Preloader="批量预载"
 Preloader="预载所有在",~文件,"中列出的文件"
 PreloaderHint=
 
-BlzShowTerrain="Show Terrain"
+BlzShowTerrain="显示地形"
 BlzShowTerrain="Show Terrain: ",~Value
 BlzShowTerrainHint=
 
-BlzShowSkyBox="Show Sky Box"
+BlzShowSkyBox="显示天空盒"
 BlzShowSkyBox="Show Sky Box: ",~Value
 BlzShowSkyBoxHint=
 
-BlzStartRecording="Start Recording"
+BlzStartRecording="开始录像"
 BlzStartRecording="Start Recording with FPS: ",~Value
 BlzStartRecordingHint=
 
-BlzEndRecording="End Recording"
+BlzEndRecording="结束录像"
 BlzEndRecording="End Recording"
 BlzEndRecordingHint=
 
 // Machinima API
-BlzHideCinematicPanels="Hide Cinematic Panels"
+BlzHideCinematicPanels="隐藏过场动画面板"
 BlzHideCinematicPanels="Hide Cinematic Panels",~Value
 BlzHideCinematicPanelsHint=隐藏标题栏、字幕及头像框体。
 
 // Game Cache actions
 InitGameCacheBJ="创建缓存"
 InitGameCacheBJ="创建游戏缓存",使用文件名:
-InitGameCacheBJHint=
+InitGameCacheBJHint=0
 
 SaveGameCacheBJ="本地保存游戏缓存"
 SaveGameCacheBJ="保存",~Game Cache,"到本地硬盘"
@@ -1671,7 +1682,7 @@ MeleeStartingResourcesHint=
 
 MeleeClearExcessUnits="删除多余单位"
 MeleeClearExcessUnits="删除已使用开始点附近的中立生物"
-MeleeClearExcessUnitsHint=
+MeleeClearExcessUnitsHint=0
 
 MeleeStartingUnits="创建初始单位"
 MeleeStartingUnits="创建对战初始单位"
@@ -1687,7 +1698,7 @@ MeleeInitVictoryDefeatHint=动作运行之前玩家要有单位.
 
 MeleeStartingUnitsForPlayer="创建初始单位(指定玩家)"
 MeleeStartingUnitsForPlayer="创建",~Race,"的对战初始单位给",~Player,"在",~指定点," (",~Include/Exclude,"英雄)"
-MeleeStartingUnitsForPlayerHint=
+MeleeStartingUnitsForPlayerHint=0
 
 
 // Multiboard actions
@@ -1761,8 +1772,8 @@ SetResourceAmount="设置储金量"
 SetResourceAmount="设置",~金矿,"的储金量为",~Quantity, gold
 SetResourceAmountHint=
 
-BlightGoldMineForPlayer="创建不死族金矿(立即)"
-BlightGoldMineForPlayer="将",~金矿,"变为",~Player,"的不死族金矿"
+BlightGoldMineForPlayer="创建亡灵金矿(立即)"
+BlightGoldMineForPlayer="将",~金矿,"变为",~Player,"的亡灵金矿"
 BlightGoldMineForPlayerHint=金矿的储金量不会改变.
 
 WaygateActivateBJ="启用/禁用传送门"
@@ -1841,7 +1852,7 @@ AdjustPlayerStateBJHint=使用负数来减少.
 
 SetPlayerFlagBJ="开启/关闭玩家参数"
 SetPlayerFlagBJ="设置",~Player Flag," ",~On/Off,"对",~Player
-SetPlayerFlagBJHint=""开启玩家12的'给与奖励'表示杀死玩家12单位会获得金钱奖励."
+SetPlayerFlagBJHint="开启玩家12的'给与奖励'表示杀死玩家12单位会获得金钱奖励."
 
 SetPlayerTaxRateBJ="设置所得税"
 SetPlayerTaxRateBJ="设置",~Rate,"%的",~Resource,"所得税",~Player,"~Player",交纳给
@@ -1853,11 +1864,11 @@ EnableCreepSleepBJHint=只影响夜晚的睡眠. 不影响催眠魔法.
 
 SetPlayerAllianceStateBJ="设置联盟状态"
 SetPlayerAllianceStateBJ="命令",~Player,"设置对",~Player,"的联盟状态为",~Alliance Setting
-SetPlayerAllianceStateBJHint=
+SetPlayerAllianceStateBJHint=0
 
 SetPlayerAllianceBJ="设置联盟状态(指定项目)"
 SetPlayerAllianceBJ="命令",~Player,"设置",~Alliance Type," ",~On/Off,"对",~Player
-SetPlayerAllianceBJHint=
+SetPlayerAllianceBJHint=0
 
 SetPlayerAbilityAvailableBJ="允许/禁用技能"
 SetPlayerAbilityAvailableBJ=~Enable/Disable," ",~技能,"对",~Player
@@ -1923,7 +1934,7 @@ ForceClearHint=并不影响玩家本身.
 
 SetForceAllianceStateBJ="设置联盟"
 SetForceAllianceStateBJ="命令",~Player,"设置对",~Player,"的联盟状态为",~Alliance Setting
-SetForceAllianceStateBJHint=
+SetForceAllianceStateBJHint=0
 
 
 // Quest actions
@@ -2037,11 +2048,11 @@ SelectUnitSingleHint="使玩家取消选择所有已选单位,并选择该单位
 
 SelectUnitAdd="添加选择单位(所有玩家)"
 SelectUnitAdd="命令所有玩家添加选择",~单位, to selection
-SelectUnitAddHint=
+SelectUnitAddHint=0
 
 SelectUnitRemove="取消选择单位(所有玩家)"
 SelectUnitRemove="命令所有玩家取消选择",~单位, from selection
-SelectUnitRemoveHint=
+SelectUnitRemoveHint=0
 
 
 // Sound actions
@@ -2123,7 +2134,7 @@ SetMapMusicRandomBJHint=可指定播放文件或播放目录.
 
 ClearMapMusicBJ="清空背景音乐列表"
 ClearMapMusicBJ="清空背景音乐列表"
-ClearMapMusicBJHint=
+ClearMapMusicBJHint=0
 
 PlayMusicBJ="播放背景音乐"
 PlayMusicBJ="播放",~背景音乐
@@ -2171,7 +2182,7 @@ VolumeGroupSetVolumeBJHint=
 
 SetCineModeVolumeGroupsBJ="设置电影多通道音量环境"
 SetCineModeVolumeGroupsBJ="设置多通道音量为电影模式"
-SetCineModeVolumeGroupsBJHint=
+SetCineModeVolumeGroupsBJHint=0
 
 SetSpeechVolumeGroupsBJ="设置语音多通道音量环境"
 SetSpeechVolumeGroupsBJ="设置多通道音量为语音模式"
@@ -2199,11 +2210,11 @@ DestroyEffectBJHint=
 // Trigger actions
 DisableTrigger="关闭"
 DisableTrigger="关闭",~Trigger
-DisableTriggerHint=
+DisableTriggerHint=0
 
 EnableTrigger="开启"
 EnableTrigger="开启",~Trigger
-EnableTriggerHint=
+EnableTriggerHint=0
 
 ConditionalTriggerExecute="运行触发(检查条件)"
 ConditionalTriggerExecute="运行",~触发,"(检查条件)"
@@ -2223,7 +2234,7 @@ QueuedTriggerRemoveBJHint="如果触发正在运行,从队列移出该单位将�
 
 QueuedTriggerClearBJ="清空触发队列"
 QueuedTriggerClearBJ="清空触发队列中所有触发"
-QueuedTriggerClearBJHint=
+QueuedTriggerClearBJHint=0
 
 QueuedTriggerClearInactiveBJ="清空未运行触发"
 QueuedTriggerClearInactiveBJ="清空触发队列中所有未运行触发"
@@ -2265,7 +2276,7 @@ ExplodeUnitBJHint="爆炸死亡不会留下尸体."
 
 ReplaceUnitBJ="替换"
 ReplaceUnitBJ="将",~单位,"替换为",~单位类型,"使用",~Property Usage,"生命和魔法"
-ReplaceUnitBJHint="使用'最后替换的单位'来获取该单位. 如果是不死族金矿被替换,经常还会留下一个普通的金矿. 实际上就是创建加删除单位,3个局部变量泄漏."
+ReplaceUnitBJHint="使用'最后替换的单位'来获取该单位. 如果是亡灵金矿被替换,经常还会留下一个普通的金矿. 实际上就是创建加删除单位,3个局部变量泄漏."
 
 ShowUnitHide="隐藏"
 ShowUnitHide="隐藏",~单位
@@ -2279,7 +2290,7 @@ SetUnitColor="改变队伍颜色"
 SetUnitColor="改变",~单位,"的队伍颜色为",~Color
 SetUnitColorHint=改变队伍颜色并不会改变单位所属.
 
-BlzShowUnitTeamGlow="Change Team Glow Visibility"
+BlzShowUnitTeamGlow="改变队伍光晕可见性"
 BlzShowUnitTeamGlow="Change Team Glow Visibility of ",~Unit," to ",~Value
 BlzShowUnitTeamGlowHint=显示/隐藏单位的队伍光晕
 
@@ -2289,7 +2300,7 @@ SetUnitOwnerHint=
 
 UnitShareVisionBJ="共享视野"
 UnitShareVisionBJ=~Grant/Deny,"共享",~单位,"的视野对",~Player
-UnitShareVisionBJHint=
+UnitShareVisionBJHint=0
 
 SetUnitPositionLoc="移动单位(立即)(指定点)"
 SetUnitPositionLoc="立即移动",~单位,"到",~指定点
@@ -2506,19 +2517,19 @@ BlzSetSpecialEffectPositionHint=
 
 BlzSpecialEffectClearSubAnimations="清除特效子动画"
 BlzSpecialEffectClearSubAnimations="清除所有的特效子动画：",~特效
-BlzSpecialEffectClearSubAnimationsHint="Clear all sub-animations"
+BlzSpecialEffectClearSubAnimationsHint="清除所有次级动画"
 
 BlzSpecialEffectRemoveSubAnimation="为特效："
 BlzSpecialEffectRemoveSubAnimation="~特效","，移除子动画：~值","~Value"
-BlzSpecialEffectRemoveSubAnimationHint="Remove sub-animation from a special effect"
+BlzSpecialEffectRemoveSubAnimationHint="移除特效的次级动画"
 
 BlzSpecialEffectAddSubAnimation="为特效："
 BlzSpecialEffectAddSubAnimation="~特效","，添加子动画：~值","~Value"
-BlzSpecialEffectAddSubAnimationHint="Add sub-animation to a special effect to make a combination with the primary animation when the special effect is played"
+BlzSpecialEffectAddSubAnimationHint="为特效添加次级动画，使其在播放时与主动画组合。"
 
 BlzPlaySpecialEffect="为特效："
 BlzPlaySpecialEffect="~特效","，播放动画：~值","~Value"
-BlzPlaySpecialEffectHint="Play Special Effect with Specific Animation (Some animations will only apply to certain special effects)"
+BlzPlaySpecialEffectHint="以指定动画播放特效（部分动画仅对特定特效生效）"
 
 // BlzPlaySpecialEffectWithTimeScale="Play Special Effect Animation with Time Scale"
 // BlzPlaySpecialEffectWithTimeScale="Play Special Effect: ",~Effect,", Animation: "~Value,", Time Scale: "~Value
@@ -2559,7 +2570,7 @@ SetUnitInvulnerableHint=
 
 PauseUnitBJ="暂停/恢复"
 PauseUnitBJ=~Pause/Unpause," ",~单位
-PauseUnitBJHint=
+PauseUnitBJHint=0
 
 PauseAllUnitsBJ="暂停/恢复所有单位"
 PauseAllUnitsBJ=~Pause/Unpause,"所有单位"
@@ -2619,7 +2630,7 @@ MakeUnitRescuableToForceBJHint=
 
 SetUnitRescueRange="设置营救范围"
 SetUnitRescueRange="设置",~单位,"的营救范围为",~Range
-SetUnitRescueRangeHint=
+SetUnitRescueRangeHint=0
 
 SetRescueUnitColorChangeBJ="设置营救颜色(单位)"
 SetRescueUnitColorChangeBJ="设置单位",~Change/Retain Color,"当被营救时"
@@ -2639,7 +2650,7 @@ SetUnitFacingToFaceUnitTimedHint=只是面向当前单位所在点而已. 并不
 
 SetUnitFacingToFaceLocTimed="设置单位面向点"
 SetUnitFacingToFaceLocTimed="设置",~单位,"面向",~点,"over",使用时间,"~Time"
-SetUnitFacingToFaceLocTimedHint=
+SetUnitFacingToFaceLocTimedHint=0
 
 SetUnitFacingTimed="设置单位面向角度(指定时间)"
 SetUnitFacingTimed="设置",~单位,"的面向角度为",~Angle,"度",使用时间,"~Time"
@@ -2647,7 +2658,7 @@ SetUnitFacingTimedHint="面向角度采用角度制,0度为正东方向,90度为
 
 SetUnitMoveSpeed="设置移动速度"
 SetUnitMoveSpeed="设置",~单位,"的移动速度为",~Speed
-SetUnitMoveSpeedHint=
+SetUnitMoveSpeedHint=0
 
 SetUnitPathing="设置碰撞开关"
 SetUnitPathing="设置",~单位," ",~On/Off,"碰撞"
@@ -2655,7 +2666,7 @@ SetUnitPathingHint="关闭碰撞的单位无视障碍物,但其他单位仍视�
 
 SetUnitAcquireRangeBJ="设置主动攻击范围"
 SetUnitAcquireRangeBJ="设置",~单位,"的主动攻击范围为",~数值
-SetUnitAcquireRangeBJHint=
+SetUnitAcquireRangeBJHint=0
 
 SetUnitUserData="设置自定义值"
 SetUnitUserData="设置",~单位,"的自定义值为",~Index
@@ -2679,7 +2690,7 @@ UnitAddAbilityBJHint=
 
 UnitRemoveAbilityBJ="删除技能"
 UnitRemoveAbilityBJ="删除",~技能,"从",~单位
-UnitRemoveAbilityBJHint=
+UnitRemoveAbilityBJHint=0
 
 UnitAddTypeBJ="添加类别 [旧]"
 UnitAddTypeBJ="添加",~Classification,"类别到",~单位
@@ -2719,7 +2730,7 @@ IssueTrainOrderByIdBJHint="该升级是指A单位升级为B单位,而不是科�
 
 IssueUpgradeOrderByIdBJ="发布研究科技命令"
 IssueUpgradeOrderByIdBJ="命令",~单位,"研究",~Tech-Type
-IssueUpgradeOrderByIdBJHint=
+IssueUpgradeOrderByIdBJHint=0
 
 UnitDropItemPointLoc="发布丢弃物品命令(指定点)"
 UnitDropItemPointLoc="命令",~单位,"丢弃物品",~物品,"到",~指定点
@@ -3048,17 +3059,17 @@ BlzGetAbilityIntegerField=技能的整数类型域
 BlzGetAbilityBooleanLevelField=技能随等级改变的布尔类型域
 BlzGetAbilityBooleanField=技能布尔类型域
 BlzFourCC2SHint=将四字符码转换为字符串
-ParseTags=Parse String with Tags,Parse,~String
-SkinManagerGetLocalPath=Skin Manager Get Local Path,Get Path for key,~Key
-SetSoundFacialAnimationSetFilepath=Set Facial Animation Label,Load,~Sound,of,~String, from
-SetSoundFacialAnimationGroupLabel=Set Facial Animation Label,Load,~Sound,of,~String, from
-SetSoundFacialAnimationLabel=Set Facial Animation Label,Load,~Sound,of,~String, from
-GetPlayerHandicapReviveTimeBJ=Revive Time Rate,~Player
+ParseTags=解析带标签的字符串,解析,~字符串
+SkinManagerGetLocalPath=皮肤管理器获取本地路径,获取键 ,~键
+SetSoundFacialAnimationSetFilepath=设置面部动画文件路径,加载,~音效,的 ,~字符串, 面部动画，来自 
+SetSoundFacialAnimationGroupLabel=设置面部动画组标签,加载,~音效,的 ,~字符串, 面部动画组，来自 
+SetSoundFacialAnimationLabel=设置面部动画标签,加载,~音效,的 ,~字符串, 面部动画，来自 
+GetPlayerHandicapReviveTimeBJ=复活时间比例,~玩家
 
 // returns boolean
 BlzIsTargetIndicatorEnabled="闪动指示器被启用"
 BlzIsTargetIndicatorEnabled="闪动指示器被启用"
-BlzIsTargetIndicatorEnabledHint="Target Indicator is normally used in cinematic conversation as blinking circles to indicate who's speaking now"
+BlzIsTargetIndicatorEnabledHint="目标指示器通常用于过场动画对话，以闪烁圆圈标明当前发言者。"
 
 IsDestructableAliveBJ="可破坏物存活"
 IsDestructableAliveBJ=~可破坏物,"是存活的"
@@ -3066,7 +3077,7 @@ IsDestructableAliveBJHint="建议使用'可破坏物生命>0'来判断."
 
 IsDestructableDeadBJ="可破坏物死亡"
 IsDestructableDeadBJ=~可破坏物,"是死亡的"
-IsDestructableDeadBJHint="建议使用'可破坏物生命<
+IsDestructableDeadBJHint="建议使用'可破坏物生命<0'来判断"
 IsDestructableInvulnerableBJ="可破坏物无敌"
 IsDestructableInvulnerableBJ=~可破坏物,"是无敌的"
 IsDestructableInvulnerableBJHint=
@@ -3168,7 +3179,7 @@ IsPlayerAllyHint="包括中立状态. 单向判断玩家A对玩家B联盟不侵�
 
 IsPlayerEnemy="是玩家的敌人"
 IsPlayerEnemy=~Player,"是",~Player,"的敌人"
-IsPlayerEnemyHint="不包括中立状态. 单向判断玩家A对玩家B敌对侵犯,即表示玩家A是玩家B的盟友.
+IsPlayerEnemyHint="不包括中立状态. 单向判断玩家A对玩家B敌对侵犯,即表示玩家A是玩家B的盟友."
 
 GetPlayerAlliance="联盟状态设置"
 GetPlayerAlliance=~Player,"对",~Player," 开启 ",~Alliance Type
@@ -3244,7 +3255,7 @@ IsUnitAliveBJHint="实际上该函数是判断单位血量是否>0."
 
 IsUnitDeadBJ="单位死亡"
 IsUnitDeadBJ=~单位,"处于死亡状态"
-IsUnitDeadBJHint="实际上该函数是判断单位血量是否<
+IsUnitDeadBJHint="实际上该函数是判断单位血量是否<0,而不是判断单位是否真的死亡."
 
 IsUnitPausedBJ="单位暂停"
 IsUnitPausedBJ=~单位,"处于暂停状态"
@@ -3300,15 +3311,15 @@ UnitHasBuffBJHint=
 
 IsUnitGroupEmptyBJ="单位组为空"
 IsUnitGroupEmptyBJ=~单位组,"为空"
-IsUnitGroupEmptyBJHint=
+IsUnitGroupEmptyBJHint=0
 
 IsUnitGroupInRectBJ="单位组中单位在矩形区域内"
 IsUnitGroupInRectBJ=~单位组,"中所有单位在",~矩形区域,"内"
-IsUnitGroupInRectBJHint=
+IsUnitGroupInRectBJHint=0
 
 IsUnitGroupDeadBJ="单位组中所有单位死亡"
 IsUnitGroupDeadBJ=~单位组,"中所有单位死亡"," are dead"
-IsUnitGroupDeadBJHint=
+IsUnitGroupDeadBJHint=0
 
 IsFogEnabled="战争迷雾开启"
 IsFogEnabled="战争迷雾开启"
@@ -3553,7 +3564,7 @@ S2IHint=
 
 BlzS2FourCC="转换字符串为四字符码 (若输入无效则返回0)"
 BlzS2FourCC="FourCC(",~String,")"
-BlzS2FourCCHint="Convert String to Integer FourCC code"
+BlzS2FourCCHint="将字符串转换为四字符代码（FourCC）整数"
 
 GetElevatorHeight="升降机高度"
 GetElevatorHeight=~升降机,"的高度"
@@ -3657,7 +3668,7 @@ IMaxBJHint=
 
 IAbsBJ="绝对值"
 IAbsBJ=~整数,"~Value",")"
-IAbsBJHint=
+IAbsBJHint=0
 
 ISignBJ="符号标志"
 ISignBJ=~整数,"~Value",")"
@@ -3704,11 +3715,11 @@ GetPlayerUnitCountHint=
 
 GetPlayerTechCountSimple="当前科技等级"
 GetPlayerTechCountSimple=~科技,"的当前等级对",~Player,~Player
-GetPlayerTechCountSimpleHint=
+GetPlayerTechCountSimpleHint=0
 
 GetPlayerTechMaxAllowedSwap="最大科技等级"
 GetPlayerTechMaxAllowedSwap=~科技,"的最大等级对",~Player,~Player
-GetPlayerTechMaxAllowedSwapHint=
+GetPlayerTechMaxAllowedSwapHint=0
 
 GetPlayerTeam="玩家队伍 [废弃]"
 GetPlayerTeam=~Player,"所属队伍编号"
@@ -3844,15 +3855,15 @@ BlzGetItemIntegerFieldHint=
 
 BlzBitOr="按位或"
 BlzBitOr=~值1,"按位或",~值2
-BlzBitOrHint=Bit Or Operation (x | y)
+BlzBitOrHint=按位或运算 (x | y)
 
 BlzBitAnd="按位与"
 BlzBitAnd=~值1,"按位与",~值2
-BlzBitAndHint=Bit And Operation (x & y)
+BlzBitAndHint=按位与运算 (x & y)
 
 BlzBitXor="按位异或"
 BlzBitXor=~值1,"按位异或",~值2
-BlzBitXorHint=Bit Xor Operation (x ^ y)
+BlzBitXorHint=按位异或运算 (x ^ y)
 
 // returns real
 OperatorReal="算术运算"
@@ -3933,11 +3944,11 @@ TimerGetTimeoutHint=
 
 GetDestructableLife="生命值"
 GetDestructableLife=~可破坏物,"的当前生命值"
-GetDestructableLifeHint=
+GetDestructableLifeHint=0
 
 GetDestructableMaxLife="最大生命值"
 GetDestructableMaxLife=~可破坏物,"的最大生命值"
-GetDestructableMaxLifeHint=
+GetDestructableMaxLifeHint=0
 
 GetDestructableOccluderHeight="闭塞高度"
 GetDestructableOccluderHeight=~可破坏物,"的闭塞高度"
@@ -4185,7 +4196,7 @@ GetRandomPercentageBJHint=0-100的随机实数. 建议直接用随即实数来�
 
 DistanceBetweenPoints="两点间距"
 DistanceBetweenPoints=~点,"和",~点,"之间的距离"
-DistanceBetweenPointsHint=
+DistanceBetweenPointsHint=0
 
 AngleBetweenPoints="两点间方向"
 AngleBetweenPoints=~点,"到",~点,"的角度"
@@ -4201,7 +4212,7 @@ RMaxBJHint=
 
 RAbsBJ="绝对值"
 RAbsBJ=~实数,"~Value",")"
-RAbsBJHint=
+RAbsBJHint=0
 
 RSignBJ="符号标志"
 RSignBJ=~实数,"~Value",")"
@@ -4324,11 +4335,11 @@ GetUnitFacingHint="采用角度制. 0度为正东方向, 90度为正北方向."
 
 GetUnitMoveSpeed="当前移动速度"
 GetUnitMoveSpeed=~单位,"的当前移动速度"
-GetUnitMoveSpeedHint=
+GetUnitMoveSpeedHint=0
 
 GetUnitDefaultMoveSpeed="默认移动速度"
 GetUnitDefaultMoveSpeed=~单位,"的默认移动速度"
-GetUnitDefaultMoveSpeedHint=
+GetUnitDefaultMoveSpeedHint=0
 
 GetUnitAcquireRange="当前主动攻击范围"
 GetUnitAcquireRange=~单位,"的当前主动攻击范围"
@@ -4454,7 +4465,7 @@ R2SW="格式转换实数为字符串"
 R2SW="转换",~Real,"为字符串",最小宽度:,"~Width",~Precision,小数位数:
 R2SWHint="如: 转换(1.234, 7, 2)后为''   1.23''. 转换(1.234, 2, 5)后为''1.23400''."
 
-OrderId2StringBJ="转换命令串为字符串"
+OrderId2StringBJ="转换命令ID为字符串"
 OrderId2StringBJ="转换",~Order,"为命令字符串"
 OrderId2StringBJHint="如''harvest'', ''move'', ''smart'', ''attack''都是命令字符串."
 
@@ -4471,7 +4482,7 @@ StringIdentityHint=获取GlobalStrings.fdf中定义的字符串.
 
 StringCase="大小写转换"
 StringCase="转换",~字符串,"为",~Lower/Upper Case,"形式"
-StringCaseHint=
+StringCaseHint=0
 
 GetDestructableName="可破坏物名字"
 GetDestructableName=~可破坏物,"的名字"
@@ -4571,11 +4582,11 @@ GetPlayerNameHint=
 
 GetTriggerName="触发名字"
 GetTriggerName="当前触发的名字"
-GetTriggerNameHint=
+GetTriggerNameHint=0
 
 GetUnitName="单位名字"
 GetUnitName=~单位,"的名字"
-GetUnitNameHint=
+GetUnitNameHint=0
 
 BlzGetAbilityStringField="技能："
 BlzGetAbilityStringField="~技能",的字符串字段~字符串字段,"~StringField"
@@ -4714,9 +4725,9 @@ GetLastReplacedUnitBJ="最后替换的单位 [旧]"
 GetLastReplacedUnitBJ="最后替换的单位"
 GetLastReplacedUnitBJHint=最后一个使用'单位 - 替换'替换的单位.
 
-GetLastHauntedGoldMine="最后创建的不死族金矿 [旧]"
-GetLastHauntedGoldMine="最后创建的不死族金矿"
-GetLastHauntedGoldMineHint=最后一个使用'中立建筑 - 创建不死族金矿'创建的不死族金矿.
+GetLastHauntedGoldMine="最后创建的亡灵金矿 [旧]"
+GetLastHauntedGoldMine="最后创建的亡灵金矿"
+GetLastHauntedGoldMineHint=最后一个使用'中立建筑 - 创建亡灵金矿'创建的亡灵金矿.
 
 GetEnumUnit="选取单位"
 GetEnumUnit="选取单位"
@@ -4886,20 +4897,20 @@ GetTrainedUnitTypeHint="响应'开始/取消/完成训练单位'单位事件, �
 
 
 // returns ordercode
-String2OrderIdBJ="转换命令字符串为命令串"
-String2OrderIdBJ="转换",~字符串,"为命令串"
+String2OrderIdBJ="转换命令字符串为命令ID"
+String2OrderIdBJ="转换",~字符串,"为命令ID"
 String2OrderIdBJHint="如''harvest'', ''move'', ''smart'', ''attack''都是命令字符串."
 
-UnitId2OrderIdBJ="转换单位类型为命令串"
-UnitId2OrderIdBJ="转换",~单位类型,"为命令串"
+UnitId2OrderIdBJ="转换单位类型为命令ID"
+UnitId2OrderIdBJ="转换",~单位类型,"为命令ID"
 UnitId2OrderIdBJHint=
 
-GetIssuedOrderIdBJ="发布的命令串"
-GetIssuedOrderIdBJ="发布的命令串"
+GetIssuedOrderIdBJ="发布的命令ID"
+GetIssuedOrderIdBJ="发布的命令ID"
 GetIssuedOrderIdBJHint=响应'发布命令'单位事件.
 
-GetUnitCurrentOrder="当前命令串"
-GetUnitCurrentOrder=~单位,"的当前命令串."
+GetUnitCurrentOrder="当前命令ID"
+GetUnitCurrentOrder=~单位,"的当前命令ID."
 GetUnitCurrentOrderHint=
 
 
@@ -5091,7 +5102,7 @@ GetLastCreatedGroupHint=最后一批通过'单位 - 创建'动作创建的单位
 
 GetRandomSubGroup="单位组中随机单位"
 GetRandomSubGroup="随机获取",~Count,"个单位从",~单位组
-GetRandomSubGroupHint="会创建单位组.该函数不能使用set bj_wantDestroyGroup
+GetRandomSubGroupHint="会创建单位组.该函数不能使用set bj_wantDestroyGroup来销毁."
 GetUnitsInRectAll="矩形区域内的单位"
 GetUnitsInRectAll=~矩形区域,"内的所有单位"
 GetUnitsInRectAllHint="会创建单位组."
@@ -5370,7 +5381,7 @@ GetLastCreatedTextTagHint=最后一个由'漂浮文字 - 创建漂浮文字'动�
 
 TownThreatened="基地被攻击"
 TownThreatened="基地被攻击"
-TownThreatenedHint="
+TownThreatenedHint=""
 
 TownHasMine="基地有金矿"
 TownHasMine="#",~ID,"基地有金矿"
@@ -5415,7 +5426,7 @@ GetUnitCountDoneHint=不包括包括正在建造的单位.
 
 GetTownUnitCount="单位总数(指定基地)"
 GetTownUnitCount=~单位类型,"的总数在#",~Town,"基地(只取已完成单位:",~Option,")",")"
-GetTownUnitCountHint="
+GetTownUnitCountHint=""
 
 GetMinesOwned="拥有金矿数量"
 GetMinesOwned="拥有金矿数量"
@@ -5458,7 +5469,7 @@ GetUpgradeWoodCost=~科技,"升级花费木材"," upgrade"
 
 GetNextExpansion="下一个扩张点ID"
 GetNextExpansion="下一个扩张点ID"
-GetNextExpansionHint=
+GetNextExpansionHint=0
 
 FoodUsed="已使用人口"
 FoodUsed="已使用人口"
@@ -5501,3 +5512,89 @@ CurrentAttackWaveHint=攻击波数在AI编辑器攻击表中定义.
 
 MeleeDifficulty="对战难度等级"
 MeleeDifficulty="对战难度等级"
+
+//***************************************************************************
+// 3.0 补齐条目 (enUS 有、官方 zhCN 缺) —— 汉化补丁 0.5.0 新增
+// 共 51 条函数提示文本
+//***************************************************************************
+AllowHeroGlowOnAllUnitsBJHint=如果单位模型本身不自带英雄光晕，该动作不会产生任何效果。
+AllowHeroGlowOnUnitBJHint=如果单位模型本身不自带英雄光晕，该动作不会产生任何效果。
+BlzAllUnitsEnableAurasBJHint=如果光环技能此前已被禁用，而此处又执行了一次禁用，则需要连续启用两次才能恢复。在过场动画期间移除光环效果时非常有用。
+BlzClearHDWaterColorOverrideBJHint=该动作不会改变实际颜色值。仅对高清版和决定版水体有效。
+BlzIsTerrainPathableExhint=效果与「地形通行性关闭」动作完全相同，但会额外考虑单位和可破坏物的存在。
+BlzQueueSpecialEffectAnimationHint=排队的动画会在上一个动画播放完毕后播放。
+BlzSetHDWaterColorBJHint=颜色值为(红、绿、蓝)。该动作会自动启用颜色覆盖。仅对高清版和决定版水体有效。它会覆盖由「设置水体着色」动作设定的着色。
+BlzSetHDWaterColorOverrideBJHint=该动作不会改变实际颜色值。仅对高清版和决定版水体有效。
+BlzSetHDWaterEdgeSoftnessBJHint=仅对高清版和决定版水体有效。
+BlzSetHDWaterEmissivityBJHint=仅对高清版和决定版水体有效。
+BlzSetHDWaterEnvMapStrengthBJHint=仅对高清版和决定版水体有效。
+BlzSetHDWaterMaxOpacityBJHint=仅对高清版和决定版水体有效。
+BlzSetHDWaterMinOpacityBJHint=仅对高清版和决定版水体有效。
+BlzSetHDWaterReflectivityBJHint=仅对高清版和决定版水体有效。
+BlzSetHDWaterVertexDisplacementBJHint=仅对高清版和决定版水体有效。
+BlzSetHDWaterWaveStrengthBJHint=仅对高清版和决定版水体有效。
+BlzSetSpecialEffectAnimationBlendTimeHint=特效的混合时间决定特效动画之间切换的快慢。
+BlzSetTerrainFogColorBJHint=颜色值为(红、绿、蓝)。对所有迷雾样式均生效。
+BlzSetTerrainFogDensityBJHint=仅对「指数型」和「新指数型」样式生效。
+BlzSetTerrainFogDrawOverSkyBJHint=该效果会用迷雾覆盖天空盒。对所有迷雾样式均生效。
+BlzSetTerrainFogHeightEndBJHint=仅对「高度」样式生效。
+BlzSetTerrainFogHeightStartBJHint=仅对「高度」样式生效。
+BlzSetTerrainFogLinearEndBJHint=仅对「高度」样式生效。
+BlzSetTerrainFogLinearStartBJHint=仅对「高度」样式生效。
+BlzSetTerrainFogMaxLinearDensityBJHint=对所有迷雾样式均生效。
+BlzSetTerrainFogStyleBJHint=并非所有样式都兼容全部参数，请参考「地图选项」菜单。
+BlzSetTerrainFogZEndBJHint=仅对「线性」「高度」和「新指数型」样式生效。
+BlzSetTerrainFogZStartBJHint=仅对「线性」「高度」和「新指数型」样式生效。
+BlzUnitEnableAurasHint=如果光环技能此前已被禁用，而此处又执行了一次禁用，则需要连续启用两次才能恢复。在过场动画期间移除光环效果时非常有用。
+ClearWantDestroyGroupBJHint=请注意，如果单位组通过「设置下次销毁」动作被销毁，该状态会自动清除。在使用受影响的动作之后调用此函数，可确保「设置下次销毁」不会误作用于不需要的单位组。
+DestroyEffectAfterTimeBJHint=特效会在时间结束后被移除。
+DestroyForceHint=该动作会销毁玩家组变量，之后必须重新赋值才能使用。对函数的返回值使用该动作无效。可用它来清理泄漏的玩家组。
+DestroyGroupHint=该动作会销毁单位组变量，之后必须重新赋值才能使用。对函数的返回值使用该动作无效。可用它来清理泄漏的单位组。
+DisallowHeroGlowOnAllUnitsBJHint=如果单位模型本身不自带英雄光晕，该动作不会产生任何效果。
+DisallowHeroGlowOnUnitBJHint=如果单位模型本身不自带英雄光晕，该动作不会产生任何效果。
+GetLastEquippedItemHint=这是最近一次通过「英雄 - 给英雄装备物品」或「英雄 - 为英雄创建装备」触发动作装备的物品。
+GetLastUnequippedItemHint=这是最近一次通过「英雄 - 从英雄卸下物品」或「英雄 - 从英雄装备槽卸下物品」触发动作卸下的物品。
+PlayDialogueFromSpeakerExHint=声音是必需的，它充当对话的载体。请务必用相应的动作为其设置正确的文本和说话者名称，并在需要时指定面部动画路径与标签。
+PlayDialogueFromSpeakerTypeExHint=声音是必需的，它充当对话的载体。请务必用相应的动作为其设置正确的文本和说话者名称，并在需要时指定面部动画路径与标签。
+SetCameraFieldControlledByInputForPlayer=该动作可确保被脚本覆盖的数值不会在收到玩家输入时立即被重置。
+SetDayNightModelsHint=并非所有模型都适合用作昼夜模型。单位和地形可以共用同一个昼夜模型文件。
+SetDialogueSpeakerNameKeyHint=使用外部化字符串可使该字符串出现在 .wts 文件中。
+SetDialogueTextKeyHint=使用外部化字符串可使该字符串出现在 .wts 文件中。
+SetDoodadColorBJHint=装饰物模型必须支持队伍颜色。
+SetDoodadColorRectBJHint=装饰物模型必须支持队伍颜色。
+SetHDWaterParamsExBJHint=颜色值为(红、绿、蓝)。将覆盖设为关闭会禁用颜色行为。仅对高清版和决定版水体有效。如需进一步调整单项参数，请使用其它动作。
+SetMinimapIconOrphanDestroyHint=仅当小地图图标附着在单位上时才有效。
+SetSoundFacialAnimationGroupLabelActionHint=组标签通常为 BaseSD（基于单位语音的动画）或 Map（基于战役对话的动画）。
+SetSoundFacialAnimationLabelActionHint=标签通常是该动画所基于的声音文件的名称。
+SetSoundFacialAnimationSetFilepathActionHint=文件路径的扩展名为 .animset
+SetWantDestroyGroupBJHint=请查阅各个动作/函数以确认受影响的单位组。该行为只作用于下一个引用，之后会自动清除。
+
+// 以下键在官方 enUS 中即为空值，按原样补齐以保证键集完整
+BlzGetAbilityBooleanLevelFieldHint=
+BlzGetAbilityIntegerLevelFieldHint=
+BlzGetAbilityStringLevelFieldHint=
+BlzGetItemAbilityHint=
+BlzGetItemSkinHint=
+BlzGetUnitSkinHint=
+BlzSetItemSkinHint=
+BlzSetUnitSkinHint=
+CampaignMinimapIconLocBJHint=
+CampaignMinimapIconUnitBJHint=
+CreateBuildCommandButtonEffectBJHint=
+CreateCommandButtonEffectBJHint=
+CreateCommonCommandButtonEffectBJHint=
+CreateLearnCommandButtonEffectBJHint=
+CreateMinimapIconAtLocBJHint=
+CreateMinimapIconBJHint=
+CreateMinimapIconOnUnitBJHint=
+CreateTrainCommandButtonEffectBJHint=
+CreateUpgradeCommandButtonEffectBJHint=
+DestroyCommandButtonEffectHint=
+DestroyMinimapIconHint=
+GetLastCreatedCommandButtonEffectBJHint=
+GetLocalizedStringHint=
+SetMaxCheckpointSavesHint=
+SetMinimapIconVisibleHint=
+SetPlayerHandicapDamageBJHint=
+SetPlayerHandicapReviveTimeBJHint=
+SkinManagerGetLocalPathHint=

@@ -1,21 +1,7 @@
-// 汉化补丁版本0.3.2
-
-// 适用游戏版本2.0.4
-
-// 条目数量376 
-
-// 通过Ctrl+F进行快速定位
-
-// 布尔值  
-
-// 01 英雄 // 02 音乐 // 03 城镇
-
-// 整数
-
-// 04 命令 // 05 英雄 // 06 音乐 // 07 资源
-// 08 城镇 // 09 单位 // 10 科技
-
-//***************************************************************************
+// ===============================================================
+// AI编辑器数据汉化补丁 v0.4.0 —— 适用游戏版本 3.0
+// 生成日期: 2026-09-14
+// ===============================================================
 [AIFunctions]
 // Defines function calls used by the AI Editor
 // Note that this section should match the format of the [TriggerCalls] section
@@ -28,8 +14,8 @@
 // Value 3+: argument types
 //
 
-// 布尔值 --- Boolean
-// 01 英雄 - Hero
+// --- Boolean
+//   - Hero
 
 CaptainIsHome=1,0,boolean
 _CaptainIsHome_DisplayName="攻击队长在基地"
@@ -62,14 +48,14 @@ _CaptainInCombat_Parameters=~队长类型,"交战中"
 _CaptainInCombat_Defaults=AICaptainAttack
 _CaptainInCombat_Category=TC_AI_HERO
 
-// 02 杂项 - Misc
+//   - Misc
 
 CreepsOnMap=1,0,boolean
 _CreepsOnMap_DisplayName="地图上存在野生单位"
 _CreepsOnMap_Parameters="地图上存在野生单位"
 _CreepsOnMap_Category=TC_AI_MISC
 
-// 03 城镇 - Town
+//   - Town
 
 TownThreatened=1,0,boolean
 _TownThreatened_DisplayName="城镇正遭受攻击"
@@ -91,9 +77,9 @@ _ExpansionNeeded_DisplayName="需要扩张点"
 _ExpansionNeeded_Parameters="需要扩张点"
 _ExpansionNeeded_Category=TC_AI_TOWN
 
-// 整数 --- Integer
+// --- Integer
 
-// 04 命令 - Command
+//   - Command
 
 CommandsWaiting=1,0,integer
 _CommandsWaiting_DisplayName="等待执行的命令数量"
@@ -112,7 +98,7 @@ _CheckLastCommandData_Parameters="最后发送的命令数据",~选项
 _CheckLastCommandData_Defaults=AICommandLeave
 _CheckLastCommandData_Category=TC_AI_COMMAND
 
-// 05 英雄 - Hero
+//   - Hero
 
 CaptainGroupSize=1,0,integer
 _CaptainGroupSize_DisplayName="攻击编队规模"
@@ -129,7 +115,7 @@ _CaptainReadinessMa_DisplayName="攻击编队法力值状态"
 _CaptainReadinessMa_Parameters="攻击编队法力值状态"
 _CaptainReadinessMa_Category=TC_AI_HERO
 
-// 06 音乐 - Misc
+//   - Misc
 
 CurrentAttackWave=1,0,integer
 _CurrentAttackWave_DisplayName="当前攻击波次"
@@ -141,7 +127,7 @@ _MeleeDifficulty_DisplayName="对战难度等级"
 _MeleeDifficulty_Parameters="对战难度等级"
 _MeleeDifficulty_Category=TC_AI_MISC
 
-// 07 资源 - Resources
+//   - Resources
 
 GetGold=1,0,integer
 _GetGold_DisplayName="当前黄金储量"
@@ -173,7 +159,7 @@ _GetFoodMade_DisplayName="单位类型提供的人口"
 _GetFoodMade_Parameters=~单位类型,"提供的人口"
 _GetFoodMade_Category=TC_AI_RESOURCES
 
-// 08 城镇 - Town
+//   - Town
 
 GetMinesOwned=1,0,integer
 _GetMinesOwned_DisplayName="拥有金矿数量"
@@ -190,7 +176,7 @@ _GetNextExpansion_DisplayName="下一个扩张点"
 _GetNextExpansion_Parameters="下一个扩张点"
 _GetNextExpansion_Category=TC_AI_TOWN
 
-// 09 单位 - Unit
+//   - Unit
 
 GetUnitCount=1,0,integer,unitcode
 _GetUnitCount_DisplayName="单位的总数"
@@ -223,7 +209,7 @@ _GetUnitBuildTime_DisplayName="单位建造时间"
 _GetUnitBuildTime_Parameters=~单位类型,"的建造时间"
 _GetUnitBuildTime_Category=TC_AI_UNIT
 
-// 10 科技 - Upgrade
+//   - Upgrade
 
 GetUpgradeLevel=1,0,integer,techcode
 _GetUpgradeLevel_DisplayName="当前科技等级"
@@ -239,3 +225,4 @@ GetUpgradeWoodCost=1,0,integer,techcode
 _GetUpgradeWoodCost_DisplayName="科技木材消耗"
 _GetUpgradeWoodCost_Parameters="下一级",~科技类型,"的木材消耗"
 _GetUpgradeWoodCost_Category=TC_AI_UPGRADE
+
