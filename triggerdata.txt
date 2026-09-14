@@ -1,7 +1,3 @@
-// ===============================================================
-// 触发器数据汉化补丁 v0.4.0 —— 适用游戏版本 3.0
-// 生成日期: 2026-09-14
-// ===============================================================
 [TriggerCategories]
 // Defines categories for organizing trigger functions
 // Key: Arbitrary category identifier
@@ -2857,7 +2853,7 @@ UnitOrderSoulPreservation=0,unitorderutarg,`soulpreservation`,WESTRING_UNITORDER
 UnitOrderDarkConversionFast=0,unitorderutarg,`darkconversion`,WESTRING_UNITORDERUTARG_DARKCONVERSIONFAST
 UnitOrderApprehend=0,unitorderutarg,`apprehend`,WESTRING_UNITORDERUTARG_APPREHEND
 UnitOrderSoulLantern=0,unitorderutarg,`soullantern`,WESTRING_UNITORDERUTARG_SOULLANTERN
-UnitOrderHeroicSlash=1,unitorderutarg,`heroicslash`,WESTRING_UNITORDERUTARG_HEROICSLASH
+//UnitOrderHeroicSlash=1,unitorderutarg,`heroicslash`,WESTRING_UNITORDERUTARG_HEROICSLASH
 UnitOrderMindControl=1,unitorderutarg,`mindcontrol`,WESTRING_UNITORDERUTARG_MINDCONTROL
 
 // Trigger Point-Targeted Unit Orders
@@ -4058,6 +4054,8 @@ _TriggerRegisterUpgradeCommandEventBJ_Defaults=_
 _TriggerRegisterUpgradeCommandEventBJ_Category=TC_GAME
 
 TriggerRegisterCommonCommandEventBJ=1,unitcommonorderEx
+_TriggerRegisterCommonCommandEventBJ_DisplayName="通用命令被下达"
+_TriggerRegisterCommonCommandEventBJ_Parameters=~命令,"被下达"
 _TriggerRegisterCommonCommandEventBJ_Defaults=_
 _TriggerRegisterCommonCommandEventBJ_Category=TC_GAME
 
@@ -4253,7 +4251,7 @@ TriggerRegisterUnitInRangeSimple=0,real,unit
 _TriggerRegisterUnitInRangeSimple_DisplayName="接近特定单位"
 _TriggerRegisterUnitInRangeSimple_Parameters="单位进入",~实数,"范围距离",~特定单位
 _TriggerRegisterUnitInRangeSimple_Defaults=256,_
-_TriggerRegisterUnitInRangeSimple_Defaults=0,_,_,_
+_TriggerRegisterUnitInRangeSimple_Limits=0,_,_,_
 _TriggerRegisterUnitInRangeSimple_Category=TC_UNIT
 
 TriggerRegisterUnitLifeEvent=0,unit,limitop,real
@@ -4486,13 +4484,13 @@ _GetBooleanOr_UseWithAI=1
 // Specially handled by the editor
 AndMultiple=0,nothing
 _AndMultiple_DisplayName="并且-所有条件为真"
-_AndMultiple_Parameters="所有条件为真,则为真，任意条件为假, 则为假"
+_AndMultiple_Parameters="所有条件为真,则为真,任意条件为假, 则为假"
 _AndMultiple_Category=TC_CONDITION
 
 // Specially handled by the editor
 OrMultiple=0,nothing
 _OrMultiple_DisplayName="或者-任意条件为真"
-_OrMultiple_Parameters="任意条件为真,则为真，所有条件为假, 则为假"
+_OrMultiple_Parameters="任意条件为真,则为真,所有条件为假, 则为假"
 _OrMultiple_Category=TC_CONDITION
 
 
@@ -4797,13 +4795,13 @@ _SetDoodadAnimationBJ_Category=TC_ANIMATION
 // Doodad actions
 SetDoodadColorRectBJ=0,playercolor,doodadcode,rect
 _SetDoodadColorRectBJ_DisplayName="设置区域内装饰物队伍颜色"
-_SetDoodadColorRectBJ_Parameters="将 ",~矩形区域," 内所有",~装饰物类型,"的装饰物设为队伍颜色 ",~颜色,"。"
+_SetDoodadColorRectBJ_Parameters="将 ",~矩形区域," 内所有",~装饰物类型,"的装饰物设为队伍颜色 ",~颜色
 _SetDoodadColorRectBJ_Defaults=Color00,_,GetPlayableMapRect
 _SetDoodadColorRectBJ_Category=TC_DOODAD
 
 SetDoodadColorBJ=0,playercolor,doodadcode,real,location
 _SetDoodadColorBJ_DisplayName="设置圆形区域内装饰物队伍颜色"
-_SetDoodadColorBJ_Parameters="将 ",~点," 周围 ",~半径," 内所有",~装饰物类型,"的装饰物设为队伍颜色 ",~颜色,"。"
+_SetDoodadColorBJ_Parameters="将 ",~点," 周围 ",~半径," 内所有",~装饰物类型,"的装饰物设为队伍颜色 ",~颜色
 _SetDoodadColorBJ_Defaults=Color00,_,128,GetRectCenter
 _SetDoodadColorBJ_Category=TC_DOODAD
 
@@ -4852,7 +4850,7 @@ _SetCameraFieldForPlayer_Category=TC_CAMERA
 
 SetCameraFieldControlledByInputForPlayer=0,player,camerafield,onoffoption
 _SetCameraFieldControlledByInputForPlayer_DisplayName="设置由输入控制的镜头参数"
-_SetCameraFieldControlledByInputForPlayer_Parameters="将",~玩家,"的镜头 ",~参数," 设为收到任意输入时更新，值为 ",~开/关
+_SetCameraFieldControlledByInputForPlayer_Parameters="将",~玩家,"的镜头 ",~参数," 设为收到任意输入时更新,值为 ",~开/关
 _SetCameraFieldControlledByInputForPlayer_Defaults=Player00,CameraFieldTargetDistance,OnOffOff
 _SetCameraFieldControlledByInputForPlayer_Category=TC_CAMERA
 
@@ -5105,7 +5103,7 @@ _CreateMinimapIconBJ_Category=TC_CINEMATIC
 
 BlzPlayModelCinematicGameAtPosition=0,modelfile,real,real,real,real
 _BlzPlayModelCinematicGameAtPosition_DisplayName="在指定位置播放模型动画并返回游戏"
-_BlzPlayModelCinematicGameAtPosition_Parameters="播放模型动画 ",~MDL文件名," 位置X ",~X坐标," 位置Y ",~Y坐标," 位置Z ",~Z坐标,"，环绕 ",~Z轴旋转
+_BlzPlayModelCinematicGameAtPosition_Parameters="播放模型动画 ",~MDL文件名," 位置X ",~X坐标," 位置Y ",~Y坐标," 位置Z ",~Z坐标,",环绕 ",~Z轴旋转
 _BlzPlayModelCinematicGameAtPosition_Defaults="cinematic.mdl", 0, 0, 0, 0
 _BlzPlayModelCinematicGameAtPosition_Category=TC_CINEMATIC
 
@@ -5498,82 +5496,82 @@ _SetWaterBaseColorBJ_Category=TC_ENVIRONMENT
 
 SetHDWaterParamsExBJ=1,real,real,real,onoffoption,integer,integer,integer,integer,integer,integer,integer,integer
 _SetHDWaterParamsExBJ_DisplayName="设置高清水体参数"
-_SetHDWaterParamsExBJ_Parameters="将高清水体覆写颜色改为（",~红,"%，",~绿,"%，",~蓝,"%）并覆写 ",~覆写,"。将波浪顶点位移改为 ",~波浪顶点位移,"，最小不透明度改为 ",~最小不透明度,"，最大不透明度改为 ",~最大不透明度,"，反射率改为 ",~反射率,"，辐射率改为 ",~辐射率,"，边缘柔和度改为 ",~边缘柔和度,"，波浪法线贴图强度改为 ",~波浪法线贴图强度,"，环境贴图反射率改为 ",~环境贴图反射率,"。"
+_SetHDWaterParamsExBJ_Parameters="将高清水体覆写颜色改为(",~红,"%,",~绿,"%,",~蓝,"%)并覆写 ",~覆写,",将波浪顶点位移改为 ",~波浪顶点位移,",最小不透明度改为 ",~最小不透明度,",最大不透明度改为 ",~最大不透明度,",反射率改为 ",~反射率,",辐射率改为 ",~辐射率,",边缘柔和度改为 ",~边缘柔和度,",波浪法线贴图强度改为 ",~波浪法线贴图强度,",环境贴图反射率改为 ",~环境贴图反射率
 _SetHDWaterParamsExBJ_Defaults=100,100,100,OnOffOn,20,0,100,10,0,50,100,100
 _SetHDWaterParamsExBJ_Limits=0,100,0,100,0,100,_,_,0,100,0,100,0,100,0,100,0,100,0,100,0,100,0,100
 _SetHDWaterParamsExBJ_Category=TC_ENVIRONMENT
 
 BlzSetHDWaterColorBJ=1,real,real,real
 _BlzSetHDWaterColorBJ_DisplayName="改变高清水体覆写颜色"
-_BlzSetHDWaterColorBJ_Parameters="将高清水体覆写颜色改为（",~红,"%，",~绿,"%，",~蓝,"%）。"
+_BlzSetHDWaterColorBJ_Parameters="将高清水体覆写颜色改为(",~红,"%,",~绿,"%,",~蓝,"%)"
 _BlzSetHDWaterColorBJ_Defaults=100,100,100
 _BlzSetHDWaterColorBJ_Limits=0,100,0,100,0,100
 _BlzSetHDWaterColorBJ_Category=TC_ENVIRONMENT
 
 BlzSetHDWaterColorOverrideBJ=1
 _BlzSetHDWaterColorOverrideBJ_DisplayName="启用高清水体颜色覆写"
-_BlzSetHDWaterColorOverrideBJ_Parameters="启用高清水体颜色覆写。"
+_BlzSetHDWaterColorOverrideBJ_Parameters="启用高清水体颜色覆写"
 _BlzSetHDWaterColorOverrideBJ_Defaults=
 _BlzSetHDWaterColorOverrideBJ_Category=TC_ENVIRONMENT
 
 BlzClearHDWaterColorOverrideBJ=1
 _BlzClearHDWaterColorOverrideBJ_DisplayName="禁用高清水体颜色覆写"
-_BlzClearHDWaterColorOverrideBJ_Parameters="禁用高清水体颜色覆写。"
+_BlzClearHDWaterColorOverrideBJ_Parameters="禁用高清水体颜色覆写"
 _BlzClearHDWaterColorOverrideBJ_Defaults=
 _BlzClearHDWaterColorOverrideBJ_Category=TC_ENVIRONMENT
 
 BlzSetHDWaterVertexDisplacementBJ=1,integer
 _BlzSetHDWaterVertexDisplacementBJ_DisplayName="改变高清水体波浪顶点位移"
-_BlzSetHDWaterVertexDisplacementBJ_Parameters="将高清水体波浪顶点位移改为 ",~波浪顶点位移,"。"
+_BlzSetHDWaterVertexDisplacementBJ_Parameters="将高清水体波浪顶点位移改为 ",~波浪顶点位移
 _BlzSetHDWaterVertexDisplacementBJ_Defaults=20
 _BlzSetHDWaterVertexDisplacementBJ_Limits=0,100
 _BlzSetHDWaterVertexDisplacementBJ_Category=TC_ENVIRONMENT
 
 BlzSetHDWaterMinOpacityBJ=1,integer
 _BlzSetHDWaterMinOpacityBJ_DisplayName="改变高清水体最小不透明度"
-_BlzSetHDWaterMinOpacityBJ_Parameters="将高清水体最小不透明度改为 ",~最小不透明度,"。"
-_BlzSetHDWaterMinOpacityBJ_Defaults0
+_BlzSetHDWaterMinOpacityBJ_Parameters="将高清水体最小不透明度改为 ",~最小不透明度
+_BlzSetHDWaterMinOpacityBJ_Defaults=0
 _BlzSetHDWaterMinOpacityBJ_Limits=0,100
 _BlzSetHDWaterMinOpacityBJ_Category=TC_ENVIRONMENT
 
 BlzSetHDWaterMaxOpacityBJ=1,integer
 _BlzSetHDWaterMaxOpacityBJ_DisplayName="改变高清水体最大不透明度"
-_BlzSetHDWaterMaxOpacityBJ_Parameters="将高清水体最大不透明度改为 ",~最大不透明度,"。"
+_BlzSetHDWaterMaxOpacityBJ_Parameters="将高清水体最大不透明度改为 ",~最大不透明度
 _BlzSetHDWaterMaxOpacityBJ_Defaults=100
 _BlzSetHDWaterMaxOpacityBJ_Limits=0,100
 _BlzSetHDWaterMaxOpacityBJ_Category=TC_ENVIRONMENT
 
 BlzSetHDWaterReflectivityBJ=1,integer
 _BlzSetHDWaterReflectivityBJ_DisplayName="改变高清水体反射率"
-_BlzSetHDWaterReflectivityBJ_Parameters="将高清水体反射率改为 ",~反射率,"。"
+_BlzSetHDWaterReflectivityBJ_Parameters="将高清水体反射率改为 ",~反射率
 _BlzSetHDWaterReflectivityBJ_Defaults=10
 _BlzSetHDWaterReflectivityBJ_Limits=0,100
 _BlzSetHDWaterReflectivityBJ_Category=TC_ENVIRONMENT
 
 BlzSetHDWaterEmissivityBJ=1,integer
 _BlzSetHDWaterEmissivityBJ_DisplayName="改变高清水体辐射率"
-_BlzSetHDWaterEmissivityBJ_Parameters="将高清水体辐射率改为 ",~辐射率,"。"
+_BlzSetHDWaterEmissivityBJ_Parameters="将高清水体辐射率改为 ",~辐射率
 _BlzSetHDWaterEmissivityBJ_Defaults=0
 _BlzSetHDWaterEmissivityBJ_Limits=0,100
 _BlzSetHDWaterEmissivityBJ_Category=TC_ENVIRONMENT
 
 BlzSetHDWaterEdgeSoftnessBJ=1,integer
 _BlzSetHDWaterEdgeSoftnessBJ_DisplayName="改变高清水体边缘柔和度"
-_BlzSetHDWaterEdgeSoftnessBJ_Parameters="将高清水体边缘柔和度改为 ",~边缘柔和度,"。"
+_BlzSetHDWaterEdgeSoftnessBJ_Parameters="将高清水体边缘柔和度改为 ",~边缘柔和度
 _BlzSetHDWaterEdgeSoftnessBJ_Defaults=50
 _BlzSetHDWaterEdgeSoftnessBJ_Limits=0,100
 _BlzSetHDWaterEdgeSoftnessBJ_Category=TC_ENVIRONMENT
 
 BlzSetHDWaterWaveStrengthBJ=1,integer
 _BlzSetHDWaterWaveStrengthBJ_DisplayName="改变高清水体波浪法线贴图强度"
-_BlzSetHDWaterWaveStrengthBJ_Parameters="将高清水体波浪法线贴图强度改为 ",~波浪法线贴图强度,"。"
+_BlzSetHDWaterWaveStrengthBJ_Parameters="将高清水体波浪法线贴图强度改为 ",~波浪法线贴图强度
 _BlzSetHDWaterWaveStrengthBJ_Defaults=100
 _BlzSetHDWaterWaveStrengthBJ_Limits=0,100
 _BlzSetHDWaterWaveStrengthBJ_Category=TC_ENVIRONMENT
 
 BlzSetHDWaterEnvMapStrengthBJ=1,integer
 _BlzSetHDWaterEnvMapStrengthBJ_DisplayName="改变高清水体环境贴图反射率"
-_BlzSetHDWaterEnvMapStrengthBJ_Parameters="将高清水体环境贴图反射率改为 ",~环境贴图反射率,"。"
+_BlzSetHDWaterEnvMapStrengthBJ_Parameters="将高清水体环境贴图反射率改为 ",~环境贴图反射率
 _BlzSetHDWaterEnvMapStrengthBJ_Defaults=100
 _BlzSetHDWaterEnvMapStrengthBJ_Limits=0,100
 _BlzSetHDWaterEnvMapStrengthBJ_Category=TC_ENVIRONMENT
@@ -5593,77 +5591,77 @@ _SetTerrainFogExBJ_Category=TC_ENVIRONMENT
 
 BlzSetTerrainFogStyleBJ=0,fogstyle
 _BlzSetTerrainFogStyleBJ_DisplayName="设置雾样式"
-_BlzSetTerrainFogStyleBJ_Parameters="将雾样式设为 ",~样式,"。"
+_BlzSetTerrainFogStyleBJ_Parameters="将雾样式设为 ",~样式
 _BlzSetTerrainFogStyleBJ_Defaults=FogStyleLinear
 _BlzSetTerrainFogStyleBJ_Limits=_,_
 _BlzSetTerrainFogStyleBJ_Category=TC_ENVIRONMENT
 
 BlzSetTerrainFogZStartBJ=0,real
 _BlzSetTerrainFogZStartBJ_DisplayName="设置雾Z起点"
-_BlzSetTerrainFogZStartBJ_Parameters="将雾的Z起点设为 ",~Z起点,"。"
+_BlzSetTerrainFogZStartBJ_Parameters="将雾的Z起点设为 ",~Z起点
 _BlzSetTerrainFogZStartBJ_Defaults=1000
 _BlzSetTerrainFogZStartBJ_Limits=0,_
 _BlzSetTerrainFogZStartBJ_Category=TC_ENVIRONMENT
 
 BlzSetTerrainFogZEndBJ=0,real
 _BlzSetTerrainFogZEndBJ_DisplayName="设置雾Z终点"
-_BlzSetTerrainFogZEndBJ_Parameters="将雾的Z终点设为 ",~Z终点,"。"
+_BlzSetTerrainFogZEndBJ_Parameters="将雾的Z终点设为 ",~Z终点
 _BlzSetTerrainFogZEndBJ_Defaults=8000
 _BlzSetTerrainFogZEndBJ_Limits=0,_
 _BlzSetTerrainFogZEndBJ_Category=TC_ENVIRONMENT
 
 BlzSetTerrainFogDensityBJ=0,real
 _BlzSetTerrainFogDensityBJ_DisplayName="设置雾浓度"
-_BlzSetTerrainFogDensityBJ_Parameters="将雾浓度设为 ",~浓度,"。"
+_BlzSetTerrainFogDensityBJ_Parameters="将雾浓度设为 ",~浓度
 _BlzSetTerrainFogDensityBJ_Defaults=0
 _BlzSetTerrainFogDensityBJ_Limits=0,_
 _BlzSetTerrainFogDensityBJ_Category=TC_ENVIRONMENT
 
 BlzSetTerrainFogHeightStartBJ=0,real
 _BlzSetTerrainFogHeightStartBJ_DisplayName="设置雾高度起点"
-_BlzSetTerrainFogHeightStartBJ_Parameters="将雾的高度起点设为 ",~高度起点,"。"
+_BlzSetTerrainFogHeightStartBJ_Parameters="将雾的高度起点设为 ",~高度起点
 _BlzSetTerrainFogHeightStartBJ_Defaults=0
 _BlzSetTerrainFogHeightStartBJ_Limits=0,_
 _BlzSetTerrainFogHeightStartBJ_Category=TC_ENVIRONMENT
 
 BlzSetTerrainFogHeightEndBJ=0,real
 _BlzSetTerrainFogHeightEndBJ_DisplayName="设置雾高度终点"
-_BlzSetTerrainFogHeightEndBJ_Parameters="将雾的高度终点设为 ",~高度终点,"。"
+_BlzSetTerrainFogHeightEndBJ_Parameters="将雾的高度终点设为 ",~高度终点
 _BlzSetTerrainFogHeightEndBJ_Defaults=0
 _BlzSetTerrainFogHeightEndBJ_Limits=0,_
 _BlzSetTerrainFogHeightEndBJ_Category=TC_ENVIRONMENT
 
 BlzSetTerrainFogLinearStartBJ=0,real
 _BlzSetTerrainFogLinearStartBJ_DisplayName="设置雾线性起点"
-_BlzSetTerrainFogLinearStartBJ_Parameters="将雾的线性起点设为 ",~线性起点,"。"
+_BlzSetTerrainFogLinearStartBJ_Parameters="将雾的线性起点设为 ",~线性起点
 _BlzSetTerrainFogLinearStartBJ_Defaults=10000
 _BlzSetTerrainFogLinearStartBJ_Limits=0,_
 _BlzSetTerrainFogLinearStartBJ_Category=TC_ENVIRONMENT
 
 BlzSetTerrainFogLinearEndBJ=0,real
 _BlzSetTerrainFogLinearEndBJ_DisplayName="设置雾线性终点"
-_BlzSetTerrainFogLinearEndBJ_Parameters="将雾的线性终点设为 ",~线性终点,"。"
+_BlzSetTerrainFogLinearEndBJ_Parameters="将雾的线性终点设为 ",~线性终点
 _BlzSetTerrainFogLinearEndBJ_Defaults=10000
 _BlzSetTerrainFogLinearEndBJ_Limits=0,_
 _BlzSetTerrainFogLinearEndBJ_Category=TC_ENVIRONMENT
 
 BlzSetTerrainFogMaxLinearDensityBJ=0,real
 _BlzSetTerrainFogMaxLinearDensityBJ_DisplayName="设置雾最大不透明度"
-_BlzSetTerrainFogMaxLinearDensityBJ_Parameters="将雾的线性浓度设为 ",~线性浓度,"。"
+_BlzSetTerrainFogMaxLinearDensityBJ_Parameters="将雾的线性浓度设为 ",~线性浓度
 _BlzSetTerrainFogMaxLinearDensityBJ_Defaults=0
 _BlzSetTerrainFogMaxLinearDensityBJ_Limits=0,_
 _BlzSetTerrainFogMaxLinearDensityBJ_Category=TC_ENVIRONMENT
 
 BlzSetTerrainFogDrawOverSkyBJ=0,onoffoption
 _BlzSetTerrainFogDrawOverSkyBJ_DisplayName="设置雾是否绘制在天空之上"
-_BlzSetTerrainFogDrawOverSkyBJ_Parameters="将雾绘制在天空之上设为 ",~绘制在天空之上,"。"
+_BlzSetTerrainFogDrawOverSkyBJ_Parameters="将雾绘制在天空之上设为 ",~绘制在天空之上
 _BlzSetTerrainFogDrawOverSkyBJ_Defaults=OnOffOff
 _BlzSetTerrainFogDrawOverSkyBJ_Limits=_,_
 _BlzSetTerrainFogDrawOverSkyBJ_Category=TC_ENVIRONMENT
 
 BlzSetTerrainFogColorBJ=0,real,real,real
 _BlzSetTerrainFogColorBJ_DisplayName="设置雾颜色"
-_BlzSetTerrainFogColorBJ_Parameters="将雾颜色设为（",~红,"%，",~绿,"%，",~蓝,"%）。"
+_BlzSetTerrainFogColorBJ_Parameters="将雾颜色设为(",~红,"%,",~绿,"%,",~蓝,"%)"
 _BlzSetTerrainFogColorBJ_Defaults=100,100,100
 _BlzSetTerrainFogColorBJ_Limits=0,100,0,100,0,100
 _BlzSetTerrainFogColorBJ_Category=TC_ENVIRONMENT
@@ -5689,7 +5687,7 @@ _SetBlightRadiusLocBJ_Category=TC_ENVIRONMENT
 
 SetDayNightModels=0,dncmodelstring,dncmodelstring
 _SetDayNightModels_DisplayName="设置昼夜光照模型"
-_SetDayNightModels_Parameters="将昼夜循环光照模型设为地形使用 ",~地形模型,"，单位使用 ",~单位模型,"。"
+_SetDayNightModels_Parameters="将昼夜循环光照模型设为地形使用 ",~地形模型,",单位使用 ",~单位模型
 _SetDayNightModels_Defaults=DNCModelLordaeronTerrain,DNCModelLordaeronUnit
 _SetDayNightModels_Category=TC_ENVIRONMENT
 
@@ -5843,7 +5841,7 @@ SetTimeOfDayScalePercentBJ=0,real
 _SetTimeOfDayScalePercentBJ_DisplayName="设置昼夜时间流逝速度"
 _SetTimeOfDayScalePercentBJ_Parameters="设置昼夜时间流逝速度为默认值的",~实数,"%"
 _SetTimeOfDayScalePercentBJ_Defaults=100
-_SetTimeOfDayScalePercentBJ_Defaults=0,_
+_SetTimeOfDayScalePercentBJ_Limits=0,_
 _SetTimeOfDayScalePercentBJ_Category=TC_GAME
 
 UseTimeOfDayBJ=0,onoffoption
@@ -6535,21 +6533,21 @@ _UnitRemoveItemFromSlotSwapped_Category=TC_HERO
 
 UnitUnequipItem=0,unit,item
 _UnitUnequipItem_DisplayName="从英雄卸下物品"
-_UnitUnequipItem_Parameters="从",~英雄,"卸下",~物品,"。"
+_UnitUnequipItem_Parameters="从",~英雄,"卸下",~物品
 _UnitUnequipItem_Defaults=_,_
 _UnitUnequipItem_Category=TC_HERO
 _UnitUnequipItem_ScriptName=UnitUnequipItemSwapped
 
 UnitUnequipItemFromSlot=0,unit,loadoutslot
 _UnitUnequipItemFromSlot_DisplayName="从英雄装备栏卸下物品"
-_UnitUnequipItemFromSlot_Parameters="从",~英雄,"的装备栏",~装备栏位,"卸下物品。"
+_UnitUnequipItemFromSlot_Parameters="从",~英雄,"的装备栏",~装备栏位,"卸下物品"
 _UnitUnequipItemFromSlot_Defaults=_,_
 _UnitUnequipItemFromSlot_Category=TC_HERO
 _UnitUnequipItemFromSlot_ScriptName=UnitUnequipItemFromSlotSwapped
 
 UnitEquipItemSwapped=0,item,unit
 _UnitEquipItemSwapped_DisplayName="给英雄装备物品"
-_UnitEquipItemSwapped_Parameters="将",~物品,"装备给",~英雄,"。"
+_UnitEquipItemSwapped_Parameters="将",~物品,"装备给",~英雄
 _UnitEquipItemSwapped_Defaults=_,_
 _UnitEquipItemSwapped_Category=TC_HERO
 
@@ -7317,6 +7315,8 @@ _CreateLearnCommandButtonEffectBJ_Defaults=
 _CreateLearnCommandButtonEffectBJ_Category=TC_GAME
 
 CreateCommonCommandButtonEffectBJ=1,unitcommonorderEx
+_CreateCommonCommandButtonEffectBJ_DisplayName="创建通用命令按钮特效"
+_CreateCommonCommandButtonEffectBJ_Parameters="创建通用命令按钮特效,对于",~命令
 _CreateCommonCommandButtonEffectBJ_Defaults=
 _CreateCommonCommandButtonEffectBJ_Category=TC_GAME
 
@@ -7367,7 +7367,7 @@ _SetForceAllianceStateBJ_Category=TC_PLAYERGROUP
 
 DestroyForce=0,force
 _DestroyForce_DisplayName="销毁"
-_DestroyForce_Parameters="销毁",~玩家组,"。"
+_DestroyForce_Parameters="销毁",~玩家组
 _DestroyForce_Defaults=_
 _DestroyForce_Category=TC_PLAYERGROUP
 
@@ -7479,7 +7479,7 @@ _MoveRectToLoc_Category=TC_REGION
 
 RemoveRect=0,rect
 _RemoveRect_DisplayName="移除"
-_RemoveRect_Parameters="移除",~区域,"。"
+_RemoveRect_Parameters="移除",~区域
 _RemoveRect_Defaults=_,
 _RemoveRect_Category=TC_REGION
 
@@ -7487,7 +7487,7 @@ _RemoveRect_Category=TC_REGION
 
 RemoveLocation=0,location
 _RemoveLocation_DisplayName="移除"
-_RemoveLocation_Parameters="移除",~点,"。"
+_RemoveLocation_Parameters="移除",~点
 _RemoveLocation_Defaults=_
 _RemoveLocation_Category=TC_LOCATION
 
@@ -7785,21 +7785,21 @@ _VolumeGroupResetBJ_Category=TC_SOUND
 
 SetSoundFacialAnimationLabelAction=0,sound,string
 _SetSoundFacialAnimationLabelAction_DisplayName="设置对话面部动画标签"
-_SetSoundFacialAnimationLabelAction_Parameters="为对话音效 ",~音效," 设置面部动画标签 ",~字符串,"。"
+_SetSoundFacialAnimationLabelAction_Parameters="为对话音效 ",~音效," 设置面部动画标签 ",~字符串
 _SetSoundFacialAnimationLabelAction_Defaults=_,_
 _SetSoundFacialAnimationLabelAction_Category=TC_SOUND
 _SetSoundFacialAnimationLabelAction_ScriptName=SetSoundFacialAnimationLabel
 
 SetSoundFacialAnimationGroupLabelAction=0,sound,string
 _SetSoundFacialAnimationGroupLabelAction_DisplayName="设置对话面部动画组标签"
-_SetSoundFacialAnimationGroupLabelAction_Parameters="为对话音效 ",~音效," 设置面部动画组标签 ",~字符串,"。"
+_SetSoundFacialAnimationGroupLabelAction_Parameters="为对话音效 ",~音效," 设置面部动画组标签 ",~字符串
 _SetSoundFacialAnimationGroupLabelAction_Defaults=_,"BaseSD"
 _SetSoundFacialAnimationGroupLabelAction_Category=TC_SOUND
 _SetSoundFacialAnimationGroupLabelAction_ScriptName=SetSoundFacialAnimationGroupLabel
 
 SetSoundFacialAnimationSetFilepathAction=0,sound,string
 _SetSoundFacialAnimationSetFilepathAction_DisplayName="设置对话面部动画文件路径"
-_SetSoundFacialAnimationSetFilepathAction_Parameters="为对话音效 ",~音效," 设置面部动画文件路径 ",~字符串,"。"
+_SetSoundFacialAnimationSetFilepathAction_Parameters="为对话音效 ",~音效," 设置面部动画文件路径 ",~字符串
 _SetSoundFacialAnimationSetFilepathv_Defaults=_,_
 _SetSoundFacialAnimationSetFilepathAction_Category=TC_SOUND
 _SetSoundFacialAnimationSetFilepathAction_ScriptName=SetSoundFacialAnimationGroupLabel
@@ -7825,7 +7825,7 @@ _DestroyEffectBJ_Category=TC_SPECIALEFFECT
 
 DestroyEffectAfterTimeBJ=0,effect,real
 _DestroyEffectAfterTimeBJ_DisplayName="延时销毁特效"
-_DestroyEffectAfterTimeBJ_Parameters="在 ",~时间," 秒后销毁",~特效,"。"
+_DestroyEffectAfterTimeBJ_Parameters="在 ",~时间," 秒后销毁",~特效
 _DestroyEffectAfterTimeBJ_Defaults=GetLastCreatedEffectBJ,2
 _DestroyEffectAfterTimeBJ_Category=TC_SPECIALEFFECT
 
@@ -8041,7 +8041,7 @@ SetUnitLifeBJ=0,unit,real
 _SetUnitLifeBJ_DisplayName="设置生命值(指定值)"
 _SetUnitLifeBJ_Parameters="设置",~单位,"的生命值为",~实数
 _SetUnitLifeBJ_Defaults=GetTriggerUnit,GetUnitStateSwap
-_SetUnitLifeBJ_Defaults=_,_,0,_
+_SetUnitLifeBJ_Limits=_,_,0,_
 _SetUnitLifeBJ_Category=TC_UNIT
 
 SetUnitManaBJ=0,unit,real
@@ -8255,13 +8255,13 @@ _BlzUnitDisableAbility_Category=TC_UNIT
 
 BlzUnitEnableAuras=0,unit,enableddisabledoption,abilityuiyesnooption
 _BlzUnitEnableAuras_DisplayName="开启/关闭光环技能"
-_BlzUnitEnableAuras_Parameters="将",~单位,"的光环技能设为",~开启/关闭,"，其界面设为：",~影响界面/不影响界面
+_BlzUnitEnableAuras_Parameters="将",~单位,"的光环技能设为",~开启/关闭,",其界面设为：",~影响界面/不影响界面
 _BlzUnitEnableAuras_Defaults=GetTriggerUnit,EnabledDisabledDisabled,AbilityUIYesNoYes
 _BlzUnitEnableAuras_Category=TC_UNIT
 
 BlzAllUnitsEnableAurasBJ=0,enableddisabledoption,abilityuiyesnooption
 _BlzAllUnitsEnableAurasBJ_DisplayName="为所有单位开启/关闭光环技能"
-_BlzAllUnitsEnableAurasBJ_Parameters="将所有单位的光环技能设为",~开启/关闭,"，其界面设为",~影响界面/不影响界面
+_BlzAllUnitsEnableAurasBJ_Parameters="将所有单位的光环技能设为",~开启/关闭,",其界面设为",~影响界面/不影响界面
 _BlzAllUnitsEnableAurasBJ_Defaults=EnabledDisabledDisabled,AbilityUIYesNoYes
 _BlzAllUnitsEnableAurasBJ_Category=TC_UNIT
 
@@ -8286,25 +8286,25 @@ _BlzSetUnitAbilityCooldown_Category=TC_UNIT
 
 BlzSetUnitAbilityCooldownRemaining=0,unit,abilcode,real
 _BlzSetUnitAbilityCooldownRemaining_DisplayName="设置剩余冷却时间"
-_BlzSetUnitAbilityCooldownRemaining_Parameters="对于单位",~单位,"，将技能 ",~数值," 的剩余冷却时间设为 ",~数值
+_BlzSetUnitAbilityCooldownRemaining_Parameters="对于单位",~单位,",将技能 ",~数值," 的剩余冷却时间设为 ",~数值
 _BlzSetUnitAbilityCooldownRemaining_Defaults=GetTriggerUnit,_,0.00
 _BlzSetUnitAbilityCooldownRemaining_Category=TC_UNIT
 
 BlzSetUnitAbilityCooldownPercent=0,unit,abilcode,real
 _BlzSetUnitAbilityCooldownPercent_DisplayName="设置冷却百分比"
-_BlzSetUnitAbilityCooldownPercent_Parameters="对于单位",~单位,"，将技能 ",~数值," 的冷却百分比设为 ",~数值
+_BlzSetUnitAbilityCooldownPercent_Parameters="对于单位",~单位,",将技能 ",~数值," 的冷却百分比设为 ",~数值
 _BlzSetUnitAbilityCooldownPercent_Defaults=GetTriggerUnit,_,1.00
 _BlzSetUnitAbilityCooldownPercent_Category=TC_UNIT
 
 BlzAdjustUnitAbilityCooldownRemaining=0,unit,abilcode,real
 _BlzAdjustUnitAbilityCooldownRemaining_DisplayName="调整剩余冷却时间"
-_BlzAdjustUnitAbilityCooldownRemaining_Parameters="对于单位",~单位,"，将技能 ",~数值," 的剩余冷却时间调整 ",~数值
+_BlzAdjustUnitAbilityCooldownRemaining_Parameters="对于单位",~单位,",将技能 ",~数值," 的剩余冷却时间调整 ",~数值
 _BlzAdjustUnitAbilityCooldownRemaining_Defaults=GetTriggerUnit,_,0.00
 _BlzAdjustUnitAbilityCooldownRemaining_Category=TC_UNIT
 
 BlzAdjustUnitAbilityCooldownPercent=0,unit,abilcode,real
 _BlzAdjustUnitAbilityCooldownPercent_DisplayName="调整冷却百分比"
-_BlzAdjustUnitAbilityCooldownPercent_Parameters="对于单位",~单位,"，将技能 ",~数值," 的冷却百分比调整 ",~数值
+_BlzAdjustUnitAbilityCooldownPercent_Parameters="对于单位",~单位,",将技能 ",~数值," 的冷却百分比调整 ",~数值
 _BlzAdjustUnitAbilityCooldownPercent_Defaults=GetTriggerUnit,_,0.50
 _BlzAdjustUnitAbilityCooldownPercent_Category=TC_UNIT
 
@@ -8397,7 +8397,7 @@ BlzSetAbilityIntegerLevelFieldBJ=0,ability,abilityintegerlevelfield,integer,inte
 _BlzSetAbilityIntegerLevelFieldBJ_DisplayName="设置整数等级域"
 _BlzSetAbilityIntegerLevelFieldBJ_Parameters="设置",~技能,"的",~布尔等级域,"在等级",~整数,"为",~整数
 _BlzSetAbilityIntegerLevelFieldBJ_Defaults=_,_,0,50
-_BlzSetAbilityIntegerLevelFieldBJ_Defaults=_,_,_,_,0,_,0,_
+_BlzSetAbilityIntegerLevelFieldBJ_Limits=_,_,_,_,0,_,0,_
 _BlzSetAbilityIntegerLevelFieldBJ_Category=TC_ABILITY
 
 BlzSetAbilityRealLevelFieldBJ=0,ability,abilityreallevelfield,integer,real
@@ -8665,13 +8665,13 @@ _BlzPlaySpecialEffect_Category=TC_SPECIALEFFECT
 
 BlzSetSpecialEffectAnimation=0,effect,animationname
 _BlzSetSpecialEffectAnimation_DisplayName="设置特效动画名称"
-_BlzSetSpecialEffectAnimation_Parameters="播放特效：",~特效,"，动画名称：",~动画名称
+_BlzSetSpecialEffectAnimation_Parameters="播放特效：",~特效,",动画名称：",~动画名称
 _BlzSetSpecialEffectAnimation_Defaults=GetLastCreatedEffectBJ,"birth"
 _BlzSetSpecialEffectAnimation_Category=TC_SPECIALEFFECT
 
 BlzQueueSpecialEffectAnimation=0,effect,animationname
 _BlzQueueSpecialEffectAnimation_DisplayName="排队播放特效动画名称"
-_BlzQueueSpecialEffectAnimation_Parameters="排队播放特效：",~特效,"，动画名称：",~动画名称
+_BlzQueueSpecialEffectAnimation_Parameters="排队播放特效：",~特效,",动画名称：",~动画名称
 _BlzQueueSpecialEffectAnimation_Defaults=GetLastCreatedEffectBJ,"birth"
 _BlzQueueSpecialEffectAnimation_Category=TC_SPECIALEFFECT
 
@@ -9137,19 +9137,19 @@ _GroupTrainOrderByIdBJ_Category=TC_UNITGROUP
 
 DestroyGroup=0,group
 _DestroyGroup_DisplayName="销毁"
-_DestroyGroup_Parameters="销毁",~单位组,"。"
+_DestroyGroup_Parameters="销毁",~单位组
 _DestroyGroup_Defaults=_
 _DestroyGroup_Category=TC_UNITGROUP
 
 SetWantDestroyGroupBJ=0 
 _SetWantDestroyGroupBJ_DisplayName="设置销毁下一个组"
-_SetWantDestroyGroupBJ_Parameters="销毁在特定动作/函数中引用的下一个单位组。"
+_SetWantDestroyGroupBJ_Parameters="销毁在特定动作/函数中引用的下一个单位组
 _SetWantDestroyGroupBJ_Defaults=
 _SetWantDestroyGroupBJ_Category=TC_UNITGROUP
 
 ClearWantDestroyGroupBJ=0 
 _ClearWantDestroyGroupBJ_DisplayName="清除销毁下一个组"
-_ClearWantDestroyGroupBJ_Parameters="清除由「设置销毁下一个组」动作设定的行为。"
+_ClearWantDestroyGroupBJ_Parameters="清除由「设置销毁下一个组」动作设定的行为"
 _ClearWantDestroyGroupBJ_Defaults=
 _ClearWantDestroyGroupBJ_Category=TC_UNITGROUP
 
@@ -9232,7 +9232,7 @@ CreateFogModifierRadiusLocBJ=0,enableddisabledoption,player,fogstate,location,re
 _CreateFogModifierRadiusLocBJ_DisplayName="创建可见度修正器(圆范围)"
 _CreateFogModifierRadiusLocBJ_Parameters="创建一个状态为",~开启/关闭,"的可见度修正器给",~玩家,",可见度状态为",~可见度状态,"在圆心为",~点,",半径",~实数,"的圆范围"
 _CreateFogModifierRadiusLocBJ_Defaults=EnabledDisabledEnabled,Player00,FogStateVisible,GetRectCenter,512
-_CreateFogModifierRadiusLocBJ_Defaults=_,_,_,_,_,_,_,_,0,_
+_CreateFogModifierRadiusLocBJ_Limits=_,_,_,_,_,_,_,_,0,_
 _CreateFogModifierRadiusLocBJ_Category=TC_VISIBILITY
 
 FogModifierStart=0,fogmodifier
@@ -9345,7 +9345,7 @@ _IsTerrainPathableBJ_Defaults=GetRectCenter,PathingTypeWalkability
 _IsTerrainPathableBJ_Category=TC_ENVIRONMENT
 
 BlzIsTerrainPathableEx=1,1,boolean,location,pathingtype
-_BlzIsTerrainPathableEx_DisplayName="地形通行性关闭（含单位与可破坏物）"
+_BlzIsTerrainPathableEx_DisplayName="地形通行性关闭(含单位与可破坏物)"
 _BlzIsTerrainPathableEx_Parameters=" 处 ",~位置," 类型的地形通行性因单位与可破坏物而关闭",~通行类型," is off considering units and destructibles"
 _BlzIsTerrainPathableEx_Defaults=GetRectCenter,PathingTypeWalkability
 _BlzIsTerrainPathableEx_Category=TC_ENVIRONMENT
@@ -9470,7 +9470,7 @@ BlzSetAbilityIntegerLevelField=0,1,boolean,ability,abilityintegerlevelfield,inte
 _BlzSetAbilityIntegerLevelField_DisplayName="设置整数等级域"
 _BlzSetAbilityIntegerLevelField_Parameters="设置",~技能,"的",~整数等级域,"在等级",~整数,"为",~整数
 _BlzSetAbilityIntegerLevelField_Defaults=_,_,0,50
-_BlzSetAbilityIntegerLevelField_Defaults=_,_,_,_,0,_,0,_
+_BlzSetAbilityIntegerLevelField_Limits=_,_,_,_,0,_,0,_
 _BlzSetAbilityIntegerLevelField_CATEGORY=TC_ABILITY
 
 BlzSetAbilityRealLevelField=0,1,boolean,ability,abilityreallevelfield,integer,real
@@ -10137,19 +10137,19 @@ _IsPlayerInForce_Defaults=Player00,GetPlayersAll
 _IsPlayerInForce_Category=TC_PLAYER
 
 IsMouseButtonPressedBJ=0,1,boolean,mousebuttontype
-_IsMouseButtonPressedBJ_DisplayName="鼠标按键是否按下（异步）"
+_IsMouseButtonPressedBJ_DisplayName="鼠标按键是否按下(异步)"
 _IsMouseButtonPressedBJ_Parameters="",~数值, 是否按下
 _IsMouseButtonPressedBJ_Defaults=
 _IsMouseButtonPressedBJ_Category=TC_PLAYER
 
 IsMetaKeyPressedBJ=0,1,boolean,integer
-_IsMetaKeyPressedBJ_DisplayName="功能键是否按下（异步）"
+_IsMetaKeyPressedBJ_DisplayName="功能键是否按下(异步)"
 _IsMetaKeyPressedBJ_Parameters="",~数值, 是否按下
 _IsMetaKeyPressedBJ_Defaults=
 _IsMetaKeyPressedBJ_Category=TC_PLAYER
 
 IsKeyPressedBJ=0,1,boolean,oskeytype
-_IsKeyPressedBJ_DisplayName="按键是否按下（异步）"
+_IsKeyPressedBJ_DisplayName="按键是否按下(异步)"
 _IsKeyPressedBJ_Parameters="",~数值, 是否按下
 _IsKeyPressedBJ_Defaults=
 _IsKeyPressedBJ_Category=TC_PLAYER
@@ -10360,7 +10360,7 @@ _IsUnitGroupDeadBJ_Category=TC_UNITGROUP
 
 GetWantDestroyGroupBJ=0,1,boolean
 _GetWantDestroyGroupBJ_DisplayName="销毁下一个组是否已设置"
-_GetWantDestroyGroupBJ_Parameters="销毁下一个组是否已设置。"
+_GetWantDestroyGroupBJ_Parameters="销毁下一个组是否已设置"
 _GetWantDestroyGroupBJ_Defaults=
 _GetWantDestroyGroupBJ_Category=TC_UNITGROUP
 
@@ -11504,14 +11504,14 @@ _BlzGetUnitAbilityCooldown_Limits=_,_,_,_,0,_
 _BlzGetUnitAbilityCooldown_Category=TC_UNIT
 
 BlzGetUnitAbilityCooldownRemaining=0,1,real,unit,abilcode
-_BlzGetUnitAbilityCooldownRemaining_DisplayName="技能剩余时间"
-_BlzGetUnitAbilityCooldownRemaining_Parameters=~单位,"的",~技能类型,"的技能剩余时间"
+_BlzGetUnitAbilityCooldownRemaining_DisplayName="技能剩余冷却时间"
+_BlzGetUnitAbilityCooldownRemaining_Parameters=~单位,"的",~技能类型,"的技能剩余冷却时间"
 _BlzGetUnitAbilityCooldownRemaining_Defaults=GetTriggerUnit,_
 _BlzGetUnitAbilityCooldownRemaining_Category=TC_UNIT
 
 BlzGetUnitAbilityCooldownPercent=0,1,real,unit,abilcode
 _BlzGetUnitAbilityCooldownPercent_DisplayName="技能冷却百分比"
-_BlzGetUnitAbilityCooldownPercent_Parameters="的技能 ",~单位," 的冷却百分比。",~数值,"."
+_BlzGetUnitAbilityCooldownPercent_Parameters=~单位," 的",~技能类型,"的冷却百分比"
 _BlzGetUnitAbilityCooldownPercent_Defaults=GetTriggerUnit,_
 _BlzGetUnitAbilityCooldownPercent_Category=TC_UNIT
 
@@ -12590,8 +12590,8 @@ _ChooseRandomItemExBJ_Limits=-1,8,_,_
 _ChooseRandomItemExBJ_Category=TC_NOTHING
 
 ChooseRandomItemExWithFilterBJ=1,1,itemcode,integer,itemtype,equipmenttype,itemtag
-_ChooseRandomItemExWithFilterBJ_DisplayName="指定分类的随机物品类型（带筛选）"
-_ChooseRandomItemExWithFilterBJ_Parameters="随机等级 ",~等级," 的",~分类,"，",~装备类型,"，",~物品标签,"物品类型"
+_ChooseRandomItemExWithFilterBJ_DisplayName="指定分类的随机物品类型(带筛选)"
+_ChooseRandomItemExWithFilterBJ_Parameters="随机等级 ",~等级," 的",~分类,",",~装备类型,",",~物品标签,"物品类型"
 _ChooseRandomItemExWithFilterBJ_Defaults=1,ItemTypeAny,EquipmentTypeAny,ItemTagAny
 _ChooseRandomItemExWithFilterBJ_Limits=-1,8,_,_,_,_,_,_
 _ChooseRandomItemExWithFilterBJ_Category=TC_NOTHING
@@ -13135,7 +13135,7 @@ _BlzGetDoodadIsUsingModelAxes_Defaults=0
 _BlzGetDoodadIsUsingModelAxes_Category=TC_DOODAD
 
 BlzGetDoodadYaw=1,0,real,integer
-_BlzGetDoodadYaw_DisplayName="获取装饰物朝向（旋转）"
+_BlzGetDoodadYaw_DisplayName="获取装饰物朝向(旋转)"
 _BlzGetDoodadYaw_Parameters="获取装饰物 ",~整数
 _BlzGetDoodadYaw_Defaults=0
 _BlzGetDoodadYaw_Category=TC_DOODAD
@@ -13166,7 +13166,7 @@ _BlzGetDoodadId_Category=TC_DOODAD
 
 BlzGetNumDoodads=1,0,integer
 _BlzGetNumDoodads_DisplayName="获取装饰物数量"
-_BlzGetNumDoodads_Parameters="获取地图中装饰物的总数。"
+_BlzGetNumDoodads_Parameters="获取地图中装饰物的总数"
 _BlzGetNumDoodads_Defaults=
 _BlzGetNumDoodads_Category=TC_DOODAD
 
@@ -13186,7 +13186,7 @@ Category01=WESTRING_INITIALIZATION
 NumTriggers=1
 
 // Melee Initialization
-Trigger01Name="Melee Initialization"
+Trigger01Name="对战初始化"
 Trigger01Comment=WESTRING_MELEEINITIALIZATION_COMMENT
 Trigger01Category=1
 Trigger01Events=1

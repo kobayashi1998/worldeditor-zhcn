@@ -1,8 +1,4 @@
-﻿// ===============================================================
-// 编辑器文本汉化补丁 v0.4.0 —— 适用游戏版本 3.0
-// 生成日期: 2026-09-14
-// ===============================================================
-[WorldEditStrings]
+﻿[WorldEditStrings]
 WESTRING_UNITORDERNOTARG_BANSHEESCALL=战役恩雅 - 女妖的呼唤
 WESTRING_UNITORDERPTARG_WITHERINGFIRE=战役恩雅 - 凋零射击
 WESTRING_UNITORDERUTARG_MINDCONTROL=战役伊拉斯塔 - 心灵控制

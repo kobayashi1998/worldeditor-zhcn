@@ -1,7 +1,3 @@
-// ===============================================================
-// AI编辑器数据汉化补丁 v0.4.0 —— 适用游戏版本 3.0
-// 生成日期: 2026-09-14
-// ===============================================================
 [AIFunctions]
 // Defines function calls used by the AI Editor
 // Note that this section should match the format of the [TriggerCalls] section
