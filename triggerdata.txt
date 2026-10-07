@@ -1,3 +1,4 @@
+//***************************************************************************
 [TriggerCategories]
 // Defines categories for organizing trigger functions
 // Key: Arbitrary category identifier
@@ -1549,6 +1550,28 @@ AbilityRLFBuildingDamageFactorNvc4=0,abilityreallevelfield,ABILITY_RLF_BUILDING_
 AbilityRLFFullDamageAmountNvc5=0,abilityreallevelfield,ABILITY_RLF_FULL_DAMAGE_AMOUNT_NVC5,WESTRING_ABILITYRLF_FULLDAMAGEAMOUNTNVC5
 AbilityRLFHalfDamageFactor=0,abilityreallevelfield,ABILITY_RLF_HALF_DAMAGE_FACTOR,WESTRING_ABILITYRLF_HALFDAMAGEFACTOR
 AbilityRLFIntervalBetweenPulses=0,abilityreallevelfield,ABILITY_RLF_INTERVAL_BETWEEN_PULSES,WESTRING_ABILITYRLF_INTERVALBETWEENPULSES
+AbilityRLFAllyHealingPerSecond=0,abilityreallevelfield,ABILITY_RLF_ALLY_HEALING_PER_SECOND,WESTRING_ABILITYRLF_ALLY_HEALING_PER_SECOND
+AbilityRLFEnemyDamagePerSecond=0,abilityreallevelfield,ABILITY_RLF_ENEMY_DAMAGE_PER_SECOND,WESTRING_ABILITYRLF_ENEMY_DAMAGE_PER_SECOND
+AbilityRLFEnemyHealingReductionPercent=0,abilityreallevelfield,ABILITY_RLF_ENEMY_HEALING_REDUCTION_PERCENT,WESTRING_ABILITYRLF_ENEMY_HEALING_REDUCTION_PERCENT
+AbilityRLFAllyHealingBase=0,abilityreallevelfield,ABILITY_RLF_ALLY_HEALING_BASE,WESTRING_ABILITYRLF_ALLY_HEALING_BASE
+AbilityRLFHealingPerDebuffRemoved=0,abilityreallevelfield,ABILITY_RLF_HEALING_PER_DEBUFF_REMOVED,WESTRING_ABILITYRLF_HEALING_PER_DEBUFF_REMOVED
+AbilityRLFAllyBuffDuration=0,abilityreallevelfield,ABILITY_RLF_ALLY_BUFF_DURATION,WESTRING_ABILITYRLF_ALLY_BUFF_DURATION
+AbilityRLFAllyDamageBonusPercent=0,abilityreallevelfield,ABILITY_RLF_ALLY_DAMAGE_BONUS_PERCENT_BASE,WESTRING_ABILITYRLF_ALLY_DAMAGE_BONUS_PERCENT_BASE
+AbilityRLFAllyDamageBonusPercentPerDebuffRemoved=0,abilityreallevelfield,ABILITY_RLF_ALLY_DAMAGE_BONUS_PERCENT_PER_DEBUFF_REMOVED,WESTRING_ABILITYRLF_ALLY_DAMAGE_BONUS_PERCENT_PER_DEBUFF_REMOVED
+AbilityRLFEnemyStunDuration=0,abilityreallevelfield,ABILITY_RLF_ENEMY_STUN_DURATION,WESTRING_ABILITYRLF_ENEMY_STUN_DURATION
+AbilityRLFDamageToSummons=0,abilityreallevelfield,ABILITY_RLF_DAMAGE_TO_SUMMONS,WESTRING_ABILITYRLF_DAMAGE_TO_SUMMONS
+AbilityRLFAllyPercentMagicResistIncrease=0,abilityreallevelfield,ABILITY_RLF_ALLY_PERCENT_MAGIC_RESIST_INCREASE,WESTRING_ABILITYRLF_ALLY_PERCENT_MAGIC_RESIST_INCREASE
+AbilityRLFAllyPercentHealingIncrease=0,abilityreallevelfield,ABILITY_RLF_ALLY_PERCENT_HEALING_INCREASE,WESTRING_ABILITYRLF_ALLY_PERCENT_HEALING_INCREASE
+AbilityRLFAllyPercentCooldownDecrease=0,abilityreallevelfield,ABILITY_RLF_ALLY_PERCENT_COOLDOWN_DECREASE,WESTRING_ABILITYRLF_ALLY_PERCENT_COOLDOWN_DECREASE
+AbilityRLFEnemyPercentMagicResistDecrease=0,abilityreallevelfield,ABILITY_RLF_ENEMY_PERCENT_MAGIC_RESIST_DECREASE,WESTRING_ABILITYRLF_ENEMY_PERCENT_MAGIC_RESIST_DECREASE
+AbilityRLFEnemyPercentHealingDecrease=0,abilityreallevelfield,ABILITY_RLF_ENEMY_PERCENT_HEALING_DECREASE,WESTRING_ABILITYRLF_ENEMY_PERCENT_HEALING_DECREASE
+AbilityRLFEnemyPercentCooldownIncrease=0,abilityreallevelfield,ABILITY_RLF_ENEMY_PERCENT_COOLDOWN_INCREASE,WESTRING_ABILITYRLF_ENEMY_PERCENT_COOLDOWN_INCREASE
+AbilityRLFAllyFlatManaRegen=0,abilityreallevelfield,ABILITY_RLF_ALLY_FLAT_MANA_REGEN,WESTRING_ABILITYRLF_ALLY_FLAT_MANA_REGEN
+AbilityRLFAllyDashSpeed=0,abilityreallevelfield,ABILITY_RLF_DASH_SPEED,WESTRING_ABILITYRLF_DASH_SPEED
+AbilityRLFDashDamage=0,abilityreallevelfield,ABILITY_RLF_DASH_DAMAGE,WESTRING_ABILITYRLF_DASH_DAMAGE
+AbilityRLFBonusCriticalStrike=0,abilityreallevelfield,ABILITY_RLF_BONUS_CRITICAL_STRIKE,WESTRING_ABILITYRLF_BONUS_CRITICAL_STRIKE
+AbilityRLFBonusCriticalStrikeDuration=0,abilityreallevelfield,ABILITY_RLF_NORMAL_BONUS_CRITICAL_STRIKE_DURATION,WESTRING_ABILITYRLF_NORMAL_BONUS_CRITICAL_STRIKE_DURATION
+AbilityRLFHeroBonusCriticalStrikeDuration=0,abilityreallevelfield,ABILITY_RLF_HERO_BONUS_CRITICAL_STRIKE_DURATION,WESTRING_ABILITYRLF_HERO_BONUS_CRITICAL_STRIKE_DURATION
 
 // Ability Boolean Level Field
 AbilityBLFPercentBonusHab2=0,abilitybooleanlevelfield,ABILITY_BLF_PERCENT_BONUS_HAB2,WESTRING_ABILITYBLF_PERCENTBONUSHAB2
@@ -1615,6 +1638,7 @@ AbilityBLFSleepOnce=0,abilitybooleanlevelfield,ABILITY_BLF_SLEEP_ONCE,WESTRING_A
 AbilityBLFAllowOnAnyPlayerSlot=0,abilitybooleanlevelfield,ABILITY_BLF_ALLOW_ON_ANY_PLAYER_SLOT,WESTRING_ABILITYBLF_ALLOWONANYPLAYERSLOT
 AbilityBLFDisableOtherAbilities=0,abilitybooleanlevelfield,ABILITY_BLF_DISABLE_OTHER_ABILITIES,WESTRING_ABILITYBLF_DISABLEOTHERABILITIES
 AbilityBLFAllowBounty=0,abilitybooleanlevelfield,ABILITY_BLF_ALLOW_BOUNTY,WESTRING_ABILITYBLF_ALLOWBOUNTY
+AbilityBLFRemoveBuffsOnAbilityStart=0,abilitybooleanlevelfield,ABILITY_BLF_REMOVE_BUFFS_ON_ABILITY_START,WESTRING_ABILITYBLF_REMOVE_BUFFS_ON_ABILITY_START
 
 // Ability String Level Field
 AbilitySLFIconNormal=0,abilitystringlevelfield,ABILITY_SLF_ICON_NORMAL,WESTRING_ABILITYSLF_ICONNORMAL
@@ -2276,6 +2300,7 @@ SkyModelSky14=1,skymodelstring,`Environment\\Sky\\Outland_Sky\\Outland_Sky.mdl`,
 SkyModelSky15=1,skymodelstring,`Environment\\Sky\\PrologueSky\\PrologueSky.mdl`,WESTRING_SKYMODEL_SKY15
 SkyModelSky22=1,skymodelstring,`Environment\\Sky\\VillageSky\\VillageSky.mdl`,WESTRING_SKYMODEL_SKY22
 SkyModelSky21=1,skymodelstring,`Environment\\Sky\\VillageFallSky\\VillageFallSky.mdl`,WESTRING_SKYMODEL_SKY21
+SkyModelSky23=1,skymodelstring,`Environment\\Sky\\ArcaneSky\\ArcaneSky.mdl`,WESTRING_SKYMODEL_SKY23
 
 // DNC Model
 DNCModelNone=0,dncmodelstring,``,WESTRING_DNCMODEL_NONE
@@ -2853,7 +2878,7 @@ UnitOrderSoulPreservation=0,unitorderutarg,`soulpreservation`,WESTRING_UNITORDER
 UnitOrderDarkConversionFast=0,unitorderutarg,`darkconversion`,WESTRING_UNITORDERUTARG_DARKCONVERSIONFAST
 UnitOrderApprehend=0,unitorderutarg,`apprehend`,WESTRING_UNITORDERUTARG_APPREHEND
 UnitOrderSoulLantern=0,unitorderutarg,`soullantern`,WESTRING_UNITORDERUTARG_SOULLANTERN
-//UnitOrderHeroicSlash=1,unitorderutarg,`heroicslash`,WESTRING_UNITORDERUTARG_HEROICSLASH
+UnitOrderHeroicSlash=1,unitorderutarg,`heroicslash`,WESTRING_UNITORDERUTARG_HEROICSLASH
 UnitOrderMindControl=1,unitorderutarg,`mindcontrol`,WESTRING_UNITORDERUTARG_MINDCONTROL
 
 // Trigger Point-Targeted Unit Orders
@@ -4054,8 +4079,6 @@ _TriggerRegisterUpgradeCommandEventBJ_Defaults=_
 _TriggerRegisterUpgradeCommandEventBJ_Category=TC_GAME
 
 TriggerRegisterCommonCommandEventBJ=1,unitcommonorderEx
-_TriggerRegisterCommonCommandEventBJ_DisplayName="通用命令被下达"
-_TriggerRegisterCommonCommandEventBJ_Parameters=~命令,"被下达"
 _TriggerRegisterCommonCommandEventBJ_Defaults=_
 _TriggerRegisterCommonCommandEventBJ_Category=TC_GAME
 
@@ -4251,7 +4274,7 @@ TriggerRegisterUnitInRangeSimple=0,real,unit
 _TriggerRegisterUnitInRangeSimple_DisplayName="接近特定单位"
 _TriggerRegisterUnitInRangeSimple_Parameters="单位进入",~实数,"范围距离",~特定单位
 _TriggerRegisterUnitInRangeSimple_Defaults=256,_
-_TriggerRegisterUnitInRangeSimple_Limits=0,_,_,_
+_TriggerRegisterUnitInRangeSimple_Defaults=0,_,_,_
 _TriggerRegisterUnitInRangeSimple_Category=TC_UNIT
 
 TriggerRegisterUnitLifeEvent=0,unit,limitop,real
@@ -4872,6 +4895,12 @@ _SetCameraOrientControllerForPlayerBJ_DisplayName="锁定镜头朝向单位(锁�
 _SetCameraOrientControllerForPlayerBJ_Parameters="锁定",~玩家,"的镜头到",~单位,",偏移(X",~实数,",Y",~实数,")"
 _SetCameraOrientControllerForPlayerBJ_Defaults=Player00,GetTriggerUnit,0,0
 _SetCameraOrientControllerForPlayerBJ_Category=TC_CAMERA
+
+BlzSetCameraAllowsHotkeyTargetLock=0,boolean
+_BlzSetCameraAllowsHotkeyTargetLock_DisplayName="设置镜头允许快捷键锁定"
+_BlzSetCameraAllowsHotkeyTargetLock_Parameters="设置镜头是否可通过快捷键锁定/解锁为",~允许/禁用
+_BlzSetCameraAllowsHotkeyTargetLock_Defaults=false
+_BlzSetCameraAllowsHotkeyTargetLock_Category=TC_CAMERA
 
 SetCinematicCameraForPlayer=0,player,modelfile
 _SetCinematicCameraForPlayer_DisplayName="播放电影镜头"
@@ -5530,7 +5559,7 @@ _BlzSetHDWaterVertexDisplacementBJ_Category=TC_ENVIRONMENT
 BlzSetHDWaterMinOpacityBJ=1,integer
 _BlzSetHDWaterMinOpacityBJ_DisplayName="改变高清水体最小不透明度"
 _BlzSetHDWaterMinOpacityBJ_Parameters="将高清水体最小不透明度改为 ",~最小不透明度
-_BlzSetHDWaterMinOpacityBJ_Defaults=0
+_BlzSetHDWaterMinOpacityBJ_Defaults0
 _BlzSetHDWaterMinOpacityBJ_Limits=0,100
 _BlzSetHDWaterMinOpacityBJ_Category=TC_ENVIRONMENT
 
@@ -5841,7 +5870,7 @@ SetTimeOfDayScalePercentBJ=0,real
 _SetTimeOfDayScalePercentBJ_DisplayName="设置昼夜时间流逝速度"
 _SetTimeOfDayScalePercentBJ_Parameters="设置昼夜时间流逝速度为默认值的",~实数,"%"
 _SetTimeOfDayScalePercentBJ_Defaults=100
-_SetTimeOfDayScalePercentBJ_Limits=0,_
+_SetTimeOfDayScalePercentBJ_Defaults=0,_
 _SetTimeOfDayScalePercentBJ_Category=TC_GAME
 
 UseTimeOfDayBJ=0,onoffoption
@@ -6635,6 +6664,7 @@ _SetItemColor_DisplayName="改变颜色"
 _SetItemColor_Parameters="将",~物品,"的颜色改为",~颜色
 _SetItemColor_Defaults=GetLastCreatedItem,Color00
 _SetItemColor_Category=TC_ITEM
+_SetItemColor_ScriptName=BlzSetItemColor
 
 SetItemLifeBJ=0,item,real
 _SetItemLifeBJ_DisplayName="设置生命值"
@@ -7315,8 +7345,6 @@ _CreateLearnCommandButtonEffectBJ_Defaults=
 _CreateLearnCommandButtonEffectBJ_Category=TC_GAME
 
 CreateCommonCommandButtonEffectBJ=1,unitcommonorderEx
-_CreateCommonCommandButtonEffectBJ_DisplayName="创建通用命令按钮特效"
-_CreateCommonCommandButtonEffectBJ_Parameters="创建通用命令按钮特效,对于",~命令
 _CreateCommonCommandButtonEffectBJ_Defaults=
 _CreateCommonCommandButtonEffectBJ_Category=TC_GAME
 
@@ -7829,6 +7857,18 @@ _DestroyEffectAfterTimeBJ_Parameters="在 ",~时间," 秒后销毁",~特效
 _DestroyEffectAfterTimeBJ_Defaults=GetLastCreatedEffectBJ,2
 _DestroyEffectAfterTimeBJ_Category=TC_SPECIALEFFECT
 
+RemoveEffectBJ=0,effect
+_RemoveEffectBJ_DisplayName="移除特效"
+_RemoveEffectBJ_Parameters="移除",~特效
+_RemoveEffectBJ_Defaults=GetLastCreatedEffectBJ
+_RemoveEffectBJ_Category=TC_SPECIALEFFECT
+
+RemoveEffectAfterTimeBJ=0,effect,real
+_RemoveEffectAfterTimeBJ_DisplayName="延时移除特效"
+_RemoveEffectAfterTimeBJ_Parameters="在 ",~时间," 秒后移除",~特效
+_RemoveEffectAfterTimeBJ_Defaults=GetLastCreatedEffectBJ,2
+_RemoveEffectAfterTimeBJ_Category=TC_SPECIALEFFECT
+
 
 // Trigger actions
 DisableTrigger=0,trigger
@@ -8041,7 +8081,7 @@ SetUnitLifeBJ=0,unit,real
 _SetUnitLifeBJ_DisplayName="设置生命值(指定值)"
 _SetUnitLifeBJ_Parameters="设置",~单位,"的生命值为",~实数
 _SetUnitLifeBJ_Defaults=GetTriggerUnit,GetUnitStateSwap
-_SetUnitLifeBJ_Limits=_,_,0,_
+_SetUnitLifeBJ_Defaults=_,_,0,_
 _SetUnitLifeBJ_Category=TC_UNIT
 
 SetUnitManaBJ=0,unit,real
@@ -8397,7 +8437,7 @@ BlzSetAbilityIntegerLevelFieldBJ=0,ability,abilityintegerlevelfield,integer,inte
 _BlzSetAbilityIntegerLevelFieldBJ_DisplayName="设置整数等级域"
 _BlzSetAbilityIntegerLevelFieldBJ_Parameters="设置",~技能,"的",~布尔等级域,"在等级",~整数,"为",~整数
 _BlzSetAbilityIntegerLevelFieldBJ_Defaults=_,_,0,50
-_BlzSetAbilityIntegerLevelFieldBJ_Limits=_,_,_,_,0,_,0,_
+_BlzSetAbilityIntegerLevelFieldBJ_Defaults=_,_,_,_,0,_,0,_
 _BlzSetAbilityIntegerLevelFieldBJ_Category=TC_ABILITY
 
 BlzSetAbilityRealLevelFieldBJ=0,ability,abilityreallevelfield,integer,real
@@ -8906,6 +8946,12 @@ _SetUnitUserData_Parameters="设置",~单位,"自定义值为",~整数
 _SetUnitUserData_Defaults=_,0
 _SetUnitUserData_Category=TC_UNIT
 
+BlzResetUnitTalents=1,unit
+_BlzResetUnitTalents_DisplayName="重置天赋"
+_BlzResetUnitTalents_Parameters="重置",~单位,"的天赋(若有)并返还天赋点"
+_BlzResetUnitTalents_Defaults=_
+_BlzResetUnitTalents_Category=TC_HERO
+
 UnitRemoveBuffsBJ=0,bufftype,unit
 _UnitRemoveBuffsBJ_DisplayName="删除魔法效果(指定类别)"
 _UnitRemoveBuffsBJ_Parameters="删除",~魔法效果类别,"的魔法效果从",~单位
@@ -9029,6 +9075,18 @@ _UnitDamageTargetBJ_DisplayName="伤害目标"
 _UnitDamageTargetBJ_Parameters=~单位,"对",~单位,"造成",~实数,"点伤害,攻击类型为",~攻击类型,",伤害类型为",~伤害类型
 _UnitDamageTargetBJ_Defaults=GetTriggerUnit,GetTriggerUnit,500,AttackTypeNormal,DamageTypeNormal
 _UnitDamageTargetBJ_Category=TC_UNIT
+
+UnitHealBJ=1,unit,real
+_UnitHealBJ_DisplayName="治疗"
+_UnitHealBJ_Parameters="治疗",~单位,",恢复",~实数,"点生命值"
+_UnitHealBJ_Defaults=GetTriggerUnit,100
+_UnitHealBJ_Category=TC_UNIT
+
+UnitHealFromOtherBJ=1,unit,unit,real
+_UnitHealFromOtherBJ_DisplayName="治疗(指定来源)"
+_UnitHealFromOtherBJ_Parameters="治疗",~单位,",来源为",~来源单位,",恢复",~实数,"点生命值"
+_UnitHealFromOtherBJ_Defaults=GetTriggerUnit,GetTriggerUnit,100
+_UnitHealFromOtherBJ_Category=TC_UNIT
 
 DecUnitAbilityLevelSwapped=1,abilcode,unit
 _DecUnitAbilityLevelSwapped_DisplayName="降低技能等级"
@@ -9232,7 +9290,7 @@ CreateFogModifierRadiusLocBJ=0,enableddisabledoption,player,fogstate,location,re
 _CreateFogModifierRadiusLocBJ_DisplayName="创建可见度修正器(圆范围)"
 _CreateFogModifierRadiusLocBJ_Parameters="创建一个状态为",~开启/关闭,"的可见度修正器给",~玩家,",可见度状态为",~可见度状态,"在圆心为",~点,",半径",~实数,"的圆范围"
 _CreateFogModifierRadiusLocBJ_Defaults=EnabledDisabledEnabled,Player00,FogStateVisible,GetRectCenter,512
-_CreateFogModifierRadiusLocBJ_Limits=_,_,_,_,_,_,_,_,0,_
+_CreateFogModifierRadiusLocBJ_Defaults=_,_,_,_,_,_,_,_,0,_
 _CreateFogModifierRadiusLocBJ_Category=TC_VISIBILITY
 
 FogModifierStart=0,fogmodifier
@@ -9346,7 +9404,7 @@ _IsTerrainPathableBJ_Category=TC_ENVIRONMENT
 
 BlzIsTerrainPathableEx=1,1,boolean,location,pathingtype
 _BlzIsTerrainPathableEx_DisplayName="地形通行性关闭(含单位与可破坏物)"
-_BlzIsTerrainPathableEx_Parameters=" 处 ",~位置," 类型的地形通行性因单位与可破坏物而关闭",~通行类型," is off considering units and destructibles"
+_BlzIsTerrainPathableEx_Parameters="考虑单位与可破坏物后,",~位置,"处",~通行类型,"的地形通行状态为关闭"
 _BlzIsTerrainPathableEx_Defaults=GetRectCenter,PathingTypeWalkability
 _BlzIsTerrainPathableEx_Category=TC_ENVIRONMENT
 
@@ -9470,7 +9528,7 @@ BlzSetAbilityIntegerLevelField=0,1,boolean,ability,abilityintegerlevelfield,inte
 _BlzSetAbilityIntegerLevelField_DisplayName="设置整数等级域"
 _BlzSetAbilityIntegerLevelField_Parameters="设置",~技能,"的",~整数等级域,"在等级",~整数,"为",~整数
 _BlzSetAbilityIntegerLevelField_Defaults=_,_,0,50
-_BlzSetAbilityIntegerLevelField_Limits=_,_,_,_,0,_,0,_
+_BlzSetAbilityIntegerLevelField_Defaults=_,_,_,_,0,_,0,_
 _BlzSetAbilityIntegerLevelField_CATEGORY=TC_ABILITY
 
 BlzSetAbilityRealLevelField=0,1,boolean,ability,abilityreallevelfield,integer,real
@@ -9979,6 +10037,7 @@ _UnitHasItemBagged_DisplayName="英雄包裹中有物品"
 _UnitHasItemBagged_Parameters=~英雄,"的包裹中有",~物品," bagged"
 _UnitHasItemBagged_Defaults=GetTriggerUnit,GetLastCreatedItem
 _UnitHasItemBagged_Category=TC_HERO
+_UnitHasItemBagged_ScriptName=BlzUnitHasItemBagged
 
 UnitHasItemOfTypeBJ=0,1,boolean,unit,itemcode
 _UnitHasItemOfTypeBJ_DisplayName="拥有物品(指定类型)"
@@ -9997,6 +10056,7 @@ _UnitHasItemEquipped_DisplayName="英雄已装备物品"
 _UnitHasItemEquipped_Parameters=~英雄,"已装备",~物品
 _UnitHasItemEquipped_Defaults=GetTriggerUnit,GetLastCreatedItem
 _UnitHasItemEquipped_Category=TC_HERO
+_UnitHasItemEquipped_ScriptName=BlzUnitHasItemEquipped
 
 UnitHasItemOfTypeEquippedBJ=0,1,boolean,unit,itemcode
 _UnitHasItemOfTypeEquippedBJ_DisplayName="英雄已装备指定类型的物品"
@@ -10009,24 +10069,28 @@ _UnitHasLoadoutSlotEmpty_DisplayName="英雄有可用装备栏位"
 _UnitHasLoadoutSlotEmpty_Parameters=~英雄,"的装备栏位 ",~装备栏位," 可用"
 _UnitHasLoadoutSlotEmpty_Defaults=GetTriggerUnit,texp
 _UnitHasLoadoutSlotEmpty_Category=TC_HERO
+_UnitHasLoadoutSlotEmpty_ScriptName=BlzUnitHasLoadoutSlotEmpty
 
 UnitHasAnyItemEquiped=0,1,boolean,unit
 _UnitHasAnyItemEquiped_DisplayName="英雄装备了任意物品"
 _UnitHasAnyItemEquiped_Parameters=~英雄,"装备了物品"
 _UnitHasAnyItemEquiped_Defaults=GetTriggerUnit
 _UnitHasAnyItemEquiped_Category=TC_HERO
+_UnitHasAnyItemEquiped_ScriptName=BlzUnitHasAnyItemEquipped
 
 UnitHasItemEquipmentOfType=0,1,boolean,unit,equipmenttype
 _UnitHasItemEquipmentOfType_DisplayName="英雄已装备指定装备类型"
 _UnitHasItemEquipmentOfType_Parameters=~英雄,"已装备",~装备类型,"类型的物品"
 _UnitHasItemEquipmentOfType_Defaults=GetTriggerUnit,_
 _UnitHasItemEquipmentOfType_Category=TC_HERO
+_UnitHasItemEquipmentOfType_ScriptName=BlzUnitHasItemEquipmentOfType
 
 UnitCanEquipItemOfEquipmentType=0,1,boolean,unit,equipmenttype
 _UnitCanEquipItemOfEquipmentType_DisplayName="英雄有可用的装备类型"
 _UnitCanEquipItemOfEquipmentType_Parameters=~英雄,"的",~装备类型,"类型装备栏可用"
 _UnitCanEquipItemOfEquipmentType_Defaults=GetTriggerUnit,_
 _UnitCanEquipItemOfEquipmentType_Category=TC_HERO
+_UnitCanEquipItemOfEquipmentType_ScriptName=BlzUnitCanEquipItemOfEquipmentType
 
 IsSuspendedXP=0,0,boolean,unit
 _IsSuspendedXP_DisplayName="无法获得经验"
@@ -10075,12 +10139,14 @@ _IsItemEquipped_DisplayName="物品已装备"
 _IsItemEquipped_Parameters=~物品,"已装备"
 _IsItemEquipped_Defaults=GetLastCreatedItem
 _IsItemEquipped_Category=TC_ITEM
+_IsItemEquipped_ScriptName=BlzIsItemEquipped
 
 IsItemInBag=0,0,boolean,item
 _IsItemInBag_DisplayName="物品在包裹中"
 _IsItemInBag_Parameters=~物品,"在包裹中"
 _IsItemInBag_Defaults=GetLastCreatedItem
 _IsItemInBag_Category=TC_ITEM
+_IsItemInBag_ScriptName=BlzIsItemInBag
 
 LeaderboardHasPlayerItemBJ=0,0,boolean,leaderboard,player
 _LeaderboardHasPlayerItemBJ_DisplayName="包含玩家"
@@ -10204,7 +10270,7 @@ _IsTriggerEnabled_Category=TC_TRIGGER
 
 BlzTriggerIsRunning=0,1,boolean,trigger
 _BlzTriggerIsRunning_DisplayName="触发器正在运行"
-_BlzTriggerIsRunning_Parameters="当前是否正在运行",~触发器," is currently running"
+_BlzTriggerIsRunning_Parameters="当前是否正在运行",~触发器," currently running"
 _BlzTriggerIsRunning_Defaults=_
 _BlzTriggerIsRunning_Category=TC_TRIGGER
 
@@ -11024,6 +11090,12 @@ _GetCameraEyePositionZ_Parameters="当前镜头源Z坐标"
 _GetCameraEyePositionZ_Defaults=
 _GetCameraEyePositionZ_Category=TC_CAMERA
 
+BlzGetCameraAllowsHotkeyTargetLock=0,0,boolean
+_BlzGetCameraAllowsHotkeyTargetLock_DisplayName="镜头是否允许快捷键锁定"
+_BlzGetCameraAllowsHotkeyTargetLock_Parameters="镜头是否允许通过快捷键锁定/解锁"
+_BlzGetCameraAllowsHotkeyTargetLock_Defaults=true
+_BlzGetCameraAllowsHotkeyTargetLock_Category=TC_CAMERA
+
 GetLastTransmissionDurationBJ=0,1,real
 _GetLastTransmissionDurationBJ_DisplayName="最后单位消息时长"
 _GetLastTransmissionDurationBJ_Parameters="最后单位消息时长"
@@ -11594,6 +11666,11 @@ _BlzGetItemRealField_DisplayName="物品实数域"
 _BlzGetItemRealField_Parameters=~物品,"的",~实数域
 _BlzGetItemRealField_Defaults=GetLastCreatedItem,_
 _BlzGetItemRealField_Category=TC_ITEM
+
+BlzGetHUDScale=0,1,real
+_BlzGetHUDScale_DisplayName="获取当前HUD缩放"
+_BlzGetHUDScale_Parameters="当前HUD缩放"
+_BlzGetHUDScale_Category=TC_GAME
 
 // returns string
 OperatorString=0,1,string,string,string
@@ -12496,12 +12573,14 @@ _GetEquippedItem_DisplayName="正在装备的物品"
 _GetEquippedItem_Parameters="正在装备的物品"
 _GetEquippedItem_Defaults=
 _GetEquippedItem_Category=TC_EVENTRESPONSE
+_GetEquippedItem_ScriptName=BlzGetEquippedItem
 
 GetUnequippedItem=1,0,item
 _GetUnequippedItem_DisplayName="正在卸下的物品"
 _GetUnequippedItem_Parameters="正在卸下的物品"
 _GetUnequippedItem_Defaults=
 _GetUnequippedItem_Category=TC_EVENTRESPONSE
+_GetUnequippedItem_ScriptName=BlzGetUnequippedItem
 
 GetOrderTargetItem=0,0,item
 _GetOrderTargetItem_DisplayName="命令目标物品"
@@ -12560,6 +12639,7 @@ _GetItemEquipmentType_DisplayName="物品的装备类型"
 _GetItemEquipmentType_Parameters="的装备类型",~物品
 _GetItemEquipmentType_Defaults=GetLastCreatedItem
 _GetItemEquipmentType_Category=TC_NOTHING
+_GetItemEquipmentType_ScriptName=BlzGetItemEquipmentType
 
 // returns itemtag
 GetItemTag=1,1,itemtag,item
@@ -12567,6 +12647,7 @@ _GetItemTag_DisplayName="物品的标签"
 _GetItemTag_Parameters="的标签",~物品
 _GetItemTag_Defaults=GetLastCreatedItem
 _GetItemTag_Category=TC_NOTHING
+_GetItemTag_ScriptName=BlzGetItemTag
 
 // returns itemcode
 GetItemTypeId=0,1,itemcode,item
@@ -12595,6 +12676,13 @@ _ChooseRandomItemExWithFilterBJ_Parameters="随机等级 ",~等级," 的",~分�
 _ChooseRandomItemExWithFilterBJ_Defaults=1,ItemTypeAny,EquipmentTypeAny,ItemTagAny
 _ChooseRandomItemExWithFilterBJ_Limits=-1,8,_,_,_,_,_,_
 _ChooseRandomItemExWithFilterBJ_Category=TC_NOTHING
+
+ChooseRandomItemExWithFilterAndIncludesBJ=1,1,itemcode,integer,itemtype,equipmenttype,itemtag,boolean,boolean
+_ChooseRandomItemExWithFilterAndIncludesBJ_DisplayName="随机物品类型(指定等级、分类及过滤与包含条件)"
+_ChooseRandomItemExWithFilterAndIncludesBJ_Parameters="等级",~整数,".",~物品分类,",",~装备类型,",",~物品标签,"随机物品类型,包括无效变形",~包含无效变形,",包括非随机物品",~包含非随机物品
+_ChooseRandomItemExWithFilterAndIncludesBJ_Defaults=1,ItemTypeAny,EquipmentTypeAny,ItemTagAny,true,false
+_ChooseRandomItemExWithFilterAndIncludesBJ_Limits=-1,8,_,_,_,_,_,_
+_ChooseRandomItemExWithFilterAndIncludesBJ_Category=TC_NOTHING
 
 // returns techcode
 GetResearched=0,1,techcode
@@ -13201,4 +13289,3 @@ Trigger01Action05=MeleeClearExcessUnits
 Trigger01Action06=MeleeStartingUnits
 Trigger01Action07=MeleeStartingAI
 Trigger01Action08=MeleeInitVictoryDefeat
-

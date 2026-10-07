@@ -10,12 +10,14 @@
 //
 // Any display text to have a comma must be contained in double quotes
 
+
 //***************************************************************************
 [TriggerEventStrings]
 
 // Special events not defined in common.j,
 // handled internally by the editor
 MapInitializationEventHint="部分动作在地图初始化时执行效果不佳。如遇问题，可在执行该动作前添加一个极短的等待。"
+
 
 TriggerRegisterCommandEventHint="当下达特定技能命令时触发。"
 
@@ -35,6 +37,7 @@ TriggerRegisterDestDeathInRegionEventHint="默认该事件只能监视最多64�
 // Dialog events
 TriggerRegisterDialogEventBJHint=
 
+
 // Game events
 TriggerRegisterGameStateEventTimeOfDayHint="游戏时间采用24小时制. 当时间从不成立变为成立时触发事件."
 
@@ -49,6 +52,7 @@ TriggerRegisterShowSkillEventBJHint="该事件仅用于单人游戏."
 TriggerRegisterBuildSubmenuEventBJHint="该事件仅用于单人游戏."
 
 TriggerRegisterGameEventHint="该事件只出现在Battle.net的自动匹配游戏."
+
 
 // Player events
 TriggerRegisterPlayerChatEventHint="使用'事件响应 - 输入/匹配的聊天信息'来获取输入/用于对照的文字. 使用'事件响应 - 触发玩家'来获取输入信息的玩家."
@@ -73,12 +77,14 @@ TriggerRegisterPlayerEventDefeatHint=
 
 TriggerRegisterPlayerEventLeaveHint="该事件不管玩家因为什么原因离开游戏."
 
+
 // Timer events
 TriggerRegisterTimerEventSingleHint=
 
 TriggerRegisterTimerEventPeriodicHint=
 
 TriggerRegisterTimerExpireEventBJHint="当计时器到0时触发该事件. 循环计时器可以多次触发该事件. 使用'事件响应 - 到期的计时器'来获取该计时器."
+
 
 // Unit events
 TriggerRegisterUnitEventHint=
@@ -96,6 +102,7 @@ TriggerRegisterUnitInRangeSimpleHint="使用'事件响应 - 触发单位'来获�
 TriggerRegisterUnitLifeEventHint="从不成立变为成立时触发该事件. 注意:该参照值在注册事件时即被确定为常量,是不会变动的."
 
 TriggerRegisterUnitManaEventHint="从不成立变为成立时触发该事件. 注意:该参照值在注册事件时即被确定为常量,是不会变动的."
+
 
 //***************************************************************************
 [TriggerConditionStrings]
@@ -172,6 +179,7 @@ AndMultipleHint="在主显示区中为本函数添加条件。"
 
 OrMultipleHint="在主显示区中为本函数添加条件。"
 
+
 //***************************************************************************
 [TriggerActionStrings]
 
@@ -191,6 +199,7 @@ CreateUpgradeCommandButtonEffectBJHint=
 
 CreateLearnCommandButtonEffectBJHint=
 
+
 CreateCommonCommandButtonEffectBJHint=
 
 DestroyCommandButtonEffectHint=
@@ -203,11 +212,14 @@ WaitForConditionHint=
 
 WaitForSoundBJHint="该动作仅当音效正在播放时有效. 如果该音效还没开始播放或是已经播放完毕,则该动作无效."
 
+
 // Specially handled by the editor
 SetVariableHint="这是一个赋值操作。"
 
+
 // Specially handled by the editor
 ReturnActionHint="跳过剩余动作,直接中止触发运行. 但是在组动作中无效."
+
 
 // Specially handled by the editor
 IfThenElseMultipleHint="在主显示区中为本函数添加条件和动作。"
@@ -232,6 +244,7 @@ ForLoopBHint="结束值要大于开始值."
 
 // Specially handled by the editor
 ForLoopVarHint="结束值要大于开始值."
+
 
 // AI actions
 StartMeleeAIHint="只能用于电脑控制的玩家槽位。使用该动作时，建议启用玩家组属性中的'固定玩家设置'。"
@@ -291,6 +304,7 @@ SetDoodadColorRectBJHint="装饰物模型必须支持队伍颜色。"
 
 SetDoodadColorBJHint="装饰物模型必须支持队伍颜色。"
 
+
 // Camera actions
 CameraSetupApplyForPlayerHint=
 
@@ -304,7 +318,7 @@ SmartCameraPanBJHint="如果距离过远则直接跳转镜头,如果过近则不
 
 SetCameraFieldForPlayerHint=
 
-SetCameraFieldControlledByInputForPlayerHint="该动作可确保被脚本覆盖的数值不会在收到玩家输入时立即被重置。"
+SetCameraFieldControlledByInputForPlayer="该动作可确保被脚本覆盖的数值不会在收到玩家输入时立即被重置。"
 
 RotateCameraAroundLocBJHint=
 
@@ -411,6 +425,7 @@ EnableOcclusionBJHint="启用遮挡后，阻挡单位视野的树木会变为半
 
 EnableWorldFogBoundaryBJHint="禁用边界染色时边界为普通地形,不显示为黑色,但仍是不可通行的."
 
+
 // Countdown Timer actions
 StartTimerBJHint=
 
@@ -433,6 +448,7 @@ TimerDialogSetTimeColorBJHint="颜色格式为(红,绿,蓝). 透明度100%是不
 //TimerDialogSetSpeedBJ="Set Timer Window Speed"
 //TimerDialogSetSpeedBJ="Set the speed of ",~Timer Window," to be ",~Factor," times normal speed"
 //TimerDialogSetSpeedBJHint=
+
 
 // Destructable actions
 CreateDestructableLocHint="面向角度采用角度制,0度为正东方向,90度为正北方向. 使用'最后创建的可破坏物'来获取创建的物体."
@@ -471,6 +487,7 @@ EnumDestructablesInRectAllHint="组动作中可使用'选取的可破坏物'来�
 
 EnumDestructablesInCircleBJHint="组动作中可使用'选取的可破坏物'来获取对应的可破坏物. 每个可破坏物都会运行一次动作(包括死亡和隐藏的). 等待不能在组动作中运行. 也是矩形区域,不建议使用该功能."
 
+
 // Dialog actions
 DialogDisplayBJHint="对话框不能在地图初始化时显示."
 
@@ -479,6 +496,7 @@ DialogSetMessageBJHint=
 DialogAddButtonBJHint=
 
 DialogClearBJHint="清空对话框的标题和所有按钮."
+
 
 // Environment actions
 AddWeatherEffectSaveLastHint=
@@ -592,6 +610,7 @@ SetTextTagLifespanBJHint="该动作并不影响永久性漂浮文字. 当生命�
 SetTextTagFadepointBJHint="该动作并不影响永久性漂浮文字. 当漂浮文字存在时间到达该值时会开始淡化消逝."
 
 SetTextTagAgeBJHint="该动作并不影响永久性漂浮文字."
+
 
 // Game actions
 DisplayTextToForceHint="显示时间取决于文字长度."
@@ -905,6 +924,7 @@ EnumItemsInRectBJMultipleHint="组动作中可使用'选取物品'来获取对�
 
 EnumItemsInRectBJHint="组动作中可使用'选取物品'来获取对应的物品. 区域内每个物品都会运行一次动作(包括隐藏物品,不包括单位身上的物品). 等待不能在组动作中运行."
 
+
 // Image actions
 CreateImageBJHint="使用'图像 - 设置永久渲染状态'才能显示图像. 创建点作为图像的左下角位置. 该功能存在Bug,会在图像上和右面多出256象素. 所以需要支持Alpha通道的图像且上和右面最后一行像素为透明才能完美显示."
 
@@ -957,6 +977,7 @@ LeaderboardSetPlayerItemValueColorBJHint="颜色格式为(红,绿,蓝). 透明�
 
 LeaderboardSetPlayerItemStyleBJHint=
 
+
 // Lightning actions
 AddLightningLocHint=
 
@@ -965,6 +986,7 @@ DestroyLightningBJHint=
 MoveLightningLocHint=
 
 SetLightningColorBJHint="颜色格式为(红,绿,蓝). 颜色和Alpha通道值取值范围0-1. Alpha通道值为0即完全透明."
+
 
 // Melee Game actions
 MeleeStartingVisibilityHint=
@@ -984,6 +1006,7 @@ MeleeStartingAIHint="动作运行之前玩家要有初始单位和资源."
 MeleeInitVictoryDefeatHint="动作运行之前玩家要有单位."
 
 MeleeStartingUnitsForPlayerHint="该动作创建的初始单位与对战游戏相同。"
+
 
 // Multiboard actions
 CreateMultiboardBJHint="多面板不能在地图初始化时显示."
@@ -1015,6 +1038,7 @@ MultiboardSetItemColorBJHint="可以设置行/列数为0来指代所有的行/�
 MultiboardSetItemWidthBJHint=
 
 MultiboardSetItemIconBJHint=
+
 
 // Neutral Building actions
 AddResourceAmountBJHint="使用负数来减少储金量."
@@ -1055,6 +1079,7 @@ SetUnitTypeSlotsHint="只影响有'出售单位'技能的单位."
 
 SetAllUnitTypeSlotsHint="影响所有拥有'出售单位'技能的单位."
 
+
 // Player actions
 SetPlayerStateHint=
 
@@ -1091,6 +1116,7 @@ SetPlayerHandicapDamageBJHint=
 SetPlayerOnScoreScreenBJHint=
 
 SetPlayerNameHint=
+
 
 // Player Group actions
 ForForceMultipleHint="玩家组动作中可使用'选取玩家'来获取对应的玩家. 等待不能在组动作中运行."
@@ -1140,8 +1166,10 @@ DefeatConditionSetDescriptionBJHint=
 
 FlashQuestDialogButtonBJHint=
 
+
 // Region actions
 MoveRectToLocHint="该区域必须是一个变量. 目标点将作为该区域的新中心点."
+
 
 // Selection actions
 ClearSelectionForPlayerHint="使玩家取消选择所有已选单位."
@@ -1165,6 +1193,7 @@ SelectUnitSingleHint="使玩家取消选择所有已选单位,并选择该单位
 SelectUnitAddHint="在保留当前选择的基础上追加选择指定单位。"
 
 SelectUnitRemoveHint="取消选择指定单位，保留当前其余选择。"
+
 
 // Sound actions
 PlaySoundBJHint="地图初始化时不能播放声音。可使用声音编辑器创建声音变量并为其设定淡入率。注意，3D音效必须指定地点才能播放。"
@@ -1250,6 +1279,10 @@ DestroyEffectBJHint=
 
 DestroyEffectAfterTimeBJHint="特效会在时间结束后被移除。"
 
+RemoveEffectBJHint="移除特效会立即生效，不播放动画。"
+
+RemoveEffectAfterTimeBJHint="特效在经过指定时间后被移除。"
+
 // Trigger actions
 DisableTriggerHint="不会中断触发器正在进行的执行，但会阻止其今后再次执行。"
 
@@ -1268,6 +1301,7 @@ QueuedTriggerClearBJHint="从触发器队列中移除所有触发器。"
 QueuedTriggerClearInactiveBJHint="只有正在运行的触发不会被移出队列."
 
 AddTriggerEventHint="使用该功能可以在游戏中为其他触发添加事件."
+
 
 // Unit actions
 CreateNUnitsAtLocHint="面向角度采用角度制,0度为正东方向,90度为正北方向. 使用'最后创建的单位组'来获取创建的所有单位. 使用'最后创建的单位'来获取创建的单个单位."
@@ -1448,6 +1482,7 @@ BlzSetSpecialEffectTimeScaleHint=
 
 BlzSetSpecialEffectTimeHint=
 
+
 SetUnitInvulnerableHint=
 
 PauseUnitBJHint="被暂停的单位会停止行动并不再执行命令，但会记住当前命令，解除暂停后继续执行。"
@@ -1541,6 +1576,10 @@ UnitDropItemTargetBJHint=
 UnitDamagePointLocHint="该动作不会打断单位动作. 由该动作伤害/杀死单位同样正常触发'受到伤害'和'死亡'单位事件."
 
 UnitDamageTargetBJHint="该动作不会打断单位动作. 由该动作伤害/杀死单位同样正常触发'受到伤害'和'死亡'单位事件."
+
+UnitHealBJHint="使用该单位自身的治疗加成。"
+
+UnitHealFromOtherBJ="使用来源单位的治疗加成。"
 
 DecUnitAbilityLevelSwappedHint="单位没有该技能则不做动作. 最低只能降到1级."
 
@@ -1664,6 +1703,7 @@ SetUbersplatRenderHint="未发现有任何作用."
 
 SetUbersplatRenderAlwaysHint="要显示地面纹理变化则必须开启该项."
 
+
 // Visibility actions
 FogEnableOnHint=
 
@@ -1683,6 +1723,7 @@ FogModifierStopHint=
 
 DestroyFogModifierHint=
 
+
 // Obsolete actions
 //AddPerfLogLabel="** AddPerfLogLabel **"
 //AddPerfLogLabel="** AddPerfLogLabel(",~Label,") **"
@@ -1691,6 +1732,8 @@ DestroyFogModifierHint=
 //Cheat="** Cheat **"
 //Cheat="** Cheat(",~Label,") **"
 //CheatHint="** This is for debugging purposes only - remove before ship. **"
+
+
 
 //***************************************************************************
 [TriggerCallStrings]
@@ -1719,7 +1762,7 @@ IsPointBlightedBJHint=
 
 IsTerrainPathableBJHint="指定类型单位不能通行即通行状态为关闭. 如该点不能造建筑就是'建造'通行状态为关闭. 可使用'环境 - 设置地形通行状态'来改变通行状态."
 
-BlzIsTerrainPathableExHint="效果与「地形通行性关闭」动作完全相同，但会额外考虑单位和可破坏物的存在。"
+BlzIsTerrainPathableExhint="效果与「地形通行性关闭」动作完全相同，但会额外考虑单位和可破坏物的存在。"
 
 IsMapFlagSetHint=
 
@@ -2543,6 +2586,7 @@ GetUnitLocHint="会创建点."
 
 GetUnitRallyPointHint="如果单位没有设置集结点,则返回null. 设置自己为集结点可取消集结点设置. 会创建点."
 
+
 // returns rect
 GetCurrentCameraBoundsMapRectBJHint="会创建矩形区域. 注意:该函数对各玩家返回值不同,请确定你知道自己在做什么,否则很容易引起掉线."
 
@@ -2559,6 +2603,7 @@ RectFromCenterSizeBJHint="会创建矩形区域."
 RectHint="输入四个坐标(最小X,最小Y,最大X,最大Y)来定义地图上的矩形区域。"
 
 RectFromLocHint="会创建矩形区域."
+
 
 // returns unit
 GetLastCreatedUnitHint="最后一个使用'单位 - 创建'动作创建的单位."
@@ -2641,6 +2686,7 @@ GetTriggerUnitHint=
 
 GetUnitRallyUnitHint="如果指定单位没有设置集结点到单位目标,则返回null."
 
+
 // returns unitcode
 GetUnitTypeIdHint=
 
@@ -2652,6 +2698,7 @@ String2UnitIdBJHint=
 
 GetTrainedUnitTypeHint="响应'开始/取消/完成训练单位'单位事件, 指代所训练的单位类型."
 
+
 // returns ordercode
 String2OrderIdBJHint="如''harvest'', ''move'', ''smart'', ''attack''都是命令字符串."
 
@@ -2660,6 +2707,7 @@ UnitId2OrderIdBJHint=
 GetIssuedOrderIdBJHint="响应'发布命令'单位事件."
 
 GetUnitCurrentOrderHint=
+
 
 // returns destructable
 GetLastCreatedDestructableHint="最后一个使用 '可破坏物 - 创建'动作创建的可破坏物."
@@ -2680,8 +2728,10 @@ GetSpellTargetDestructableHint="响应'施放技能'单位事件并以可破坏�
 
 GetUnitRallyDestructableHint="如果指定单位没有设置集结点到可破坏物上,则返回null."
 
+
 // returns destructablecode
 GetDestructableTypeIdHint=
+
 
 // returns item
 GetLastCreatedItemHint="最后一个使用'物品 - 创建'或'英雄 - 创建物品给英雄'动作创建的物品."
@@ -2712,8 +2762,10 @@ GetOrderTargetItemHint="响应'发布指定物体目标命令'单位事件并以
 
 GetSpellTargetItemHint="响应施放技能单位事件并以物品为目标时. 注意: 技能施放结束将无法捕获施放目标."
 
+
 // returns itemtype
 GetItemTypeHint=
+
 
 // returns itemcode
 GetItemTypeIdHint=
@@ -2722,8 +2774,10 @@ ChooseRandomItemBJHint="该功能为ROC版函数,使用旧版等级作为参照�
 
 ChooseRandomItemExBJHint="该功能为新版函数,使用新版等级作为参照对象. -1表示任何等级."
 
+
 // returns techcode
 GetResearchedHint="响应'开始/取消/完成科技研究'单位事件."
+
 
 // returns abilcode
 GetSpellAbilityIdHint="响应施放技能单位事件, 指代被施放的技能."
@@ -2737,6 +2791,7 @@ BlzGetItemAbilityHint=
 
 // returns heroskillcode
 GetLearnedSkillBJHint="响应'学习技能'单位事件, 指代被学习的技能. 新函数在'技能'类别中."
+
 
 // returns player
 GetEnumPlayerHint="使用'选取玩家做动作'时, 指代相应的玩家."
@@ -2756,6 +2811,7 @@ GetChangingUnitPrevOwnerHint="响应'改变所有者'单位事件,指代单位�
 GetTriggerPlayerHint=
 
 LeaderboardGetIndexedPlayerBJHint=
+
 
 // returns group
 GetLastCreatedGroupHint="最后一批通过'单位 - 创建'动作创建的单位."
@@ -2782,6 +2838,7 @@ GetUnitsOfTypeIdAllHint="会创建单位组."
 
 GetUnitsSelectedAllHint="不能用于触发条件. 会创建单位组."
 
+
 // returns force
 GetPlayersAllHint="包括未使用玩家和中立玩家."
 
@@ -2795,112 +2852,147 @@ GetPlayersEnemiesHint="对其敌对的所有玩家,不包括中立玩家. 会创
 
 GetForceOfPlayerHint="会创建玩家组."
 
+
 // returns race
 GetPlayerRaceHint=
 
 GetUnitRaceHint="物体编辑器中设置的单位所属种族."
 
+
 // returns camerasetup
 GetCurrentCameraSetupHint="注意:该函数对各玩家返回值不同,请确定你知道自己在做什么,否则很容易引起掉线. 会创建镜头对象."
+
 
 // returns fogmodifier
 GetLastCreatedFogModifierHint="最后一个由'可见度 - 创建可见度修正器'动作创建的可见度修正器."
 
+
 // returns trigger
 GetTriggeringTriggerHint=
+
 
 // returns gamedifficulty
 GetGameDifficultyHint=
 
+
 // returns aidifficulty
 GetAIDifficultyHint="对非AI玩家返回普通难度."
+
 
 // returns gamespeed
 GetGameSpeedHint=
 
+
 // returns mapcontrol
 GetPlayerControllerHint=
+
 
 // returns playercolor
 GetPlayerColorHint=
 
+
 // returns playerslotstate
 GetPlayerSlotStateHint=
+
 
 // returns effect
 GetLastCreatedEffectBJHint="最后一个使用'特殊效果 - 创建特效'动作创建的效果."
 
+
 // returns command button effect
 GetLastCreatedCommandButtonEffectBJHint=
+
 
 // returns lightning
 GetLastCreatedLightningBJHint="最后一个使用'闪电效果 - 创建'动作创建的闪电效果."
 
+
 // returns image
 GetLastCreatedImageHint="最后一个使用'图像 - 创建'动作创建的图像."
+
 
 // returns ubersplat
 GetLastCreatedUbersplatHint="最后一个使用'地面纹理 - 创建'动作创建的纹理变化."
 
+
 // returns minimapicon
 GetLastCreatedMinimapIconHint="本触发器为使用“创建小地图标记”触发器动作创建的上一个小地图标记。"
+
 
 // returns weathereffect
 GetLastCreatedWeatherEffectHint="最后一个使用'环境 - 创建天气效果'动作创建的天气效果."
 
+
 // returns terraindeformation
 GetLastCreatedTerrainDeformationHint="最后一个由'环境 - 创建地形变化'动作创建的地形变化."
+
 
 // returns terraintype
 GetTerrainTypeBJHint=
 
+
 // returns sound
 GetLastPlayedSoundHint="最后一个由'声音 - 播放音效'或'电影 - 播放单位消息'动作播放的音效."
+
 
 // returns music
 GetLastPlayedMusicHint="最后一个由'声音 - 播放音乐'动作播放的音乐."
 
+
 // returns quest
 GetLastCreatedQuestBJHint="最后一个由'任务 - 创建任务'动作创建的任务."
+
 
 // returns questitem
 GetLastCreatedQuestItemBJHint="最后一个由'任务 - 创建任务项目'动作创建的任务项目."
 
+
 // returns defeatcondition
 GetLastCreatedDefeatConditionBJHint="最后一个由'任务 - 创建失败条件'动作创建的失败条件."
 
+
 // returns dialog
 GetClickedDialogBJHint="响应'对话框 - 点击对话框/按钮'事件."
+
 
 // returns button
 GetLastCreatedButtonBJHint="最后一个由'对话框 - 创建对话框按钮'动作创建的对话框按钮."
 
 GetClickedButtonBJHint="响应'对话框 - 点击对话框/按钮'事件."
 
+
 // returns leaderboard
 GetLastCreatedLeaderboardHint="最后一个由'排行榜 - 创建排行榜'动作创建的排行榜."
 
 PlayerGetLeaderboardBJHint="每个玩家只能使用1个排行榜."
 
+
 // returns multiboard
 GetLastCreatedMultiboardHint="最后一个由'多面板 - 创建多面板'动作创建的多面板."
+
 
 // returns timer
 GetLastCreatedTimerBJHint="最后一个由'计时器 - 启用计时器'动作启用的计时器."
 
 GetExpiredTimerHint="响应'时间 - 计时器到期'事件."
 
+
 // returns timerdialog
 GetLastCreatedTimerDialogBJHint="最后一个由'计时器 - 创建计时器窗口'动作创建的计时器窗口."
+
 
 // returns gamecache
 GetLastCreatedGameCacheBJHint="最后一个由'游戏缓存 - 创建缓存'动作创建的缓存."
 
+
 // returns hashtable
 GetLastCreatedHashtableBJHint="能得到通过 '哈希表 - 新建哈希表' 最后一次创建的哈希表"
 
+
 // returns texttag
 GetLastCreatedTextTagHint="最后一个由'漂浮文字 - 创建漂浮文字'动作创建的漂浮文字."
+
+
 
 //***************************************************************************
 [AIFunctionStrings]
@@ -2909,6 +3001,14 @@ GetLastCreatedTextTagHint="最后一个由'漂浮文字 - 创建漂浮文字'动
 // --- Boolean
 
 TownThreatenedHint=
+
+
+
+
+
+
+
+
 
 
 ExpansionNeededHint="当AI需要开分矿时返回True."
@@ -2931,7 +3031,12 @@ GetGoldHint="当前AI玩家拥有的黄金资源"
 
 GetWoodHint="当前AI玩家拥有的木材资源"
 
+
+
 GetUnitBuildTimeHint="时间单位为秒."
+
+
+
 
 GetNextExpansionHint="返回下一个分矿点的城镇ID。"
 
@@ -2952,4 +3057,3 @@ CaptainReadinessHPHint="生命级别为所有攻击组单位的平均百分比�
 CaptainReadinessMaHint="魔法级别为所有攻击组单位的平均百分比魔法值,最高为100."
 
 CurrentAttackWaveHint="攻击波数在AI编辑器攻击表中定义."
-
