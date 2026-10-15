@@ -4079,6 +4079,8 @@ _TriggerRegisterUpgradeCommandEventBJ_Defaults=_
 _TriggerRegisterUpgradeCommandEventBJ_Category=TC_GAME
 
 TriggerRegisterCommonCommandEventBJ=1,unitcommonorderEx
+_TriggerRegisterCommonCommandEventBJ_DisplayName="通用命令被下达"
+_TriggerRegisterCommonCommandEventBJ_Parameters=~命令,"的命令被下达"
 _TriggerRegisterCommonCommandEventBJ_Defaults=_
 _TriggerRegisterCommonCommandEventBJ_Category=TC_GAME
 
@@ -8428,14 +8430,14 @@ _BlzSetAbilityStringFieldBJ_Category=TC_ABILITY
 
 BlzSetAbilityBooleanLevelFieldBJ=0,ability,abilitybooleanlevelfield,integer,boolean
 _BlzSetAbilityBooleanLevelFieldBJ_DisplayName="设置布尔等级域"
-_BlzSetAbilityBooleanLevelFieldBJ_Parameters="设置",~技能,"的",~整数等级域,"在等级",~整数,"为",~是/否
+_BlzSetAbilityBooleanLevelFieldBJ_Parameters="设置",~技能,"的",~布尔等级域,"在等级",~整数,"为",~是/否
 _BlzSetAbilityBooleanLevelFieldBJ_Defaults=_,_,0,true
 _BlzSetAbilityBooleanLevelFieldBJ_Limits=_,_,_,_,0,_,_,_
 _BlzSetAbilityBooleanLevelFieldBJ_Category=TC_ABILITY
 
 BlzSetAbilityIntegerLevelFieldBJ=0,ability,abilityintegerlevelfield,integer,integer
 _BlzSetAbilityIntegerLevelFieldBJ_DisplayName="设置整数等级域"
-_BlzSetAbilityIntegerLevelFieldBJ_Parameters="设置",~技能,"的",~布尔等级域,"在等级",~整数,"为",~整数
+_BlzSetAbilityIntegerLevelFieldBJ_Parameters="设置",~技能,"的",~整数等级域,"在等级",~整数,"为",~整数
 _BlzSetAbilityIntegerLevelFieldBJ_Defaults=_,_,0,50
 _BlzSetAbilityIntegerLevelFieldBJ_Defaults=_,_,_,_,0,_,0,_
 _BlzSetAbilityIntegerLevelFieldBJ_Category=TC_ABILITY

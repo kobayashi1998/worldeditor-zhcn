@@ -16,18 +16,18 @@
 
 // Special events not defined in common.j,
 // handled internally by the editor
-MapInitializationEventHint="部分动作在地图初始化时执行效果不佳。如遇问题，可在执行该动作前添加一个极短的等待。"
+MapInitializationEventHint="部分动作在地图初始化时执行效果不佳.如遇问题,可在执行该动作前添加一个极短的等待."
 
 
-TriggerRegisterCommandEventHint="当下达特定技能命令时触发。"
+TriggerRegisterCommandEventHint="当下达特定技能命令时触发."
 
-TriggerRegisterBuildCommandEventBJHint="当下达特定建造命令时触发。"
+TriggerRegisterBuildCommandEventBJHint="当下达特定建造命令时触发."
 
-TriggerRegisterTrainCommandEventBJHint="当下达特定训练命令时触发。"
+TriggerRegisterTrainCommandEventBJHint="当下达特定训练命令时触发."
 
-TriggerRegisterUpgradeCommandEventBJHint="当下达特定研究命令时触发。"
+TriggerRegisterUpgradeCommandEventBJHint="当下达特定研究命令时触发."
 
-TriggerRegisterCommonCommandEventBJHint="当下达特定通用命令时触发。"
+TriggerRegisterCommonCommandEventBJHint="当下达特定通用命令时触发."
 
 // Destructible events
 TriggerRegisterDeathEventHint="使用'事件响应 - 死亡的可破坏物'来获取死亡物体."
@@ -57,7 +57,7 @@ TriggerRegisterGameEventHint="该事件只出现在Battle.net的自动匹配游�
 // Player events
 TriggerRegisterPlayerChatEventHint="使用'事件响应 - 输入/匹配的聊天信息'来获取输入/用于对照的文字. 使用'事件响应 - 触发玩家'来获取输入信息的玩家."
 
-TriggerRegisterPlayerEventEndCinematicHint="玩家按下'Esc'键时即发生该事件（无论其是否正在观看过场动画）。"
+TriggerRegisterPlayerEventEndCinematicHint="玩家按下'Esc'键时即发生该事件(无论其是否正在观看过场动画)."
 
 TriggerRegisterPlayerSelectionEventBJHint="使用'事件响应 - 触发单位'来获取被选择/取消选择的单位."
 
@@ -93,9 +93,9 @@ TriggerRegisterPlayerUnitEventSimpleHint=
 
 TriggerRegisterAnyUnitEventBJHint=
 
-TriggerRegisterEnterRectSimpleHint="使用'事件响应 - 进入的单位'来响应进入该区域的单位. 事实上是创建不规则区域，并注册单位进入不规则区域事件,所以之后改动该矩形区域对事件不会产生任何影响."
+TriggerRegisterEnterRectSimpleHint="使用'事件响应 - 进入的单位'来响应进入该区域的单位. 事实上是创建不规则区域,并注册单位进入不规则区域事件,所以之后改动该矩形区域对事件不会产生任何影响."
 
-TriggerRegisterLeaveRectSimpleHint="使用'事件响应 - 离开的单位'来响应离开该区域的单位. 事实上是创建不规则区域，并注册单位进入不规则区域事件,所以之后改动该矩形区域对事件不会产生任何影响."
+TriggerRegisterLeaveRectSimpleHint="使用'事件响应 - 离开的单位'来响应离开该区域的单位. 事实上是创建不规则区域,并注册单位进入不规则区域事件,所以之后改动该矩形区域对事件不会产生任何影响."
 
 TriggerRegisterUnitInRangeSimpleHint="使用'事件响应 - 触发单位'来获取接近指定单位的单位."
 
@@ -147,19 +147,15 @@ OperatorComparePlayerControlHint=
 
 OperatorComparePlayerSlotStatusHint=
 
-//OperatorComparePoint="Point Comparison"
-//OperatorComparePoint=~Value," ",~Operator," ",~Value
-//OperatorComparePointHint=
+OperatorComparePointHint=
 
 OperatorCompareRaceHint=
 
 OperatorCompareRealHint=
 
-//OperatorCompareRegion="Region Comparison"
-//OperatorCompareRegion=~Value," ",~Operator," ",~Value
-//OperatorCompareRegionHint=
+OperatorCompareRegionHint=
 
-OperatorCompareStringHint="两个字符串必须长度相等且内容一致才视为相等。"
+OperatorCompareStringHint="两个字符串必须长度相等且内容一致才视为相等."
 
 OperatorCompareTechCodeHint=
 
@@ -175,9 +171,9 @@ GetBooleanAndHint=
 
 GetBooleanOrHint=
 
-AndMultipleHint="在主显示区中为本函数添加条件。"
+AndMultipleHint="在主显示区中为本函数添加条件."
 
-OrMultipleHint="在主显示区中为本函数添加条件。"
+OrMultipleHint="在主显示区中为本函数添加条件."
 
 
 //***************************************************************************
@@ -214,7 +210,7 @@ WaitForSoundBJHint="该动作仅当音效正在播放时有效. 如果该音效�
 
 
 // Specially handled by the editor
-SetVariableHint="这是一个赋值操作。"
+SetVariableHint="左边的变量赋右边的值"
 
 
 // Specially handled by the editor
@@ -222,7 +218,7 @@ ReturnActionHint="跳过剩余动作,直接中止触发运行. 但是在组动�
 
 
 // Specially handled by the editor
-IfThenElseMultipleHint="在主显示区中为本函数添加条件和动作。"
+IfThenElseMultipleHint="在主显示区中为本函数添加条件和动作."
 
 // Specially handled by the editor
 IfThenElseHint=
@@ -247,9 +243,9 @@ ForLoopVarHint="结束值要大于开始值."
 
 
 // AI actions
-StartMeleeAIHint="只能用于电脑控制的玩家槽位。使用该动作时，建议启用玩家组属性中的'固定玩家设置'。"
+StartMeleeAIHint="只能用于电脑控制的玩家槽位.使用该动作时,建议启用玩家组属性中的'固定玩家设置'."
 
-StartCampaignAIHint="只能用于电脑控制的玩家槽位。使用该动作时，建议启用玩家组属性中的'固定玩家设置'。"
+StartCampaignAIHint="只能用于电脑控制的玩家槽位.使用该动作时,建议启用玩家组属性中的'固定玩家设置'."
 
 CommandAIHint="发送的AI命令将被AI脚本所使用."
 
@@ -257,7 +253,7 @@ RemoveGuardPositionHint="单位将不会自动返回原警戒点. 一个很有�
 
 RemoveAllGuardPositionsHint="单位将不会自动返回原警戒点. 一个很有用的功能就是刷怪进攻时忽视单位警戒范围的话,怪就不会想家了."
 
-RecycleGuardPositionHint="该动作请求AI回收曾属于指定单位的警戒位置。"
+RecycleGuardPositionHint="该动作请求AI回收曾属于指定单位的警戒位置."
 
 LockGuardPositionHint="锁定并防止AI脚本改动单位警戒点."
 
@@ -296,19 +292,19 @@ QueueDestructableAnimationBJHint=
 
 SetDestAnimationSpeedPercentHint="设置100%动画播放速度来恢复正常状态."
 
-SetDoodadAnimationRectBJHint="特殊动画名: 'show'、'hide'、'soundon'、'soundoff'。"
+SetDoodadAnimationRectBJHint="特殊动画名: 'show'、'hide'、'soundon'、'soundoff'."
 
-SetDoodadAnimationBJHint="特殊动画名: 'show'、'hide'、'soundon'、'soundoff'。"
+SetDoodadAnimationBJHint="特殊动画名: 'show'、'hide'、'soundon'、'soundoff'."
 
-SetDoodadColorRectBJHint="装饰物模型必须支持队伍颜色。"
+SetDoodadColorRectBJHint="装饰物模型必须支持队伍颜色."
 
-SetDoodadColorBJHint="装饰物模型必须支持队伍颜色。"
+SetDoodadColorBJHint="装饰物模型必须支持队伍颜色."
 
 
 // Camera actions
 CameraSetupApplyForPlayerHint=
 
-CameraSetupApplyForPlayerSmoothHint="镜头将在指定的淡入时间内加速，并在指定的淡出时间内减速；平滑系数是速度方程中一次项系数与二次项系数的比值。"
+CameraSetupApplyForPlayerSmoothHint="镜头将在指定的淡入时间内加速,并在指定的淡出时间内减速；平滑系数是速度方程中一次项系数与二次项系数的比值."
 
 PanCameraToTimedLocForPlayerHint=
 
@@ -318,7 +314,7 @@ SmartCameraPanBJHint="如果距离过远则直接跳转镜头,如果过近则不
 
 SetCameraFieldForPlayerHint=
 
-SetCameraFieldControlledByInputForPlayer="该动作可确保被脚本覆盖的数值不会在收到玩家输入时立即被重置。"
+SetCameraFieldControlledByInputForPlayerHint="该动作可确保被脚本覆盖的数值不会在收到玩家输入时立即被重置."
 
 RotateCameraAroundLocBJHint=
 
@@ -354,20 +350,20 @@ SetCameraBoundsToRectForPlayerBJHint="该动作同样会影响小地图的显示
 
 SetCameraQuickPositionLocForPlayerHint="按下空格键时镜头转向的位置."
 
-BlzCameraSetupSetLabelHint="设置镜头标签，以便在游戏内查看场景转换效果"
+BlzCameraSetupSetLabelHint="设置镜头标签,以便在游戏内查看场景转换效果"
 
 BlzCameraSetupGetLabelHint="获取镜头对象的标签"
 
 // Cinematic actions
-SetDialogueTextKeyHint="使用外部化字符串可使该字符串出现在 .wts 文件中。"
+SetDialogueTextKeyHint="使用外部化字符串可使该字符串出现在 .wts 文件中."
 
-SetDialogueSpeakerNameKeyHint="使用外部化字符串可使该字符串出现在 .wts 文件中。"
+SetDialogueSpeakerNameKeyHint="使用外部化字符串可使该字符串出现在 .wts 文件中."
 
-PlayDialogueFromSpeakerExHint="声音是必需的，它充当对话的载体。请务必用相应的动作为其设置正确的文本和说话者名称，并在需要时指定面部动画路径与标签。"
+PlayDialogueFromSpeakerExHint="声音是必需的,它充当对话的载体.请务必用相应的动作为其设置正确的文本和说话者名称,并在需要时指定面部动画路径与标签."
 
-PlayDialogueFromSpeakerTypeExHint="声音是必需的，它充当对话的载体。请务必用相应的动作为其设置正确的文本和说话者名称，并在需要时指定面部动画路径与标签。"
+PlayDialogueFromSpeakerTypeExHint="声音是必需的,它充当对话的载体.请务必用相应的动作为其设置正确的文本和说话者名称,并在需要时指定面部动画路径与标签."
 
-BlzEnableTargetIndicatorHint="目标指示器通常用于过场动画对话，以闪烁圆圈标明当前发言者。"
+BlzEnableTargetIndicatorHint="目标指示器通常用于过场动画对话,以闪烁圆圈标明当前发言者."
 
 TransmissionFromUnitWithNameBJHint="'没有声音'的持续时间为5秒. 等待表示其他动作需要等待信息播放完毕后才能运行."
 
@@ -403,7 +399,7 @@ DestroyMinimapIconHint=
 
 SetMinimapIconVisibleHint=
 
-SetMinimapIconOrphanDestroyHint="仅当小地图图标附着在单位上时才有效。"
+SetMinimapIconOrphanDestroyHint="仅当小地图图标附着在单位上时才有效."
 
 UnitAddIndicatorBJHint="颜色格式为(红,绿,蓝). 透明度100%是不可见的."
 
@@ -421,7 +417,7 @@ SetUserControlForceOffHint=
 
 SetUserControlForceOnHint=
 
-EnableOcclusionBJHint="启用遮挡后，阻挡单位视野的树木会变为半透明。"
+EnableOcclusionBJHint="启用遮挡后,阻挡单位视野的树木会变为半透明."
 
 EnableWorldFogBoundaryBJHint="禁用边界染色时边界为普通地形,不显示为黑色,但仍是不可通行的."
 
@@ -445,8 +441,6 @@ TimerDialogSetTitleColorBJHint="颜色格式为(红,绿,蓝). 透明度100%是�
 
 TimerDialogSetTimeColorBJHint="颜色格式为(红,绿,蓝). 透明度100%是不可见的."
 
-//TimerDialogSetSpeedBJ="Set Timer Window Speed"
-//TimerDialogSetSpeedBJ="Set the speed of ",~Timer Window," to be ",~Factor," times normal speed"
 //TimerDialogSetSpeedBJHint=
 
 
@@ -522,57 +516,57 @@ SetWaterDeformsHint="开启时当发生地形变化时水面高度也会随着�
 SetTerrainTypeBJHint="地形样式-1表示随机样式. 范围即地形编辑器中的刷子大小.1表示128x128范围"
 
 SetTerrainPathableBJHint="例:设置'建造'通行状态为开,则该点可以建造建筑. 一个单元点范围为32x32."
-SetWaterBaseColorBJHint="颜色格式为(红,绿,蓝)。100%透明的水完全不可见。此动作用于SD水面，对HD和DE水面同样有效，但建议在那些模式下使用覆盖选项。"
+SetWaterBaseColorBJHint="颜色格式为(红,绿,蓝).100%透明的水完全不可见.此动作用于SD水面,对HD和DE水面同样有效,但建议在那些模式下使用覆盖选项."
 
-SetHDWaterParamsExBJHint="颜色值为(红、绿、蓝)。将覆盖设为关闭会禁用颜色行为。仅对高清版和决定版水体有效。如需进一步调整单项参数，请使用其它动作。"
+SetHDWaterParamsExBJHint="颜色值为(红、绿、蓝).将覆盖设为关闭会禁用颜色行为.仅对高清版和决定版水体有效.如需进一步调整单项参数,请使用其它动作."
 
-BlzSetHDWaterColorBJHint="颜色值为(红、绿、蓝)。该动作会自动启用颜色覆盖。仅对高清版和决定版水体有效。它会覆盖由「设置水体着色」动作设定的着色。"
+BlzSetHDWaterColorBJHint="颜色值为(红、绿、蓝).该动作会自动启用颜色覆盖.仅对高清版和决定版水体有效.它会覆盖由「设置水体着色」动作设定的着色."
 
-BlzSetHDWaterColorOverrideBJHint="该动作不会改变实际颜色值。仅对高清版和决定版水体有效。"
+BlzSetHDWaterColorOverrideBJHint="该动作不会改变实际颜色值.仅对高清版和决定版水体有效."
 
-BlzClearHDWaterColorOverrideBJHint="该动作不会改变实际颜色值。仅对高清版和决定版水体有效。"
+BlzClearHDWaterColorOverrideBJHint="该动作不会改变实际颜色值.仅对高清版和决定版水体有效."
 
-BlzSetHDWaterVertexDisplacementBJHint="仅对高清版和决定版水体有效。"
+BlzSetHDWaterVertexDisplacementBJHint="仅对高清版和决定版水体有效."
 
-BlzSetHDWaterMinOpacityBJHint="仅对高清版和决定版水体有效。"
+BlzSetHDWaterMinOpacityBJHint="仅对高清版和决定版水体有效."
 
-BlzSetHDWaterMaxOpacityBJHint="仅对高清版和决定版水体有效。"
+BlzSetHDWaterMaxOpacityBJHint="仅对高清版和决定版水体有效."
 
-BlzSetHDWaterReflectivityBJHint="仅对高清版和决定版水体有效。"
+BlzSetHDWaterReflectivityBJHint="仅对高清版和决定版水体有效."
 
-BlzSetHDWaterEmissivityBJHint="仅对高清版和决定版水体有效。"
+BlzSetHDWaterEmissivityBJHint="仅对高清版和决定版水体有效."
 
-BlzSetHDWaterEdgeSoftnessBJHint="仅对高清版和决定版水体有效。"
+BlzSetHDWaterEdgeSoftnessBJHint="仅对高清版和决定版水体有效."
 
-BlzSetHDWaterWaveStrengthBJHint="仅对高清版和决定版水体有效。"
+BlzSetHDWaterWaveStrengthBJHint="仅对高清版和决定版水体有效."
 
-BlzSetHDWaterEnvMapStrengthBJHint="仅对高清版和决定版水体有效。"
+BlzSetHDWaterEnvMapStrengthBJHint="仅对高清版和决定版水体有效."
 
-SetSkyModelHint="并非所有自定义模型都适合用作天空盒。"
+SetSkyModelHint="并非所有自定义模型都适合用作天空盒."
 
-SetTerrainFogExBJHint="颜色格式为(红,绿,蓝)。保留此版本仅为兼容旧版，建议改用单项参数设置动作。"
+SetTerrainFogExBJHint="颜色格式为(红,绿,蓝).保留此版本仅为兼容旧版,建议改用单项参数设置动作."
 
-BlzSetTerrainFogStyleBJHint="并非所有样式都兼容全部参数，请参考「地图选项」菜单。"
+BlzSetTerrainFogStyleBJHint="并非所有样式都兼容全部参数,请参考「地图选项」菜单."
 
-BlzSetTerrainFogZStartBJHint="仅对「线性」「高度」和「新指数型」样式生效。"
+BlzSetTerrainFogZStartBJHint="仅对「线性」「高度」和「新指数型」样式生效."
 
-BlzSetTerrainFogZEndBJHint="仅对「线性」「高度」和「新指数型」样式生效。"
+BlzSetTerrainFogZEndBJHint="仅对「线性」「高度」和「新指数型」样式生效."
 
-BlzSetTerrainFogDensityBJHint="仅对「指数型」和「新指数型」样式生效。"
+BlzSetTerrainFogDensityBJHint="仅对「指数型」和「新指数型」样式生效."
 
-BlzSetTerrainFogHeightStartBJHint="仅对「高度」样式生效。"
+BlzSetTerrainFogHeightStartBJHint="仅对「高度」样式生效."
 
-BlzSetTerrainFogHeightEndBJHint="仅对「高度」样式生效。"
+BlzSetTerrainFogHeightEndBJHint="仅对「高度」样式生效."
 
-BlzSetTerrainFogLinearStartBJHint="仅对「高度」样式生效。"
+BlzSetTerrainFogLinearStartBJHint="仅对「高度」样式生效."
 
-BlzSetTerrainFogLinearEndBJHint="仅对「高度」样式生效。"
+BlzSetTerrainFogLinearEndBJHint="仅对「高度」样式生效."
 
-BlzSetTerrainFogMaxLinearDensityBJHint="对所有迷雾样式均生效。"
+BlzSetTerrainFogMaxLinearDensityBJHint="对所有迷雾样式均生效."
 
-BlzSetTerrainFogDrawOverSkyBJHint="该效果会用迷雾覆盖天空盒。对所有迷雾样式均生效。"
+BlzSetTerrainFogDrawOverSkyBJHint="该效果会用迷雾覆盖天空盒.对所有迷雾样式均生效."
 
-BlzSetTerrainFogColorBJHint="颜色值为(红、绿、蓝)。对所有迷雾样式均生效。"
+BlzSetTerrainFogColorBJHint="颜色值为(红、绿、蓝).对所有迷雾样式均生效."
 
 ResetTerrainFogBJHint=
 
@@ -580,14 +574,14 @@ SetBlightRectBJHint=
 
 SetBlightRadiusLocBJHint=
 
-SetDayNightModelsHint="并非所有模型都适合用作昼夜模型。单位和地形可以共用同一个昼夜模型文件。"
+SetDayNightModelsHint="并非所有模型都适合用作昼夜模型.单位和地形可以共用同一个昼夜模型文件."
 
 // Text Tag actions
 CreateTextTagLocBJHint="颜色格式为(红,绿,蓝). 透明度100%是不可见的."
 
 CreateTextTagUnitBJHint="该方式创建的漂浮文字并不会跟随单位一起移动.  颜色格式为(红,绿,蓝). 透明度100%是不可见的."
 
-DestroyTextTagBJHint="游戏最多允许存在100个漂浮文字. 当超过范围时新创建的漂浮文字会直接替换最后一个漂浮文字,导致只能显示一个漂浮文字的状况. 所以请及时删除不再使用的漂浮文字."
+DestroyTextTagBJHint="游戏最多允许存在10K个漂浮文字. 当超过范围时会反复替换最后一个漂浮文字. 请及时删除不再使用的漂浮文字."
 
 ShowTextTagForceBJHint=
 
@@ -649,9 +643,9 @@ SaveGameHint=
 
 SetMaxCheckpointSavesHint=
 
-SaveGameCheckPointHint="本触发器会创建一个地图存档，并弹出一则“游戏保存中”的信息。"
+SaveGameCheckPointHint="本触发器会创建一个地图存档,并弹出一则“游戏保存中”的信息."
 
-SaveGameCheckPointBJHint="本触发器会创建一个地图存档，并弹出一则“到达检查点”的信息。上限为5个"
+SaveGameCheckPointBJHint="本触发器会创建一个地图存档,并弹出一则“到达检查点”的信息.上限为5个"
 
 LoadGameBJHint=
 
@@ -706,10 +700,10 @@ BlzStartRecordingHint=
 BlzEndRecordingHint=
 
 // Machinima API
-BlzHideCinematicPanelsHint="隐藏标题栏、字幕及头像框体。"
+BlzHideCinematicPanelsHint="隐藏标题栏、字幕及头像框体."
 
 // Game Cache actions
-InitGameCacheBJHint="游戏缓存可在不同地图之间、或同一地图的多次游戏之间存储数据。若指定文件不存在，将会被创建。"
+InitGameCacheBJHint="游戏缓存可在不同地图之间、或同一地图的多次游戏之间存储数据.若指定文件不存在,将会被创建."
 
 SaveGameCacheBJHint="只对单机游戏有效,保存缓存数据到本地硬盘,主要用来实现战役关卡间的数据传递."
 
@@ -734,7 +728,7 @@ FlushGameCacheBJHint="删除并清空该缓存的所有数据."
 FlushStoredMissionBJHint="清空该类别下的所有缓存数据."
 
 // Hashtable actions
-InitHashtableBJHint="您可以使用哈希表来储存临时数据，比缓存的效率要高"
+InitHashtableBJHint="您可以使用哈希表来储存临时数据,比缓存的效率要高"
 
 SaveRealBJHint="使用 '哈希表 - 从哈希表提取实数' 可以取出保存的值"
 
@@ -758,9 +752,7 @@ SaveAbilityHandleBJHint="使用 '哈希表 - 从哈希表提取技能' 可以取
 
 SaveTimerHandleBJHint="使用 '哈希表 - 从哈希表提取计时器' 可以取出保存的值"
 
-//SaveTriggerRegionHandleBJ="Save Region"
-//SaveTriggerRegionHandleBJ="Save Handle Of",~Region," as ",~Value," of ",~Value," in ",~Hashtable
-//SaveTriggerRegionHandleBJHint="Use the 'Hashtable - Load Region' actions to load this region from a hashtable."
+SaveTriggerRegionHandleBJHint="使用 '哈希表 - 从哈希表提取矩形区域' 可以取出保存的值"
 
 SaveTriggerHandleBJHint="使用 '哈希表 - 从哈希表提取触发器' 可以取出保存的值"
 
@@ -782,18 +774,12 @@ SaveRectHandleBJHint="使用 '哈希表 - 从哈希表提取区域(矩型)' 可�
 
 SaveBooleanExprHandleBJHint="使用 '哈希表 - 从哈希表提取布尔表达式' 可以取出保存的值"
 
-//SaveConditionFuncHandleBJ="Save Conditionfunc Handle"
-//SaveConditionFuncHandleBJ="Save Handle Of",~Conditionfunc," as ",~Value," of ",~Value," in ",~Hashtable
 //SaveConditionFuncHandleBJHint="Use the 'Hashtable - Load Conditionfunc' actions to load this conditionfunc from a hashtable."
 
-//SaveFilterFuncHandleBJ="Save Filterfunc Handle"
-//SaveFilterFuncHandleBJ="Save Handle Of",~Filterfunc," as ",~Value," of ",~Value," in ",~Hashtable
 //SaveFilterFuncHandleBJHint="Use the 'Hashtable - Load Filterfunc' actions to load this filterfunc from a hashtable."
 
 SaveSoundHandleBJHint="使用 '哈希表 - 从哈希表提取音效' 可以取出保存的值"
 
-//SaveRaceHandleBJ="Save Race Handle"
-//SaveRaceHandleBJ="Save Handle Of",~Race," as ",~Value," of ",~Value," in ",~Hashtable
 //SaveRaceHandleBJHint="Use the 'Hashtable - Load Race' actions to load this race from a hashtable."
 
 SaveEffectHandleBJHint="使用 '哈希表 - 从哈希表提取特效' 可以取出保存的值"
@@ -824,12 +810,8 @@ SaveDialogHandleBJHint="使用 '哈希表 - 从哈希表提取对话框' 可以�
 
 SaveButtonHandleBJHint="使用 '哈希表 - 从哈希表提取对话框按钮' 可以取出保存的值"
 
-//SaveVersionHandleBJ="Save Version Handle"
-//SaveVersionHandleBJ="Save Handle Of",~Version," as ",~Value," of ",~Value," in ",~Hashtable
 //SaveVersionHandleBJHint="Use the 'Hashtable - Load Version' actions to load this version from a hashtable."
 
-//SaveItemTypeHandleBJ="Save Itemtype Handle"
-//SaveItemTypeHandleBJ="Save Handle Of",~Itemtype," as ",~Value," of ",~Value," in ",~Hashtable
 //SaveItemTypeHandleBJHint="Use the 'Hashtable - Load Itemtype' actions to load this itemtype from a hashtable."
 
 SaveTextTagHandleBJHint="使用 '哈希表 - 从哈希表提取漂浮文字' 可以取出保存的值"
@@ -887,13 +869,13 @@ UnitUseItemDestructableHint=
 
 UnitUseItemHint=
 
-AllowHeroGlowOnUnitBJHint="如果单位模型本身不自带英雄光晕，该动作不会产生任何效果。"
+AllowHeroGlowOnUnitBJHint="如果单位模型本身不自带英雄光晕,该动作不会产生任何效果."
 
-DisallowHeroGlowOnUnitBJHint="如果单位模型本身不自带英雄光晕，该动作不会产生任何效果。"
+DisallowHeroGlowOnUnitBJHint="如果单位模型本身不自带英雄光晕,该动作不会产生任何效果."
 
-AllowHeroGlowOnAllUnitsBJHint="如果单位模型本身不自带英雄光晕，该动作不会产生任何效果。"
+AllowHeroGlowOnAllUnitsBJHint="如果单位模型本身不自带英雄光晕,该动作不会产生任何效果."
 
-DisallowHeroGlowOnAllUnitsBJHint="如果单位模型本身不自带英雄光晕，该动作不会产生任何效果。"
+DisallowHeroGlowOnAllUnitsBJHint="如果单位模型本身不自带英雄光晕,该动作不会产生任何效果."
 
 // Item actions
 CreateItemLocHint=
@@ -997,7 +979,7 @@ MeleeGrantHeroItemsHint=
 
 MeleeStartingResourcesHint=
 
-MeleeClearExcessUnitsHint="移除每个已使用起始点周围1024范围内的所有中立敌对单位，以及非建筑的中立被动单位。"
+MeleeClearExcessUnitsHint="移除每个已使用起始点周围1024范围内的所有中立敌对单位,以及非建筑的中立被动单位."
 
 MeleeStartingUnitsHint=
 
@@ -1005,7 +987,7 @@ MeleeStartingAIHint="动作运行之前玩家要有初始单位和资源."
 
 MeleeInitVictoryDefeatHint="动作运行之前玩家要有单位."
 
-MeleeStartingUnitsForPlayerHint="该动作创建的初始单位与对战游戏相同。"
+MeleeStartingUnitsForPlayerHint="该动作创建的初始单位与对战游戏相同."
 
 
 // Multiboard actions
@@ -1091,15 +1073,15 @@ SetPlayerTaxRateBJHint="缴纳所得税所损失的资源可以通过'玩家得�
 
 EnableCreepSleepBJHint="只影响夜晚的睡眠. 不影响催眠魔法."
 
-SetPlayerAllianceStateBJHint="注意中立玩家槽位无法共享视野。"
+SetPlayerAllianceStateBJHint="注意中立玩家槽位无法共享视野."
 
-SetPlayerAllianceBJHint="该动作只修改玩家联盟状态的某一方面，其余保持不变。注意中立玩家槽位无法共享视野。"
+SetPlayerAllianceBJHint="该动作只修改玩家联盟状态的某一方面,其余保持不变.注意中立玩家槽位无法共享视野."
 
 SetPlayerAbilityAvailableBJHint="设置玩家能否使用该技能."
 
 SetPlayerUnitAvailableBJHint="设置玩家能否建造该单位."
 
-SetPlayerUnitMaxAllowedHint="限制为-1表示可无限训练该单位类型，0表示无法训练。"
+SetPlayerUnitMaxAllowedHint="限制为-1表示可无限训练该单位类型,0表示无法训练."
 
 SetPlayerMaxHeroesAllowedHint="-1为无限制,0为不能生产."
 
@@ -1129,9 +1111,9 @@ ForceRemovePlayerSimpleHint="并不影响玩家本身."
 
 ForceClearHint="并不影响玩家本身."
 
-SetForceAllianceStateBJHint="注意中立玩家槽位无法共享视野。"
+SetForceAllianceStateBJHint="注意中立玩家槽位无法共享视野."
 
-DestroyForceHint="该动作会销毁玩家组变量，之后必须重新赋值才能使用。对函数的返回值使用该动作无效。可用它来清理泄漏的玩家组。"
+DestroyForceHint="该动作会销毁玩家组变量,之后必须重新赋值才能使用.对函数的返回值使用该动作无效.可用它来清理泄漏的玩家组."
 
 // Quest actions
 QuestMessageBJHint=
@@ -1190,13 +1172,13 @@ SelectGroupBJHint="使所有玩家取消选择所有单位,并选择单位组中
 
 SelectUnitSingleHint="使玩家取消选择所有已选单位,并选择该单位."
 
-SelectUnitAddHint="在保留当前选择的基础上追加选择指定单位。"
+SelectUnitAddHint="在保留当前选择的基础上追加选择指定单位."
 
-SelectUnitRemoveHint="取消选择指定单位，保留当前其余选择。"
+SelectUnitRemoveHint="取消选择指定单位,保留当前其余选择."
 
 
 // Sound actions
-PlaySoundBJHint="地图初始化时不能播放声音。可使用声音编辑器创建声音变量并为其设定淡入率。注意，3D音效必须指定地点才能播放。"
+PlaySoundBJHint="地图初始化时不能播放声音.可使用声音编辑器创建声音变量并为其设定淡入率.注意,3D音效必须指定地点才能播放."
 
 PlaySoundAtPointBJHint="音效不能在地图初始化时播放. 该动作只能用于播放3D音效."
 
@@ -1234,7 +1216,7 @@ SetMapMusicIndexedBJHint="可指定播放文件或播放目录."
 
 SetMapMusicRandomBJHint="可指定播放文件或播放目录."
 
-ClearMapMusicBJHint="清空音乐列表后，当前音乐播放完毕将不再播放新音乐。"
+ClearMapMusicBJHint="清空音乐列表后,当前音乐播放完毕将不再播放新音乐."
 
 PlayMusicBJHint=
 
@@ -1258,15 +1240,15 @@ SetThematicMusicOffsetBJHint=
 
 VolumeGroupSetVolumeBJHint=
 
-SetCineModeVolumeGroupsBJHint="使用与'过场动画 - 过场动画模式'动作相同的音量通道设置。"
+SetCineModeVolumeGroupsBJHint="使用与'过场动画 - 过场动画模式'动作相同的音量通道设置."
 
 SetSpeechVolumeGroupsBJHint="语音模式即电影的播送单位消息功能."
 
 VolumeGroupResetBJHint=
 
-SetSoundFacialAnimationLabelActionHint="标签通常是该动画所基于的声音文件的名称。"
+SetSoundFacialAnimationLabelActionHint="标签通常是该动画所基于的声音文件的名称."
 
-SetSoundFacialAnimationGroupLabelActionHint="组标签通常为 BaseSD（基于单位语音的动画）或 Map（基于战役对话的动画）。"
+SetSoundFacialAnimationGroupLabelActionHint="组标签通常为 BaseSD(基于单位语音的动画)或 Map(基于战役对话的动画)."
 
 SetSoundFacialAnimationSetFilepathActionHint="文件路径的扩展名为 .animset"
 
@@ -1277,16 +1259,16 @@ AddSpecialEffectTargetUnitBJHint=
 
 DestroyEffectBJHint=
 
-DestroyEffectAfterTimeBJHint="特效会在时间结束后被移除。"
+DestroyEffectAfterTimeBJHint="特效会在时间结束后被移除."
 
-RemoveEffectBJHint="移除特效会立即生效，不播放动画。"
+RemoveEffectBJHint="移除特效会立即生效,不播放动画."
 
-RemoveEffectAfterTimeBJHint="特效在经过指定时间后被移除。"
+RemoveEffectAfterTimeBJHint="特效在经过指定时间后被移除."
 
 // Trigger actions
-DisableTriggerHint="不会中断触发器正在进行的执行，但会阻止其今后再次执行。"
+DisableTriggerHint="不会中断触发器正在进行的执行,但会阻止其今后再次执行."
 
-EnableTriggerHint="允许触发器被执行。"
+EnableTriggerHint="允许触发器被执行."
 
 ConditionalTriggerExecuteHint="如果其触发条件成立则运行触发动作."
 
@@ -1296,7 +1278,7 @@ QueuedTriggerAddBJHint="个人认为触发队列属于没用的功能."
 
 QueuedTriggerRemoveBJHint="如果触发正在运行,从队列移出该单位将允许后面的触发运行,但不影响本身的动作."
 
-QueuedTriggerClearBJHint="从触发器队列中移除所有触发器。"
+QueuedTriggerClearBJHint="从触发器队列中移除所有触发器."
 
 QueuedTriggerClearInactiveBJHint="只有正在运行的触发不会被移出队列."
 
@@ -1330,7 +1312,7 @@ BlzShowUnitTeamGlowHint="显示/隐藏单位的队伍光晕"
 
 SetUnitOwnerHint=
 
-UnitShareVisionBJHint="注意中立玩家槽位无法共享视野。"
+UnitShareVisionBJHint="注意中立玩家槽位无法共享视野."
 
 SetUnitPositionLocHint=
 
@@ -1398,7 +1380,7 @@ BlzSetUnitMaxManaHint=
 
 BlzSetUnitBaseDamageHint=
 
-BlzSetUnitDiceNumberHint="5"
+BlzSetUnitDiceNumberHint=
 
 BlzSetUnitDiceSidesHint=
 
@@ -1408,11 +1390,9 @@ BlzSetUnitNameHint=
 
 BlzSetUnitSkinHint=
 
-// BlzSetDestructableSkin="Set Destructable Skin"
-// BlzSetDestructableSkin="Set Destructable Skin of ",~Destructable," to ",~Value
-// BlzSetDestructableSkinHint=
+BlzSetDestructableSkinHint=
 
-BlzSetHeroProperNameHint="设置英雄的称谓（例如，圣骑士的“格拉尼丝黑锤”）."
+BlzSetHeroProperNameHint="设置英雄的称谓(例如,圣骑士的“格拉尼丝黑锤”)."
 
 BlzSetUnitArmorHint=
 
@@ -1420,9 +1400,9 @@ BlzUnitHideAbilityHint=
 
 BlzUnitDisableAbilityHint=
 
-BlzUnitEnableAurasHint="如果光环技能此前已被禁用，而此处又执行了一次禁用，则需要连续启用两次才能恢复。在过场动画期间移除光环效果时非常有用。"
+BlzUnitEnableAurasHint="如果光环技能此前已被禁用,而此处又执行了一次禁用,则需要连续启用两次才能恢复.在过场动画期间移除光环效果时非常有用."
 
-BlzAllUnitsEnableAurasBJHint="如果光环技能此前已被禁用，而此处又执行了一次禁用，则需要连续启用两次才能恢复。在过场动画期间移除光环效果时非常有用。"
+BlzAllUnitsEnableAurasBJHint="如果光环技能此前已被禁用,而此处又执行了一次禁用,则需要连续启用两次才能恢复.在过场动画期间移除光环效果时非常有用."
 
 BlzUnitCancelTimedLifeHint=
 
@@ -1454,19 +1434,17 @@ BlzSpecialEffectClearSubAnimationsHint="清除所有次级动画"
 
 BlzSpecialEffectRemoveSubAnimationHint="移除特效的次级动画"
 
-BlzSpecialEffectAddSubAnimationHint="为特效添加次级动画，使其在播放时与主动画组合。"
+BlzSpecialEffectAddSubAnimationHint="为特效添加次级动画,使其在播放时与主动画组合."
 
-BlzPlaySpecialEffectHint="以指定动画播放特效（部分动画仅对特定特效生效）"
+BlzPlaySpecialEffectHint="以指定动画播放特效(部分动画仅对特定特效生效)"
 
-BlzSetSpecialEffectAnimationHint="按名称播放特殊效果的指定动画（部分动画只对某些特殊效果有效）。"
+BlzSetSpecialEffectAnimationHint="按名称播放特殊效果的指定动画(部分动画只对某些特殊效果有效)."
 
-BlzQueueSpecialEffectAnimationHint="排队的动画会在上一个动画播放完毕后播放。"
+BlzQueueSpecialEffectAnimationHint="排队的动画会在上一个动画播放完毕后播放."
 
-BlzSetSpecialEffectAnimationBlendTimeHint="特效的混合时间决定特效动画之间切换的快慢。"
- 
-// BlzPlaySpecialEffectWithTimeScale="Play Special Effect Animation with Time Scale"
-// BlzPlaySpecialEffectWithTimeScale="Play Special Effect: ",~Effect,", Animation: "~Value,", Time Scale: "~Value
-// BlzPlaySpecialEffectWithTimeScaleHint="Play Special Effect with Specific Animation (Some animations will only apply to certain special effects) with time scale"
+BlzSetSpecialEffectAnimationBlendTimeHint="特效的混合时间决定特效动画之间切换的快慢."
+
+BlzPlaySpecialEffectWithTimeScaleHint="以时间缩放播放带有特定动画的特殊效果(某些动画仅适用于特定的特殊效果)"
 
 BlzSetSpecialEffectHeightHint=
 
@@ -1485,7 +1463,7 @@ BlzSetSpecialEffectTimeHint=
 
 SetUnitInvulnerableHint=
 
-PauseUnitBJHint="被暂停的单位会停止行动并不再执行命令，但会记住当前命令，解除暂停后继续执行。"
+PauseUnitBJHint="被暂停的单位会停止行动并不再执行命令,但会记住当前命令,解除暂停后继续执行."
 
 PauseAllUnitsBJHint="该动作只作用于当前存在于地图的单位. 对于之后创建或复活的单位并不会受到影响."
 
@@ -1495,7 +1473,7 @@ UnitApplyTimedLifeBJHint=
 
 SetUnitExplodedBJHint=
 
-UnitSuspendDecayBJHint="只对已完成死亡动作的尸体有效. 该函数有Bug,不能恢复尸体腐烂状态,请使用新加函数."
+UnitSuspendDecayBJHint="只对已完成死亡动作的尸体有效,不能恢复尸体腐烂状态"
 
 UnitResetCooldownHint="如果要重置单一技能的CD,可以通过删除技能+添加技能+设置技能等级来完成."
 
@@ -1515,7 +1493,7 @@ RescueUnitBJHint=
 
 MakeUnitRescuableToForceBJHint=
 
-SetUnitRescueRangeHint="要使单位可被救援，可使用'单位 - 设为可救援'动作或将单位所有者设为'可救援'。"
+SetUnitRescueRangeHint="要使单位可被救援,可使用'单位 - 设为可救援'动作或将单位所有者设为'可救援'."
 
 SetRescueUnitColorChangeBJHint="默认情况单位被营救时会改变颜色. 不影响已经被营救的单位."
 
@@ -1525,15 +1503,15 @@ SetUnitUseFoodBJHint=
 
 SetUnitFacingToFaceUnitTimedHint="只是面向当前单位所在点而已. 并不会因为单位位置改变而改变目标位置."
 
-SetUnitFacingToFaceLocTimedHint="强制单位面向某点。仅当该单位当时未移动时有效。"
+SetUnitFacingToFaceLocTimedHint="强制单位面向某点.仅当该单位当时未移动时有效."
 
 SetUnitFacingTimedHint="面向角度采用角度制,0度为正东方向,90度为正北方向."
 
-SetUnitMoveSpeedHint="常见移动速度范围为150到300。"
+SetUnitMoveSpeedHint="常见移动速度范围为150到300."
 
 SetUnitPathingHint="关闭碰撞的单位无视障碍物,但其他单位仍视其为障碍物."
 
-SetUnitAcquireRangeBJHint="单位的获取范围指其主动搜索并攻击目标的距离。"
+SetUnitAcquireRangeBJHint="单位的获取范围指其主动搜索并攻击目标的距离."
 
 SetUnitUserDataHint="单位自定义值仅用于触发器. 可用来给单位绑定一个整型数据."
 
@@ -1545,7 +1523,7 @@ UnitRemoveBuffBJHint=
 
 UnitAddAbilityBJHint=
 
-UnitRemoveAbilityBJHint="大多数情况下，以这种方式移除的技能是永久性的。"
+UnitRemoveAbilityBJHint="大多数情况下,以这种方式移除的技能是永久性的."
 
 UnitAddTypeBJHint="并非所有类别都是可以添加的,建议使用新函数."
 
@@ -1565,7 +1543,7 @@ IssueBuildOrderByIdLocBJHint=
 
 IssueTrainOrderByIdBJHint="该升级是指A单位升级为B单位,而不是科技升级."
 
-IssueUpgradeOrderByIdBJHint="通过该触发动作可以多次研究武器和护甲升级。"
+IssueUpgradeOrderByIdBJHint="通过该触发动作可以多次研究武器和护甲升级."
 
 UnitDropItemPointLocHint=
 
@@ -1577,9 +1555,9 @@ UnitDamagePointLocHint="该动作不会打断单位动作. 由该动作伤害/�
 
 UnitDamageTargetBJHint="该动作不会打断单位动作. 由该动作伤害/杀死单位同样正常触发'受到伤害'和'死亡'单位事件."
 
-UnitHealBJHint="使用该单位自身的治疗加成。"
+UnitHealBJHint="使用该单位自身的治疗加成."
 
-UnitHealFromOtherBJ="使用来源单位的治疗加成。"
+UnitHealFromOtherBJ="使用来源单位的治疗加成."
 
 DecUnitAbilityLevelSwappedHint="单位没有该技能则不做动作. 最低只能降到1级."
 
@@ -1656,17 +1634,17 @@ BlzSetUnitWeaponRealFieldBJHint=
 BlzSetUnitWeaponStringFieldBJHint=
 
 // Unit Group actions
-ForGroupMultipleHint="使用'选取单位'来指代每个被选取的单位。对单位组内每个单位都会运行一次动作（包括死亡单位）。等待动作不能在该函数中使用。在主显示区中为本函数添加动作。受'设置下次销毁'影响。"
+ForGroupMultipleHint="使用'选取单位'来指代每个被选取的单位.对单位组内每个单位都会运行一次动作(包括死亡单位).等待动作不能在该函数中使用.在主显示区中为本函数添加动作.受'设置下次销毁'影响."
 
-ForGroupHint="使用'选取单位'来指代每个被选取的单位。对单位组内每个单位都会运行一次动作（包括死亡单位）。等待动作不能在该函数中使用。受'设置下次销毁'影响。"
+ForGroupHint="使用'选取单位'来指代每个被选取的单位.对单位组内每个单位都会运行一次动作(包括死亡单位).等待动作不能在该函数中使用.受'设置下次销毁'影响."
 
 GroupAddUnitSimpleHint="并不影响单位本身."
 
-GroupAddGroupHint="将一个单位组中的所有单位添加到单位组变量中，并不影响单位本身。第一个单位组受'设置下次销毁'影响。"
+GroupAddGroupHint="将一个单位组中的所有单位添加到单位组变量中,并不影响单位本身.第一个单位组受'设置下次销毁'影响."
 
 GroupRemoveUnitSimpleHint="并不影响单位本身."
 
-GroupRemoveGroupHint="从单位组变量中移除另一单位组中的所有单位，并不影响单位本身。第一个单位组受'设置下次销毁'影响。"
+GroupRemoveGroupHint="从单位组变量中移除另一单位组中的所有单位,并不影响单位本身.第一个单位组受'设置下次销毁'影响."
 
 GroupClearHint="并不影响单位本身."
 
@@ -1680,13 +1658,13 @@ GroupTargetItemOrderHint="最多只能对单位组中12个单位发布命令."
 
 GroupImmediateOrderHint="最多只能对单位组中12个单位发布命令."
 
-GroupTrainOrderByIdBJHint="该动作也可用于命令单位自我升级（例如命令城镇大厅训练主城堡即可完成升级）。最多只能对单位组中12个单位发布命令。"
+GroupTrainOrderByIdBJHint="该动作也可用于命令单位自我升级(例如命令城镇大厅训练主城堡即可完成升级).最多只能对单位组中12个单位发布命令."
 
-DestroyGroupHint="该动作会销毁单位组变量，之后必须重新赋值才能使用。对函数的返回值使用该动作无效。可用它来清理泄漏的单位组。"
+DestroyGroupHint="该动作会销毁单位组变量,之后必须重新赋值才能使用.对函数的返回值使用该动作无效.可用它来清理泄漏的单位组."
  
-SetWantDestroyGroupBJHint="请查阅各个动作/函数以确认受影响的单位组。该行为只作用于下一个引用，之后会自动清除。"
+SetWantDestroyGroupBJHint="请查阅各个动作/函数以确认受影响的单位组.该行为只作用于下一个引用,之后会自动清除."
 
-ClearWantDestroyGroupBJHint="请注意，如果单位组通过「设置下次销毁」动作被销毁，该状态会自动清除。在使用受影响的动作之后调用此函数，可确保「设置下次销毁」不会误作用于不需要的单位组。"
+ClearWantDestroyGroupBJHint="请注意,如果单位组通过「设置下次销毁」动作被销毁,该状态会自动清除.在使用受影响的动作之后调用此函数,可确保「设置下次销毁」不会误作用于不需要的单位组."
 
 // Ubersplat actions
 CreateUbersplatBJHint="颜色格式为(红,绿,蓝). 透明度100%是不可见的. 使用'地面纹理变化 - 设置永久渲染状态' 来显示创建的纹理变化. 暂停状态表示动画播放完毕后是否继续保留该纹理变化."
@@ -1723,17 +1701,11 @@ FogModifierStopHint=
 
 DestroyFogModifierHint=
 
-
 // Obsolete actions
-//AddPerfLogLabel="** AddPerfLogLabel **"
-//AddPerfLogLabel="** AddPerfLogLabel(",~Label,") **"
+
 //AddPerfLogLabelHint="** This is for debugging purposes only - remove before ship. **"
 
-//Cheat="** Cheat **"
-//Cheat="** Cheat(",~Label,") **"
 //CheatHint="** This is for debugging purposes only - remove before ship. **"
-
-
 
 //***************************************************************************
 [TriggerCallStrings]
@@ -1744,11 +1716,11 @@ ParseTagsHint="用标签解析字符串"
 // returns boolean
 SetSoundFacialAnimationLabelHint="设置面部动画标签"
 
-SetSoundFacialAnimationGroupLabelHint="组标签通常为BaseSD（基于单位语音的动画）或Map（基于战役对话的动画）。"
+SetSoundFacialAnimationGroupLabelHint="组标签通常为BaseSD(基于单位语音的动画)或Map(基于战役对话的动画)."
 
 SetSoundFacialAnimationSetFilepathHint="设置面部动画标签"
 
-BlzIsTargetIndicatorEnabledHint="目标指示器通常用于过场动画对话，以闪烁圆圈标明当前发言者。"
+BlzIsTargetIndicatorEnabledHint="目标指示器通常用于过场动画对话,以闪烁圆圈标明当前发言者."
 
 SkinManagerGetLocalPathHint=
 
@@ -1762,7 +1734,7 @@ IsPointBlightedBJHint=
 
 IsTerrainPathableBJHint="指定类型单位不能通行即通行状态为关闭. 如该点不能造建筑就是'建造'通行状态为关闭. 可使用'环境 - 设置地形通行状态'来改变通行状态."
 
-BlzIsTerrainPathableExhint="效果与「地形通行性关闭」动作完全相同，但会额外考虑单位和可破坏物的存在。"
+BlzIsTerrainPathableExhint="效果与「地形通行性关闭」动作完全相同,但会额外考虑单位和可破坏物的存在."
 
 IsMapFlagSetHint=
 
@@ -1876,11 +1848,11 @@ IsUnitEnemyHint="不包括中立状态. 单向判断玩家对单位是否为敌�
 
 UnitHasBuffBJHint=
 
-IsUnitGroupEmptyBJHint="单位组内没有任何单位时为真。受'设置下次销毁'影响。"
+IsUnitGroupEmptyBJHint="单位组内没有任何单位时为真.受'设置下次销毁'影响."
 
-IsUnitGroupInRectBJHint="单位组内所有单位都在指定区域内时为真。"
+IsUnitGroupInRectBJHint="单位组内所有单位都在指定区域内时为真."
 
-IsUnitGroupDeadBJHint="单位组内所有单位都死亡时为真。受'设置下次销毁'影响。"
+IsUnitGroupDeadBJHint="单位组内所有单位都死亡时为真.受'设置下次销毁'影响."
 
 IsFogEnabledHint=
 
@@ -2003,7 +1975,7 @@ R2IHint=
 
 S2IHint=
 
-BlzS2FourCCHint="将字符串转换为四字符代码（FourCC）整数"
+BlzS2FourCCHint="将字符串转换为四字符代码(FourCC)整数"
 
 GetElevatorHeightHint="可以使用'可破坏物 - 设置升降机高度'来设置升降机高度."
 
@@ -2055,11 +2027,11 @@ IMinBJHint=
 
 IMaxBJHint=
 
-IAbsBJHint="计算一个数的绝对值。"
+IAbsBJHint="计算一个数的绝对值."
 
-ISignBJHint="计算一个数的符号。负数为-1，非负数为1。"
+ISignBJHint="计算一个数的符号.负数为-1,非负数为1."
 
-ModuloIntegerHint="计算除法的余数。例: 12 mod 5 = 2。"
+ModuloIntegerHint="计算除法的余数.例: 12 mod 5 = 2."
 
 MultiboardGetRowCountHint=
 
@@ -2079,9 +2051,9 @@ GetPlayerStructureCountHint=
 
 GetPlayerUnitCountHint=
 
-GetPlayerTechCountSimpleHint="普通科技返回0或1，三段升级科技返回0到3。"
+GetPlayerTechCountSimpleHint="普通科技返回0或1,三段升级科技返回0到3."
 
-GetPlayerTechMaxAllowedSwapHint="普通科技返回0或1，三段升级科技返回0到3。"
+GetPlayerTechMaxAllowedSwapHint="普通科技返回0或1,三段升级科技返回0到3."
 
 GetPlayerTeamHint="错误函数."
 
@@ -2089,7 +2061,7 @@ CountPlayersInForceBJHint=
 
 BlzGetTriggerPlayerMouseButtonHint=
 
-CountUnitsInGroupHint="受'设置下次销毁'影响。"
+CountUnitsInGroupHint="受'设置下次销毁'影响."
 
 CountLivingPlayerUnitsOfTypeIdHint=
 
@@ -2159,8 +2131,6 @@ BlzGetUnitSkinHint=
 
 BlzGetItemSkinHint=
 
-// BlzGetDestructableSkin="Skin"
-// BlzGetDestructableSkin="Skin ID of ",~Destructable
 // BlzGetDestructableSkinHint=
 
 // returns real
@@ -2202,9 +2172,9 @@ TimerGetRemainingHint=
 
 TimerGetTimeoutHint=
 
-GetDestructableLifeHint="可破坏物被攻击或采集时会损失生命值。与单位一样，生命值降为0时死亡。"
+GetDestructableLifeHint="可破坏物被攻击或采集时会损失生命值.与单位一样,生命值降为0时死亡."
 
-GetDestructableMaxLifeHint="可破坏物被攻击或采集时会损失生命值。与单位一样，生命值降为0时死亡。"
+GetDestructableMaxLifeHint="可破坏物被攻击或采集时会损失生命值.与单位一样,生命值降为0时死亡."
 
 GetDestructableOccluderHeightHint=
 
@@ -2240,9 +2210,7 @@ LoadAbilityHandleBJHint="如果不存在则返回空"
 
 LoadTimerHandleBJHint="如果不存在则返回空"
 
-///LoadTriggerRegionHandleBJ="Load Region Handle"
-///LoadTriggerRegionHandleBJ="Load ",~Value," of ",~Value," in ",~Hashtable
-///LoadTriggerRegionHandleBJHint="If the label is not found, this function returns NULL."
+LoadTriggerRegionHandleBJHint="如果不存在则返回空"
 
 LoadTriggerHandleBJHint="如果不存在则返回空"
 
@@ -2264,19 +2232,13 @@ LoadRectHandleBJHint="如果不存在则返回空"
 
 LoadBooleanExprHandleBJHint="如果不存在则返回空"
 
-//LoadConditionFuncHandleBJ="Load Conditionfunc Handle"
-//LoadConditionFuncHandleBJ="Load ",~Value," of ",~Value," in ",~Hashtable
-//LoadConditionFuncHandleBJHint="If the label is not found, this function returns NULL."
+LoadConditionFuncHandleBJHint="如果不存在则返回空"
 
-//LoadFilterFuncHandleBJ="Load Filterfunc Handle"
-//LoadFilterFuncHandleBJ="Load ",~Value," of ",~Value," in ",~Hashtable
-//LoadFilterFuncHandleBJHint="If the label is not found, this function returns NULL."
+LoadFilterFuncHandleBJHint="如果不存在则返回空"
 
 LoadSoundHandleBJHint="如果不存在则返回空"
 
-//LoadRaceHandleBJ="Load Race Handle"
-//LoadRaceHandleBJ="Load ",~Value," of ",~Value," in ",~Hashtable
-//LoadRaceHandleBJHint="If the label is not found, this function returns NULL."
+LoadRaceHandleBJHint="如果不存在则返回空"
 
 LoadEffectHandleBJHint="如果不存在则返回空"
 
@@ -2304,13 +2266,9 @@ LoadDialogHandleBJHint="如果不存在则返回空"
 
 LoadButtonHandleBJHint="如果不存在则返回空"
 
-//LoadVersionHandleBJ="Load Version Handle"
-//LoadVersionHandleBJ="Load ",~Value," of ",~Value," in ",~Hashtable
-//LoadVersionHandleBJHint="If the label is not found, this function returns NULL."
+LoadVersionHandleBJHint="如果不存在则返回空"
 
-//LoadItemTypeHandleBJ="Load Itemtype Handle"
-//LoadItemTypeHandleBJ="Load ",~Value," of ",~Value," in ",~Hashtable
-//LoadItemTypeHandleBJHint="If the label is not found, this function returns NULL."
+LoadItemTypeHandleBJHint="如果不存在则返回空"
 
 LoadTextTagHandleBJHint="如果不存在则返回空"
 
@@ -2340,19 +2298,19 @@ GetRandomDirectionDegHint="0-360的随机实数. 建议直接用随即实数来�
 
 GetRandomPercentageBJHint="0-100的随机实数. 建议直接用随即实数来做."
 
-DistanceBetweenPointsHint="返回两点间的欧几里得距离（忽略高度）。"
+DistanceBetweenPointsHint="返回两点间的欧几里得距离(忽略高度)."
 
-AngleBetweenPointsHint="返回从一点指向另一点的直线的角度。"
+AngleBetweenPointsHint="返回从一点指向另一点的直线的角度."
 
 RMinBJHint=
 
 RMaxBJHint=
 
-RAbsBJHint="计算一个数的绝对值。"
+RAbsBJHint="计算一个数的绝对值."
 
-RSignBJHint="计算一个数的符号。负数为-1，非负数为1。"
+RSignBJHint="计算一个数的符号.负数为-1,非负数为1."
 
-ModuloRealHint="计算除法的余数。例: 9.0 mod 2.5 = 1.5。"
+ModuloRealHint="计算除法的余数.例: 9.0 mod 2.5 = 1.5."
 
 PowHint=
 
@@ -2372,7 +2330,7 @@ AtanBJHint="采用角度制计算. 返回角度取值-90 — 90."
 
 Atan2BJHint="采用角度制计算. 返回角度取值-90 — 90."
 
-GetPlayerHandicapReviveTimeBJHint="复活速度用百分比表示，正常值为100%。"
+GetPlayerHandicapReviveTimeBJHint="复活速度用百分比表示,正常值为100%."
 
 GetPlayerHandicapXPBJHint="百分比数值, 默认值为100."
 
@@ -2402,7 +2360,7 @@ GetRectHeightBJHint=
 
 GetSoundDurationBJHint="单位为秒."
 
-GetSoundFileDurationBJHint="返回音乐文件的时长，单位为秒。"
+GetSoundFileDurationBJHint="返回音乐文件的时长,单位为秒."
 
 GetUnitStateSwapHint=
 
@@ -2412,9 +2370,9 @@ GetUnitManaPercentHint=
 
 GetUnitFacingHint="采用角度制. 0度为正东方向, 90度为正北方向."
 
-GetUnitMoveSpeedHint="常见移动速度范围为150到300。"
+GetUnitMoveSpeedHint="常见移动速度范围为150到300."
 
-GetUnitDefaultMoveSpeedHint="常见移动速度范围为150到300。"
+GetUnitDefaultMoveSpeedHint="常见移动速度范围为150到300."
 
 GetUnitAcquireRangeHint=
 
@@ -2487,7 +2445,7 @@ BlzFourCC2SHint="将四字符码转换为字符串"
 
 StringIdentityHint="获取GlobalStrings.fdf中定义的字符串."
 
-StringCaseHint="字符串中的所有字母将被转换为选定的大小写。"
+StringCaseHint="字符串中的所有字母将被转换为选定的大小写."
 
 GetDestructableNameHint=
 
@@ -2537,9 +2495,9 @@ MultiboardGetTitleTextHint=
 
 GetPlayerNameHint=
 
-GetTriggerNameHint="返回包含该函数的触发器在编辑器中输入的名称。"
+GetTriggerNameHint="返回包含该函数的触发器在编辑器中输入的名称."
 
-GetUnitNameHint="返回单位的内部名称，而非单位或英雄的专属名称。"
+GetUnitNameHint="返回单位的内部名称,而非单位或英雄的专属名称."
 
 BlzGetAbilityStringFieldHint=
 
@@ -2600,7 +2558,7 @@ OffsetRectBJHint="会创建矩形区域."
 
 RectFromCenterSizeBJHint="会创建矩形区域."
 
-RectHint="输入四个坐标(最小X,最小Y,最大X,最大Y)来定义地图上的矩形区域。"
+RectHint="输入四个坐标(最小X,最小Y,最大X,最大Y)来定义地图上的矩形区域."
 
 RectFromLocHint="会创建矩形区域."
 
@@ -2618,7 +2576,7 @@ GetEnumUnitHint="使用'选取单位做动作'时, 指代相应的单位."
 
 GetFilterUnitHint="在'选取单位满足条件'之类功能的条件中,指代被判断单位."
 
-GroupPickRandomUnitHint="受'设置下次销毁'影响。"
+GroupPickRandomUnitHint="受'设置下次销毁'影响."
 
 GetAttackedUnitBJHint="响应'被攻击'单位事件."
 
@@ -2738,9 +2696,9 @@ GetLastCreatedItemHint="最后一个使用'物品 - 创建'或'英雄 - 创建�
 
 GetLastRemovedItemHint="最后一个使用'英雄 - 丢弃物品'动作丢弃的物品."
 
-GetLastEquippedItemHint="这是最近一次通过「英雄 - 给英雄装备物品」或「英雄 - 为英雄创建装备」触发动作装备的物品。"
+GetLastEquippedItemHint="这是最近一次通过「英雄 - 给英雄装备物品」或「英雄 - 为英雄创建装备」触发动作装备的物品."
 
-GetLastUnequippedItemHint="这是最近一次通过「英雄 - 从英雄卸下物品」或「英雄 - 从英雄装备槽卸下物品」触发动作卸下的物品。"
+GetLastUnequippedItemHint="这是最近一次通过「英雄 - 从英雄卸下物品」或「英雄 - 从英雄装备槽卸下物品」触发动作卸下的物品."
 
 RandomItemInRectSimpleBJHint=
 
@@ -2916,7 +2874,7 @@ GetLastCreatedUbersplatHint="最后一个使用'地面纹理 - 创建'动作创�
 
 
 // returns minimapicon
-GetLastCreatedMinimapIconHint="本触发器为使用“创建小地图标记”触发器动作创建的上一个小地图标记。"
+GetLastCreatedMinimapIconHint="本触发器为使用“创建小地图标记”触发器动作创建的上一个小地图标记."
 
 
 // returns weathereffect
@@ -3038,7 +2996,7 @@ GetUnitBuildTimeHint="时间单位为秒."
 
 
 
-GetNextExpansionHint="返回下一个分矿点的城镇ID。"
+GetNextExpansionHint="返回下一个分矿点的城镇ID."
 
 FoodUsedHint="AI玩家的当前人口数"
 
