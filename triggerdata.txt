@@ -28,6 +28,7 @@ TC_TIMER=WESTRING_TRIGCAT_TIMER,ReplaceableTextures\WorldEditUI\Events-Time
 TC_DESTRUCT=WESTRING_TRIGCAT_DESTRUCT,ReplaceableTextures\WorldEditUI\Actions-Destructibles
 TC_DOODAD=WESTRING_TRIGCAT_DOODAD,ReplaceableTextures\WorldEditUI\Actions-Destructibles
 TC_DIALOG=WESTRING_TRIGCAT_DIALOG,ReplaceableTextures\WorldEditUI\Actions-Dialog
+TC_CCARD=WESTRING_TRIGCAT_CCARD,ReplaceableTextures\WorldEditUI\Actions-Dialog
 TC_ENVIRONMENT=WESTRING_TRIGCAT_ENVIRONMENT,ReplaceableTextures\WorldEditUI\Actions-Environment
 TC_EVENTRESPONSE=WESTRING_TRIGCAT_EVENTRESPONSE,ReplaceableTextures\WorldEditUI\Actions-Nothing
 TC_TEXTTAG=WESTRING_TRIGCAT_TEXTTAG,ReplaceableTextures\WorldEditUI\Actions-Nothing
@@ -1134,6 +1135,24 @@ AbilityILFFactoryUnitId=0,abilityintegerlevelfield,ABILITY_ILF_FACTORY_UNIT_ID,W
 AbilityILFSpawnUnitIdNfyu=0,abilityintegerlevelfield,ABILITY_ILF_SPAWN_UNIT_ID_NFYU,WESTRING_ABILITYILF_SPAWNUNITIDNFYU
 AbilityILFDestructibleId=0,abilityintegerlevelfield,ABILITY_ILF_DESTRUCTIBLE_ID,WESTRING_ABILITYILF_DESTRUCTIBLEID
 AbilityILFUpgradeType=0,abilityintegerlevelfield,ABILITY_ILF_UPGRADE_TYPE,WESTRING_ABILITYILF_UPGRADETYPE
+AbilityILFMindControlledUnitLimit=0,abilityintegerlevelfield,ABILITY_ILF_MIND_CONTROLLED_UNIT_LIMIT,WESTRING_ABILITYILF_MIND_CONTROLLED_UNIT_LIMIT
+AbilityILFDamageStrengthModifierPercent=0,abilityintegerlevelfield,ABILITY_ILF_DAMAGE_STRENGTH_MODIFIER_PERCENT,WESTRING_ABILITYILF_DAMAGE_STRENGTH_MODIFIER_PERCENT
+AbilityILFMaxTargetsHit=0,abilityintegerlevelfield,ABILITY_ILF_MAX_TARGETS_HIT,WESTRING_ABILITYILF_MAX_TARGETS_HIT
+AbilityILFAttackSpeedReductionPercentSwp9=0,abilityintegerlevelfield,ABILITY_ILF_ATTACK_SPEED_REDUCTION_PERCENT_SWP9,WESTRING_ABILITYILF_ATTACK_SPEED_REDUCTION_PERCENT_SWP9
+AbilityILFAllyPassiveStatAmplifyPercent=0,abilityintegerlevelfield,ABILITY_ILF_ALLY_PASSIVE_STAT_AMPLIFY_PERCENT,WESTRING_ABILITYILF_ALLY_PASSIVE_STAT_AMPLIFY_PERCENT
+AbilityILFAttackSpeedGainPercent=0,abilityintegerlevelfield,ABILITY_ILF_ATTACK_SPEED_GAIN_PERCENT,WESTRING_ABILITYILF_ATTACK_SPEED_GAIN_PERCENT
+AbilityILFMovementSpeedGainPercent=0,abilityintegerlevelfield,ABILITY_ILF_MOVEMENT_SPEED_GAIN_PERCENT,WESTRING_ABILITYILF_MOVEMENT_SPEED_GAIN_PERCENT
+AbilityILFHealthCostPercent=0,abilityintegerlevelfield,ABILITY_ILF_HEALTH_COST_PERCENT,WESTRING_ABILITYILF_HEALTH_COST_PERCENT
+AbilityILFBonusStrengthUvg2=0,abilityintegerlevelfield,ABILITY_ILF_BONUS_STRENGTH_UVG2,WESTRING_ABILITYILF_BONUS_STRENGTH_UVG2
+AbilityILFBonusResolvePercent=0,abilityintegerlevelfield,ABILITY_ILF_BONUS_RESOLVE_PERCENT,WESTRING_ABILITYILF_BONUS_RESOLVE_PERCENT
+AbilityILFBonusLifeStealPercent=0,abilityintegerlevelfield,ABILITY_ILF_BONUS_LIFE_STEAL_PERCENT,WESTRING_ABILITYILF_BONUS_LIFE_STEAL_PERCENT
+AbilityILFBonusSpellVampPercent=0,abilityintegerlevelfield,ABILITY_ILF_BONUS_SPELL_VAMP_PERCENT,WESTRING_ABILITYILF_BONUS_SPELL_VAMP_PERCENT
+AbilityILFDoubleBonusBelowHealthPercent=0,abilityintegerlevelfield,ABILITY_ILF_DOUBLE_BONUS_BELOW_HEALTH_PERCENT,WESTRING_ABILITYILF_DOUBLE_BONUS_BELOW_HEALTH_PERCENT
+AbilityILFMaxChargesUbr3=0,abilityintegerlevelfield,ABILITY_ILF_MAX_CHARGES_UBR3,WESTRING_ABILITYILF_MAX_CHARGES_UBR3
+AbilityILFStacksRequired=0,abilityintegerlevelfield,ABILITY_ILF_STACKS_REQUIRED,WESTRING_ABILITYILF_STACKS_REQUIRED
+AbilityILFMaxAttackSpeedStacks=0,abilityintegerlevelfield,ABILITY_ILF_MAX_ATTACK_SPEED_STACKS,WESTRING_ABILITYILF_MAX_ATTACK_SPEED_STACKS
+AbilityILFMaxChargesUwf1=0,abilityintegerlevelfield,ABILITY_ILF_MAX_CHARGES_UWF1,WESTRING_ABILITYILF_MAX_CHARGES_UWF1
+AbilityILFTargetArmorReduction=0,abilityintegerlevelfield,ABILITY_ILF_TARGET_ARMOR_REDUCTION,WESTRING_ABILITYILF_TARGET_ARMOR_REDUCTION
 
 // Ability Real Level Field
 AbilityRLFCastingTime=0,abilityreallevelfield,ABILITY_RLF_CASTING_TIME,WESTRING_ABILITYRLF_CASTINGTIME
@@ -1572,6 +1591,91 @@ AbilityRLFDashDamage=0,abilityreallevelfield,ABILITY_RLF_DASH_DAMAGE,WESTRING_AB
 AbilityRLFBonusCriticalStrike=0,abilityreallevelfield,ABILITY_RLF_BONUS_CRITICAL_STRIKE,WESTRING_ABILITYRLF_BONUS_CRITICAL_STRIKE
 AbilityRLFBonusCriticalStrikeDuration=0,abilityreallevelfield,ABILITY_RLF_NORMAL_BONUS_CRITICAL_STRIKE_DURATION,WESTRING_ABILITYRLF_NORMAL_BONUS_CRITICAL_STRIKE_DURATION
 AbilityRLFHeroBonusCriticalStrikeDuration=0,abilityreallevelfield,ABILITY_RLF_HERO_BONUS_CRITICAL_STRIKE_DURATION,WESTRING_ABILITYRLF_HERO_BONUS_CRITICAL_STRIKE_DURATION
+AbilityRLFStunDurationEns4=0,abilityreallevelfield,ABILITY_RLF_STUN_DURATION_ENS4,WESTRING_ABILITYRLF_STUN_DURATION_ENS4
+AbilityRLFAttackSpeedReductionPercentEns5=0,abilityreallevelfield,ABILITY_RLF_ATTACK_SPEED_REDUCTION_PERCENT_ENS5,WESTRING_ABILITYRLF_ATTACK_SPEED_REDUCTION_PERCENT_ENS5
+AbilityRLFBonusDamageTakenPercentEns6=0,abilityreallevelfield,ABILITY_RLF_BONUS_DAMAGE_TAKEN_PERCENT_ENS6,WESTRING_ABILITYRLF_BONUS_DAMAGE_TAKEN_PERCENT_ENS6
+AbilityRLFDamageSwp1=0,abilityreallevelfield,ABILITY_RLF_DAMAGE_SWP1,WESTRING_ABILITYRLF_DAMAGE_SWP1
+AbilityRLFAttackDistanceSwp2=0,abilityreallevelfield,ABILITY_RLF_ATTACK_DISTANCE_SWP2,WESTRING_ABILITYRLF_ATTACK_DISTANCE_SWP2
+AbilityRLFAttackAngleSwp3=0,abilityreallevelfield,ABILITY_RLF_ATTACK_ANGLE_SWP3,WESTRING_ABILITYRLF_ATTACK_ANGLE_SWP3
+AbilityRLFDamageDelaySwp4=0,abilityreallevelfield,ABILITY_RLF_DAMAGE_DELAY_SWP4,WESTRING_ABILITYRLF_DAMAGE_DELAY_SWP4
+AbilityRLFDamageHsl1=0,abilityreallevelfield,ABILITY_RLF_DAMAGE_HSL1,WESTRING_ABILITYRLF_DAMAGE_HSL1
+AbilityRLFBonusDamagePercentAgainstDebuffed=0,abilityreallevelfield,ABILITY_RLF_BONUS_DAMAGE_PERCENT_AGAINST_DEBUFFED,WESTRING_ABILITYRLF_BONUS_DAMAGE_PERCENT_AGAINST_DEBUFFED
+AbilityRLFHealPercentOnDamageDealt=0,abilityreallevelfield,ABILITY_RLF_HEAL_PERCENT_ON_DAMAGE_DEALT,WESTRING_ABILITYRLF_HEAL_PERCENT_ON_DAMAGE_DEALT
+AbilityRLFTargetIntersectRadius=0,abilityreallevelfield,ABILITY_RLF_TARGET_INTERSECT_RADIUS,WESTRING_ABILITYRLF_TARGET_INTERSECT_RADIUS
+AbilityRLFBurnDamage=0,abilityreallevelfield,ABILITY_RLF_BURN_DAMAGE,WESTRING_ABILITYRLF_BURN_DAMAGE
+AbilityRLFBurnDamagePulseFrequency=0,abilityreallevelfield,ABILITY_RLF_BURN_DAMAGE_PULSE_FREQUENCY,WESTRING_ABILITYRLF_BURN_DAMAGE_PULSE_FREQUENCY
+AbilityRLFBonusDamageToSummons=0,abilityreallevelfield,ABILITY_RLF_BONUS_DAMAGE_TO_SUMMONS,WESTRING_ABILITYRLF_BONUS_DAMAGE_TO_SUMMONS
+AbilityRLFHealAmountToAllyUnits=0,abilityreallevelfield,ABILITY_RLF_HEAL_AMOUNT_TO_ALLY_UNITS,WESTRING_ABILITYRLF_HEAL_AMOUNT_TO_ALLY_UNITS
+AbilityRLFDefenseHic1=0,abilityreallevelfield,ABILITY_RLF_DEFENSE_HIC1,WESTRING_ABILITYRLF_DEFENSE_HIC1
+AbilityRLFSpellDamageResistance=0,abilityreallevelfield,ABILITY_RLF_SPELL_DAMAGE_RESISTANCE,WESTRING_ABILITYRLF_SPELL_DAMAGE_RESISTANCE
+AbilityRLFHealingHic4=0,abilityreallevelfield,ABILITY_RLF_HEALING_HIC4,WESTRING_ABILITYRLF_HEALING_HIC4
+AbilityRLFExplosionDamage=0,abilityreallevelfield,ABILITY_RLF_EXPLOSION_DAMAGE,WESTRING_ABILITYRLF_EXPLOSION_DAMAGE
+AbilityRLFHealingPerTargetHit=0,abilityreallevelfield,ABILITY_RLF_HEALING_PER_TARGET_HIT,WESTRING_ABILITYRLF_HEALING_PER_TARGET_HIT
+AbilityRLFArmorReductionSwp8=0,abilityreallevelfield,ABILITY_RLF_ARMOR_REDUCTION_SWP8,WESTRING_ABILITYRLF_ARMOR_REDUCTION_SWP8
+AbilityRLFDamagePercentOfTargetMaxHealth=0,abilityreallevelfield,ABILITY_RLF_DAMAGE_PERCENT_OF_TARGET_MAX_HEALTH,WESTRING_ABILITYRLF_DAMAGE_PERCENT_OF_TARGET_MAX_HEALTH
+AbilityRLFCooldownReductionOnHit=0,abilityreallevelfield,ABILITY_RLF_COOLDOWN_REDUCTION_ON_HIT,WESTRING_ABILITYRLF_COOLDOWN_REDUCTION_ON_HIT
+AbilityRLFDamageBonusHhr1=0,abilityreallevelfield,ABILITY_RLF_DAMAGE_BONUS_HHR1,WESTRING_ABILITYRLF_DAMAGE_BONUS_HHR1
+AbilityRLFStunDurationNormal=0,abilityreallevelfield,ABILITY_RLF_STUN_DURATION_NORMAL,WESTRING_ABILITYRLF_STUN_DURATION_NORMAL
+AbilityRLFStunDurationHero=0,abilityreallevelfield,ABILITY_RLF_STUN_DURATION_HERO,WESTRING_ABILITYRLF_STUN_DURATION_HERO
+AbilityRLFBonusDamageDebuffDurationNormal=0,abilityreallevelfield,ABILITY_RLF_BONUS_DAMAGE_DEBUFF_DURATION_NORMAL,WESTRING_ABILITYRLF_BONUS_DAMAGE_DEBUFF_DURATION_NORMAL
+AbilityRLFBonusDamageDebuffDurationHero=0,abilityreallevelfield,ABILITY_RLF_BONUS_DAMAGE_DEBUFF_DURATION_HERO,WESTRING_ABILITYRLF_BONUS_DAMAGE_DEBUFF_DURATION_HERO
+AbilityRLFDebuffBonusDamageReceivedPercent=0,abilityreallevelfield,ABILITY_RLF_DEBUFF_BONUS_DAMAGE_RECEIVED_PERCENT,WESTRING_ABILITYRLF_DEBUFF_BONUS_DAMAGE_RECEIVED_PERCENT
+AbilityRLFDefenseIncrease=0,abilityreallevelfield,ABILITY_RLF_DEFENSE_INCREASE,WESTRING_ABILITYRLF_DEFENSE_INCREASE
+AbilityRLFDefenseCap=0,abilityreallevelfield,ABILITY_RLF_DEFENSE_CAP,WESTRING_ABILITYRLF_DEFENSE_CAP
+AbilityRLFMagicResistanceAtCap=0,abilityreallevelfield,ABILITY_RLF_MAGIC_RESISTANCE_AT_CAP,WESTRING_ABILITYRLF_MAGIC_RESISTANCE_AT_CAP
+AbilityRLFBonusAttackDamagePercentAtCap=0,abilityreallevelfield,ABILITY_RLF_BONUS_ATTACK_DAMAGE_PERCENT_AT_CAP,WESTRING_ABILITYRLF_BONUS_ATTACK_DAMAGE_PERCENT_AT_CAP
+AbilityRLFArmorReductionDurationNormal=0,abilityreallevelfield,ABILITY_RLF_ARMOR_REDUCTION_DURATION_NORMAL,WESTRING_ABILITYRLF_ARMOR_REDUCTION_DURATION_NORMAL
+AbilityRLFArmorReductionDurationHero=0,abilityreallevelfield,ABILITY_RLF_ARMOR_REDUCTION_DURATION_HERO,WESTRING_ABILITYRLF_ARMOR_REDUCTION_DURATION_HERO
+AbilityRLFAllyInstantHeal=0,abilityreallevelfield,ABILITY_RLF_ALLY_INSTANT_HEAL,WESTRING_ABILITYRLF_ALLY_INSTANT_HEAL
+AbilityRLFAllyHealPerSecond=0,abilityreallevelfield,ABILITY_RLF_ALLY_HEAL_PER_SECOND,WESTRING_ABILITYRLF_ALLY_HEAL_PER_SECOND
+AbilityRLFAllyManaRestore=0,abilityreallevelfield,ABILITY_RLF_ALLY_MANA_RESTORE,WESTRING_ABILITYRLF_ALLY_MANA_RESTORE
+AbilityRLFAllyPassiveCooldown=0,abilityreallevelfield,ABILITY_RLF_ALLY_PASSIVE_COOLDOWN,WESTRING_ABILITYRLF_ALLY_PASSIVE_COOLDOWN
+AbilityRLFAllyPassiveDuration=0,abilityreallevelfield,ABILITY_RLF_ALLY_PASSIVE_DURATION,WESTRING_ABILITYRLF_ALLY_PASSIVE_DURATION
+AbilityRLFPassiveRadius=0,abilityreallevelfield,ABILITY_RLF_PASSIVE_RADIUS,WESTRING_ABILITYRLF_PASSIVE_RADIUS
+AbilityRLFMindControlDurationNormal=0,abilityreallevelfield,ABILITY_RLF_MIND_CONTROL_DURATION_NORMAL,WESTRING_ABILITYRLF_MIND_CONTROL_DURATION_NORMAL
+AbilityRLFExplosionRadiusMcrd=0,abilityreallevelfield,ABILITY_RLF_EXPLOSION_RADIUS_MCRD,WESTRING_ABILITYRLF_EXPLOSION_RADIUS_MCRD
+AbilityRLFExplosionRadiusSfrd=0,abilityreallevelfield,ABILITY_RLF_EXPLOSION_RADIUS_SFRD,WESTRING_ABILITYRLF_EXPLOSION_RADIUS_SFRD
+AbilityRLFDamageReductionPercentBld1=0,abilityreallevelfield,ABILITY_RLF_DAMAGE_REDUCTION_PERCENT_BLD1,WESTRING_ABILITYRLF_DAMAGE_REDUCTION_PERCENT_BLD1
+AbilityRLFMovementSpeedReductionPercentBld2=0,abilityreallevelfield,ABILITY_RLF_MOVEMENT_SPEED_REDUCTION_PERCENT_BLD2,WESTRING_ABILITYRLF_MOVEMENT_SPEED_REDUCTION_PERCENT_BLD2
+AbilityRLFAttackSpeedIncreasePercentBld3=0,abilityreallevelfield,ABILITY_RLF_ATTACK_SPEED_INCREASE_PERCENT_BLD3,WESTRING_ABILITYRLF_ATTACK_SPEED_INCREASE_PERCENT_BLD3
+AbilityRLFOnDamageTakenBonusDuration=0,abilityreallevelfield,ABILITY_RLF_ON_DAMAGE_TAKEN_BONUS_DURATION,WESTRING_ABILITYRLF_ON_DAMAGE_TAKEN_BONUS_DURATION
+AbilityRLFSweepCooldownReductionOnHit=0,abilityreallevelfield,ABILITY_RLF_SWEEP_COOLDOWN_REDUCTION_ON_HIT,WESTRING_ABILITYRLF_SWEEP_COOLDOWN_REDUCTION_ON_HIT
+AbilityRLFDamageReflectionPercent=0,abilityreallevelfield,ABILITY_RLF_DAMAGE_REFLECTION_PERCENT,WESTRING_ABILITYRLF_DAMAGE_REFLECTION_PERCENT
+AbilityRLFFlatDamageReflection=0,abilityreallevelfield,ABILITY_RLF_FLAT_DAMAGE_REFLECTION,WESTRING_ABILITYRLF_FLAT_DAMAGE_REFLECTION
+AbilityRLFAbilitySpeedIncreasePercent=0,abilityreallevelfield,ABILITY_RLF_ABILITY_SPEED_INCREASE_PERCENT,WESTRING_ABILITYRLF_ABILITY_SPEED_INCREASE_PERCENT
+AbilityRLFShieldHealth=0,abilityreallevelfield,ABILITY_RLF_SHIELD_HEALTH,WESTRING_ABILITYRLF_SHIELD_HEALTH
+AbilityRLFShieldReflectPercent=0,abilityreallevelfield,ABILITY_RLF_SHIELD_REFLECT_PERCENT,WESTRING_ABILITYRLF_SHIELD_REFLECT_PERCENT
+AbilityRLFShieldDuration=0,abilityreallevelfield,ABILITY_RLF_SHIELD_DURATION,WESTRING_ABILITYRLF_SHIELD_DURATION
+AbilityRLFTauntedDefenseReduction=0,abilityreallevelfield,ABILITY_RLF_TAUNTED_DEFENSE_REDUCTION,WESTRING_ABILITYRLF_TAUNTED_DEFENSE_REDUCTION
+AbilityRLFBonusAttackSpeedPercentHgh1=0,abilityreallevelfield,ABILITY_RLF_BONUS_ATTACK_SPEED_PERCENT_HGH1,WESTRING_ABILITYRLF_BONUS_ATTACK_SPEED_PERCENT_HGH1
+AbilityRLFBonusMoveSpeedPercentHgh2=0,abilityreallevelfield,ABILITY_RLF_BONUS_MOVE_SPEED_PERCENT_HGH2,WESTRING_ABILITYRLF_BONUS_MOVE_SPEED_PERCENT_HGH2
+AbilityRLFBonusCriticalHitPercent=0,abilityreallevelfield,ABILITY_RLF_BONUS_CRITICAL_HIT_PERCENT,WESTRING_ABILITYRLF_BONUS_CRITICAL_HIT_PERCENT
+AbilityRLFBonusCriticalDamagePercent=0,abilityreallevelfield,ABILITY_RLF_BONUS_CRITICAL_DAMAGE_PERCENT,WESTRING_ABILITYRLF_BONUS_CRITICAL_DAMAGE_PERCENT
+AbilityRLFManaPerSecondHgh6=0,abilityreallevelfield,ABILITY_RLF_MANA_PER_SECOND_HGH6,WESTRING_ABILITYRLF_MANA_PER_SECOND_HGH6
+AbilityRLFBonusCooldownReductionPercent=0,abilityreallevelfield,ABILITY_RLF_BONUS_COOLDOWN_REDUCTION_PERCENT,WESTRING_ABILITYRLF_BONUS_COOLDOWN_REDUCTION_PERCENT
+AbilityRLFBonusDamageUbr1=0,abilityreallevelfield,ABILITY_RLF_BONUS_DAMAGE_UBR1,WESTRING_ABILITYRLF_BONUS_DAMAGE_UBR1
+AbilityRLFBonusDamageDurationUbr2=0,abilityreallevelfield,ABILITY_RLF_BONUS_DAMAGE_DURATION_UBR2,WESTRING_ABILITYRLF_BONUS_DAMAGE_DURATION_UBR2
+AbilityRLFChargeRegenTimeUbr4=0,abilityreallevelfield,ABILITY_RLF_CHARGE_REGEN_TIME_UBR4,WESTRING_ABILITYRLF_CHARGE_REGEN_TIME_UBR4
+AbilityRLFAllyManaPerSecond=0,abilityreallevelfield,ABILITY_RLF_ALLY_MANA_PER_SECOND,WESTRING_ABILITYRLF_ALLY_MANA_PER_SECOND
+AbilityRLFAllyHealingPerSecondUla2=0,abilityreallevelfield,ABILITY_RLF_ALLY_HEALING_PER_SECOND_ULA2,WESTRING_ABILITYRLF_ALLY_HEALING_PER_SECOND_ULA2
+AbilityRLFAllySpellResistPercent=0,abilityreallevelfield,ABILITY_RLF_ALLY_SPELL_RESIST_PERCENT,WESTRING_ABILITYRLF_ALLY_SPELL_RESIST_PERCENT
+AbilityRLFAllySpellAmpPercent=0,abilityreallevelfield,ABILITY_RLF_ALLY_SPELL_AMP_PERCENT,WESTRING_ABILITYRLF_ALLY_SPELL_AMP_PERCENT
+AbilityRLFAllySpellCritHitPercent=0,abilityreallevelfield,ABILITY_RLF_ALLY_SPELL_CRIT_HIT_PERCENT,WESTRING_ABILITYRLF_ALLY_SPELL_CRIT_HIT_PERCENT
+AbilityRLFAllyMovementSpeedPercent=0,abilityreallevelfield,ABILITY_RLF_ALLY_MOVEMENT_SPEED_PERCENT,WESTRING_ABILITYRLF_ALLY_MOVEMENT_SPEED_PERCENT
+AbilityRLFEnemyManaPerSecond=0,abilityreallevelfield,ABILITY_RLF_ENEMY_MANA_PER_SECOND,WESTRING_ABILITYRLF_ENEMY_MANA_PER_SECOND
+AbilityRLFEnemyDamagePerSecondUla8=0,abilityreallevelfield,ABILITY_RLF_ENEMY_DAMAGE_PER_SECOND_ULA8,WESTRING_ABILITYRLF_ENEMY_DAMAGE_PER_SECOND_ULA8
+AbilityRLFFlatManaGain=0,abilityreallevelfield,ABILITY_RLF_FLAT_MANA_GAIN,WESTRING_ABILITYRLF_FLAT_MANA_GAIN
+AbilityRLFHealingRadius=0,abilityreallevelfield,ABILITY_RLF_HEALING_RADIUS,WESTRING_ABILITYRLF_HEALING_RADIUS
+AbilityRLFFlatDamageUdb1=0,abilityreallevelfield,ABILITY_RLF_FLAT_DAMAGE_UDB1,WESTRING_ABILITYRLF_FLAT_DAMAGE_UDB1
+AbilityRLFPercentDamageUdb2=0,abilityreallevelfield,ABILITY_RLF_PERCENT_DAMAGE_UDB2,WESTRING_ABILITYRLF_PERCENT_DAMAGE_UDB2
+AbilityRLFBonusAttackSpeedPerAttack=0,abilityreallevelfield,ABILITY_RLF_BONUS_ATTACK_SPEED_PER_ATTACK,WESTRING_ABILITYRLF_BONUS_ATTACK_SPEED_PER_ATTACK
+AbilityRLFChargeRegenTimeUwf2=0,abilityreallevelfield,ABILITY_RLF_CHARGE_REGEN_TIME_UWF2,WESTRING_ABILITYRLF_CHARGE_REGEN_TIME_UWF2
+AbilityRLFDamageUwf3=0,abilityreallevelfield,ABILITY_RLF_DAMAGE_UWF3,WESTRING_ABILITYRLF_DAMAGE_UWF3
+AbilityRLFCooldownReductionOnAutoAttack=0,abilityreallevelfield,ABILITY_RLF_COOLDOWN_REDUCTION_ON_AUTO_ATTACK,WESTRING_ABILITYRLF_COOLDOWN_REDUCTION_ON_AUTO_ATTACK
+AbilityRLFAttackSpeedReductionDurationNormal=0,abilityreallevelfield,ABILITY_RLF_ATTACK_SPEED_REDUCTION_DURATION_NORMAL,WESTRING_ABILITYRLF_ATTACK_SPEED_REDUCTION_DURATION_NORMAL
+AbilityRLFAttackSpeedReductionDurationHero=0,abilityreallevelfield,ABILITY_RLF_ATTACK_SPEED_REDUCTION_DURATION_HERO,WESTRING_ABILITYRLF_ATTACK_SPEED_REDUCTION_DURATION_HERO
+AbilityRLFDamageByTargetMaxHealthDurationNormal=0,abilityreallevelfield,ABILITY_RLF_DAMAGE_BY_TARGET_MAX_HEALTH_DURATION_NORMAL,WESTRING_ABILITYRLF_DAMAGE_BY_TARGET_MAX_HEALTH_DURATION_NORMAL
+AbilityRLFDamageByTargetMaxHealthDurationHero=0,abilityreallevelfield,ABILITY_RLF_DAMAGE_BY_TARGET_MAX_HEALTH_DURATION_HERO,WESTRING_ABILITYRLF_DAMAGE_BY_TARGET_MAX_HEALTH_DURATION_HERO
 
 // Ability Boolean Level Field
 AbilityBLFPercentBonusHab2=0,abilitybooleanlevelfield,ABILITY_BLF_PERCENT_BONUS_HAB2,WESTRING_ABILITYBLF_PERCENTBONUSHAB2
@@ -1639,6 +1743,13 @@ AbilityBLFAllowOnAnyPlayerSlot=0,abilitybooleanlevelfield,ABILITY_BLF_ALLOW_ON_A
 AbilityBLFDisableOtherAbilities=0,abilitybooleanlevelfield,ABILITY_BLF_DISABLE_OTHER_ABILITIES,WESTRING_ABILITYBLF_DISABLEOTHERABILITIES
 AbilityBLFAllowBounty=0,abilitybooleanlevelfield,ABILITY_BLF_ALLOW_BOUNTY,WESTRING_ABILITYBLF_ALLOWBOUNTY
 AbilityBLFRemoveBuffsOnAbilityStart=0,abilitybooleanlevelfield,ABILITY_BLF_REMOVE_BUFFS_ON_ABILITY_START,WESTRING_ABILITYBLF_REMOVE_BUFFS_ON_ABILITY_START
+AbilityBLFSilencesWhenEnsnared=0,abilitybooleanlevelfield,ABILITY_BLF_SILENCES_WHEN_ENSNARED,WESTRING_ABILITYBLF_SILENCES_WHEN_ENSNARED
+AbilityBLFRefreshCooldownOnKillHsl3=0,abilitybooleanlevelfield,ABILITY_BLF_REFRESH_COOLDOWN_ON_KILL_HSL3,WESTRING_ABILITYBLF_REFRESH_COOLDOWN_ON_KILL_HSL3
+AbilityBLFEnableChainExplosion=0,abilitybooleanlevelfield,ABILITY_BLF_ENABLE_CHAIN_EXPLOSION,WESTRING_ABILITYBLF_ENABLE_CHAIN_EXPLOSION
+AbilityBLFDispelMagicBonusDamageToSummons=0,abilitybooleanlevelfield,ABILITY_BLF_DISPEL_MAGIC_BONUS_DAMAGE_TO_SUMMONS,WESTRING_ABILITYBLF_DISPEL_MAGIC_BONUS_DAMAGE_TO_SUMMONS
+AbilityBLFRemovesNegativeDebuffs=0,abilitybooleanlevelfield,ABILITY_BLF_REMOVES_NEGATIVE_DEBUFFS,WESTRING_ABILITYBLF_REMOVES_NEGATIVE_DEBUFFS
+AbilityBLFRefreshCooldownOnKillHhr7=0,abilitybooleanlevelfield,ABILITY_BLF_REFRESH_COOLDOWN_ON_KILL_HHR7,WESTRING_ABILITYBLF_REFRESH_COOLDOWN_ON_KILL_HHR7
+AbilityBLFMakesUnitsUndying=0,abilitybooleanlevelfield,ABILITY_BLF_MAKES_UNITS_UNDYING,WESTRING_ABILITYBLF_MAKES_UNITS_UNDYING
 
 // Ability String Level Field
 AbilitySLFIconNormal=0,abilitystringlevelfield,ABILITY_SLF_ICON_NORMAL,WESTRING_ABILITYSLF_ICONNORMAL
@@ -4057,32 +4168,32 @@ _MapInitializationEvent_Category=TC_NOTHING
 TriggerRegisterCommandEvent=1,abilcode,unitorderEx
 _TriggerRegisterCommandEvent_DisplayName="技能命令被下达"
 _TriggerRegisterCommandEvent_Parameters="释放",~技能类型,"的",~命令,"被下达."
-_TriggerRegisterCommandEvent_Defaults=_
-_TriggerRegisterCommandEvent_Category=TC_GAME
+_TriggerRegisterCommandEvent_Defaults=_,_
+_TriggerRegisterCommandEvent_Category=TC_CCARD
 
 TriggerRegisterBuildCommandEventBJ=1,unitcode
 _TriggerRegisterBuildCommandEventBJ_DisplayName="建造命令被下达"
 _TriggerRegisterBuildCommandEventBJ_Parameters="建造",~建筑,"的命令被下达"
-_TriggerRegisterBuildCommandEventBJ_Defaults=_
-_TriggerRegisterBuildCommandEventBJ_Category=TC_GAME
+_TriggerRegisterBuildCommandEventBJ_Defaults=hhou
+_TriggerRegisterBuildCommandEventBJ_Category=TC_CCARD
 
 TriggerRegisterTrainCommandEventBJ=1,unitcode
 _TriggerRegisterTrainCommandEventBJ_DisplayName="训练命令被下达"
 _TriggerRegisterTrainCommandEventBJ_Parameters="训练",~单位,"的命令被下达"
-_TriggerRegisterTrainCommandEventBJ_Defaults=_
-_TriggerRegisterTrainCommandEventBJ_Category=TC_GAME
+_TriggerRegisterTrainCommandEventBJ_Defaults=hfoo
+_TriggerRegisterTrainCommandEventBJ_Category=TC_CCARD
 
 TriggerRegisterUpgradeCommandEventBJ=1,techcode
 _TriggerRegisterUpgradeCommandEventBJ_DisplayName="研究命令被下达"
 _TriggerRegisterUpgradeCommandEventBJ_Parameters="研究",~科技,"的命令被下达"
 _TriggerRegisterUpgradeCommandEventBJ_Defaults=_
-_TriggerRegisterUpgradeCommandEventBJ_Category=TC_GAME
+_TriggerRegisterUpgradeCommandEventBJ_Category=TC_CCARD
 
 TriggerRegisterCommonCommandEventBJ=1,unitcommonorderEx
 _TriggerRegisterCommonCommandEventBJ_DisplayName="通用命令被下达"
 _TriggerRegisterCommonCommandEventBJ_Parameters=~命令,"的命令被下达"
-_TriggerRegisterCommonCommandEventBJ_Defaults=_
-_TriggerRegisterCommonCommandEventBJ_Category=TC_GAME
+_TriggerRegisterCommonCommandEventBJ_Defaults=UnitOrderAttackUnitEx
+_TriggerRegisterCommonCommandEventBJ_Category=TC_CCARD
 
 // Destructible events
 TriggerRegisterDeathEvent=0,destructable
@@ -5101,7 +5212,7 @@ _PingMinimapLocForForce_Limits=_,_,_,_,0,_
 _PingMinimapLocForForce_Category=TC_CINEMATIC
 
 PingMinimapLocForForceEx=1,force,location,real,minimappingstyle,real,real,real
-_PingMinimapLocForForceEx_DisplayName="向玩家组发送小地图信号(指定风格、颜色)"
+_PingMinimapLocForForceEx_DisplayName="向玩家组发送小地图信号(指定风格,颜色)"
 _PingMinimapLocForForceEx_Parameters="向",~玩家组,"在",~点,"发送小地图信号,持续",~实数,"秒,使用",~风格,",颜色(红",~实数,"%,绿",~实数,"%,蓝",~实数,"%)"
 _PingMinimapLocForForceEx_Defaults=GetPlayersAll,GetRectCenter,1,MinimapPingStyleSimple,100,100,100
 _PingMinimapLocForForceEx_Limits=_,_,_,_,0,_,_,_,0,100,0,100,0,100
@@ -5724,89 +5835,89 @@ _SetDayNightModels_Category=TC_ENVIRONMENT
 
 // Text Tag actions
 CreateTextTagLocBJ=1,StringExt,location,real,real,real,real,real,real
-_CreateTextTagLocBJ_DisplayName="创建漂浮文本(指定点)"
-_CreateTextTagLocBJ_Parameters="创建漂浮文本",~字符串,"在",~点,",Z轴偏移",~实数,",字体大小为",~实数,",颜色为(红",~实数,"%,绿",~实数,"%,蓝",~实数,"%)透明度",~实数,"%"
+_CreateTextTagLocBJ_DisplayName="创建漂浮文字(指定点)"
+_CreateTextTagLocBJ_Parameters="创建漂浮文字",~字符串,"在",~点,",Z轴偏移",~实数,",字体大小为",~实数,",颜色为(红",~实数,"%,绿",~实数,"%,蓝",~实数,"%)透明度",~实数,"%"
 _CreateTextTagLocBJ_Defaults=_,GetRectCenter,0,10,100,100,100,0
 _CreateTextTagLocBJ_Limits=_,_,_,_,_,_,1,_,0,100,0,100,0,100,0,100
 _CreateTextTagLocBJ_Category=TC_TEXTTAG
 
 CreateTextTagUnitBJ=1,StringExt,unit,real,real,real,real,real,real
-_CreateTextTagUnitBJ_DisplayName="创建漂浮文本(指定单位)"
-_CreateTextTagUnitBJ_Parameters="创建漂浮文本",~字符串,"在",~单位,",Z轴偏移",~实数,",字体大小为",~实数,",颜色为(红",~实数,"%,绿",~实数,"%,蓝",~实数,"%)透明度",~实数,"%"
+_CreateTextTagUnitBJ_DisplayName="创建漂浮文字(指定单位)"
+_CreateTextTagUnitBJ_Parameters="创建漂浮文字",~字符串,"在",~单位,",Z轴偏移",~实数,",字体大小为",~实数,",颜色为(红",~实数,"%,绿",~实数,"%,蓝",~实数,"%)透明度",~实数,"%"
 _CreateTextTagUnitBJ_Defaults=_,_,0,10,100,100,100,0
 _CreateTextTagUnitBJ_Limits=_,_,_,_,_,_,1,_,0,100,0,100,0,100,0,100
 _CreateTextTagUnitBJ_Category=TC_TEXTTAG
 
 DestroyTextTagBJ=1,texttag
-_DestroyTextTagBJ_DisplayName="销毁漂浮文本"
-_DestroyTextTagBJ_Parameters="销毁",~漂浮文本
+_DestroyTextTagBJ_DisplayName="销毁漂浮文字"
+_DestroyTextTagBJ_Parameters="销毁",~漂浮文字
 _DestroyTextTagBJ_Defaults=GetLastCreatedTextTag
 _DestroyTextTagBJ_Category=TC_TEXTTAG
 
 ShowTextTagForceBJ=1,showhideoption,texttag,force
-_ShowTextTagForceBJ_DisplayName="显示/隐藏漂浮文本"
-_ShowTextTagForceBJ_Parameters=~显示/隐藏,~漂浮文本,",对于",~玩家组
+_ShowTextTagForceBJ_DisplayName="显示/隐藏漂浮文字"
+_ShowTextTagForceBJ_Parameters=~显示/隐藏,~漂浮文字,",对于",~玩家组
 _ShowTextTagForceBJ_Defaults=ShowHideShow,GetLastCreatedTextTag,GetPlayersAll
 _ShowTextTagForceBJ_Category=TC_TEXTTAG
 
 SetTextTagVelocityBJ=1,texttag,real,real
-_SetTextTagVelocityBJ_DisplayName="设置漂浮文本的速度"
-_SetTextTagVelocityBJ_Parameters="设置",~漂浮文本,"的速度为",~实数,",方向为",~实数
+_SetTextTagVelocityBJ_DisplayName="设置漂浮文字的速度"
+_SetTextTagVelocityBJ_Parameters="设置",~漂浮文字,"的速度为",~实数,",方向为",~实数
 _SetTextTagVelocityBJ_Defaults=GetLastCreatedTextTag,64,90
 _SetTextTagVelocityBJ_Category=TC_TEXTTAG
 
 SetTextTagColorBJ=1,texttag,real,real,real,real
-_SetTextTagColorBJ_DisplayName="设置漂浮文本的颜色"
-_SetTextTagColorBJ_Parameters="设置",~漂浮文本,"的颜色为(红",~实数,"%,绿",~实数,"%,蓝",~实数,"%)透明度",~实数,"%"
+_SetTextTagColorBJ_DisplayName="设置漂浮文字的颜色"
+_SetTextTagColorBJ_Parameters="设置",~漂浮文字,"的颜色为(红",~实数,"%,绿",~实数,"%,蓝",~实数,"%)透明度",~实数,"%"
 _SetTextTagColorBJ_Defaults=GetLastCreatedTextTag,100,100,100,0
 _SetTextTagColorBJ_Limits=_,_,0,100,0,100,0,100,0,100
 _SetTextTagColorBJ_Category=TC_TEXTTAG
 
 SetTextTagPosBJ=1,texttag,location,real
-_SetTextTagPosBJ_DisplayName="设置漂浮文本的位置(指定点)"
-_SetTextTagPosBJ_Parameters="设置",~漂浮文本,"到",~点,",Z轴偏移",~实数
+_SetTextTagPosBJ_DisplayName="设置漂浮文字的位置(指定点)"
+_SetTextTagPosBJ_Parameters="设置",~漂浮文字,"到",~点,",Z轴偏移",~实数
 _SetTextTagPosBJ_Defaults=GetLastCreatedTextTag,GetRectCenter,0
 _SetTextTagPosBJ_Category=TC_TEXTTAG
 
 SetTextTagPosUnitBJ=1,texttag,unit,real
-_SetTextTagPosUnitBJ_DisplayName="设置漂浮文本的位置(指定单位)"
-_SetTextTagPosUnitBJ_Parameters="设置",~漂浮文本,"到",~单位,",Z轴偏移",~实数
+_SetTextTagPosUnitBJ_DisplayName="设置漂浮文字的位置(指定单位)"
+_SetTextTagPosUnitBJ_Parameters="设置",~漂浮文字,"到",~单位,",Z轴偏移",~实数
 _SetTextTagPosUnitBJ_Defaults=GetLastCreatedTextTag,_,0
 _SetTextTagPosUnitBJ_Category=TC_TEXTTAG
 
 SetTextTagTextBJ=1,texttag,StringExt,real
-_SetTextTagTextBJ_DisplayName="设置漂浮文本的文本"
-_SetTextTagTextBJ_Parameters="设置",~漂浮文本,"的文本为",~字符串,",字体大小为",~实数
+_SetTextTagTextBJ_DisplayName="设置漂浮文字的文本"
+_SetTextTagTextBJ_Parameters="设置",~漂浮文字,"的文本为",~字符串,",字体大小为",~实数
 _SetTextTagTextBJ_Defaults=GetLastCreatedTextTag,_,10
 _SetTextTagTextBJ_Category=TC_TEXTTAG
 
 SetTextTagSuspendedBJ=1,texttag,enabledisableoption
-_SetTextTagSuspendedBJ_DisplayName="设置漂浮文本开启/关闭暂停状态"
-_SetTextTagSuspendedBJ_Parameters="设置",~漂浮文本,~开启/关闭,"暂停状态"
+_SetTextTagSuspendedBJ_DisplayName="设置漂浮文字开启/关闭暂停状态"
+_SetTextTagSuspendedBJ_Parameters="设置",~漂浮文字,~开启/关闭,"暂停状态"
 _SetTextTagSuspendedBJ_Defaults=GetLastCreatedTextTag,EnableDisableEnable
 _SetTextTagSuspendedBJ_Category=TC_TEXTTAG
 
 SetTextTagPermanentBJ=1,texttag,enabledisableoption
-_SetTextTagPermanentBJ_DisplayName="设置漂浮文本开启/关闭永久状态"
-_SetTextTagPermanentBJ_Parameters="设置",~漂浮文本,~开启/关闭,"永久状态"
+_SetTextTagPermanentBJ_DisplayName="设置漂浮文字开启/关闭永久状态"
+_SetTextTagPermanentBJ_Parameters="设置",~漂浮文字,~开启/关闭,"永久状态"
 _SetTextTagPermanentBJ_Defaults=GetLastCreatedTextTag,EnableDisableEnable
 _SetTextTagPermanentBJ_Category=TC_TEXTTAG
 
 SetTextTagLifespanBJ=1,texttag,real
-_SetTextTagLifespanBJ_DisplayName="设置漂浮文本的清除时间"
-_SetTextTagLifespanBJ_Parameters="设置",~漂浮文本,"的清除时间为",~实数,"秒"
+_SetTextTagLifespanBJ_DisplayName="设置漂浮文字的清除时间"
+_SetTextTagLifespanBJ_Parameters="设置",~漂浮文字,"的清除时间为",~实数,"秒"
 _SetTextTagLifespanBJ_Defaults=GetLastCreatedTextTag,5
 _SetTextTagLifespanBJ_Category=TC_TEXTTAG
 
 SetTextTagFadepointBJ=1,texttag,real
-_SetTextTagFadepointBJ_DisplayName="设置漂浮文本的消逝时间"
-_SetTextTagFadepointBJ_Parameters="设置",~漂浮文本,"的消逝时间为",~实数,"秒"
+_SetTextTagFadepointBJ_DisplayName="设置漂浮文字的消逝时间"
+_SetTextTagFadepointBJ_Parameters="设置",~漂浮文字,"的消逝时间为",~实数,"秒"
 _SetTextTagFadepointBJ_Defaults=GetLastCreatedTextTag,4
 _SetTextTagFadepointBJ_Category=TC_TEXTTAG
 
 SetTextTagAgeBJ=1,texttag,real
-_SetTextTagAgeBJ_DisplayName="设置漂浮文本的已存在时间"
-_SetTextTagAgeBJ_Parameters="设置",~漂浮文本,"的已存在时间为",~实数,"秒"
+_SetTextTagAgeBJ_DisplayName="设置漂浮文字的已存在时间"
+_SetTextTagAgeBJ_Parameters="设置",~漂浮文字,"的已存在时间为",~实数,"秒"
 _SetTextTagAgeBJ_Defaults=GetLastCreatedTextTag,0
 _SetTextTagAgeBJ_Category=TC_TEXTTAG
 
@@ -6393,8 +6504,8 @@ _SaveButtonHandleBJ_Category=TC_HASHTABLE
 //_SaveItemTypeHandleBJ_Category=TC_HASHTABLE
 
 SaveTextTagHandleBJ=0,texttag,integer,integer,hashtable
-_SaveTextTagHandleBJ_DisplayName="保存漂浮文本"
-_SaveTextTagHandleBJ_Parameters="保存",~漂浮文本,",子引索",~整数,"主引索",~整数,"到",~哈希表
+_SaveTextTagHandleBJ_DisplayName="保存漂浮文字"
+_SaveTextTagHandleBJ_Parameters="保存",~漂浮文字,",子引索",~整数,"主引索",~整数,"到",~哈希表
 _SaveTextTagHandleBJ_Defaults=_,_,_,GetLastCreatedHashtableBJ
 _SaveTextTagHandleBJ_Category=TC_HASHTABLE
 
@@ -7319,42 +7430,44 @@ _SetPlayerName_Category=TC_PLAYER
 CreateCommandButtonEffectBJ=1,abilcode,unitorderEx
 _CreateCommandButtonEffectBJ_DisplayName="创建技能按钮特效"
 _CreateCommandButtonEffectBJ_Parameters="创建技能按钮特效,为",~技能类型,"和",~命令ID,
-_CreateCommandButtonEffectBJ_Defaults=
-_CreateCommandButtonEffectBJ_Category=TC_GAME
+_CreateCommandButtonEffectBJ_Defaults=_,_
+_CreateCommandButtonEffectBJ_Category=TC_CCARD
 
 CreateTrainCommandButtonEffectBJ=1,unitcode
 _CreateTrainCommandButtonEffectBJ_DisplayName="创建训练按钮特效"
 _CreateTrainCommandButtonEffectBJ_Parameters="创建训练按钮特效,为",~单位类型
-_CreateTrainCommandButtonEffectBJ_Defaults=
-_CreateTrainCommandButtonEffectBJ_Category=TC_GAME
+_CreateTrainCommandButtonEffectBJ_Defaults=hfoo
+_CreateTrainCommandButtonEffectBJ_Category=TC_CCARD
 
 CreateBuildCommandButtonEffectBJ=1,unitcode
 _CreateBuildCommandButtonEffectBJ_DisplayName="创建建造按钮特效"
 _CreateBuildCommandButtonEffectBJ_Parameters="创建建造按钮特效,对于",~单位类型
-_CreateBuildCommandButtonEffectBJ_Defaults=
-_CreateBuildCommandButtonEffectBJ_Category=TC_GAME
+_CreateBuildCommandButtonEffectBJ_Defaults=hhou
+_CreateBuildCommandButtonEffectBJ_Category=TC_CCARD
 
 CreateUpgradeCommandButtonEffectBJ=1,techcode
 _CreateUpgradeCommandButtonEffectBJ_DisplayName="创建研究按钮特效"
 _CreateUpgradeCommandButtonEffectBJ_Parameters="创建研究按钮特效,对于",~科技
-_CreateUpgradeCommandButtonEffectBJ_Defaults=
-_CreateUpgradeCommandButtonEffectBJ_Category=TC_GAME
+_CreateUpgradeCommandButtonEffectBJ_Defaults=_
+_CreateUpgradeCommandButtonEffectBJ_Category=TC_CCARD
 
 CreateLearnCommandButtonEffectBJ=1,heroskillcode
 _CreateLearnCommandButtonEffectBJ_DisplayName="创建技能学习按钮特效"
 _CreateLearnCommandButtonEffectBJ_Parameters="创建技能学习按钮特效,对于",~技能
-_CreateLearnCommandButtonEffectBJ_Defaults=
-_CreateLearnCommandButtonEffectBJ_Category=TC_GAME
+_CreateLearnCommandButtonEffectBJ_Defaults=HeroSkillBlizzard
+_CreateLearnCommandButtonEffectBJ_Category=TC_CCARD
 
 CreateCommonCommandButtonEffectBJ=1,unitcommonorderEx
-_CreateCommonCommandButtonEffectBJ_Defaults=
-_CreateCommonCommandButtonEffectBJ_Category=TC_GAME
+_CreateCommonCommandButtonEffectBJ_DisplayName="创建通用按钮特效"
+_CreateCommonCommandButtonEffectBJ_Parameters="创建通用按钮特效,对于",~命令
+_CreateCommonCommandButtonEffectBJ_Defaults=UnitOrderAttackUnitEx
+_CreateCommonCommandButtonEffectBJ_Category=TC_CCARD
 
 DestroyCommandButtonEffect=1,commandbuttoneffect
 _DestroyCommandButtonEffect_DisplayName="删除按钮特效"
 _DestroyCommandButtonEffect_Parameters="删除",~按钮特效
-_DestroyCommandButtonEffect_Defaults=
-_DestroyCommandButtonEffect_Category=TC_GAME
+_DestroyCommandButtonEffect_Defaults=GetLastCreatedCommandButtonEffectBJ
+_DestroyCommandButtonEffect_Category=TC_CCARD
 
 // Player Group actions
 // Specially handled by the editor
@@ -8297,7 +8410,7 @@ _BlzUnitDisableAbility_Category=TC_UNIT
 
 BlzUnitEnableAuras=0,unit,enableddisabledoption,abilityuiyesnooption
 _BlzUnitEnableAuras_DisplayName="开启/关闭光环技能"
-_BlzUnitEnableAuras_Parameters="将",~单位,"的光环技能设为",~开启/关闭,",其界面设为：",~影响界面/不影响界面
+_BlzUnitEnableAuras_Parameters="将",~单位,"的光环技能设为",~开启/关闭,",其界面设为:",~影响界面/不影响界面
 _BlzUnitEnableAuras_Defaults=GetTriggerUnit,EnabledDisabledDisabled,AbilityUIYesNoYes
 _BlzUnitEnableAuras_Category=TC_UNIT
 
@@ -8327,26 +8440,26 @@ _BlzSetUnitAbilityCooldown_Limits=_,_,_,_,0,_,0.00,_
 _BlzSetUnitAbilityCooldown_Category=TC_UNIT
 
 BlzSetUnitAbilityCooldownRemaining=0,unit,abilcode,real
-_BlzSetUnitAbilityCooldownRemaining_DisplayName="设置剩余冷却时间"
-_BlzSetUnitAbilityCooldownRemaining_Parameters="对于单位",~单位,",将技能 ",~数值," 的剩余冷却时间设为 ",~数值
+_BlzSetUnitAbilityCooldownRemaining_DisplayName="设置技能剩余冷却"
+_BlzSetUnitAbilityCooldownRemaining_Parameters="设置",~单位,"的 ",~技能类型," 的剩余冷却为",~实数,"秒"
 _BlzSetUnitAbilityCooldownRemaining_Defaults=GetTriggerUnit,_,0.00
 _BlzSetUnitAbilityCooldownRemaining_Category=TC_UNIT
 
 BlzSetUnitAbilityCooldownPercent=0,unit,abilcode,real
-_BlzSetUnitAbilityCooldownPercent_DisplayName="设置冷却百分比"
-_BlzSetUnitAbilityCooldownPercent_Parameters="对于单位",~单位,",将技能 ",~数值," 的冷却百分比设为 ",~数值
+_BlzSetUnitAbilityCooldownPercent_DisplayName="设置技能冷却百分比"
+_BlzSetUnitAbilityCooldownPercent_Parameters="设置",~单位,"的 ",~技能类型,"的冷却百分比为",~实数,"%"
 _BlzSetUnitAbilityCooldownPercent_Defaults=GetTriggerUnit,_,1.00
 _BlzSetUnitAbilityCooldownPercent_Category=TC_UNIT
 
 BlzAdjustUnitAbilityCooldownRemaining=0,unit,abilcode,real
-_BlzAdjustUnitAbilityCooldownRemaining_DisplayName="调整剩余冷却时间"
-_BlzAdjustUnitAbilityCooldownRemaining_Parameters="对于单位",~单位,",将技能 ",~数值," 的剩余冷却时间调整 ",~数值
+_BlzAdjustUnitAbilityCooldownRemaining_DisplayName="调整技能剩余冷却"
+_BlzAdjustUnitAbilityCooldownRemaining_Parameters="调整",~单位,"的 ",~技能类型,"的剩余冷却",~实数,"秒"
 _BlzAdjustUnitAbilityCooldownRemaining_Defaults=GetTriggerUnit,_,0.00
 _BlzAdjustUnitAbilityCooldownRemaining_Category=TC_UNIT
 
 BlzAdjustUnitAbilityCooldownPercent=0,unit,abilcode,real
-_BlzAdjustUnitAbilityCooldownPercent_DisplayName="调整冷却百分比"
-_BlzAdjustUnitAbilityCooldownPercent_Parameters="对于单位",~单位,",将技能 ",~数值," 的冷却百分比调整 ",~数值
+_BlzAdjustUnitAbilityCooldownPercent_DisplayName="调整技能冷却百分比"
+_BlzAdjustUnitAbilityCooldownPercent_Parameters="调整",~单位,"的 ",~技能类型,"的冷却百分比",~实数,"%"
 _BlzAdjustUnitAbilityCooldownPercent_Defaults=GetTriggerUnit,_,0.50
 _BlzAdjustUnitAbilityCooldownPercent_Category=TC_UNIT
 
@@ -8707,22 +8820,22 @@ _BlzPlaySpecialEffect_Category=TC_SPECIALEFFECT
 
 BlzSetSpecialEffectAnimation=0,effect,animationname
 _BlzSetSpecialEffectAnimation_DisplayName="设置特效动画名称"
-_BlzSetSpecialEffectAnimation_Parameters="播放特效：",~特效,",动画名称：",~动画名称
+_BlzSetSpecialEffectAnimation_Parameters="播放特效:",~特效,",动画名称:",~动画名称
 _BlzSetSpecialEffectAnimation_Defaults=GetLastCreatedEffectBJ,"birth"
 _BlzSetSpecialEffectAnimation_Category=TC_SPECIALEFFECT
 
 BlzQueueSpecialEffectAnimation=0,effect,animationname
 _BlzQueueSpecialEffectAnimation_DisplayName="排队播放特效动画名称"
-_BlzQueueSpecialEffectAnimation_Parameters="排队播放特效：",~特效,",动画名称：",~动画名称
+_BlzQueueSpecialEffectAnimation_Parameters="排队播放特效:",~特效,",动画名称:",~动画名称
 _BlzQueueSpecialEffectAnimation_Defaults=GetLastCreatedEffectBJ,"birth"
 _BlzQueueSpecialEffectAnimation_Category=TC_SPECIALEFFECT
 
 BlzSetSpecialEffectAnimationBlendTime=0,effect,real
 _BlzSetSpecialEffectAnimationBlendTime_DisplayName="设置特效动画混合时间"
-_BlzSetSpecialEffectAnimationBlendTime_Parameters="将",~特效,"的动画混合时间设为：",~数值
-_SetSpecialEffectAnimationBlendTime_Defaults=GetLastCreatedEffectBJ,_
-_SetSpecialEffectAnimationBlendTime_Limits=_,_,_,0,_
-_SetSpecialEffectAnimationBlendTime_Category=TC_SPECIALEFFECT
+_BlzSetSpecialEffectAnimationBlendTime_Parameters="将",~特效,"的动画混合时间设为:",~数值
+_BlzSetSpecialEffectAnimationBlendTime_Defaults=GetLastCreatedEffectBJ,_
+_BlzSetSpecialEffectAnimationBlendTime_Limits=_,_,_,0,_
+_BlzSetSpecialEffectAnimationBlendTime_Category=TC_SPECIALEFFECT
 
 // Temporarily disable [with time scale] function in GUI
 // BlzPlaySpecialEffectWithTimeScale=0,effect,animtype,real
@@ -9981,8 +10094,8 @@ _LoadButtonHandleBJ_Category=TC_HASHTABLE
 //_LoadItemTypeHandleBJ_Category=TC_HASHTABLE
 
 LoadTextTagHandleBJ=0,0,texttag,integer,integer,hashtable
-_LoadTextTagHandleBJ_DisplayName="读取漂浮文本"
-_LoadTextTagHandleBJ_Parameters="读取漂浮文本,子引索",~整数,"主引索",~整数,"从",~哈希表
+_LoadTextTagHandleBJ_DisplayName="读取漂浮文字"
+_LoadTextTagHandleBJ_Parameters="读取漂浮文字,子引索",~整数,"主引索",~整数,"从",~哈希表
 _LoadTextTagHandleBJ_Defaults=_,_,GetLastCreatedHashtableBJ
 _LoadTextTagHandleBJ_Category=TC_HASHTABLE
 
@@ -10329,6 +10442,18 @@ _IsUnitDeadBJ_DisplayName="死亡"
 _IsUnitDeadBJ_Parameters=~单位,"死亡"
 _IsUnitDeadBJ_Defaults=GetTriggerUnit
 _IsUnitDeadBJ_Category=TC_UNIT
+
+UnitIsAliveBJ=0,0,boolean,unit
+_UnitIsAliveBJ_DisplayName="单位存活"
+_UnitIsAliveBJ_Parameters=~单位,"存活"
+_UnitIsAliveBJ_Defaults=GetTriggerUnit
+_UnitIsAliveBJ_Category=TC_UNIT
+
+UnitIsDeadBJ=0,0,boolean,unit
+_UnitIsDeadBJ_DisplayName="单位死亡"
+_UnitIsDeadBJ_Parameters=~单位,"死亡"
+_UnitIsDeadBJ_Defaults=GetTriggerUnit
+_UnitIsDeadBJ_Category=TC_UNIT
 
 IsUnitPausedBJ=0,0,boolean,unit
 _IsUnitPausedBJ_DisplayName="单位暂停"
@@ -11564,22 +11689,22 @@ _BlzGetUnitArmor_Defaults=GetTriggerUnit
 _BlzGetUnitArmor_Category=TC_UNIT
 
 BlzGetAbilityCooldown=0,1,real,abilcode,integer
-_BlzGetAbilityCooldown_DisplayName="技能默认冷却时间"
-_BlzGetAbilityCooldown_Parameters=~技能,"在等级",~整数,"的技能冷却时间"
+_BlzGetAbilityCooldown_DisplayName="技能默认冷却"
+_BlzGetAbilityCooldown_Parameters=~技能,"在等级",~整数,"的技能冷却"
 _BlzGetAbilityCooldown_Defaults=_,0
 _BlzGetAbilityCooldown_Limits=_,_,0,_
 _BlzGetAbilityCooldown_Category=TC_GAME
 
 BlzGetUnitAbilityCooldown=0,1,real,unit,abilcode,integer
-_BlzGetUnitAbilityCooldown_DisplayName="技能冷却时间"
-_BlzGetUnitAbilityCooldown_Parameters=~单位,"的",~技能类型,"在等级",~整数,"的技能冷却时间"
+_BlzGetUnitAbilityCooldown_DisplayName="技能冷却"
+_BlzGetUnitAbilityCooldown_Parameters=~单位,"的",~技能类型,"在等级",~整数,"的技能冷却"
 _BlzGetUnitAbilityCooldown_Defaults=GetTriggerUnit,_,0
 _BlzGetUnitAbilityCooldown_Limits=_,_,_,_,0,_
 _BlzGetUnitAbilityCooldown_Category=TC_UNIT
 
 BlzGetUnitAbilityCooldownRemaining=0,1,real,unit,abilcode
-_BlzGetUnitAbilityCooldownRemaining_DisplayName="技能剩余冷却时间"
-_BlzGetUnitAbilityCooldownRemaining_Parameters=~单位,"的",~技能类型,"的技能剩余冷却时间"
+_BlzGetUnitAbilityCooldownRemaining_DisplayName="技能剩余冷却"
+_BlzGetUnitAbilityCooldownRemaining_Parameters=~单位,"的",~技能类型,"的技能剩余冷却"
 _BlzGetUnitAbilityCooldownRemaining_Defaults=GetTriggerUnit,_
 _BlzGetUnitAbilityCooldownRemaining_Category=TC_UNIT
 
@@ -12666,7 +12791,7 @@ _ChooseRandomItemBJ_Limits=-1,10
 _ChooseRandomItemBJ_Category=TC_NOTHING
 
 ChooseRandomItemExBJ=1,1,itemcode,integer,itemtype
-_ChooseRandomItemExBJ_DisplayName="随机物品(指定等级、分类)"
+_ChooseRandomItemExBJ_DisplayName="随机物品(指定等级,分类)"
 _ChooseRandomItemExBJ_Parameters="等级",~整数,"分类",~物品分类,"随机物品"
 _ChooseRandomItemExBJ_Defaults=1,ItemTypeAny
 _ChooseRandomItemExBJ_Limits=-1,8,_,_
@@ -12680,7 +12805,7 @@ _ChooseRandomItemExWithFilterBJ_Limits=-1,8,_,_,_,_,_,_
 _ChooseRandomItemExWithFilterBJ_Category=TC_NOTHING
 
 ChooseRandomItemExWithFilterAndIncludesBJ=1,1,itemcode,integer,itemtype,equipmenttype,itemtag,boolean,boolean
-_ChooseRandomItemExWithFilterAndIncludesBJ_DisplayName="随机物品类型(指定等级、分类及过滤与包含条件)"
+_ChooseRandomItemExWithFilterAndIncludesBJ_DisplayName="随机物品类型(指定等级,分类及过滤与包含条件)"
 _ChooseRandomItemExWithFilterAndIncludesBJ_Parameters="等级",~整数,".",~物品分类,",",~装备类型,",",~物品标签,"随机物品类型,包括无效变形",~包含无效变形,",包括非随机物品",~包含非随机物品
 _ChooseRandomItemExWithFilterAndIncludesBJ_Defaults=1,ItemTypeAny,EquipmentTypeAny,ItemTagAny,true,false
 _ChooseRandomItemExWithFilterAndIncludesBJ_Limits=-1,8,_,_,_,_,_,_
@@ -13177,8 +13302,8 @@ _GetLastCreatedHashtableBJ_Category=TC_LAST
 
 // returns texttag
 GetLastCreatedTextTag=1,0,texttag
-_GetLastCreatedTextTag_DisplayName="最后创建的漂浮文本"
-_GetLastCreatedTextTag_Parameters="最后创建的漂浮文本"
+_GetLastCreatedTextTag_DisplayName="最后创建的漂浮文字"
+_GetLastCreatedTextTag_Parameters="最后创建的漂浮文字"
 _GetLastCreatedTextTag_Defaults=
 _GetLastCreatedTextTag_Category=TC_LAST
 

@@ -84,13 +84,13 @@ _CommandsWaiting_Category=TC_AI_COMMAND
 
 CheckLastCommand=1,0,integer,aicommandpop
 _CheckLastCommand_DisplayName="最后发送的命令"
-_CheckLastCommand_Parameters="最后发送的命令",~选项
+_CheckLastCommand_Parameters="最后发送的命令为",~选项
 _CheckLastCommand_Defaults=AICommandPop
 _CheckLastCommand_Category=TC_AI_COMMAND
 
 CheckLastCommandData=1,0,integer,aicommandpop
 _CheckLastCommandData_DisplayName="最后发送的命令数据"
-_CheckLastCommandData_Parameters="最后发送的命令数据",~选项
+_CheckLastCommandData_Parameters="最后发送的命令数据为",~选项
 _CheckLastCommandData_Defaults=AICommandLeave
 _CheckLastCommandData_Category=TC_AI_COMMAND
 

@@ -63,7 +63,7 @@ TriggerRegisterPlayerSelectionEventBJHint="使用'事件响应 - 触发单位'�
 
 TriggerRegisterPlayerKeyEventBJHint=
 
-TriggerRegisterPlayerMouseEventBJHint=
+TriggerRegisterPlayerMouseEventBJHint="在地图初始化期间注册并使用鼠标事件会导致游戏崩溃.建议延后至游戏开始后再注册."
 
 TriggerRegisterPlayerStateEventHint="不考虑原属性值,只要变化后的属性值满足条件即触发."
 
@@ -91,7 +91,7 @@ TriggerRegisterUnitEventHint=
 
 TriggerRegisterPlayerUnitEventSimpleHint=
 
-TriggerRegisterAnyUnitEventBJHint=
+TriggerRegisterAnyUnitEventBJHint="会为所有玩家槽位(含中立)注册事件,因此对地图上的所有单位都会触发."
 
 TriggerRegisterEnterRectSimpleHint="使用'事件响应 - 进入的单位'来响应进入该区域的单位. 事实上是创建不规则区域,并注册单位进入不规则区域事件,所以之后改动该矩形区域对事件不会产生任何影响."
 
@@ -181,7 +181,7 @@ OrMultipleHint="在主显示区中为本函数添加条件."
 
 DoNothingHint=
 
-CommentStringHint=
+CommentStringHint="该函数不起任何作用.世界编辑器会忽略它,因为它不会生成任何触发."
 
 CustomScriptCodeHint="输入一行Jass代码. 如: call my_func(udg_my_var)"
 
@@ -292,9 +292,9 @@ QueueDestructableAnimationBJHint=
 
 SetDestAnimationSpeedPercentHint="设置100%动画播放速度来恢复正常状态."
 
-SetDoodadAnimationRectBJHint="特殊动画名: 'show'、'hide'、'soundon'、'soundoff'."
+SetDoodadAnimationRectBJHint="特殊动画名: 'show', 'hide', 'soundon', 'soundoff'."
 
-SetDoodadAnimationBJHint="特殊动画名: 'show'、'hide'、'soundon'、'soundoff'."
+SetDoodadAnimationBJHint="特殊动画名: 'show', 'hide', 'soundon', 'soundoff'."
 
 SetDoodadColorRectBJHint="装饰物模型必须支持队伍颜色."
 
@@ -304,7 +304,7 @@ SetDoodadColorBJHint="装饰物模型必须支持队伍颜色."
 // Camera actions
 CameraSetupApplyForPlayerHint=
 
-CameraSetupApplyForPlayerSmoothHint="镜头将在指定的淡入时间内加速,并在指定的淡出时间内减速；平滑系数是速度方程中一次项系数与二次项系数的比值."
+CameraSetupApplyForPlayerSmoothHint="镜头将在指定的淡入时间内加速,并在指定的淡出时间内减速;平滑系数是速度方程中一次项系数与二次项系数的比值."
 
 PanCameraToTimedLocForPlayerHint=
 
@@ -332,9 +332,9 @@ CameraSetSmoothingFactorBJHint="数值越大,镜头转换越平滑."
 
 CameraResetSmoothingFactorBJHint="其实就是设置镜头平滑参数为0."
 
-CameraSetFocalDistanceHint=
+CameraSetFocalDistanceHint="仅在重制版高清(HD)画面模式下生效."
 
-CameraSetDepthOfFieldScaleHint=
+CameraSetDepthOfFieldScaleHint="仅在重制版高清(HD)画面模式下生效."
 
 CameraSetSourceNoiseForPlayerHint="使用'镜头 - 重置镜头'或'镜头 - 停止摇晃镜头'来停止摇晃."
 
@@ -373,7 +373,7 @@ ForceCinematicSubtitlesBJHint="该功能和'游戏菜单-声音选项'中的字�
 
 CinematicModeBJHint=
 
-CinematicModeExBJHint=
+CinematicModeExBJHint="部分效果(如游戏速度)会影响所有玩家,无法只对单个玩家生效."
 
 CinematicFadeBJHint="颜色格式为(红,绿,蓝). 透明度100%是不可见的."
 
@@ -413,7 +413,7 @@ ShowInterfaceForceOffHint="使用电影镜头模式,隐藏游戏界面."
 
 ShowInterfaceForceOnHint="关闭信箱模式,返回游戏界面."
 
-SetUserControlForceOffHint=
+SetUserControlForceOffHint="被禁用后玩家的鼠标会消失,除 ALT + F4 与切换桌面外,其余游戏快捷键均不响应.对电脑玩家(AI)无效."
 
 SetUserControlForceOnHint=
 
@@ -449,17 +449,17 @@ CreateDestructableLocHint="面向角度采用角度制,0度为正东方向,90度
 
 CreateDeadDestructableLocBJHint="面向角度采用角度制,0度为正东方向,90度为正北方向. 使用'最后创建的可破坏物'来获取创建的物体."
 
-KillDestructableHint=
+KillDestructableHint="杀死可破坏物并播放其死亡动画(若有),此后仍可将其复活."
 
-RemoveDestructableHint=
+RemoveDestructableHint="将可破坏物从游戏中彻底移除,此后无法复活."
 
-DestructableRestoreLifeHint=
+DestructableRestoreLifeHint="生命值为 0 或超过其最大生命值时,将设为最大生命值;低于 0.5 时,将设为 0.5.若该可破坏物并未死亡,则不产生任何效果."
 
 ShowDestructableBJHint="隐藏的可破坏物不被显示,但仍影响通行和视线."
 
 SetDestructableLifePercentBJHint=
 
-SetDestructableLifeHint=
+SetDestructableLifeHint="虽可复活已死亡的可破坏物,但其外观不会显示,需攻击它触发死亡动画后才会显现."
 
 SetDestructableMaxLifeBJHint=
 
@@ -467,7 +467,7 @@ ModifyGateBJHint=
 
 ChangeElevatorWallsHint="存在10~30个局部变量泄漏."
 
-ChangeElevatorHeightHint=
+ChangeElevatorHeightHint="升降台会按目标高度与当前高度自动播放升降过程,并非立即改变高度."
 
 SetDestructableInvulnerableBJHint=
 
@@ -487,7 +487,7 @@ DialogDisplayBJHint="对话框不能在地图初始化时显示."
 
 DialogSetMessageBJHint=
 
-DialogAddButtonBJHint=
+DialogAddButtonBJHint="按钮内容在添加时就已固定,之后即使修改所用的变量,已添加按钮的内容也不会随之改变."
 
 DialogClearBJHint="清空对话框的标题和所有按钮."
 
@@ -518,9 +518,9 @@ SetTerrainTypeBJHint="地形样式-1表示随机样式. 范围即地形编辑器
 SetTerrainPathableBJHint="例:设置'建造'通行状态为开,则该点可以建造建筑. 一个单元点范围为32x32."
 SetWaterBaseColorBJHint="颜色格式为(红,绿,蓝).100%透明的水完全不可见.此动作用于SD水面,对HD和DE水面同样有效,但建议在那些模式下使用覆盖选项."
 
-SetHDWaterParamsExBJHint="颜色值为(红、绿、蓝).将覆盖设为关闭会禁用颜色行为.仅对高清版和决定版水体有效.如需进一步调整单项参数,请使用其它动作."
+SetHDWaterParamsExBJHint="颜色值为(红,绿,蓝).将覆盖设为关闭会禁用颜色行为.仅对高清版和决定版水体有效.如需进一步调整单项参数,请使用其它动作."
 
-BlzSetHDWaterColorBJHint="颜色值为(红、绿、蓝).该动作会自动启用颜色覆盖.仅对高清版和决定版水体有效.它会覆盖由「设置水体着色」动作设定的着色."
+BlzSetHDWaterColorBJHint="颜色值为(红,绿,蓝).该动作会自动启用颜色覆盖.仅对高清版和决定版水体有效.它会覆盖由「设置水体着色」动作设定的着色."
 
 BlzSetHDWaterColorOverrideBJHint="该动作不会改变实际颜色值.仅对高清版和决定版水体有效."
 
@@ -566,7 +566,7 @@ BlzSetTerrainFogMaxLinearDensityBJHint="对所有迷雾样式均生效."
 
 BlzSetTerrainFogDrawOverSkyBJHint="该效果会用迷雾覆盖天空盒.对所有迷雾样式均生效."
 
-BlzSetTerrainFogColorBJHint="颜色值为(红、绿、蓝).对所有迷雾样式均生效."
+BlzSetTerrainFogColorBJHint="颜色值为(红,绿,蓝).对所有迷雾样式均生效."
 
 ResetTerrainFogBJHint=
 
@@ -641,11 +641,11 @@ CustomDefeatBJHint=
 
 SaveGameHint=
 
-SetMaxCheckpointSavesHint=
+SetMaxCheckpointSavesHint="超过该数量时,会自动替换最早的存档."
 
-SaveGameCheckPointHint="本触发器会创建一个地图存档,并弹出一则“游戏保存中”的信息."
+SaveGameCheckPointHint="本触发器会创建一个地图存档,并弹出一则'游戏保存中'的信息."
 
-SaveGameCheckPointBJHint="本触发器会创建一个地图存档,并弹出一则“到达检查点”的信息.上限为5个"
+SaveGameCheckPointBJHint="本触发器会创建一个地图存档,并弹出一则'到达检查点'的信息.上限为5个"
 
 LoadGameBJHint=
 
@@ -673,37 +673,37 @@ SetAllyColorFilterStateHint="0为不开启. 1为小地图显示. 2为小地图�
 
 SetCreepCampFilterStateHint="相当于游戏中Alt+R功能."
 
-EnableMinimapFilterButtonsHint=
+EnableMinimapFilterButtonsHint="此项属于玩家的辅助功能设置.如无必要请勿更改,以免影响视障玩家的正常使用."
 
 EnableSelectHint="禁用选择后仍可以通过触发来选择物体. 只有允许选择功能时才会显示选择圈."
 
-EnableDragSelectHint=
+EnableDragSelectHint="后一个参数仅控制绿色选择框的显示,关闭后框选功能仍然有效."
 
-EnablePreSelectHint=
+EnablePreSelectHint="后一个参数为否时仅隐藏绿色圆圈与生命条,光标仍会按单位归属闪烁颜色."
 
-ForceUIKeyBJHint=
+ForceUIKeyBJHint="该函数模拟玩家的按键操作,请仅对该玩家本地调用,否则会导致不同步."
 
-ForceUICancelBJHint=
+ForceUICancelBJHint="该函数模拟玩家的取消操作,请仅对该玩家本地调用,否则会导致不同步."
 
-PreloadHint=
+PreloadHint="游戏只是将这些文件读入缓存,并不会真正加载它们.读取在独立线程中进行,不会造成卡顿."
 
-PreloadEndHint=
+PreloadEndHint="与「预载入开始」效果相同,其超时参数实际不起任何作用."
 
-PreloaderHint=
+PreloaderHint="仅在文件名带扩展名时才会作为预载入脚本执行.每个地图载入周期内,预载入文件只从磁盘读取一次."
 
-BlzShowTerrainHint=
+BlzShowTerrainHint="关闭后地形不再渲染,背景默认为黑色."
 
 BlzShowSkyBoxHint=
 
-BlzStartRecordingHint=
+BlzStartRecordingHint="未运行战网客户端时该函数无效,不会生成任何文件."
 
-BlzEndRecordingHint=
+BlzEndRecordingHint="未运行战网客户端时该函数无效,不会生成任何文件."
 
 // Machinima API
-BlzHideCinematicPanelsHint="隐藏标题栏、字幕及头像框体."
+BlzHideCinematicPanelsHint="隐藏标题栏,字幕及头像框体."
 
 // Game Cache actions
-InitGameCacheBJHint="游戏缓存可在不同地图之间、或同一地图的多次游戏之间存储数据.若指定文件不存在,将会被创建."
+InitGameCacheBJHint="游戏缓存可在不同地图之间,或同一地图的多次游戏之间存储数据.若指定文件不存在,将会被创建."
 
 SaveGameCacheBJHint="只对单机游戏有效,保存缓存数据到本地硬盘,主要用来实现战役关卡间的数据传递."
 
@@ -841,9 +841,9 @@ AddHeroXPSwappedHint="经验值不能倒退."
 
 SuspendHeroXPBJHint=
 
-SetPlayerHandicapReviveTimeBJHint=
+SetPlayerHandicapReviveTimeBJHint="实际按输入值的百分之一生效:输入 100 即为 100%,输入 50 即为 50%."
 
-SetPlayerHandicapXPBJHint=
+SetPlayerHandicapXPBJHint="实际按输入值的百分之一生效:输入 100 即为 100%,输入 50 即为 50%."
 
 ReviveHeroLocHint="如果英雄正在祭坛复活,则会退回部分花费(默认为100%)."
 
@@ -855,19 +855,19 @@ SetReservedLocalHeroButtonsHint="因为共享单位而被控制的其他玩家�
 
 UnitAddItemSwappedHint=
 
-UnitAddItemByIdSwappedHint=
+UnitAddItemByIdSwappedHint="若该单位没有物品栏或物品栏已满,物品会被创建在该单位所在的位置."
 
 UnitRemoveItemSwappedHint="物品将被丢弃在英雄脚下."
 
 UnitRemoveItemFromSlotSwappedHint="如果物品存在则会被丢弃在英雄脚下."
 
-UnitUseItemTargetHint=
+UnitUseItemTargetHint="以建筑等为目标时,需要指定位置的物品(如逃脱匕首)不会施放,因为其实际目标是地图位置而非该建筑."
 
 UnitUseItemPointLocHint=
 
 UnitUseItemDestructableHint=
 
-UnitUseItemHint=
+UnitUseItemHint="若该物品需要指定一个位置作为目标(如逃脱匕首),即使命令已下达并返回 true,也不会真正施放."
 
 AllowHeroGlowOnUnitBJHint="如果单位模型本身不自带英雄光晕,该动作不会产生任何效果."
 
@@ -910,7 +910,7 @@ EnumItemsInRectBJHint="组动作中可使用'选取物品'来获取对应的物�
 // Image actions
 CreateImageBJHint="使用'图像 - 设置永久渲染状态'才能显示图像. 创建点作为图像的左下角位置. 该功能存在Bug,会在图像上和右面多出256象素. 所以需要支持Alpha通道的图像且上和右面最后一行像素为透明才能完美显示."
 
-DestroyImageHint=
+DestroyImageHint="若图像无效(为空或从未创建过图像),可能导致游戏崩溃."
 
 ShowImageBJHint=
 
@@ -971,17 +971,17 @@ SetLightningColorBJHint="颜色格式为(红,绿,蓝). 颜色和Alpha通道值�
 
 
 // Melee Game actions
-MeleeStartingVisibilityHint=
+MeleeStartingVisibilityHint="该函数已被默认的「对战初始化」触发器直接调用."
 
 MeleeStartingHeroLimitHint="每个对战英雄只能建造1个. 最大英雄数量为3."
 
-MeleeGrantHeroItemsHint=
+MeleeGrantHeroItemsHint="该函数已被默认的「对战初始化」触发器直接调用."
 
-MeleeStartingResourcesHint=
+MeleeStartingResourcesHint="该函数已被默认的「对战初始化」触发器直接调用."
 
 MeleeClearExcessUnitsHint="移除每个已使用起始点周围1024范围内的所有中立敌对单位,以及非建筑的中立被动单位."
 
-MeleeStartingUnitsHint=
+MeleeStartingUnitsHint="该函数已被默认的「对战初始化」触发器直接调用."
 
 MeleeStartingAIHint="动作运行之前玩家要有初始单位和资源."
 
@@ -1003,11 +1003,11 @@ MultiboardMinimizeBJHint="最小化的多面板只显示标题."
 
 MultiboardClearHint="清空该多面板中的所有行和列."
 
-MultiboardSetTitleTextHint=
+MultiboardSetTitleTextHint="新标题会立即显示,多面板会自动加宽以适应标题长度."
 
 MultiboardSetTitleTextColorBJHint="颜色格式为(红,绿,蓝). 透明度100%是不可见的."
 
-MultiboardSetRowCountHint=
+MultiboardSetRowCountHint="每次调用只可安全地将行数增减 1.需要更大的改动请分多次调用."
 
 MultiboardSetColumnCountHint=
 
@@ -1025,7 +1025,7 @@ MultiboardSetItemIconBJHint=
 // Neutral Building actions
 AddResourceAmountBJHint="使用负数来减少储金量."
 
-SetResourceAmountHint=
+SetResourceAmountHint="若减去后最终值小于零,会显示正确的负数,但此后采集不会再产出资源."
 
 BlightGoldMineForPlayerHint="金矿的储金量不会改变."
 
@@ -1093,7 +1093,7 @@ SetPlayerColorBJHint=
 
 SetPlayerHandicapBJHint="生命障碍影响玩家拥有单位的生命最大值. 生命之书并不受生命障碍限制,所以对英雄血量可能会有偏差."
 
-SetPlayerHandicapDamageBJHint=
+SetPlayerHandicapDamageBJHint="实际按输入值的百分之一生效:输入 100 即为 100%,输入 50 即为 50%."
 
 SetPlayerOnScoreScreenBJHint=
 
@@ -1257,7 +1257,7 @@ AddSpecialEffectLocBJHint=
 
 AddSpecialEffectTargetUnitBJHint=
 
-DestroyEffectBJHint=
+DestroyEffectBJHint="删除特效时会先播放其消散动画,然后将其移除."
 
 DestroyEffectAfterTimeBJHint="特效会在时间结束后被移除."
 
@@ -1294,7 +1294,7 @@ CreateCorpseLocBJHint="不是所有单位都有尸体形态. 使用'最后创建
 
 CreatePermanentCorpseLocBJHint="肉态尸体经常会自动变为骨态尸体."
 
-KillUnitHint=
+KillUnitHint="立即杀死单位,会触发死亡事件并掉落物品,单位会留下尸体.与「删除」不同,被删除的单位不留尸体且英雄无法复活."
 
 RemoveUnitHint="被删除的单位不会留下尸体. 如果是英雄则不能再被复活."
 
@@ -1310,7 +1310,7 @@ SetUnitColorHint="改变队伍颜色并不会改变单位所属."
 
 BlzShowUnitTeamGlowHint="显示/隐藏单位的队伍光晕"
 
-SetUnitOwnerHint=
+SetUnitOwnerHint="只有在单位真正从一个玩家转移给另一个玩家时才会应用新的颜色.重制版中生命条颜色始终为原属玩家的颜色."
 
 UnitShareVisionBJHint="注意中立玩家槽位无法共享视野."
 
@@ -1352,21 +1352,21 @@ BlzSetAbilityIconHint=
 
 BlzSetAbilityActivatedIconHint=
 
-BlzSetAbilityPosXHint=
+BlzSetAbilityPosXHint="该函数无法改变「建造」等技能在物体编辑器中已指定的按钮位置."
 
 BlzSetAbilityActivatedPosXHint=
 
-BlzSetAbilityPosYHint=
+BlzSetAbilityPosYHint="该函数无法改变「建造」等技能在物体编辑器中已指定的按钮位置."
 
 BlzSetAbilityActivatedPosYHint=
 
-BlzSetEventDamageHint=
+BlzSetEventDamageHint="设为 0 可完全抵挡伤害,设为负数则改为治疗目标.未命中不会触发任何伤害事件.在伤害事件触发的动作中再次造成伤害会导致无限循环并使游戏崩溃."
 
-BlzSetItemNameHint=
+BlzSetItemNameHint="该函数无效,无法改变物品名称."
 
 BlzSetItemDescriptionHint=
 
-BlzSetItemTooltipHint=
+BlzSetItemTooltipHint="该函数无效,无法改变物品说明."
 
 BlzSetItemExtendedTooltipHint=
 
@@ -1386,49 +1386,49 @@ BlzSetUnitDiceSidesHint=
 
 BlzSetUnitAttackCooldownHint=
 
-BlzSetUnitNameHint=
+BlzSetUnitNameHint="将名称设置为空字符串会导致游戏崩溃."
 
-BlzSetUnitSkinHint=
+BlzSetUnitSkinHint="调用后会移除该单位身上所有的挂点特效."
 
 BlzSetDestructableSkinHint=
 
-BlzSetHeroProperNameHint="设置英雄的称谓(例如,圣骑士的“格拉尼丝黑锤”)."
+BlzSetHeroProperNameHint="设置英雄的称谓(例如,圣骑士的'格拉尼丝黑锤')."
 
-BlzSetUnitArmorHint=
+BlzSetUnitArmorHint="设置的是单位的护甲总值.若单位已有光环或物品提供的额外护甲,其基础护甲会被相应削减以达到设定的总值."
 
-BlzUnitHideAbilityHint=
+BlzUnitHideAbilityHint="该开关实际按计数器运作,并非单纯的隐藏开关."
 
-BlzUnitDisableAbilityHint=
+BlzUnitDisableAbilityHint="该开关实际按计数器运作.重复设为 true 后,需重复相同次数设为 false 才能真正恢复."
 
 BlzUnitEnableAurasHint="如果光环技能此前已被禁用,而此处又执行了一次禁用,则需要连续启用两次才能恢复.在过场动画期间移除光环效果时非常有用."
 
 BlzAllUnitsEnableAurasBJHint="如果光环技能此前已被禁用,而此处又执行了一次禁用,则需要连续启用两次才能恢复.在过场动画期间移除光环效果时非常有用."
 
-BlzUnitCancelTimedLifeHint=
+BlzUnitCancelTimedLifeHint="移除计时生命会立即杀死该单位.对没有计时生命的普通单位无效."
 
 BlzUnitInterruptAttackHint=
 
-BlzSetUnitAbilityCooldownHint=
+BlzSetUnitAbilityCooldownHint="不会缩短当前正在进行的冷却,新的冷却时间需等本次冷却结束后才会生效."
 
 BlzSetUnitAbilityManaCostHint=
 
-BlzSetSpecialEffectColorByPlayerHint=
+BlzSetSpecialEffectColorByPlayerHint="并非所有模型都有可染色的表面,例如战役建筑无法显示为所属玩家的颜色."
 
-BlzSetSpecialEffectColorHint=
+BlzSetSpecialEffectColorHint="任一参数无效或超出范围时,该函数不产生任何效果."
 
-BlzSetSpecialEffectAlphaHint=
+BlzSetSpecialEffectAlphaHint="只改变特效主模型的透明度.若特效附加在其他物体上,需改为设置被附加物体的透明度."
 
-BlzSetSpecialEffectScaleHint=
+BlzSetSpecialEffectScaleHint="若该特效已设置了矩阵缩放,最终缩放为两者相乘的结果.使用负值会使模型沿所有坐标轴镜像翻转,并可能因此渲染到地形下方."
 
-BlzSetSpecialEffectXHint=
+BlzSetSpecialEffectXHint="会将特效的 Y 轴与高度重置为其生成时的位置."
 
-BlzSetSpecialEffectYHint=
+BlzSetSpecialEffectYHint="会将特效的 X 轴与高度重置为其生成时的位置."
 
-BlzSetSpecialEffectZHint=
+BlzSetSpecialEffectZHint="对已附加到模型挂点的特效无效,数值保持为 0."
 
-BlzSetSpecialEffectPositionLocHint=
+BlzSetSpecialEffectPositionLocHint="会将特效的高度重置为其生成时的高度,而非保持原值."
 
-BlzSetSpecialEffectPositionHint=
+BlzSetSpecialEffectPositionHint="对已附加到模型挂点的特效无效,数值保持为 0."
 
 BlzSpecialEffectClearSubAnimationsHint="清除所有次级动画"
 
@@ -1446,22 +1446,22 @@ BlzSetSpecialEffectAnimationBlendTimeHint="特效的混合时间决定特效动�
 
 BlzPlaySpecialEffectWithTimeScaleHint="以时间缩放播放带有特定动画的特殊效果(某些动画仅适用于特定的特殊效果)"
 
-BlzSetSpecialEffectHeightHint=
+BlzSetSpecialEffectHeightHint="对已附加到其他物体上的特效使用会导致游戏崩溃."
 
-BlzSetSpecialEffectOrientationHint=
+BlzSetSpecialEffectOrientationHint="对已附加到模型挂点的特效无效,数值保持为 0."
 
-BlzSetSpecialEffectYawHint=
+BlzSetSpecialEffectYawHint="对已附加到模型挂点的特效无效,数值保持为 0."
 
-BlzSetSpecialEffectPitchHint=
+BlzSetSpecialEffectPitchHint="对已附加到模型挂点的特效无效,数值保持为 0."
 
-BlzSetSpecialEffectRollHint=
+BlzSetSpecialEffectRollHint="对已附加到模型挂点的特效无效,数值保持为 0."
 
-BlzSetSpecialEffectTimeScaleHint=
+BlzSetSpecialEffectTimeScaleHint="负值会使动画倒放并回到开头,但不能以负值开始.如需重置动画,应在动画播放途中传入负值,否则动画会静止不动."
 
-BlzSetSpecialEffectTimeHint=
+BlzSetSpecialEffectTimeHint="该值不能为负数."
 
 
-SetUnitInvulnerableHint=
+SetUnitInvulnerableHint="该函数依赖 AbilityData.slk 中定义的无敌技能.若该技能缺失,调用会导致游戏崩溃."
 
 PauseUnitBJHint="被暂停的单位会停止行动并不再执行命令,但会记住当前命令,解除暂停后继续执行."
 
@@ -1531,7 +1531,7 @@ UnitRemoveTypeBJHint="并非所有类别都是可以删除的,建议使用新函
 
 IssueTargetOrderHint=
 
-IssuePointOrderLocHint=
+IssuePointOrderLocHint="若命令为建造建筑,即使单位已接受命令,该函数仍返回 false."
 
 IssueTargetDestructableOrderHint=
 
@@ -1545,11 +1545,11 @@ IssueTrainOrderByIdBJHint="该升级是指A单位升级为B单位,而不是科�
 
 IssueUpgradeOrderByIdBJHint="通过该触发动作可以多次研究武器和护甲升级."
 
-UnitDropItemPointLocHint=
+UnitDropItemPointLocHint="该动作不会设置「最后被丢弃的物品」."
 
 UnitDropItemSlotBJHint="只有当单位持有该物品时才有效."
 
-UnitDropItemTargetBJHint=
+UnitDropItemTargetBJHint="该动作不会设置「最后被丢弃的物品」."
 
 UnitDamagePointLocHint="该动作不会打断单位动作. 由该动作伤害/杀死单位同样正常触发'受到伤害'和'死亡'单位事件."
 
@@ -1557,7 +1557,7 @@ UnitDamageTargetBJHint="该动作不会打断单位动作. 由该动作伤害/�
 
 UnitHealBJHint="使用该单位自身的治疗加成."
 
-UnitHealFromOtherBJ="使用来源单位的治疗加成."
+UnitHealFromOtherBJHint="使用来源单位的治疗加成."
 
 DecUnitAbilityLevelSwappedHint="单位没有该技能则不做动作. 最低只能降到1级."
 
@@ -1625,7 +1625,7 @@ BlzSetUnitRealFieldBJHint=
 
 BlzSetUnitStringFieldBJHint=
 
-BlzSetUnitWeaponBooleanFieldBJHint=
+BlzSetUnitWeaponBooleanFieldBJHint="该动作不支持攻击模式 2(第二武器)."
 
 BlzSetUnitWeaponIntegerFieldBJHint=
 
@@ -1671,7 +1671,7 @@ CreateUbersplatBJHint="颜色格式为(红,绿,蓝). 透明度100%是不可见�
 
 DestroyUbersplatHint=
 
-ResetUbersplatHint=
+ResetUbersplatHint="该函数无效,不产生任何效果."
 
 FinishUbersplatHint="在动画播放完毕时自动清除该地面纹理变化."
 
@@ -1734,7 +1734,7 @@ IsPointBlightedBJHint=
 
 IsTerrainPathableBJHint="指定类型单位不能通行即通行状态为关闭. 如该点不能造建筑就是'建造'通行状态为关闭. 可使用'环境 - 设置地形通行状态'来改变通行状态."
 
-BlzIsTerrainPathableExhint="效果与「地形通行性关闭」动作完全相同,但会额外考虑单位和可破坏物的存在."
+BlzIsTerrainPathableExHint="效果与「地形通行性关闭」动作完全相同,但会额外考虑单位和可破坏物的存在."
 
 IsMapFlagSetHint=
 
@@ -2045,7 +2045,7 @@ GetPlayerTaxRateBJHint="所得税取值范围0-100."
 
 GetPlayerScoreHint=
 
-GetConvertedPlayerIdHint="玩家索引取值1-16."
+GetConvertedPlayerIdHint="玩家索引取值1-28."
 
 GetPlayerStructureCountHint=
 
@@ -2322,13 +2322,13 @@ CosBJHint="采用角度制计算."
 
 TanBJHint="采用角度制计算."
 
-AsinBJHint="采用角度制计算. 返回角度取值-90 — 90."
+AsinBJHint="采用角度制计算. 返回角度取值-90 - 90."
 
-AcosBJHint="采用角度制计算. 返回角度取值0 — 180."
+AcosBJHint="采用角度制计算. 返回角度取值0 - 180."
 
-AtanBJHint="采用角度制计算. 返回角度取值-90 — 90."
+AtanBJHint="采用角度制计算. 返回角度取值-90 - 90."
 
-Atan2BJHint="采用角度制计算. 返回角度取值-90 — 90."
+Atan2BJHint="采用角度制计算. 返回角度取值-90 - 90."
 
 GetPlayerHandicapReviveTimeBJHint="复活速度用百分比表示,正常值为100%."
 
@@ -2762,7 +2762,7 @@ GetItemPlayerHint="与持有者无关,默认为中立被动玩家."
 
 ForcePickRandomPlayerHint=
 
-ConvertedPlayerHint="玩家索引号取值1-16."
+ConvertedPlayerHint="玩家索引号取值1-28."
 
 GetChangingUnitPrevOwnerHint="响应'改变所有者'单位事件,指代单位原来的所有者."
 
@@ -2874,7 +2874,7 @@ GetLastCreatedUbersplatHint="最后一个使用'地面纹理 - 创建'动作创�
 
 
 // returns minimapicon
-GetLastCreatedMinimapIconHint="本触发器为使用“创建小地图标记”触发器动作创建的上一个小地图标记."
+GetLastCreatedMinimapIconHint="本触发器为使用'创建小地图标记'触发器动作创建的上一个小地图标记."
 
 
 // returns weathereffect
