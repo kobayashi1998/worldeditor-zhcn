@@ -3243,7 +3243,6 @@ UnitOrderMedivhUnRavenForm=0,unitordernotarg,`unravenform`,WESTRING_UNITORDERNOT
 UnitOrderRexxarBattleRoar=1,unitordernotarg,`battleroar`,WESTRING_UNITORDERNOTARG_REXXARBATTLEROAR
 UnitOrderColdArrows=0,unitordernotarg,`coldarrows`,WESTRING_UNITORDERNOTARG_COLDARROWS
 UnitOrderUnColdArrows=0,unitordernotarg,`uncoldarrows`,WESTRING_UNITORDERNOTARG_UNCOLDARROWS
-UnitOrderChallengingCall=1,unitordernotarg,`challengingcall`,WESTRING_UNITORDERNOTARG_CHALLENGINGCALL
 UnitOrderWarcry=1,unitordernotarg,`warcry`,WESTRING_UNITORDERNOTARG_WARCRY
 UnitOrderUnyieldingGuard=1,unitordernotarg,`unyieldingguard`,WESTRING_UNITORDERNOTARG_UNYIELDINGGUARD
 UnitOrderGrimConviction=1,unitordernotarg,`grimconviction`,WESTRING_UNITORDERNOTARG_GRIMCONVICTION
@@ -4387,7 +4386,7 @@ TriggerRegisterUnitInRangeSimple=0,real,unit
 _TriggerRegisterUnitInRangeSimple_DisplayName="接近特定单位"
 _TriggerRegisterUnitInRangeSimple_Parameters="单位进入",~实数,"范围距离",~特定单位
 _TriggerRegisterUnitInRangeSimple_Defaults=256,_
-_TriggerRegisterUnitInRangeSimple_Defaults=0,_,_,_
+_TriggerRegisterUnitInRangeSimple_Limits=0,_,_,_
 _TriggerRegisterUnitInRangeSimple_Category=TC_UNIT
 
 TriggerRegisterUnitLifeEvent=0,unit,limitop,real
@@ -5983,7 +5982,7 @@ SetTimeOfDayScalePercentBJ=0,real
 _SetTimeOfDayScalePercentBJ_DisplayName="设置昼夜时间流逝速度"
 _SetTimeOfDayScalePercentBJ_Parameters="设置昼夜时间流逝速度为默认值的",~实数,"%"
 _SetTimeOfDayScalePercentBJ_Defaults=100
-_SetTimeOfDayScalePercentBJ_Defaults=0,_
+_SetTimeOfDayScalePercentBJ_Limits=0,_
 _SetTimeOfDayScalePercentBJ_Category=TC_GAME
 
 UseTimeOfDayBJ=0,onoffoption
@@ -8196,7 +8195,7 @@ SetUnitLifeBJ=0,unit,real
 _SetUnitLifeBJ_DisplayName="设置生命值(指定值)"
 _SetUnitLifeBJ_Parameters="设置",~单位,"的生命值为",~实数
 _SetUnitLifeBJ_Defaults=GetTriggerUnit,GetUnitStateSwap
-_SetUnitLifeBJ_Defaults=_,_,0,_
+_SetUnitLifeBJ_Limits=_,_,0,_
 _SetUnitLifeBJ_Category=TC_UNIT
 
 SetUnitManaBJ=0,unit,real
@@ -8552,7 +8551,7 @@ BlzSetAbilityIntegerLevelFieldBJ=0,ability,abilityintegerlevelfield,integer,inte
 _BlzSetAbilityIntegerLevelFieldBJ_DisplayName="设置整数等级域"
 _BlzSetAbilityIntegerLevelFieldBJ_Parameters="设置",~技能,"的",~整数等级域,"在等级",~整数,"为",~整数
 _BlzSetAbilityIntegerLevelFieldBJ_Defaults=_,_,0,50
-_BlzSetAbilityIntegerLevelFieldBJ_Defaults=_,_,_,_,0,_,0,_
+_BlzSetAbilityIntegerLevelFieldBJ_Limits=_,_,_,_,0,_,0,_
 _BlzSetAbilityIntegerLevelFieldBJ_Category=TC_ABILITY
 
 BlzSetAbilityRealLevelFieldBJ=0,ability,abilityreallevelfield,integer,real
@@ -9316,7 +9315,7 @@ _DestroyGroup_Category=TC_UNITGROUP
 
 SetWantDestroyGroupBJ=0 
 _SetWantDestroyGroupBJ_DisplayName="设置销毁下一个组"
-_SetWantDestroyGroupBJ_Parameters="销毁在特定动作/函数中引用的下一个单位组
+_SetWantDestroyGroupBJ_Parameters="销毁在特定动作/函数中引用的下一个单位组。"
 _SetWantDestroyGroupBJ_Defaults=
 _SetWantDestroyGroupBJ_Category=TC_UNITGROUP
 
@@ -9405,7 +9404,7 @@ CreateFogModifierRadiusLocBJ=0,enableddisabledoption,player,fogstate,location,re
 _CreateFogModifierRadiusLocBJ_DisplayName="创建可见度修正器(圆范围)"
 _CreateFogModifierRadiusLocBJ_Parameters="创建一个状态为",~开启/关闭,"的可见度修正器给",~玩家,",可见度状态为",~可见度状态,"在圆心为",~点,",半径",~实数,"的圆范围"
 _CreateFogModifierRadiusLocBJ_Defaults=EnabledDisabledEnabled,Player00,FogStateVisible,GetRectCenter,512
-_CreateFogModifierRadiusLocBJ_Defaults=_,_,_,_,_,_,_,_,0,_
+_CreateFogModifierRadiusLocBJ_Limits=_,_,_,_,_,_,_,_,0,_
 _CreateFogModifierRadiusLocBJ_Category=TC_VISIBILITY
 
 FogModifierStart=0,fogmodifier
@@ -9425,6 +9424,23 @@ _DestroyFogModifier_DisplayName="删除可见度修正器"
 _DestroyFogModifier_Parameters="删除",~可见度修正器
 _DestroyFogModifier_Defaults=GetLastCreatedFogModifier
 _DestroyFogModifier_Category=TC_VISIBILITY
+
+BlzSetHUDScale=1,integer
+_BlzSetHUDScale_DisplayName="按百分比覆盖当前HUD缩放"
+_BlzSetHUDScale_Parameters="将当前HUD缩放覆盖为 ",~整数,"%"
+_BlzSetHUDScale_Defaults=100
+_BlzSetHUDScale_Limits=0,100
+_BlzSetHUDScale_Category=TC_GAME
+
+BlzLockHUDScale=1
+_BlzLockHUDScale_DisplayName="锁定HUD缩放选项"
+_BlzLockHUDScale_Parameters="为玩家锁定HUD缩放选项"
+_BlzLockHUDScale_Category=TC_GAME
+
+BlzUnlockHUDScale=1
+_BlzUnlockHUDScale_DisplayName="解锁HUD缩放选项"
+_BlzUnlockHUDScale_Parameters="为玩家解锁HUD缩放选项"
+_BlzUnlockHUDScale_Category=TC_GAME
 
 
 // Obsolete actions
@@ -9643,7 +9659,7 @@ BlzSetAbilityIntegerLevelField=0,1,boolean,ability,abilityintegerlevelfield,inte
 _BlzSetAbilityIntegerLevelField_DisplayName="设置整数等级域"
 _BlzSetAbilityIntegerLevelField_Parameters="设置",~技能,"的",~整数等级域,"在等级",~整数,"为",~整数
 _BlzSetAbilityIntegerLevelField_Defaults=_,_,0,50
-_BlzSetAbilityIntegerLevelField_Defaults=_,_,_,_,0,_,0,_
+_BlzSetAbilityIntegerLevelField_Limits=_,_,_,_,0,_,0,_
 _BlzSetAbilityIntegerLevelField_CATEGORY=TC_ABILITY
 
 BlzSetAbilityRealLevelField=0,1,boolean,ability,abilityreallevelfield,integer,real
