@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>补丁说明 · 版本 3.0.1</title>
+<meta name="description" content="魔兽争霸III：重制版 1.32.0 至 3.0.1 全部正式服补丁与热修说明的中文译文，按版本号分页收录。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2032%2032%22%3E%3Ctext%20x=%221%22%20y=%2225%22%20font-size=%2223%22%20font-family=%22Segoe%20UI%20Emoji,Apple%20Color%20Emoji,Noto%20Color%20Emoji,sans-serif%22%3E%F0%9F%93%9C%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="世界编辑器中文站">
+<meta property="og:title" content="补丁说明">
+<meta property="og:description" content="魔兽争霸III：重制版 1.32.0 — 3.0.1 正式服补丁与热修说明中文译文。">
+<meta property="og:url" content="https://worldeditor.cn/patch-notes.html">
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2129; --border:#2d333b;
+    --text:#e6edf3; --muted:#9aa4b2; --accent:#e3b341; --accent-rgb:227,179,65;
+    --code:#ffd479; --accent-bright:#f0d68a; --strong:#ffffff; --btn-shadow:rgba(0,0,0,.35);
+    --hot:#e08b5c;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;padding:56px 20px 72px;
+    background:var(--bg);color:var(--text);
+    font:15px/1.85 -apple-system,BlinkMacSystemFont,"Microsoft YaHei","PingFang SC",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  main{max-width:820px;margin:0 auto}
+  .back{margin:0 0 26px}
+  .back a{display:inline-block;font-size:13px;color:var(--muted);text-decoration:none;
+    border:1px solid var(--border);background:var(--panel2);border-radius:20px;padding:3px 13px;
+    transition:color .15s,border-color .15s}
+  .back a:hover{color:var(--accent);border-color:var(--accent)}
+
+  header{margin:0 0 18px}
+  h1{margin:0 0 8px;font-size:26px;font-weight:650;letter-spacing:.2px}
+  .sub{margin:0;font-size:12.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .lede{margin:18px 0 0;font-size:14px;color:var(--muted);line-height:1.85}
+  .lede b{color:var(--text);font-weight:600}
+
+  .tabwrap{position:relative;background:var(--bg);margin:26px 0 0;
+    padding:12px 0 14px;border-bottom:1px solid var(--border)}
+  .tabbar{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;border:0;
+    position:static;background:none}
+  /* 折叠态：强制单行，超出部分横向滚动，右侧留出按钮位 */
+  .tabwrap:not(.open) .tabbar{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;
+    padding-right:104px;scrollbar-width:none}
+  .tabwrap:not(.open) .tabbar::-webkit-scrollbar{display:none}
+  .tabmore{display:none;position:absolute;right:0;top:12px;height:29px;align-items:center;
+    font:12.5px/1 inherit;color:var(--muted);background:var(--panel2);border:1px solid var(--border);
+    border-radius:7px;padding:0 10px;cursor:pointer;transition:color .15s,border-color .15s}
+  .tabwrap.hasmore .tabmore{display:inline-flex}
+  .tabmore:hover{color:var(--text);border-color:var(--muted)}
+  .tabwrap.open{padding-bottom:46px}
+  .tabwrap.open .tabmore{top:auto;bottom:14px}
+  .tab{font:13px/1 inherit;color:var(--muted);background:var(--panel2);border:1px solid var(--border);
+    border-radius:7px;padding:7px 12px;cursor:pointer;transition:.15s;font-variant-numeric:tabular-nums}
+  .tab:hover{color:var(--text);border-color:var(--muted)}
+  .tab.on{color:var(--accent);border-color:rgba(var(--accent-rgb),.6);background:rgba(var(--accent-rgb),.12);font-weight:600}
+  .tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .panel{margin:26px 0 0}
+  .panel[hidden]{display:none}
+  .phead{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;padding-bottom:12px;
+    border-bottom:2px solid rgba(var(--accent-rgb),.35);margin-bottom:20px}
+  .phead h2{margin:0;font-size:20px;font-weight:650;letter-spacing:.04em}
+  .pmeta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12.5px;color:var(--muted)}
+  .pmeta .d{font-variant-numeric:tabular-nums}
+  .pmeta .b,.pmeta .k{font-size:11.5px;border:1px solid var(--border);border-radius:4px;padding:2px 7px}
+
+  .pbody h3{margin:26px 0 10px;font-size:15px;font-weight:650;color:var(--accent);
+    padding-left:10px;border-left:3px solid var(--accent);letter-spacing:.02em}
+  .pbody h3:first-child{margin-top:0}
+  .pbody h4{margin:20px 0 8px;font-size:13.5px;font-weight:650;color:var(--text);letter-spacing:.02em}
+  .pbody h4:first-child{margin-top:0}
+  .pbody p{margin:0 0 12px;font-size:14.5px}
+  .pbody ul{margin:0 0 14px;padding-left:0;list-style:none}
+  .pbody ul ul{margin:6px 0 0;padding-left:18px}
+  .pbody li{position:relative;padding-left:16px;margin:0 0 7px;font-size:14.5px;line-height:1.8;overflow-wrap:anywhere}
+  .pbody li:before{content:"";position:absolute;left:2px;top:.72em;width:4px;height:4px;
+    border-radius:50%;background:var(--muted);opacity:.7}
+  .pbody li.w3x,.pbody p.w3x{font-family:Consolas,Menlo,monospace;font-size:12.5px;color:var(--muted);line-height:1.7}
+  .pbody p.w3x{margin:.2em 0 .9em;overflow-wrap:anywhere}
+  .pbody li.w3x:before{opacity:.35}
+  .pbody b{color:var(--text);font-weight:650}
+
+  .psrc{margin:30px 0 0;padding-top:14px;border-top:1px solid var(--border);
+    font-size:12.5px;color:var(--muted);line-height:1.9}
+  .psrc-k{margin-right:10px;letter-spacing:.06em;font-size:11.5px;text-transform:uppercase}
+  .psrc a{color:var(--text);text-decoration:none;border-bottom:1px dotted var(--muted);
+    margin-right:16px;transition:color .15s,border-color .15s}
+  .psrc a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+
+  .hx{margin:30px 0 0;padding-top:18px;border-top:1px dashed var(--border)}
+  .hx-h{margin:0 0 14px}
+  .hx-t{display:inline-block;font-size:12px;letter-spacing:.04em;color:var(--hot);
+    border:1px solid color-mix(in srgb,var(--hot) 45%,transparent);border-radius:4px;padding:3px 9px}
+
+  .pfoot{display:flex;justify-content:space-between;gap:12px;margin:34px 0 0;padding-top:18px;
+    border-top:1px solid var(--border)}
+  .nav{font-size:13px;color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:none}
+  .nav:hover{color:var(--accent)}
+  .nav[disabled]{opacity:.35;cursor:default}
+  .nav[disabled]:hover{color:var(--muted)}
+
+  footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--border);color:var(--muted);font-size:12.5px;line-height:1.85}
+  footer p{margin:0 0 6px}
+  footer p:last-child{margin-bottom:0}
+
+  /* ===== 日间（浅色）令牌 ===== */
+  :root[data-theme="light"]{
+    --bg:#f6f4ef; --panel:#ffffff; --panel2:#f1eee7; --border:#ddd6c8;
+    --text:#2b2720; --muted:#6b6559; --accent:#806428; --accent-rgb:128,100,40;
+    --code:#785c12; --accent-bright:#6a5119; --strong:#000000; --btn-shadow:rgba(0,0,0,.12);
+    --hot:#a8522a;
+  }
+
+  .theme-btn{position:fixed;top:14px;right:14px;z-index:99;width:30px;height:30px;border-radius:50%;
+    border:1px solid var(--border);background:var(--panel);color:var(--text);font-size:12px;line-height:1;
+    cursor:pointer;box-shadow:0 2px 10px var(--btn-shadow,rgba(0,0,0,.3));}
+  .theme-btn:hover{border-color:var(--accent);}
+
+  @media (max-width:620px){
+    body{padding:44px 16px 60px}
+    h1{font-size:21px}
+    .tabwrap{padding:10px 0 12px}
+    .tabbar{gap:5px;flex-wrap:nowrap;overflow-x:auto;padding-right:0}
+    .tabwrap.hasmore .tabmore{display:none}
+    .tab{flex:0 0 auto}
+    .pbody li,.pbody p{font-size:14px}
+  }
+
+  @media print{
+    @page{size:A4;margin:14mm 13mm}
+    :root, :root[data-theme="light"]{
+      --bg:#ffffff; --panel:#ffffff; --panel2:#ffffff; --border:#c8c8c8;
+      --text:#111111; --muted:#555555; --accent:#5a4416; --accent-rgb:90,68,22;
+      --code:#4a3a10; --accent-bright:#3d2e0c; --strong:#000000; --hot:#7d3a19;
+    }
+    body{padding:0;background:#fff;color:#111;font-size:10.5pt}
+    .theme-btn,.back,.tabwrap,.pfoot{display:none !important}
+    /* 打印只出当前版本：其余面板保持隐藏，不做展开 */
+    .panel[hidden]{display:none !important}
+    .panel{margin-top:0}
+    header{margin-bottom:0}
+    h1{font-size:17pt;margin-bottom:4px}
+    .sub{font-size:8.5pt}
+    .lede{font-size:9.5pt;color:#333}
+    .phead{border-bottom-color:#b89a4e;margin-bottom:12px;break-after:avoid}
+    .phead h2{font-size:13.5pt}
+    .pmeta{font-size:8.5pt}
+    .pbody h3{font-size:10.5pt;page-break-after:avoid;break-after:avoid}
+    .pbody h4{font-size:9.5pt;page-break-after:avoid;break-after:avoid}
+    .pbody p,.pbody li{font-size:9.5pt;line-height:1.7}
+    .pbody li.w3x,.pbody p.w3x{font-size:8.5pt}
+    .pbody li{break-inside:avoid}
+    .pbody li:before{background:#666}
+    .hx-t{color:#7d3a19;border-color:#c8a58f}
+    .psrc{font-size:8.5pt;color:#444}
+    .psrc a[href]:after{content:" " attr(href);font-size:7.5pt;color:#555;word-break:break-all}
+    footer{font-size:8.5pt;color:#555}
+    a{color:var(--text);text-decoration:none}
+  }
+</style>
+<script>
+(function(){var t=null;try{t=localStorage.getItem('site-theme')}catch(e){}
+if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}
+document.documentElement.setAttribute('data-theme',t)})();
+</script>
+</head>
+<body>
+<button id="themeBtn" class="theme-btn" type="button" aria-label="切换日间/夜间模式" title="切换日间/夜间模式">☀️</button>
+<main>
+
+  <div class="back"><a href="index.html">← 返回主页</a></div>
+
+  <header>
+    <h1>补丁说明</h1>
+    <p class="sub" style="white-space: pre-wrap;">PATCH NOTES · 3.0.1 — 1.32.0</p>
+  </header>
+
+  
+
+  <div class="tabwrap hasmore open"><nav class="tabbar" role="tablist" aria-label="版本选择">
+      <button class="tab on" type="button" role="tab" aria-selected="true" data-v="3.0.1">3.0.1</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="3.0.0">3.0.0</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="2.0.4">2.0.4</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="2.0.3">2.0.3</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="2.0.2">2.0.2</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="2.0.1">2.0.1</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="2.0">2.0</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.36.2">1.36.2</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.36.1">1.36.1</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.36">1.36</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.35">1.35</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.34">1.34</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.33">1.33</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.32.10">1.32.10</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.32.9">1.32.9</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.32.8">1.32.8</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.32.7">1.32.7</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.32.6">1.32.6</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.32.5">1.32.5</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.32.4">1.32.4</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.32.3">1.32.3</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.32.2">1.32.2</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.32.1">1.32.1</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-v="1.32.0">1.32.0</button>
+  </nav><button class="tabmore" type="button" aria-controls="tabbar" aria-expanded="true">收起 ▴</button></div>
+
+<section class="panel on" id="v301" data-v="3.0.1" role="tabpanel"><div class="phead"><h2>版本 3.0.1</h2><div class="pmeta"><span class="d">2026-10-08</span><span class="b">构建 24342</span><span class="k">补丁</span></div></div><div class="pbody"><p>此补丁包含基于玩家反馈的各种错误修复和调整。</p>
+<p>提醒：之前的存档文件将不再有效。章节和幕之间的战役进度仍会保存。</p>
+<p>对于地图制作者，如果在此补丁之后你们的任何自定义地图仍然损坏，请在论坛中向我们提供你们地图的链接，以及相较于 2.0 损坏内容的详细描述，我们也会查看。</p>
+<h3>主更改列表</h3>
+<h4>常规</h4>
+<ul><li>将银松冲刺和遗忘空谷作为独立地图添加到 Maps\ForsakenKingdom\Scenarios 文件夹中。</li></ul>
+<h4>美术</h4>
+<ul><li>将环境光遮蔽添加到选项菜单，以获得更好的阴影。</li><li>启用环境光遮蔽可能会导致性能降低。</li><li>动画：以下单位已重新制作动画。<ul><li>熊猫酒仙</li><li>兽人步兵</li></ul></li><li>动画：修复了以下单位的若干穿模问题：<ul><li>人类圣骑士</li><li>死亡守卫</li><li>药剂师</li></ul></li><li>以下 VFX 已根据反馈重新调整：<ul><li>奥术塔导弹</li><li>暴风雪</li><li>神圣护盾</li><li>内心之火</li><li>献祭</li><li>回春术</li><li>流星雨</li><li>黑暗之箭</li><li>叉状闪电</li><li>霜冻之箭</li><li>通用光环目标</li><li>升级</li><li>速度目标</li><li>兽人粉碎者</li><li>奇美拉酸液导弹</li><li>光之化身</li><li>火焰吐息与霜冻吐息</li><li>战吼</li><li>生命汲取与法力汲取</li><li>唤醒与种族复活</li><li>放逐</li><li>死亡缠绕</li><li>冷酷信念</li><li>物品属性(DE)</li><li>闪电之球</li><li>减速之球、投射物与目标</li><li>咆哮目标</li><li>符文光辉与卡通描边(HD 与 DE)</li><li>暗影突袭目标</li><li>减速目标</li><li>灵魂链目标</li><li>亡灵集结点</li><li>枯萎之火投射物</li></ul></li><li>修复了茧状装饰物在死亡时无限循环动画的问题。</li><li>以下模型的模型色调和/或缩放已调整，以更好地反映其原始外观：<ul><li>海龟</li><li>巨型海龟</li><li>庞大海洋龟</li><li>覆苔花岗岩傀儡</li><li>泥浆傀儡、花岗岩傀儡</li><li>枭兽</li><li>狂怒枭兽</li><li>狂暴枭兽</li><li>巨型霜狼</li><li>恐惧霜狼</li><li>恐惧狼</li></ul></li><li>为 HD 图形添加了无雾气粒子效果的瀑布变体(Doodads\Terrain\CliffDoodad\Waterfall\WaterfallNoMist)。</li><li>过场动画：修复了若干 FaceFX 口型同步问题。</li><li>过场动画：修复了若干本地化字幕问题。</li><li>过场动画：修复了若干地图音乐会在过场动画期间播放的问题。</li><li>过场动画：归乡——在乌瑟尔过场动画中隐藏了布景装饰皇冠。</li><li>过场动画：修复了某些过场动画中的重复单位问题。</li><li>动态头像动画已添加，并在决定版图形模式中的大多数单位上启用。<ul><li>头像动画现在会截断，以更好地匹配语音台词。</li><li>说话动画的口型同步已改进。</li></ul></li><li>短草地砖已重做，以更好地匹配经典版。</li><li>环境光遮蔽已编辑，使其不影响地形和近距离过场动画镜头。</li><li>洛丹伦夏季生物群系的白天光照强度降低 10%。</li><li>光环特效现在会根据地形角度相应倾斜，以减少地面穿模。</li><li>地穴恶魔钻地精灵现在会在倾斜地形上正确显示。</li><li>人类兵营的选择框已调整到适当比例。</li><li>降低了主菜单过渡到 TFT 主题时的亮度，并更改了颜色。</li></ul>
+<h4>音频</h4>
+<ul><li>决定版图形现在将使用经典音效。</li></ul>
+<h4>洛丹伦的终焉之日</h4>
+<ul><li>提高了此战役中大多数首领的生命值和伤害。</li><li>加雷克的横扫打击伤害从 100/175/250 降低到 100/150/200</li><li>伊拉斯特的光明涌动在攻击可破坏物时不再触发。</li><li>伊拉斯特的圣责天赋现在会降低敌人正确数量的魔法抗性。</li><li>玩家在与乌瑟尔的过场动画后不再能够返回王座厅。</li><li>伊拉斯特的精神控制不再允许通过侍僧建造。</li><li>单位在某些地图上不再能够跑出地图边界。</li></ul>
+<h4>被遗忘者王国</h4>
+<ul><li>战役整体难度已提高<ul><li>总体而言，敌人造成更高伤害，并且更加耐久。</li></ul></li><li>被遗忘者王国战役英雄的基础属性和每级属性已调整。</li><li>重新平衡了战役中的若干消耗品物品。</li><li>修复了消耗品物品在第二幕中无法正确堆叠的问题。</li><li>重新平衡了许多装备物品。</li><li>为若干商人添加了重修书。<ul><li>重修书也会重置天赋点。</li></ul></li><li>第一幕：银松冲刺——添加了更多围栏和更宽的缓冲区。碰撞现在更不容易让车辆翻覆。</li><li>第一幕：银松冲刺——米科·螺丝匠和其他车手都不得不移除他们的非法引擎改装，现在慢了数秒。</li><li>第一幕：银松冲刺——已添加空格键作为刹车键。</li><li>加雷克的无情劈砍伤害从 100/175/250/325/400 降低到 100/150/200/250/300。</li><li>加雷克的不朽反抗移动惩罚从 40%/40%/40%/40%/40% 降低到 40%/35%/30%/25%/20%。</li><li>觅死之箭现在会与其他攻击效果叠加，包括：<ul><li>暴击</li><li>毒箭天赋</li><li>法球</li></ul></li><li>恩雅的幽影破裂天赋不再伤害友军</li><li>物品凤凰印记、深海背包、御火者之心、海拉之缚和埃森西姆现在会按预期生成投射物</li></ul>
+<h4>中立</h4>
+<ul><li>被遗忘者圣骑士快捷键从 F 改为 Y，以避免与其他种族英雄冲突。</li><li>被遗忘者圣骑士正义之怒攻击速度减缓从 30%/40%/50% 提高到 40%/40%/40%。</li><li>被遗忘者圣骑士正义之怒移动速度减缓从 20%/30%/40% 提高到 40%/40%/40%。</li><li>被遗忘者圣骑士正义之怒法力消耗从 100/100/100 降低到 90/90/90</li><li>被遗忘者圣骑士正义之怒伤害从 100/150/200 降低到 90/135/185</li><li>被遗忘者圣骑士奉献不再影响空中和机械单位。</li><li>被遗忘者圣骑士奉献持续时间从 5 增加到 10。</li><li>被遗忘者圣骑士奉献冷却从 8 增加到 10。</li><li>被遗忘者圣骑士奉献治疗从 25/35/50 降低到 15/25/35。</li><li>被遗忘者圣骑士奉献伤害从 20/30/40 降低到 15/20/25。</li><li>被遗忘者圣骑士神圣光环魔法抗性从 15%/25%/35% 降低到 15%/20%/25%。</li><li>被遗忘者圣骑士净化之火不再驱散不可驱散的法术，例如疾风步和末日。</li><li>被遗忘者圣骑士净化之火伤害增益现在会与其他伤害增益正确叠加。</li></ul>
+<h4>世界编辑器</h4>
+<ul><li>3.0 中添加的原生函数现在具有 Blz- 前缀。</li><li>[Aret] 重修书现在有一个布尔值，用于重置天赋点。</li><li>添加了以下原生函数的 Blz 前缀版本：<ul><li>GetEquippedItem</li><li>GetUnequippedItem</li><li>IsItemEquipped</li><li>IsItemInBag</li><li>GetItemEquipmentType</li><li>GetItemTag</li><li>UnitEquipItem</li><li>UnitUnequipItem</li><li>UnitUnequipItemFromSlot</li><li>UnitHasItemBagged</li><li>UnitExtendedInventorySize</li><li>UnitItemInBagSlot</li><li>UnitItemInEquipmentSlot</li><li>UnitHasItemEquipped</li><li>UnitHasLoadoutSlotEmpty</li><li>UnitHasAnyItemEquiped</li><li>UnitHasItemEquipmentOfType</li><li>UnitCanEquipItemOfEquipmentType</li><li>SetItemColor</li></ul></li><li>非 Blz 原生函数将在未来补丁中移除</li><li>新的原生函数和触发器 BlzResetUnitTalents</li><li>新的原生函数和触发器 ChooseRandomItemExWithFilterAndIncludes</li><li>新的原生函数和触发器 BlzUnitHeal</li><li>新的原生函数和触发器 BlzRemoveEffect</li><li>新游戏常数 CanInterruptByZeroDurationBuffs，禁用任何以零持续时间添加的增益后，不再打断引导</li><li>新的原生函数和触发器 BlzSetCameraAllowsHotkeyTargetLock 和 BlzGetCameraAllowsHotkeyTargetLock，之前的锁定镜头函数现在会自动禁用快捷键锁定</li><li>为被遗忘者圣骑士技能字段添加了触发器常量</li><li>添加了新的游戏常数，用于允许幻象获得治疗和魔法抗性加成</li><li>原生函数 BlzUnitHeal 接受 unit whichUnit, unit source, real life, boolean isItem, boolean applyStatBonuses 返回 real</li><li>原生函数 BlzRemoveEffect 接受 effect whichEffect 返回 nothing</li><li>原生函数 SetThematicMusicAbsoluteVolume 接受 integer volume 返回 nothing</li></ul>
+<h4>错误修复</h4>
+<ul><li>用户设置的快捷键现在会在物品栏按钮上正确显示</li><li>修复了施放法术的物品会使其拥有者对单位命令响应缓慢的问题</li><li>修复了从缓存恢复单位时攻击速度加成被重置的问题</li><li>修复了单位站在可破坏桥梁上会导致重制版图形模式中帧率低下的问题</li><li>当在声音选项中切换时，经典音效现在会在重制版模式中正确播放。</li><li>将被遗忘者圣骑士添加到酒馆快捷键选择中。</li><li>被遗忘者圣骑士现在会在其他语言中说出他的英语语音台词。</li><li>在被遗忘者主题下，被遗忘者光标现在会替换人类光标。</li><li>主菜单主题背景现在会在进入游戏时立即出现。</li><li>具有顶点但没有面的自定义模型不再崩溃。</li><li>修复了在地图中加载自定义资源的一个错误。</li><li>修复了通过世界编辑器测试地图启动时自定义纹理无法正确加载的问题。</li><li>在世界编辑器中打开多个地图时，关闭一个地图不再导致下一个打开的地图丢失其光照。</li><li>修复了一个错误，该错误会导致后处理对话框在重新打开并勾选复选框时禁用滑块。</li><li>修复了 koKR 区域设置中资源交易的崩溃。</li><li>修复了“AIs2”技能指向力量加成而不是攻击速度加成的错误。</li><li>加载文件名中带有句点的模型路径不再使游戏崩溃。</li><li>超过第 4 级的技能数据现在会正确保留其默认值。</li><li>在世界编辑器中设置的负治疗数值现在会消耗单位生命值。</li><li>修复了在 JASS 中带有长字符串的地图上加载存档文件时的崩溃。</li><li>如果冷却设置为 0，疾风步、虚无形态、石像形态不再取消预设冷却时间。</li><li>修复了游戏启动时偶尔性能缓慢的问题。</li><li>工程升级现在会正确切换技能，即使它们来自不同的基础技能。</li><li>修复了加载已保存游戏时的崩溃，该游戏中所选单位带有吸血物品增益处于激活状态。</li><li>修复了原生函数 UnitDropItemSlot 的功能</li><li>决意现在适用于空中锁链和放逐</li><li>修复了灵魂灯笼的 VFX 束缚偏移</li><li>修复了黑暗游侠和暗影猎手的 VFX 束缚偏移</li><li>修复了由于 DE 变体导致的损坏 SD / HD 装饰物的问题</li><li>树木从迷雾中出现时不再播放被击打动画。</li><li>物品头像不再不断重置自身。</li><li>车间现在在重制版图形中正确显示。</li><li>人类主城建筑现在在重制版图形中正确显示。</li><li>在回放中禁用全局迷雾时，树木现在会正确显示为被砍伐。</li><li>修复了可破坏物不播放破坏动画的问题。</li><li>修复了流星雨、破法者和季风技能使用别名 VFX 而不是基于技能 VFX 的问题</li><li>修复了一些悬崖纹理在重制版图形中错误使用 DE 版本的问题。</li><li>修复了重制版外域深渊悬崖纹理的 alpha 为透明而不是黑色的问题。</li><li>修复了自定义单位的默认头像 MDL 不显示的错误。</li><li>修复了在被遗忘者王国战役中的某些地图上，敏捷提供过多护甲的问题。</li><li>被遗忘者王国物品现在将其 pickRandom 值设为 0，防止它们在其他地图中生成。</li><li>对被遗忘者王国战役天赋和技能进行了各种提示修复。</li><li>指引之手不再使召唤的仆从持续无限时间</li><li>物品上的光照在英雄拾取后不再保留。</li><li>在冷酷信念激活时加载存档不再导致崩溃。</li><li>修复了莱尼德的正义之手天赋未正确降低移动速度的错误。</li><li>修复了莱尼德的挑衅没有法力消耗的错误。</li><li>修复了恩雅的指引之光法力消耗数值错误的错误。</li><li>修复了加雷克的招架第 5 级法力消耗数值错误的错误。</li><li>修复了战役中的若干音乐错误。</li><li>修复了若干无限刷金漏洞。</li><li>修复了战役中的大量图形和路径错误。</li><li>修复了若干关于正确任务追踪的错误。</li><li>修复了若干关于首领战和重置的错误。<ul><li>第一幕：幽暗城——修复了死亡骑士首领战中玩家英雄永久生命回复降低的错误。</li><li>第三幕：纳克萨玛斯——当英雄装备某些物品时，首领战不再崩溃。</li></ul></li><li>奉献治疗减益现在会应用于周期性治疗效果</li><li>施放两个或更多奉献法术不再无限叠加加成</li><li>净化之火现在应用正确的伤害计算</li><li>修复了幻象未从被遗忘者圣骑士技能获得正确属性的问题</li><li>石像鬼返回石像形态不再有冷却时间。</li><li>灵魂行者进入虚无形态不再有冷却时间。</li></ul>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2026-10-19（Build 24371）</span></div><p>我们部署了热修复。</p><h4>漏洞修复</h4><ul><li>修复了一个在韩国本地游玩时可能导致资源转移给其他玩家时崩溃的bug。</li></ul></div></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-forsaken-kingdom-patch-notes/38400/4" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 3.0.1 补丁说明</a><a href="https://us.forums.blizzard.com/en/warcraft3/t/28629/28" target="_blank" rel="noopener noreferrer">热修说明（2026-10-19）</a></div></section>
+
+<section class="panel" id="v300" data-v="3.0.0" role="tabpanel" hidden=""><div class="phead"><h2>版本 3.0.0</h2><div class="pmeta"><span class="d">2026-09-12</span><span class="b">构建 24268</span><span class="k">补丁</span></div></div><div class="pbody"><h3>常规</h3>
+<ul><li>添加了新的 UI 主题——被遗忘者王国</li><li>添加了新的音乐——被遗忘者王国</li><li>添加了新的首次启动过场动画</li><li>最大选择编组从 12 增加到 24</li><li>添加了单位遮挡</li><li>为 HD 图形添加了空对地指示器</li><li>战役流程界面已更新</li><li>更新了 IBL 贴图，以在 HD 模式下获得更好的视觉保真度</li><li>玩家现在可以在任务选择界面选择他们想要的图形</li><li>玩家现在无论游玩哪种模式都可以解锁战役进度(例如，游玩经典人类战役也会解锁重制版战役进度)</li><li>添加了新的 DLC 战役(需要购买被遗忘者王国)<ul><li>洛丹伦的终焉之日</li><li>被遗忘者王国</li></ul></li><li>游戏现在支持 OOG 音频文件</li><li>浮动文字上限增加到 10k</li><li>添加了新属性：技能增幅、技能吸血、技能速度、法力效率、暴击几率/伤害、技能暴击几率/伤害、决意</li><li>主菜单现在会根据所选 UI 主题更改音乐主题和环境音</li><li>经典高清现已被新模式“决定版”取代</li><li>插件系统已弃用，玩家现在可以在经典版、决定版和重制版之间选择</li><li>1.36 地形已重新添加到重制版模式</li><li>改进了 HD 水面</li><li>改进了 HD 中大型装饰物和可破坏物的战争迷雾</li><li>HD 中无限光照</li><li>修复了装饰物和地形图像的剔除问题</li></ul>
+<h3>中立英雄</h3>
+<ul><li>为 SD、DE 和 HD 添加了新的酒馆英雄——被遗忘者圣骑士</li></ul>
+<h3>自定义大厅</h3>
+<ul><li>自定义游戏大厅现在可以设置密码保护</li></ul>
+<h3>网络</h3>
+<ul><li>在以下地点添加了新的游戏服务器：<ul><li>新加坡，裕廊西</li><li>日本，大阪</li><li>印度，德里</li><li>比利时，圣吉斯兰</li><li>澳大利亚，墨尔本</li><li>加拿大，安大略省，多伦多</li><li>巴西，圣保罗州，奥萨斯库</li><li>美国，俄勒冈州，达尔斯</li><li>芬兰，哈米纳</li></ul></li><li>LAN 模式已移除(玩家仍可通过经典客户端进行 LAN 游戏)</li><li>重制版客户端现在要求玩家始终在线(离线模式仍可通过经典客户端使用)</li></ul>
+<h3>选项</h3>
+<ul><li>为点光源阴影、水面和超级采样添加了新选项</li><li>移除了环境光遮蔽、泛光、头像泛光、粒子和法术</li><li>将“阴影”重命名为“环境阴影”</li><li>在快捷键菜单中为战役单位添加了新的战役选项卡</li></ul>
+<h3>世界编辑器</h3>
+<ul><li>添加了新的光照编辑器</li><li>装饰物现在可以使用俯仰和翻滚旋转</li><li>装饰物和物品现在可以分配队伍颜色</li><li>添加了可编辑的全向光</li><li>添加了可投射阴影的全向光</li><li>可以在 HD 中查看阴影和迷雾</li><li>新的 HD 水面</li><li>在 HD 中添加了装饰物贴花</li><li>在 HD 中添加了水面装饰物</li><li>在 HD 中添加了阴影阻挡装饰物</li><li>添加了更多迷雾选项(高度雾、新的指数雾、绘制在天空之上、最大不透明度)</li><li>实时编辑迷雾和 HD 水面设置</li><li>玩家现在可以为可破坏物、装饰物和物品分配队伍颜色</li><li>添加了新的 alpha 图块功能</li><li>添加了用不同颜色绘制小地图的功能</li><li>添加了小地图在镜头边界内动态生成的选项</li><li>添加了新的装备类别</li><li>添加了物品实例的新类别</li><li>添加了为每位玩家选择 HUD 皮肤的选项(包括新的被遗忘者 HUD)</li><li>添加了自由镜头</li><li>添加了自由编辑现有声音变量文件路径的功能</li><li>添加了新的原生函数，用于重置单位的攻击冷却</li><li>添加了新的原生函数，用于设置单位技能的剩余冷却时间</li><li>添加了新的原生函数，用于启用或禁用单位的所有光环技能</li><li>为触发器添加了“复制为脚本”选项</li><li>添加了将触发器转换为 Lua 的选项</li><li>对象现在可以沿其局部轴而非世界轴缩放</li><li>添加了 AI 呼救范围的游戏常数</li><li>添加了复制对象保留其高度的选项</li><li>添加了各种新的技能原生函数</li><li>添加了后处理工具，以在地图级别应用后处理效果</li><li>添加了调整字符串 ID 的工具</li><li>添加了数据编辑器选项，以显示无敌建筑的生命值</li><li>添加了泄漏清理原生函数的 GUI 接口</li><li>添加了光照范围可视化</li><li>添加了禁用 HD 阴影的标志</li><li>重构了部分原生函数的 GUI 接口及其内置文档</li><li>增加了默认撤销堆栈大小，用户可配置至近乎无限</li></ul>
+<h3>错误修复</h3>
+<ul><li>修复了若干关于 LUA 序列化的保存/加载问题</li><li>修复了小地图图标不会随 HUD 缩放而缩放的问题</li><li>修复了地图制作者无法更改其地图的种族徽记，或决定是否完全不要徽记的问题</li><li>修复了登录输入时非英文键盘布局的问题</li><li>修复了 .tif 文件导入在地图加载时导致世界编辑器崩溃的问题</li><li>修复了如果目标距离施法者太近，投射物不会出现的问题</li><li>没有透明边框的地形图像不再渲染超出其文件像素范围</li><li>修复了生成新的闪电效果会移除旧效果的问题</li><li>修复了会错误地重置自定义战役地图自定义加载画面的问题</li><li>修复了会损坏自定义战役中地图导入的问题</li><li>修复了会导致自定义战役和 AI 编辑器以错误数据集打开的问题</li><li>地形图像现在跟随可行走层</li><li>修复了编辑器中区域和选择的若干 UI 渲染错误</li></ul></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-forsaken-kingdom-patch-notes/38400" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 被遗忘者王国补丁说明</a></div></section>
+
+<section class="panel" id="v204" data-v="2.0.4" role="tabpanel" hidden=""><div class="phead"><h2>版本 2.0.4</h2><div class="pmeta"><span class="d">2026-01-26</span><span class="b">构建 23452</span><span class="k">补丁</span></div></div><div class="pbody"><h3>匹配系统</h3>
+<ul><li>在 3v3 和 4v4 模式中，为预设队伍和随机队伍解锁了匹配对战</li><li>所有游戏模式中的预设队伍在搜索匹配时，会应用一个较小的天梯匹配等级权重</li><li>玩家现在可以以少于该模式人数的预设队伍排队进行 3v3 和 4v4 比赛<ul><li>例如，你可以以 2 人预设队伍排队进入 3v3 模式</li></ul></li><li>天梯排行榜现在支持相应游戏模式中的人数较少的预设队伍<ul><li>例如，一个 2 人预设队伍现在可以出现在 3v3 预设队伍天梯排行榜上</li></ul></li><li>预设队伍中的玩家在开始排队匹配前，现在会收到一条"准备就绪"的确认消息</li></ul>
+<h3>性能</h3>
+<ul><li>对Lua垃圾回收器进行了改进和优化</li></ul>
+<h3>世界编辑器</h3>
+<ul><li>用户现在可以添加额外的悬崖类型</li><li>修复了导入地形集(tilesets)会导致编辑器崩溃的问题</li><li>在 Lua 脚本中使用%字符将不再导致世界编辑器崩溃</li></ul>
+<h3>人类</h3>
+<ul><li>火枪手攻击间隔从 1.35 增加至 1.4</li><li>女巫大师级训练研究时间从 75 秒减少至 60 秒</li><li>牧师大师级训练研究时间从 75 秒减少至 60 秒</li><li>2 级水元素基础伤害从 31 点降低至 30 点</li></ul>
+<h3>兽人</h3>
+<ul><li>萨满大师级训练研究时间从 75 秒减少至 60 秒</li><li>巫医大师级训练研究时间从 75 秒减少至 60 秒</li><li>灵魂行者大师级训练研究时间从 65 秒减少至 60 秒</li><li>治疗药膏持续时间从 45 秒减少至 40 秒<ul><li>总治疗量不变</li></ul></li></ul>
+<h3>暗夜精灵</h3>
+<ul><li>猛禽德鲁伊大师级训练研究时间从 75 秒减少至 60 秒</li><li>投刃车建造时间从 48 秒减少至 42 秒</li></ul>
+<h3>亡灵</h3>
+<ul><li>食尸鬼基础伤害从 9 点提高至 10 点</li><li>食尸鬼攻击间隔从 1.3 增加至 1.35</li><li>女妖占据在引导时现在有新的视觉效果</li><li>女妖占据的施法者和目标视觉效果已调整，使其显示在生命条上方</li><li>女妖大师级训练研究时间从 75 秒减少至 60 秒</li><li>否定法杖花费从 150 金降低至 120 金</li><li>否定法杖使用次数从 4 次减少至 3 次</li><li>否定法杖现在有 5 秒的冷却时间</li><li>冰霜巨龙的建造时间从 65 秒减少至 60 秒</li><li>冰霜巨龙的霜冻攻击减速持续时间从 10 秒(英雄为 3 秒)提高至 10 秒(英雄为 4 秒)<ul><li>这是之前在 1.36.2 补丁中已说明但从未实装的改动</li></ul></li></ul>
+<h3>中立单位</h3>
+<ul><li>驱散魔法的伤害从 250 点降低至 150 点</li><li>巨魔暗影祭司的库存补充延迟从 120 秒增加至 180 秒</li><li>熊猫酒仙火焰呼吸的初始影响范围从 60/60/60 提高至 90/90/90</li><li>兽王初始力量从 22 点提高至 24 点</li><li>修补匠初始力量从 20 点提高至 22 点</li><li>深渊魔王初始力量从 26 点提高至 28 点</li><li>黑暗游侠生命汲取法力消耗从 35/35/35 点降低至 30/30/30 点</li><li>黑暗游侠生命汲取施法距离从 500/500/500 提高至 600/600/600</li><li>黑暗游侠生命汲取牵引范围从 800/800/800 降低至 700/700/700<ul><li>施法距离与牵引范围的改动已与法力虹吸保持一致</li></ul></li></ul>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2026-02-24（Build 23556）</span></div><p>今天的全新构建现已上线：</p><h4>漏洞修复</h4><ul><li>修复了地图结束时显卡资源有时会泄漏的问题。</li><li>修复了在自定义游戏中销毁 Frame 有时会崩溃的问题。</li><li>修复了地图结束时清理自定义游戏单位有时会崩溃的问题。</li><li>修复了退出游戏时有时会卡死的问题。</li></ul></div>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2026-04-22（Build 23727）</span></div><p>以下热修现已上线：</p><h4>漏洞修复</h4><ul><li>修复了透明悬崖和替换悬崖对话框的问题。</li><li>修复了加载贴图时偶尔会出现的崩溃。</li><li>修复了尝试启动不同版本世界编辑器时的兼容性问题。</li><li>修复了一个通过排队多次攻击动作可以穿透战争迷雾的问题。</li></ul></div></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes-version-204/36567" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 2.0.4 补丁说明</a><a href="https://us.forums.blizzard.com/en/warcraft3/t/28629/27" target="_blank" rel="noopener noreferrer">热修说明（2026-04-21）</a></div></section>
+
+<section class="panel" id="v203" data-v="2.0.3" role="tabpanel" hidden=""><div class="phead"><h2>版本 2.0.3</h2><div class="pmeta"><span class="d">2025-07-17</span><span class="b">构建 22968</span><span class="k">补丁</span></div></div><div class="pbody"><h3>游戏服务器</h3>
+<ul><li>自定义游戏大厅广告现在会在最后一名玩家加入/离开后 15 分钟正确关闭<ul><li>此计时器会在每次玩家加入或离开时重置</li></ul></li><li>修复了部分经典版密钥玩家出现的授权问题</li><li>修复了自定义游戏邀请功能异常的问题</li></ul>
+<h3>通用功能</h3>
+<ul><li>在用户界面中添加建筑建造和单位训练的倒计时计时器</li><li>Ctrl+C 现在会持续追踪选定单位而非瞬移至位置</li><li>修复了某些触发器有时无法正确保存的问题<ul><li>现有存档可能仍存在此问题，但新存档将正确保存</li></ul></li><li>修复了进入单人自定义游戏有时会跳转至多人游戏大厅的问题</li></ul>
+<h3>性能优化</h3>
+<ul><li>优化了AI寻找建造位置的函数<ul><li>此项优化可提升AI玩家建造时的性能表现</li><li>请观察并报告任何意外行为变化</li></ul></li><li>优化了部分重制版视觉特效的重粒子数量</li><li>改进了地形渲染性能</li></ul>
+<h3>视觉效果</h3>
+<ul><li>更新重制版着色器，改善阴影和光照强度</li><li>根据反馈降低了经典高清模式下单位和肖像的亮度</li><li>将经典主菜单和战役.webm背景替换为.mdl渲染</li><li>环境经典HD/重制版切换不再控制金矿和喷泉，现在由建筑切换控制这些内容</li><li>修复经典高清模式下某些特效显示为白色方块的问题</li><li>重制版环境中启用树木闲置动画</li><li>在选项菜单中添加环境光遮蔽和泛光选项<ul><li>注意：4K分辨率启用这些设置会降低性能</li></ul></li><li>修复了透明单位在水面上透明度异常的问题</li><li>修复了自定义单位肖像错误继承基础单位肖像的问题</li><li>修复了自定义皮肤图标有时显示基础图标的问题</li><li>修复了载入存档后单位有时不可见的问题<ul><li>现有存档可能仍存在此问题，但新存档将正确保存</li></ul></li><li>修复了部分模型文件未正确包含在游戏中的问题</li></ul>
+<h3>音频</h3>
+<ul><li>修复了地图结束时或播放过场动画时音乐持续播放的问题</li><li>修复了载入存档时背景音乐重叠的问题</li></ul>
+<h3>世界编辑器</h3>
+<ul><li>自定义战役现在可使用MDL文件作为任务选择背景</li><li>装饰物上限从 30000 提升至 130000 (请谨慎使用！)</li><li>增加了世界编辑器中的绘制距离</li><li>修复了天气效果[RAhr]导致永久降雨的问题</li><li>修复了模型查看器窗口缩放异常的问题</li><li>修复了召唤单位窗口缩放异常的问题</li><li>修复了变量窗口列宽关闭后无法保存的问题</li><li>修复了物品技能[AIsb]未遵守附加技能冷却时间的问题</li><li>修复了[AIf2]存在隐藏附加伤害和攻击索引字段的问题</li><li>修复了弹幕升级覆盖主攻击投射物的问题</li><li>修复了拥有生命升级和魔法书技能的单位创建时死亡的问题</li><li>修复以下原生函数：<ul><li>以下更改影响多个原生函数和字段，旨在修复系统性问题(请报告相关漏洞)：</li><li>修复了数十个损坏的BlzSetAbility_Field原生函数</li><li>BlzSetAbility__LevelField现在强制刷新技能数据</li><li>例如：火焰之球(AIf2)的伤害加成可实时更新</li><li>BlzSetUnitIntegerField现在支持UNIT_IF_PRIMARY_ATTRIBUTE</li><li>BlzSetUnitWeaponIntegerField现在支持UNIT_WEAPON_IF_ATTACK_WEAPON_TYPE</li><li>BlzSetUnitWeaponIntegerField设置单位原有攻击类型之外的字段时不再崩溃</li><li>BlzSetUnitWeaponIntegerField现支持以下字段：<ul><li>UNIT_WEAPON_IF_ATTACK_MAXIMUM_NUMBER_OF_TARGETS</li><li>UNIT_WEAPON_IF_ATTACK_DAMAGE_NUMBER_OF_DICE</li><li>UNIT_WEAPON_IF_ATTACK_DAMAGE_SIDES_PER_DIE</li><li>UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE</li></ul></li><li>BlzSetUnitIntegerField(unit, UNIT_IF_MOVE_TYPE, 2)现在可正确使地面单位飞行</li><li>新增字段UNIT_RF_FLY_MAX_HEIGHT(ufmh)</li><li>BlzSetUnitBooleanField现在正确设置UNIT_BF_HIDE_MINIMAP_DISPLAY</li><li>BlzSetUnitStringField设置UNIT_SF_SHADOW_IMAGE时实时更新阴影</li><li>BlzSetUnitRealField现在正确设置UNIT_RF_CAST_POINT和UNIT_RF_CAST_BACK_SWING</li><li>ABILITY_RLF_CASTING_TIME现在正确更新技能施法时间</li></ul></li><li>地图选项中新增功能：<ul><li>强制玩家使用特定缩放级别</li><li>移除反补单位出现的"!"</li></ul></li><li>新增技能[Amgi]：阻止弹射攻击在建筑间弹射<ul><li>用户可修改该技能的目标允许字段控制弹射中断单位类型</li></ul></li><li>新增技能[AUa2]：新版操纵死尸(可继承单位技能)</li></ul>
+<h3>快捷键</h3>
+<ul><li>显著增加可绑定按键数量</li><li>新增菜单/游戏/录像/观战命令的绑定选项</li><li>快捷键菜单添加"冲突"检测功能<ul><li>点击冲突项可跳转至对应快捷键</li></ul></li><li>增加对非QWERTY/非英语键盘布局的支持</li><li>移除被动技能的快捷键绑定<ul><li>学习被动技能的快捷键仍可设置</li></ul></li><li>解除农民与民兵的快捷键冲突检测</li><li>调整佣兵排序使所有营地可无冲突分配QWER键</li><li>从中立建筑列表中移除口袋工厂</li><li>移除酒馆中的"选择单位"技能</li><li>修复英雄选择和物品栏键位冲突检测异常</li><li>在中立建筑列表中添加幽冥龙栖木</li><li>在暗夜精灵建筑列表中添加缠绕金矿</li></ul>
+<h3>多人游戏</h3>
+<ul><li>新增硬壳大虾(Makrura Snapper)头像</li><li>修复了固定队伍徽章显示错误信息的问题</li><li>修复了载入界面未显示MMR和等级的问题</li><li>修复了定级赛在赛后界面显示异常的问题</li><li>为单人和固定队伍徽章添加MMR数据</li><li>调整MMR增减计算方式：<ul><li>玩家有一个隐藏的统计数据，称为方差（variance）。方差越高，MMR 波动越大（当玩家开始他们的定位赛时，他们的方差很高，经过很多场比赛，方差会触底）。在团队游戏中，当前系统将每个玩家的 MMR 和方差相加。例如，在 2v2 游戏中，一方是 4500 的固定队伍，另一方是 4000 和 4200 评价的随机队伍，系统会将其视为 9000 MMR 的一方对阵 8200 MMR 的一方。我们正在对此进行更改，现在系统不再采用总和，而是采用平均 MMR 和方差，因此系统会将比赛视为 4500 对 4100</li><li>除了上述更改外，我们还将所有 MMR 收益和损失翻倍</li><li>我们希望这些变化可以减少某些情况下极端 MMR 收益和损失的发生，同时也分散了 MMR 的分布。团队将继续监控此事，并在必要时做出调整</li></ul></li></ul>
+<h3>平衡性调整</h3>
+<h4>通用</h4>
+<ul><li>所有地面范围攻击的添加"守卫"单位类型</li><li>穿刺伤害对重甲效果从 100%降至 90%</li></ul>
+<h4>人类</h4>
+<ul><li>山丘之王的重击现在可以在装备法球时眩晕魔法免疫的空中单位</li></ul>
+<h4>兽人</h4>
+<ul><li>粉碎现在可以以守卫为目标</li><li>燃烧之油现在可以以守卫为目标</li></ul>
+<h4>暗夜精灵</h4>
+<ul><li>小精灵采集木材时间从 7 秒增至 7.5 秒</li><li>弓箭手生命值从 255 增至 275</li><li>搭载弓箭手/骑乘角鹰兽/卸下冷却时间从 30 秒减至 5 秒</li><li>角鹰兽骑士生命值从 780 增至 800</li><li>女猎手月刃不再弹射建筑</li><li>月刃升级时间从 60 秒减至 50 秒</li></ul>
+<h4>亡灵</h4>
+<ul><li>操纵死尸复活的单位现在可使用生前技能</li><li>巫妖霜冻新星施法距离从 700/700/700 增至 750/750/750</li><li>石像鬼优先攻击现在可在编组时正确切换</li></ul>
+<h4>中立</h4>
+<ul><li>深渊领主分裂攻击现在可以伤害守卫</li><li>黑暗游侠生命汲取魔法消耗从 50/50/50 减至 25/25/25</li><li>生命汲取对自身伤害类型从魔法改为通用。这将允许生命传输在施法者免疫魔法时继续传输</li><li>修补匠口袋工厂生成间隔从 5/4.5/3.5/3 秒减至 4.5/4/3.5/3 秒(按工程学等级)</li><li>修补匠集束火箭每波最大伤害从 105/195/300 增至 200/250/300<ul><li>集束火箭包含 4 个伤害间隔，因此如果一个单位在整个技能持续时间内都留在该区域，它将受到 4 次伤害。此更改增加了每个间隔可分散在多个单位上的最大伤害</li></ul></li><li>熊猫酒仙的火焰吐息基础伤害从 65/125/170 增至 80/130/180</li><li>火焰吐息最大总伤害从 480/800/1200 增至 600/900/1200</li><li>火焰吐息初始范围从 25/25/25 增至 60/60/60</li><li>火焰吐息末端范围从 125/125/125 增至 175/175/175<ul><li>先前火焰吐息可命中远超视觉效果的单位，此项调整使作用范围与视觉效果一致。初始范围参数控制吐息喷发端的宽度，末端范围控制法术末端的半径。为补偿范围削弱，该法术的整体伤害已提高</li></ul></li><li>火焰吐息持续伤害从 7/14/21 增至 10/15/25</li><li>移除了3级兽人骷髅兵的吸血光环和死亡缠绕</li><li>修复了中立辉煌光环在工具提示中未显示小数数值的问题</li></ul>
+<h3>漏洞修复</h3>
+<ul><li>修复了修补匠机器人形态死亡时叠加物品治疗效果的问题</li><li>修复了恶魔猎手在变形期间升级献祭后关闭技能仍耗魔的问题</li><li>被变形单位的物品加成将不再短暂失效</li><li>当单位自动获取目标时，法球效果现在会正常触发</li><li>霜冻之球/闪电之球现在在沉默时购买时会正常生效</li></ul>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2025-07-22（Build 22988）</span></div><p>热修现已上线：</p><ul><li>修复了纳迦海妖的冰冻箭矢可能导致单位卡死的问题</li><li>修复了经典版视觉特效显示过于透明的问题</li><li>修复了镜头跟随控制器(SetCameraTargetController)失效的问题<ul><li>为适配此修复，Ctrl+C 将锁定选中单位并禁止镜头平移，直到玩家再次按下 Ctrl+C 解除镜头锁定</li></ul></li><li>修复了长按任意按键导致性能下降的问题</li><li>鼠标悬停闲置工人图标时现在会显示正确的快捷键</li></ul></div></div><div class="hx"><div class="hx-h"><span class="hx-t">更新 · 2025-09-15（Build 23101）</span></div>
+<h4>通用</h4><ul><li>Ctrl + C 镜头锁定不再追踪离开玩家视野的单位。</li></ul>
+<h4>性能</h4><ul><li>为 AMD 和 Nvidia 驱动添加了使用独立显卡的提示。</li></ul>
+<h4>世界编辑器</h4><ul><li>修复了 BlzSetAbility____ 原生函数将更改全局应用而非仅应用于单个技能的问题。</li><li>将地块集（Tileset）上限从 16 提升至 64。<ul><li>请注意，使用更多地块集纹理可能会显著增加地图的加载时间，请谨慎使用！</li><li>此更改提高了 .w3e 文件的版本号。使用此版本的编辑器保存地图后，地图将无法在旧版本中打开。</li></ul></li><li>在「高级」选项卡下添加了「保留复制对象高度」选项。启用后，编辑器会记住对象复制时的高度，并在粘贴时保留。</li></ul>
+<h4>多人游戏</h4><ul><li>修复了 (8)皇家花园 东北绿色营地彼此距离过近的问题。</li></ul>
+<h4>亡灵</h4><ul><li>食尸鬼基础伤害降低至 9（原为 10）。</li></ul>
+<h4>中立</h4><ul><li>黑暗游侠的生命汲取不再能以自身为目标。</li></ul>
+<h4>漏洞修复</h4><ul><li>修复了在创建无效 UberSplat 时可能发生的崩溃。</li><li>修复了从 Lua 脚本加载声音文件时有时会发生崩溃的问题。</li><li>修复了在某些情况下会导致内存损坏、进而在游戏后期引发随机崩溃的若干问题。</li><li>修复了鼠标悬停在界面上时鼠标按键发出错误指令的问题。</li><li>Warchasers 自定义地图中的英雄现在拥有物品栏。</li></ul></div>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2025-10-07（Build 23172）</span></div><p>以下热修现已上线：</p><h4>漏洞修复</h4>
+<ul><li>修复了 MacOS 上小地图绘制错误的问题。</li><li>修复了匹配成功后游戏可能卡住的问题。</li><li>修复了退出游戏时的崩溃。</li><li>修复了游戏未正确选择 AMD 显卡的问题。</li><li>修复了重制版地形上会显示黑边的问题。</li></ul></div><div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes-version-203/36567" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 2.0.3 补丁说明（原帖首楼现为 2.0.4）</a><a href="https://us.forums.blizzard.com/en/warcraft3/t/28629/24" target="_blank" rel="noopener noreferrer">热修说明（2025-07-22）</a><a href="https://us.forums.blizzard.com/en/warcraft3/t/28629/26" target="_blank" rel="noopener noreferrer">热修说明（2025-10-07 · Build 23172）</a></div></section>
+
+<section class="panel" id="v202" data-v="2.0.2" role="tabpanel" hidden=""><div class="phead"><h2>版本 2.0.2</h2><div class="pmeta"><span class="d">2025-04-15</span><span class="b">构建 22761</span><span class="k">补丁</span></div></div><div class="pbody"><h3>改动</h3>
+<h4>性能</h4>
+<ul><li>修复了生产服务器中导致部分玩家每隔几秒出现卡顿的问题</li></ul>
+<h4>错误修正</h4>
+<ul><li>修复了未下载地图的玩家无法通过名称加入私人自定义游戏的问题</li></ul>
+<h4>常规</h4>
+<ul><li>新增经典战役背景画面，当玩家使用经典画质进行战役时自动启用</li><li>新增《混乱之治》与《冰封王座》的经典菜单界面，可在选项菜单中自定义</li><li>更新了多个重制版战役背景画面</li></ul>
+<h4>光照</h4>
+<ul><li>重制版环境光照方向已调整，以匹配经典/经典高清画面</li><li>地下城生态区光照全面翻新，更贴近经典光照风格</li><li>小幅调整亮度</li></ul>
+<h4>地图池</h4>
+<ul><li>1v1、2v2、3v3 和 4v4 地图池已更新</li></ul>
+<h4>地图编辑器</h4>
+<ul><li>新增技能减速宝珠(AIno)与减速宝珠减益效果(Bson)</li><li>修复“防御类型更改”科技效果，现在可正确改变护甲类型</li></ul>
+<h3>平衡性调整</h3>
+<h4>物品</h4>
+<ul><li>哨岗守卫的视野从 1600减少至 1200</li><li>哨岗守卫的生命值从 200 减少至 50</li><li>哨岗守卫现在魔法免疫</li><li>治疗守卫的充能次数从 3 次减少至 2 次</li><li>治疗守卫的作用范围从 500 缩小至 450</li><li>治疗守卫现在魔法免疫</li><li>防护指环 +4 从掉落池中移除</li><li>防护指环 +3 加入掉落池</li><li>防护指环 +3 的金币价格从 150 降低至 125（与防护指环 +4 一致）</li><li>所有种族的背包商店需求已移除</li><li>黑暗宝珠：现在会召唤2级黑暗仆从</li><li>远古坚忍之鼓：移动速度加成从 5% 提升至 7.5%，攻击速率加成从 3% 提升至 3.5%</li><li>末日号角：移动速度加成从 5% 提升至 7.5%，每秒生命恢复从 0.3 提升至 0.35</li></ul>
+<h4>人类</h4>
+<ul><li>火焰宝珠替换为减速宝珠<ul><li>售价 325 金币</li><li>提供 +5 伤害</li><li>对单位有 25% 概率触发，对英雄有 10% 概率触发，使目标攻击速度降低 25%、移动速度降低 55%，持续 10 秒（英雄为 5 秒）</li><li>该效果不可驱散且对魔法免疫单位生效</li><li>与其他减速效果可叠加（近战游戏中的最低移动速度为 150）</li></ul></li><li>烈焰风暴的法力消耗从 135/135/135 降低至 125/125/125</li><li>法力虹吸的作用范围从 800 缩小至 700</li><li>放逐的冷却时间从 0/0/0 增加至 4/2/0秒</li><li>圣光术的冷却时间从 5/5/5 增加至 5.5/5.5/5.5 秒</li><li>虔诚光环的护甲加成从 2/4/6 降低至 2/3.5/5</li><li>民兵的护甲从4减少至3</li><li>防御的穿刺伤害减免从 65% 降低至 50%；</li><li>防御的偏转概率从 30% 降低至25%；</li><li>防御的研究成本从 150/100 降低至 125/75；</li><li>防御的研究时间从 45 秒缩短至 40 秒</li><li>减速的持续时间由 60 秒降低至 45 秒</li><li>隐身的施法范围从 300 增加至 400</li><li>治疗的施法范围从 250 增加至 350</li><li>飞行器：移动速度从 400 降低至 375</li><li>移除龙鹰骑士和云雾科技对奥术圣殿的需求</li></ul>
+<h4>兽人</h4>
+<ul><li>闪电球对召唤单位的伤害由 150 提升至 200</li><li>镜像冷却时间由 3 秒增加至 5 秒</li><li>大厅建造时间由 140 秒缩短至 135 秒</li><li>驭风者等级由 4 级降低至 3 级</li><li>浸毒标枪每次的伤害由 4 降低至 3</li><li>驭风者的移动速度由 320 降低至 310</li><li>哨兵守卫、静止陷阱和治疗守卫现在对魔法免疫</li><li>哨兵守卫的生命值由 200 降低至 50</li><li>静止陷阱的生命值由 100 降低至 25</li><li>静止陷阱的引爆范围减少 400 至 350</li><li>静止陷阱的眩晕时间由 6(2.5) 秒减少至 4(2) 秒</li><li>治疗守卫的持续时间由 30 秒减少至 25 秒</li><li>治疗守卫的作用范围由 500 降低至 450</li><li>牛头人现在拥有抗性皮肤</li><li>牛头人的价格从 280/80 提升至 300/100</li></ul>
+<h4>暗夜精灵</h4>
+<ul><li>毒液宝珠每次的伤害由 9 降低至 8</li><li>丛林守护者的力量增长由 1.8 提升至 2</li><li>树人的攻击间隔从 1.75 秒缩短至 1.65 秒</li><li>小精灵采集木材间隔从 8 秒缩短至 7 秒</li><li>研究月刃现在会把女猎手的护甲类型改为“重型”</li><li>研究月刃的价格从 100/150 提升至 125/175</li><li>研究月刃的研究时间由 35 秒增加至 60 秒</li><li>女猎手的移动速度由 350 降低至 340</li><li>夜视研究时间由 45 秒减少至 30 秒</li><li>奇美拉的移动速度从 250 提升至 270</li><li>穿刺投刃研究现在额外提供 10 点伤害</li></ul>
+<h4>亡灵</h4>
+<ul><li>否定魔棒现在是单个目标驱散，对召唤单位造成 200 伤害</li><li>否定魔棒充能次数由 2 提升至 4</li><li>仪式匕首的价格由 100 降低至 75</li><li>仪式匕首的充能次数由 2 次减少至 1 次</li><li>仪式匕首的治疗量由 175 提升至 200</li><li>霜冻新星的施法范围由 800 降低至 700</li><li>腐臭蜂群的伤害从 75/125/200 提升至 75/135/200</li><li>蛛网怪塔的攻击间隔从 1.3 秒缩短至 1.15 秒</li><li>钻地研究时间由 45 秒缩短至 30 秒</li><li>石像鬼的移动速度由 375 降低至 350</li><li>残废的法力消耗由 100 降低至 90</li><li>反魔法护盾的格挡伤害由 420 降低至 300</li><li>憎恶死亡时生成的疾病云不再有碰撞</li><li>冰霜巨龙的空中攻击现在具有范围效果(与地面攻击相同)</li><li>冰霜巨龙的地面和空中攻击距离由 300 提升至 375</li></ul>
+<h4>中立</h4>
+<ul><li>1级火焰雨的施法范围从 700 增加至 800</li><li>黑暗游侠的生命虹吸现在可将生命转移至友方单位</li></ul>
+<h4>野怪</h4>
+<ul><li>剧毒树人不再拥有纠缠根须。生命值由 290 提升至 350</li><li>喷毒蜘蛛的护甲类型由重型改为中型；生命值从 400 降低至 350</li><li>巨型蜘蛛的生命值由 550 降低至 500</li><li>萨特地狱召唤者的等级从 9 级降低至 8 级</li><li>巨狼的库存延迟由 220 提升至 440</li><li>萨特暗影舞的价格由 200 降低至 190</li><li>献祭伤害由 10 降低至 5</li><li>纠缠根须缠绕持续时间从 10(3) 秒到 6(3) 秒。施法范围由 800 降低至 600</li><li>霜冻新星的减速时间由 4 秒缩短至 2 秒</li><li>邪恶狂热的生命消耗从从 4 减少到 2</li><li>辉煌光环的法力恢复从 1 降低至 0.5</li><li>变形术的法力消耗由 225 降低至 200。持续时间由 25 秒缩短至 20 秒</li><li>治疗波的治疗量由 215 降低至 130。跳跃次数由 4 次减少至 3 次</li><li>冰箭的持续时间由 3(0.75) 秒提升至 3(1) 秒，伤害由 0.25 提升至 1</li><li>疾病云雾的持续时间由 120 秒缩短至 75 秒</li><li>操纵死尸将持续时间从 120 秒降低到 40 秒，魔力消耗由 250 降低到 150。冷却时间由 240 秒减少至 180 秒</li><li>寄生虫持续时间由 30 秒缩短至 15 秒</li><li>暴风雪的施法时间由 1 秒缩短至 0.599 秒</li><li>火焰雨的施法时间由 1 秒缩短至 0.599 秒</li><li>蜥蜴的移动速度由 200 降低至 100</li><li>学徒巫师的生命值由 180 提升至 200，伤害增加 2</li><li>堕落祭司的伤害提高 2</li><li>闪电蜥蜴的护甲类型由重型改为中型。生命值由 280 提升至 300。骰子伤害降低 2</li><li>火蜥蜴幼崽的护甲类型由重型改为中型。伤害降低 1</li><li>地穴蛛魔移除暗影突袭和法力值；生命值从400提升至450</li><li>鱼人诱捕者的生命值从375提升至400；伤害-1</li><li>兽人骷髅勇士移除死亡缠绕；现在拥有残废与吸血光环</li><li>地狱火机器现在拥有邪恶光环</li></ul>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2025-04-30（Build 22796）</span></div><p>热修现已上线：</p>
+<h4>错误修复</h4>
+<ul><li>修复了缩放设置无法正确应用的异常问题</li></ul>
+<h4>常规</h4>
+<ul><li>地图禁用数量从3张增加至4张</li></ul>
+<h4>人类</h4>
+<ul><li>法力虹吸的魔法消耗由 10/10/10 提升至 25/25/25</li><li>法力虹吸的冷却时间由 6/6/6 秒增加至 8/8/8 秒</li></ul>
+<h4>暗夜精灵</h4>
+<ul><li>夜视研究时间从 30 秒增加到 45 秒</li><li>哨兵持续时间由 300 秒降低至 120 秒</li></ul>
+<h4>亡灵</h4>
+<ul><li>仪式匕首的库存补充间隔从 90 秒减少到 75 秒</li></ul>
+<h4>中立</h4>
+<ul><li>地狱火和熊猫人的永久献祭伤害从5回调至10(恢复此前意外削弱的数值)</li><li>黑暗游侠生命汲取的转移不再会因施法者的抗性而降低，现在可以对魔法免疫单位生效。此技能的吸取部分保持不变</li></ul></div></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes-version-202/35355" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 2.0.2 补丁说明</a><a href="https://us.forums.blizzard.com/en/warcraft3/t/28629/23" target="_blank" rel="noopener noreferrer">热修说明（2025-04-29）</a></div></section>
+
+<section class="panel" id="v201" data-v="2.0.1" role="tabpanel" hidden=""><div class="phead"><h2>版本 2.0.1</h2><div class="pmeta"><span class="d">2024-12-17</span><span class="b">构建 22474</span><span class="k">补丁</span></div></div><div class="pbody"><p>我们发布了《魔兽争霸III：重制版》版本2.0.1</p>
+<p>这些更新旨在通过解决各种错误和增强功能来改善整体游戏体验。</p>
+<h3>改动</h3>
+<ul><li>匹配：优先考虑理想的 ping 而不是 MMR。对战匹配器将优先考虑 ping，然后是 MMR，然后经过长时间的等待，它将尝试与任何人匹配。<ul><li>开发者说明：我们将继续监控这一点，并在必要时做出更改。</li></ul></li><li>排位赛：玩家现在输了会损失更多的 XP(经验值)。</li><li>自定义热键界面：更新以允许自定义物品栏、F 键。</li><li>经典高清图标：大小已从 512x512 调整为 256x256，定制了边框和进行了各种更新。</li><li>冰封王座主题：已更新，在边框上加入了雪。</li><li>对战设置界面：现在可显示与所有种族的排名(以前只显示与自己种族的排名)。</li><li>旧地形：移至插件子文件夹，并提供使用旧地形的选项。</li><li>聊天系统：添加了在聊天中隐藏游戏系统信息的选项。大厅聊天现在会在退出后清除。</li><li>新皮肤：添加了三款新皮肤(吉安娜、幽灵安东尼达斯、幽灵丛林守护者)。</li><li>视觉特效插件：强化防御和尖刺路障移至建筑插件。</li><li>比赛历史：添加了比赛日期。</li><li>强化镜头：现在具有与经典版相同的 FOV(视场角)值。</li></ul>
+<h3>错误修复</h3>
+<ul><li>修复了自定义游戏邀请时崩溃的问题。</li><li>修复了玩家无法按名称加入私人游戏的问题。</li><li>修复了玩家在控制台缩小时无法选择某些区域中的单位的问题。</li><li>修复了单位编队在设置为关闭时偶尔会打开的问题。</li><li>修复了 Windows 7 中出现的崩溃问题。</li><li>修复了使用集成显卡时出现的崩溃。</li><li>修复了当玩家超过 11 人时游戏结束时的崩溃问题。</li><li>修复了某些自定义游戏地图单元无法显示的问题。</li><li>修复了克尔苏加德皮肤的肖像不正确的问题...</li><li>修复了小精灵会显示不正确肖像的问题。</li><li>修复了得分界面中总得分丢失的问题。</li><li>修复了分数界面中鼠标高亮显示选项卡时无法完全高亮显示的问题。</li><li>修复了 -graphicsapi Direct3D12 不工作的问题。</li><li>修复了在自定义游戏中添加电脑被隐藏在用户界面后面的问题。</li><li>修复了右键单击自定义游戏菜单会在错误的位置拉出正确的菜单的问题。</li><li>修复了剑圣皮肤在使用剑刃风暴时缺少视觉特效的问题。</li><li>修复了经典高清画面中的蝙蝠骑士在使用不稳定的混合物仍会使用其重制版动画的问题。</li><li>修复了“显示”即使启用了经典高清画面也会使用重制画面视觉特效的问题。</li><li>修复了各种经典音效无法播放正确经典音效的问题。</li><li>修复了攻击之爪在中文和韩文中数字错误的问题。</li><li>修复了在 Tab 键跳入私聊时聊天会消失的问题。</li><li>修复了在经典模式下，经典音效复选框不会变灰的问题。</li><li>修复了经典亡灵控制台侧边栏在缩小时不会消失的问题。</li><li>修复了镜头缩放滑块显示距离不准确的问题。</li><li>修复了子组顺序修改器选项显示的工具提示不准确的问题。</li><li>修复了即使比赛暂停，游戏计时器也会继续的问题。</li><li>修复了重制画面中金色边框错位的问题。</li><li>修复了玩家在聊天频道中看不到自己的问题。</li><li>修复了聊天频道中无法显示玩家等级的问题。</li><li>修复了在编辑器中调整地图大小时因无效的鼠标地形交叉点而崩溃的问题。</li><li>修复了自定义地图框架定义的一个问题。</li><li>修复了自定义地图中 UI 缩放的问题。</li><li>修复了达拉然废墟和遗迹的漫反射层不正确的问题。</li></ul>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2024-12-18（Build 22479）</span></div><p>今天早些时候的热修：</p><ul><li>修复了可能阻止玩家使用新皮肤的问题。</li><li>修复了默认缩放按钮默认恢复为错误值的问题。</li><li>修复了玩家无法邀请其他玩家加入团队的问题。</li><li>修复了主机离开后玩家自定义大厅不会退出的问题。</li></ul></div></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes-version-20/33148/4" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 2.0.1 补丁说明</a><a href="https://us.forums.blizzard.com/en/warcraft3/t/28629/21" target="_blank" rel="noopener noreferrer">热修说明（2024-12-18）</a></div></section>
+
+<section class="panel" id="v20" data-v="2.0" role="tabpanel" hidden=""><div class="phead"><h2>版本 2.0</h2><div class="pmeta"><span class="d">2024-11-13</span><span class="b">构建 22365</span><span class="k">补丁</span></div></div><div class="pbody"><p>为了庆祝《魔兽争霸：兽人与人类》发行30周年，我们更新了《魔兽争霸III：重制版》到2.0版，其中包括许多修正、改进和对魔兽争霸历史的回顾。</p>
+<h3>经典高清 + 插件系统</h3>
+<ul><li>增加了经典单位，建筑物，视觉特效，英雄，环境和图标的高清版本。</li><li>添加了新的部分(在选项屏幕中的高清图像下)，这将使玩家能够在重制版和经典高清素材之间进行自定义。</li></ul>
+<h3>收藏</h3>
+<ul><li>收藏屏幕现在有一个皮肤和头像之间的过滤器选项。</li><li>添加了5个新的魔兽争霸III入门头像。</li><li>在多人游戏中添加了可玩皮肤的重制战役英雄(如果皮肤有经典等效物，则经典版本将显示您是否启用了经典高清英雄)。</li><li>增加了一个选项，以禁用皮肤(提供给只想看到默认单位的玩家)。</li><li>魔兽争霸2头像</li><li>魔兽争霸1头像</li></ul>
+<h3>用户界面</h3>
+<ul><li>冰封王座主题(The Frozen Throne Theme)玩家可以通过点击主菜单或选项中的徽标切换回来。</li><li>菜单流程已更新。</li><li>所有前端菜单都已更新。</li><li>在选项菜单中添加了游戏内热键自定义屏幕。玩家必须启用自定义键才能访问菜单。</li><li>通过选项菜单增加了打开APM，FPS，计时器，Ping的选项。</li><li>添加了玩家在保存了重播时查看其对战历史的功能。</li><li>创建游戏添加了搜索过滤器。</li><li>录像添加了搜索过滤器</li><li><b>游戏内用户界面</b><ul><li>添加了游戏内计时器，可通过选项或使用“/time”打开/关闭。</li><li>添加了否认指示器，可通过选项打开/关闭。</li><li>添加了金矿工人计数器，可通过选项打开/关闭。</li><li>在盟友菜单(F11)中玩家名字旁边添加了种族指示器。</li><li>默认禁用所有聊天，但可通过选项手动开启。</li><li>小队编组默认为禁用，但可通过选项手动开启。</li><li>生命条默认设置为始终打开，但可通过选项手动更改。</li><li>冷却时间数字默认为开启，但可通过选项手动关闭。</li><li>闲置工人键只有在玩家双击后才会镜头捕捉到单位。</li><li>HUD 现在可以在选项中缩放。</li><li>经典模式 HUD 现在可以选择移除侧边栏。</li><li>战役“对话头”用户界面默认为禁用，但可通过选项手动打开。</li></ul></li></ul>
+<h3>音乐</h3>
+<ul><li>添加了魔兽争霸 1 和魔兽争霸 2 音乐作为选项。</li></ul>
+<h3>多人游戏</h3>
+<ul><li>为排名游戏添加了经验和等级。</li><li>排行榜的排名基于经验数值，如果玩家的经验数值相同，则将以 MMR 来决定胜负。</li><li>MMR 等级从 0-10000 降为 0-7000。</li><li>如果您目前排名靠前，新赛季后 MMR 将不再重置。如果您在上一赛季中只打了 0 场比赛，则 MMR 将略微重置。</li><li>等级和 XP 将在每个赛季开始时完全重置。</li><li>AT 不再能在 4v4 和 3v3 中匹配 RT。</li><li>添加了位于美国芝加哥和澳大利亚悉尼的游戏服务器。</li></ul>
+<h3>重制版环境</h3>
+<ul><li>所有环境中的 “重制版地形艺术 ”都已更新。</li><li>各种树木装饰已更新以反映环境变化。</li><li>树叶默认为禁用。</li></ul>
+<h3>重制版光照</h3>
+<ul><li>删除了光晕。</li><li>更新了色调图。</li><li>增加了环境照明。</li></ul>
+<h3>设置</h3>
+<ul><li>所有设置均已设置为默认设置。</li></ul>
+<h3>提示框</h3>
+<ul><li>更新了各种提示框，以更好地反映英雄的技能使用情况。</li></ul>
+<h3>世界编辑器</h3>
+<ul><li>添加了从 “重制 ”到 “经典高清 ”打开/关闭附加组件的选项。</li><li>添加了打开/关闭树叶的功能。</li></ul>
+<h3>错误修复</h3>
+<ul><li>修正了一个玩家无法再创建或邀请玩家加入战队的问题。</li><li>修正了一个问题，即如果恶魔猎手通过复活十字架复活，它将永久失去视野。</li><li>修正了一个无法处理比赛结果的问题。</li><li><b>Mac</b><ul><li>修正了 Mac 用户无法启动游戏的问题。</li></ul></li></ul>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2024-11-14</span></div><p>太平洋标准时间今晚7：50，我们应用了修补程序来解决以下问题：</p>
+<ul><li>修复了阻止某些玩家登录的问题。</li><li>修复了阻止某些玩家访问选项菜单的问题。</li><li>修复了Mac用户的游戏版本问题。</li></ul></div>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2024-11-19（Build 22385）</span></div><p>几分钟前，太平洋标准时间下午1：30，我们对魔兽争霸III：重制版应用了以下修补程序-</p>
+<ul><li>修复了阻止某些Mac玩家登录的问题。</li><li>修复了阻止游戏结果注册的服务器数据库问题。</li><li>改进了服务器性能，以解决某些玩家遇到 UI 无响应的问题。</li></ul></div>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2024-11-20（Build 22389）</span></div><p>以下修补程序于太平洋标准时间今天下午 4：45 上线</p>
+<ul><li>修复了输入长信息会破坏自定义游戏大厅的问题。</li><li>当玩家在 “对战”设置界面中将鼠标移至地图列表时，增加了地图预览功能。</li><li>在自定义游戏大厅列表中添加了游戏房主(Game Host)。</li><li>为重制版菜单中的开关添加了音效。</li><li>为魔兽争霸 2音乐添加了过滤器。玩家现在可以选择全体、兽人或人类。</li><li>修正了各种英雄肖像无法正确显示的问题。</li><li>修正了经典高清建筑使用重制画面火焰的问题。</li><li>修正了冰冠雪岩未显示的问题。</li><li>添加了在重制画面中使用经典光标的选项。</li><li>添加了在重制画面下使用经典音效的选项。</li><li>为地图制作者在文件目录的TerrainArtOld下添加旧版重制地形。</li><li>修正了攻击之爪 +5 错误显示为 +4 的问题。</li><li>添加了空闲工人切换镜头捕捉的选项。</li></ul></div></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes-version-20/33148" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 2.0 补丁说明</a><a href="https://us.forums.blizzard.com/en/warcraft3/t/28629/19" target="_blank" rel="noopener noreferrer">热修说明（2024-11-18）</a><a href="https://us.forums.blizzard.com/en/warcraft3/t/28629/20" target="_blank" rel="noopener noreferrer">热修说明（2024-11-20）</a></div></section>
+
+<section class="panel" id="v1362" data-v="1.36.2" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.36.2</h2><div class="pmeta"><span class="d">2024-06-04</span><span class="b">构建 21179</span><span class="k">补丁</span></div></div><div class="pbody"><h3>平衡性改动</h3>
+<h4>人类</h4>
+<ul><li>变形术现在可以针对英雄(持续 1.5 秒)</li><li>奥术之塔的反馈对英雄从 16 降至 14</li><li>骑士和裂甲之刃不再要求伐木场</li><li>裂甲之刃现在再次要求研究了</li><li>裂甲之刃的研究费用从 100/100 提高到 100/150</li><li>烈焰风暴的引导时间从 0.9 秒降低到 0.8 秒</li><li>控制魔法的魔法消耗从召唤物的生命值的 45% 降低到 35%</li><li>控制魔法的魔法消耗从 25 增加到 40</li><li>龙鹰骑士基础伤害从 17 增加到 19</li></ul>
+<h4>兽人</h4>
+<ul><li>巨魔猎头基础伤害从 22 降低到 21(狂战士基础伤害仍为 22)</li><li>治疗守卫的魔法消耗从 200 降低到 150</li><li>牛头人移动速度从 270 秒提升至 290</li><li>毒蛇守卫 3 级基础伤害从 47 降低到 45</li><li>粉碎者移动速度从 220 秒提升至 240</li></ul>
+<h4>暗夜精灵</h4>
+<ul><li>灼热之箭伤害从 10/24/40 提高至 12/24/48(10/20/30)</li><li>星辰坠落持续时间从 45 秒降低到 30</li><li>星辰坠落的坠落伤害从每波 50 增加到 60</li><li>穿刺投刃的研究时间从 60 秒缩短至 45 秒</li><li>月亮井的法力回复从 1.35 提高到 1.45</li><li>月井之春的法力值奖励从 125 减少到 100</li><li>刀扇目标从 5/6/7 改为 6/6/6(最大伤害从 375/750/1330 提升至 420/780/1200)</li><li>刀扇伤害从 75/125/190 改为 70/130/200</li><li>小精灵生命值从 120 增加到 125</li><li>投刃车移动速度从 220 提升至 240</li></ul>
+<h4>亡灵</h4>
+<ul><li>反魔法壳不能再被吞噬魔法驱散</li><li>闹鬼金矿的建造时间从 110 秒减少到 105 秒</li><li>蛛魔塔伤害类型从普通变为穿刺</li><li>食尸鬼狂热研究时间从 45 秒增加到 50 秒</li><li>食尸鬼狂热移动速度加成从 80 降低到 60</li><li>诅咒持续时间从 120/60 降低至 60/30</li><li>残废术现在可以瞄准机械单位</li><li>从遗迹之墓中移除的治疗卷轴</li><li>遗迹之墓中添加了虚无魔杖(2 次充能，150 金币，5 秒冷却时间 - 可在 2 本使用)(如果发现这过于强大，我们会热修回调这个需求)</li><li>清道夫速度从 220 秒提升至 240</li><li>冰霜新星的减速持续时间从 4/6/8 降低到 4/5/6(仅限单位 - 英雄保持不变)</li><li>地穴领主穿刺魔法消耗从 100 降低到 90</li><li>死亡凋零魔法消耗从 250 降低到 200</li><li>蛛网研究成本从 150/150 降低到 100/100</li><li>埋骨厂消耗从 175/200 降低到 150/200</li><li>冰霜巨龙冰冻之息(Freezing Breath)的木材消耗从 275 减少到 225</li><li>冰霜吐息(Frost Breath)对英雄的持续时间从 3 秒增加到 4 秒(冰霜巨龙减速)</li><li>憎恶基础伤害从 32 增加到 34</li></ul>
+<h4>中立</h4>
+<ul><li>火山爆发建筑破坏系数从 3 降低到 2</li><li>灵魂燃烧伤害减少从 -50% 提高到 -75%</li><li>灵魂燃烧对英雄的持续时间从 7/8/9 增加到 8/9/10</li><li>龙卷风速度从 75 增加到 150</li><li>魔法护盾激活消耗从 25 降低到 10</li><li>地精飞艇的食物成本从 0 增加到 1</li></ul>
+<h4>宝物</h4>
+<ul><li>重生十字架的延迟从 7 秒缩短至 5 秒</li><li>急速手套的攻击速度从 15% 提高到 18%</li><li>贵族头环的价格从 175 增加到 200</li></ul>
+<h4>野怪</h4>
+<ul><li>沉睡不再以英雄为目标</li><li>沉睡持续时间从 10 小时减少到 8 次</li><li>沉睡冷却时间从 6 秒增加到 10 秒</li><li>沉睡魔法消耗从 125 降低到 100</li><li>黑暗巨魔大祭司现在拥有驱除魔法</li><li>打手和强盗领主不再有影遁，晚上会睡觉</li><li>血巫师现在可以睡觉了</li><li>打手生命值从 500 增加到 600</li><li>速度符文持续时间从 60 秒降低到 20 秒</li><li>地狱火机关的移动速度从 180 提升到 200</li><li>地狱火机械的移动速度从 180 增加到 200</li><li>地狱火战车的移动速度从 180 增加到 200</li><li>法力燃烧数值从 100 降低到 50</li><li>自然之力召唤从 3 个减少到 2 个</li><li>自然之力魔法消耗从 175 降低到 100</li><li>粉碎(海巨人)伤害从 40/20 降低到 30/15</li><li>残废术从 60/10 降低到 20/10</li><li>残废术魔法消耗从 175 降低到 125</li><li>半人马弓箭手护甲类型从重甲变为中甲</li><li>半人马穿刺者护甲类型从重甲变为中甲(生命值从 350 增加到 400)</li><li>半人马巫师护甲类型从重甲变为中甲</li></ul>
+<h3>BUG修复</h3>
+<ul><li>修复了在被吞食中的尸体上使用先祖之魂会导致客户端崩溃的问题</li><li>修复了玩家有时无法加入自动匹配游戏的问题</li><li>修复了 ping 在自定义游戏列表中显示不正确的问题</li><li>修复了胜利不计入排名的问题(主要在 FFA 中出现，但在所有模式中仍可能发生)</li><li>修复了 FFA 比赛无法在排位赛中创建的问题</li></ul>
+<h3>锦标赛</h3>
+<ul><li>我们正在更新锦标赛时间表，在一周内增加 1v1 和 2v2，在周日增加 3v3 锦标赛，并从锦标赛池中删除 4v4</li></ul>
+<h3>地图池更新</h3>
+<h4>1v1</h4>
+<ul><li>移除：Springtime</li><li>加入：Tidehunters</li></ul>
+<p class="w3x">(4)TwistedMeadows_S2_v1.1.w3x (2)EchoIsles_S2_v2.2.w3x (4)TurtleRock_S2.w3x (4)LostTemple_S2.w3x (2)LastRefuge_S2_v1.5.w3x (2)NorthernIsles_S2.w3x (2)ConcealedHill_S2.w3x (2)TerenasStand_LV.w3x (2)Tidehunters.w3x (2)Hammerfall.w3x</p>
+<h4>2v2</h4>
+<ul><li>移除：Shatter Exile、Rusty Creek</li><li>加入：Synergy、Goldshire</li></ul>
+<p class="w3x">(4)TwistedMeadows_S2_v1.1.w3x (4)LostTemple_S2.w3x (6)GnollWood.w3x (4)TurtleRock_S2.w3x (4)PhantomGrove_S2_v2.0.w3x (4)HillsbradCreek_S2.w3x (4)TidewaterGlades_S2_v1.1.w3x (4)Synergy_S2.w3x (4)KingAndCountry_S2_v1.3.w3x (4)Goldshire.w3x</p>
+<h4>3v3</h4>
+<ul><li>移除：BloodstoneMesa、StranglethornVale、Guardians</li><li>加入：Wellsprings、Typhoon、ScorchedBasin</li></ul>
+<p class="w3x">(6)Wellspring.w3x (6)Typhoon.w3x (6)ScorchedBasin.w3x (6)Monsoon_LV.w3x (6)RuinsOfStratholme.w3x (6)UpperKingdom.w3x (8)Mur’gulOasis_LV.w3x (6)ThunderLake_LV.w3x (8)Battleground_LV.w3x (6)GnollWood.w3x</p>
+<h4>4v4</h4>
+<ul><li>移除：Royal Gardens、Nightopia、Ferocity、Wellspring Temple</li><li>加入：Battleground、FullscaleAssault、Ekrezem Maze、Emerald Gardens</li></ul>
+<p class="w3x">(8)GolemsInTheMist_LV.w3x (8)MarketSquare.w3x (8)Sanctuary_LV_S2.w3x (8)Northshire_S2.w3x (8)Feralas_S2.w3x (8)PaintedWorld_S2.w3x (8)Battleground_LV.w3x (8)FullScaleAssault.w3x (8)EkrezemsMaze_S2_v1.1.w3x (12)EmeraldGardens.w3x</p>
+
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2024-06-17（Build 21214）</span></div><p>以下修补程序于太平洋夏令时上午 11：15 上线‎</p>
+<ul><li>修复了部分玩家登录游戏时会崩溃的问题。</li><li>当物品传递给其他英雄时，充能物品的冷却时间将不再重置。</li><li>亡灵骷髅棒的冷却时间缩短至 22 秒(原为 24 秒)。这是为了弥补上述充能物品冷却时间改动对其造成的间接削弱。</li><li>多排队伍不能作为部分随机队伍进行匹配。多排队伍将只与相同玩家数量的队伍进行比赛(例如，双排不再可能排到 3V3 或者 4V4 随机队伍)。‎</li><li>在 3v3 地图池中用 Timbermaw Hold 替换了 Scorched Basin。‎</li><li>更新了 1v1 中的 Hammerfall，以反映最新版本。‎</li></ul></div></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes-version-1362/32218" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 1.36.2 补丁说明</a><a href="https://us.forums.blizzard.com/en/warcraft3/t/28629/16" target="_blank" rel="noopener noreferrer">热修说明（2024-06-17）</a></div></section>
+
+<section class="panel" id="v1361" data-v="1.36.1" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.36.1</h2><div class="pmeta"><span class="d">2023-11-20</span><span class="b">构建 20704</span><span class="k">补丁</span></div></div><div class="pbody"><p>版本 1.36.1 带来了系统更新、平衡性改动、地图池更新与错误修复。</p>
+<p>我们要感谢所有参与公开测试并提供宝贵反馈的人。</p>
+<h3>常规</h3>
+<ul><li>为在线游戏重新添加了保存/载入功能(不适用于排位赛)</li><li>更新了摄像机缩放功能，以支持更精细的缩放值(例如1933)</li><li>启用了在观察者模式下将鼠标悬停在选择面板中的栏上来查看英雄的经验值栏的功能</li><li>添加了在锦标赛结果屏幕中查看队友和对手的个人资料的功能</li><li>由于大量的AI和脚本改动导致了战役中的不稳定，我们将回滚之前在1.33版中所做的改动。之前进行的audio pass没有回滚</li></ul>
+<h3>Bug修复</h3>
+<ul><li>修复了主要发生在《银月城的陨落》中的崩溃问题，即视觉特效会尝试在不同的游戏线程上播放</li><li>修复了语音语言和文本无法更换的问题</li><li>修正了科技树要求对自定义要求不起作用的问题</li><li>修复了自定义物品操作在世界编辑器中不起作用的问题</li><li>修正了匹配处理屏幕会持续超时的问题</li><li>修复了在声音编辑器上更新声音会导致文件生成问题的问题</li><li>修复了战役会跳过分数结算然后游戏客户端会冻结的问题。</li><li>修复了战役难度在下一关重置为正常的问题</li><li>修复了自定义加载屏幕无法正确加载的问题</li><li>修复了Campaigns文件夹中的子文件夹会导致崩溃的问题</li><li>修复了玩家在尝试检索比赛历史数据时断开连接的问题</li><li>修复了暴雪在录像中被列在玩家列表的问题</li><li>修复了无法正确处理AT淘汰赛的问题</li><li>修复了在锦标赛结果屏幕处于活动状态时查看个人资料时没有信息的问题</li><li>修复了进入淘汰赛时锦标赛结果屏幕会短暂可见的问题</li><li>修复了下一届锦标赛前的倒计时无法正常开始的问题</li><li>修复了Esc按键在锦标赛结果屏幕中不起作用的问题</li><li>修复了用户在进入淘汰赛时会被踢出匹配的一些问题</li><li>修复了淘汰赛UI界面线条排列不齐的问题</li><li>修复了轮空胜利未添加到您的个人资料中的问题</li><li>修复了盟友选项卡文本不一致的问题</li><li>修复了资源会无意中卸载的问题</li></ul>
+<h3>平衡性</h3>
+<h4>人类</h4>
+<ul><li>民兵持续时间从40秒增加到42.5秒</li><li>猛击加成伤害从25提升至25/40/55</li><li>虔诚光环从2/3.5/5提升至2/4/6</li><li>要塞将食物从12增加到14</li><li>城堡将食物从14增加到16</li><li>牧师施法动画点时间从0.5降低到0.4</li><li>治疗冷却时间从1秒增加到1.1秒</li><li>大法师每级力量成长从1.8提升到2</li><li>圣骑士移动速度从290提升到300</li></ul>
+<h4>暗夜精灵</h4>
+<ul><li>月亮井魔法恢复从1.5降低到1.35</li><li>献祭激活的消耗从1增加到10</li><li>献祭魔法缓冲需求从9增加到10。</li><li>守望者闪烁冷却时间从10/7/4秒降低至10/5/2.5秒</li><li>刀扇最大总伤害从300/625/950提升至375/750/1330(单位上限提升至4/5/5至5/6/7)</li><li>法力闪耀最大伤害从100降低到80</li><li>猛禽印记现在只要求专家级训练</li></ul>
+<h4>亡灵</h4>
+<ul><li>尖刺甲壳近战反弹伤害从15/25/35%增加至15/30/45%</li><li>尖刺甲壳加成护甲从3/5/7提升至4/8/12。</li><li>残废消耗从125点魔法值降低到100点魔法值</li><li>骷髅精通花费从200/175降低到150/100</li><li>蛛魔塔的冷却时间从1秒增加到1.3秒</li><li>蛛魔塔的霜冻攻击对英雄从5秒减少到3秒(单位保持5秒)</li><li>憎恶转身速率从0.4提升到0.5</li><li>地穴恶魔的转身速率从0.5提升到0.6</li><li>恐惧魔王移动速度从290提升到300</li></ul>
+<h4>兽人</h4>
+<ul><li>剑刃风暴伤害从每秒110点伤害增加到每秒140点伤害</li><li>灵魂行者建造时间从38秒减少到35秒</li><li>灵魂行者专家级训练时间从60降低到50</li><li>灵魂行者大师级训练时间从75降低到65</li><li>钢铁护甲升级木材消耗从150降低到125</li><li>钢铁近战武器木材消耗从100降低到75</li><li>钢铁远程武器木材消耗从100降低到75</li><li>巨魔猎头者的生命值从350增加到375</li><li>牛头人建造时间从44秒减少到39秒</li></ul>
+<h4>中立</h4>
+<ul><li>炎魔领主焚身化骨魔法消耗从6降低到3</li><li>炎魔领主熔岩爪牙分裂需求从15降低到13</li><li>炎魔领主火山爆发伤害由100点提升至125点</li></ul>
+<h4>宝物</h4>
+<ul><li>重修之书现在在商店里有2个库存</li><li>传送法杖现在在商店里有2个库存</li><li>水晶球从3级升至2级</li><li>水晶球从永久掉落池移至消耗品掉落池</li><li>水晶球现在有3次使用次数</li><li>水晶球冷却时间被移除</li><li>守护指环+3已从掉落表中移除</li><li>攻击之爪+4增加到+5</li><li>活力护身符黄金价格从325降低到300</li></ul>
+<h4>中立野怪</h4>
+<ul><li>黑暗巨魔诱捕者的移动速度从300降低到270</li><li>冰巨魔狂战士的移动速度从300降低到270</li><li>冰巨魔高阶祭司的移动速度从300降低到270</li><li>刺客移动速度从300降低到270</li><li>冰霜护甲(野怪)减速持续时间从5秒降低到3秒</li></ul>
+<h3>地图池</h3>
+<ul><li>1v1、2v2、4v4 和 FFA 地图池已更新。</li><li>添加 Hammerfall、Springtime</li><li>移除 Autumn Leave、Tidehunters</li><li>添加 King and Country、Rusty Creek</li><li>移除 Synergy、Avalanche</li><li>添加 Wellspring Temple、Ferocity、Nightopia</li><li>移除 Ekrezem's Maze、Chimney Isles、Goldrush</li><li>添加 Monopoly、Phantom Grove、Royal Gardens、Wellspring Temple、Twisted Meadows、Ferocity</li><li>移除 Deathrose、Silkverpine Forest、Sanctuary、Monsoon、Mur’Gul Oasis、Neon City</li></ul>
+<h3>比赛</h3>
+<p>我们调整了比赛时间表，现在每周轮换时区。在第4周结束时，锦标赛将重置回第1周。我们还放弃了更具体的锦标赛类型，以迎合每场比赛更广泛的观众。</p>
+<p>对于PST、EST、CST</p>
+<ul><li>周一至周五晚上7：00</li><li>周六至周日为下午2：00</li></ul>
+<p>对于KST</p>
+<ul><li>周一至周五晚上7：00</li><li>周六至周日为上午10：00</li></ul></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes-version-1361/31486" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 1.36.1 补丁说明</a></div></section>
+
+<section class="panel" id="v136" data-v="1.36" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.36</h2><div class="pmeta"><span class="d">2023-05-09</span><span class="b">构建 20210</span><span class="k">补丁</span></div></div><div class="pbody"><h3>平衡性</h3>
+<ul><li>献祭伤害从7/12/18降低到6/11/17。</li><li>哨兵研究成本从100黄金/100木材减少到50黄金/50木材。</li><li>奥术塔的反馈对英雄从12增加到16(对普通单位的24保持不变)。</li><li>裂甲之刃加成从15%降低到10%。</li><li>巨魔猎头生命值从375降低到350。</li><li>粉碎研究成本从225木材降低到175木材。</li><li>食尸研究成本从75黄金降低到50黄金。</li><li>食尸研究时间从30秒减少到15秒。</li><li>攻击之爪+5伤害降低到+4。</li><li>攻击之爪+9伤害降低到+8。</li><li>强效法力药水恢复法力从250降低到200。</li><li>消耗法力石的恢复的法力从250减少到200。</li><li>贵族头环的物品等级从2增加到3。</li><li>守护指环+3物品等级从2降低到1。</li><li>守护指环+4物品等级从3降低到2。</li><li>守护指环+5物品等级从6降低到3。</li><li>优越之戒作为1级物品添加到掉落列表中(所有属性+1)。</li><li>大法师之戒作为4级物品添加到掉落表中(所有属性+3)。</li><li>法力窃取权杖的窃取从65减少到60。</li><li>闪电护盾权杖从物品列表中移除了。</li></ul>
+<h3>排名</h3>
+<ul><li>每个赛季结束后，MMR现在会重置。(之前每个赛季之后MMR都没有完全重置。)</li><li>地图池已经标准化，包括10幅地图，收录了著名的经典地图和全新的社区地图。</li><li>地图否决现在对所有模式最多提供3次否决。</li></ul>
+<h3>观战模式</h3>
+<ul><li>添加了禁用/启用观察者模式UI的选项。默认情况下，这是自动关闭的</li><li>通过点击命令卡在观察者模式界面中增加了点击跟随功能。</li><li>已卸下控制面板，并将命令卡移至最右侧。帮助菜单中提供了切换菜单的热键。</li><li>生产栏进度颜色现在是白色。</li><li>切换到生产面板的热键是“Alt +P”，切换到单位面板的热键是“Alt + U”。</li><li>为观战模式添加了新功能和更新的 UI。</li><li>所有面板都可以使用热键或控制面板单独打开和关闭。</li><li>添加统计面板：您现在可以一次性查看游戏中所有玩家的种族、黄金、木材、食物和 APM。</li><li>添加了生产队列：您现在可以同时查看每个玩家当前正在建造的单位。</li><li>添加单位视图：您现在可以一次查看每个玩家军队中的所有单位。</li><li>您可以在查看生产队列或单位视图之间切换。</li><li>添加了英雄面板视图：您现在可以同时查看最多4名玩家的所有英雄及其物品和能力。您也可以点击英雄，将镜头对准他们。</li></ul>
+<h3>锦标赛</h3>
+<ul><li>现在可以通过对战界面访问锦标赛。</li><li>比赛将每天进行。</li><li>锦标赛对所有玩家开放。</li><li>增加了额外的用户界面来指示下一场比赛何时开始。</li><li>每个锦标赛都有不同的游戏规则、地图和可用的种族。</li><li>预选阶段：最多进行8场比赛，根据胜负获得积分。</li><li>预选赛的前16名选手将在淘汰赛中对决。</li><li>在淘汰赛中保持不败将赢得整个锦标赛。</li><li>通过参加锦标赛赢得积分来解锁独一无二的头像。</li><li>锦标赛表现的统计数据显示在您的玩家资料中。</li></ul>
+<h3>聊天</h3>
+<ul><li>现在可以在“设置”中打开和关闭游戏内和全局聊天。</li></ul>
+<h3>Bug修复</h3>
+<ul><li>修复了一个将阻止纹理加载到各种经典资产的问题，。</li><li>修复了阻止用户创建512x512自定义地图的问题。</li><li>修正了调用BlizHideOriginFrames时游戏会崩溃的问题。</li><li>修正了选择剑圣的镜像会破坏观战模式界面的问题。</li><li>修正了排名图标从对战:排名界面中消失的问题。</li><li>修正了你的最高等级和种族数据从最近的锦标赛历史中被删除的问题。</li><li>修正了一个导致登录崩溃的问题。修复了在FOW中播放FX会导致重制版画面游戏崩溃的问题。</li><li>修复了观战人机游戏时会崩溃的问题。</li><li>修复了在失败时成为观察者时游戏崩溃的问题。</li><li>修复了在菜单打开时游戏内热键仍然可用的问题。</li><li>修复了如果您尝试在比赛结束后立即观看录像会被软锁定的问题。</li><li>修复了在观战有大量玩家的游戏时会看到黑屏的问题。</li><li>修复了排行榜中玩家的分区图标未正确更新的问题。</li></ul></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes-version-136/30481" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 1.36 补丁说明</a></div></section>
+
+<section class="panel" id="v135" data-v="1.35" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.35</h2><div class="pmeta"><span class="d">2023-01-19</span><span class="b">构建 19844</span><span class="k">补丁</span></div></div><div class="pbody"><p>修补程序1.35.0的功能:</p>
+<ul><li>自定义战役</li><li>平衡性更新</li><li>地图池更新</li><li>排行榜修复</li><li>赛季轮替更新</li><li>其他改进和Bug修复</li></ul>
+<p>感谢所有社区内容创作者创建新地图和更新旧地图！</p>
+<h3>自定义战役</h3>
+<p>玩家可以下载、玩或者自己制作自定义战役。</p>
+<ul><li>一些自定义的战役可以使用高清画面或者经典画面游玩。</li><li>重做了前端菜单，现在自定义战役位于“单人模式”菜单下。</li><li>自定义战役现在可以追踪任务完成的难度。</li><li>“载入保存的游戏”菜单现在可以重新加载自定义战役存档文件。</li><li>添加了信息提示，向用户显示战役文件的安装位置。</li><li>在战役编辑器中增加了“是电影化的”选项，以改变战役按钮来使用相机缩略图而不是难度级数。</li><li>修正了编辑器中的战役缩略图不显示的问题。</li><li>增加了战役缩略图预览支持。</li><li>增加了环境声音支持。</li><li>增加了webm支持作为战役背景。对于以前使用3D背景的战役，现在可以使用webm来替换webui中的背景。</li><li>自定义战役列表菜单现在会在恢复游戏窗口焦点时自动刷新。</li><li>增加了Warcraft III/Movies下播放自定义电影的支持(文件格式依赖，Warcraft III/Movies/Audio下的vp9编码的avi文件+mp3音频文件)。</li><li>为自定义战役增加了好友在线支持。</li><li>更新了默认的战役背景为重制版风格。</li><li>增加了自定义战役的用户状态。</li><li>为自定义战役菜单添加了丰富/彩色格式的文本支持。</li></ul>
+<h3>排名游戏</h3>
+<ul><li>本赛季将于2023年1月19日开始，届时补丁1.35.0将上线。我们最初计划本赛季持续一年，但我们可能会根据玩家的反馈调整结束日期。</li><li>所有比赛和模式的MMR将在赛季滚动期间重置。</li><li>球员们将以定位赛开始新赛季。</li><li>更新了1v1，2v2，4v4和FFA中的地图池。</li><li>排行榜缓存已更新，响应速度更快。</li><li>排行榜现在将正确更新。</li></ul>
+<h3>平衡性</h3>
+<p>这次平衡性更新从团队希望测试的大范围变化开始——有些比其他更具实验性。我们对这个补丁的做法是首先看看各种社区反馈，目的是多样化策略和减少挫折。然后我们观看并阅读了一个社区的帖子，我们在天梯上玩了很多多人游戏，并考虑到了玩家的反馈。然后我们分析了游戏数据。</p>
+<p>为了找出最终可行的方法，我们尽可能早地在PTR版本中加入了许多变化，然后进一步测试和校准。</p>
+<p>关于攻城坦克的改变，我们希望给这个单位一个替代的角色，而不仅仅是用来杀死建筑(在1v1中)。最终，它与其他人类单位重叠太多，并且由于失去了城甲，变得不那么独特。我们可能会在另一个时间重新讨论攻城坦克。</p>
+<p>我们要感谢所有在PTR期间投入时间和精力提供反馈的社区成员。我们阅读了您的在线帖子并观看了您的视频，发现这些都非常有帮助。</p>
+<h4>通用</h4>
+<ul><li>祭坛所有英雄的金钱花费从425降低到400。</li><li>复活时间系数从0.65降低到0.6。<ul><li>现在：33s/66s/99s/110s（曾经是36s/72s/107s/110s）</li></ul></li></ul>
+<h4>人类</h4>
+<ul><li>铁匠铺的木材花费从60降低到40。</li><li>农民生命值从230增加到240。</li><li>破法者的护甲从2增加到3。</li><li>控制魔法要求从T2改为T3。</li><li>法力虹吸传输速率从15/30/45降低到15/25/40。</li><li>变形术消耗从220法力降低到200法力。</li><li>机械小动物的视野范围从350增加到500。</li><li>攻城坦克火箭弹幕伤害从14增加到16。</li><li>攻城坦克在获得火箭弹幕升级时不再降低单位等级。</li><li>群体传送的冷却时间从20秒增加到30秒。</li><li>庇护法杖的花费从250减少到200。</li><li>火焰之球的伤害从+7降低到+5。</li><li>火焰之球的花费从325减少到250。</li></ul>
+<h4>兽人</h4>
+<ul><li>猎头者建造时间从20秒增加到22秒。</li><li>剑圣镜像现在造成剑圣基础伤害的15%。</li><li>剑圣镜像现在提供相对于等级的经验值(等级1:12xp/等级2:20xp/等级3:30xp/等级4:42xp/等级5:57xp/等级6:75xp)。</li><li>巨魔蝙蝠骑士火油瓶不再阻止修理，但现在降低75%的修复率。</li><li>坚韧光环移动速度加成从0.1/0.2/0.3降低到0.1/0.15/0.2。</li><li>停滞陷阱激活延迟从9秒减少到7秒。</li><li>野蛮之力的血量加成从100增加到125。</li><li>剑刃风暴的冷却时间从180秒减少到120秒。</li><li>大厅建造时间从150秒减少到140秒。</li><li>先知的幽狼之魂法力消耗从75增加到85。</li><li>先知的闪电链法力消耗从120降低到110。</li></ul>
+<h4>暗夜精灵</h4>
+<ul><li>宁静冷却时间从60秒增加到120秒。</li><li>星辰坠落冷却时间从180秒减少到120秒。</li><li>星辰坠落魔法消耗从200降低到150。</li><li>缠绕根须的普通单位持续时间从9/18/30减少到9/17/25。</li><li>荆棘光环从0.1/0.2/0.3增加到0.15/0.30/0.45。</li><li>山岭巨人现在初始护甲+2。</li><li>硬化皮肤伤害减免从12降低到8。</li><li>夜视现在需要2本。</li><li>献祭每次消耗的法力从7减少到6。</li><li>献祭间隔持续时间从1秒减少到0.5秒。</li><li>献祭伤害从10/15/20减少到8/12/180(每秒伤害16/24/36)。</li><li>献祭的初始法力消耗从35降低到30(其中20用于激活技能的消耗，10用于技能需求)。</li><li>乌鸦形态的猛禽德鲁伊现在造成穿刺伤害。</li><li>乌鸦形态的猛禽德鲁伊基础伤害从34降低到26。</li><li>猛禽德鲁伊乌鸦形态的法力消耗从50降低到25。</li><li>利爪德鲁伊的初始法力值从125降低到100</li></ul>
+<h4>亡灵</h4>
+<ul><li>反魔法护罩现在可以受到驱散魔法、净化和驱除魔法造成的召唤魔法伤害。</li><li>邪恶光环移动速度加成从0.1/0.175/0.25降低到0.1/0.15/0.2。</li><li>亡者再临的死尸现在可以被杀死，如果有研究科技会产生疾病之云。</li><li>死亡骑士复活的死尸不再能被驱散。</li><li>疾病之云从90秒减少到75秒。</li><li>黑曜石雕像等级从2级增加到3级。</li><li>黑曜石雕像灵魂之触法力恢复从3减少到2。</li><li>闹鬼金矿的建造时间从100秒增加到110秒。</li><li>巫妖黑暗仪式的冷却时间从15秒增加到20秒。</li><li>黑暗仪式法力回复从33/66/100减少到30/50/75。</li></ul>
+<h4>物品</h4>
+<ul><li>幻象魔杖使用次数从3次减少到2次。</li><li>法力窃取魔杖增加法力窃取从50到65。</li><li>军团的末日号角移动速度加成从0.075降低到0.05。</li><li>远古坚韧杖鼓速度加成从0.075降低到0.05。</li></ul>
+<h3>Bug修复和改进</h3>
+<ul><li>修正了提前离场会导致比赛未处理的问题。</li><li>修复了在不同自定义地图和画面之间切换时模型和纹理无法正确加载的问题。</li><li>增加了额外的缩放级别(1750、2100、2250)。</li><li>修正了一个问题，如果你在特定的地图上缩小得太远，玩家会失去可见性</li><li>现在可以从排列好的比赛历史中查看其他玩家的个人资料。</li><li>修正了退出单人游戏会让玩家进入载入游戏存档界面的问题。</li><li>修正了保存自定义战役会重置字符串数据的问题。</li><li>修正了自定义战役加载屏幕文本错位的问题。</li><li>修正了自定义游戏列表的名称分类挤到ping分类的问题。</li><li>修正了编辑器在没有打开地图的情况下保存战役时崩溃的问题。</li><li>修正了地图编辑器在编辑伤害/护甲表时崩溃的问题。</li><li>删除了举报描述的字符要求。</li><li>修正了战队等级显示不正确的问题。</li><li>增加了收到社交请求时的通知指示器。</li><li>修正了排行榜不更新的问题。</li><li>修正了载入高对象数地图时偶尔崩溃的问题。</li><li>修正了自定义战役在重新载入战役地图时崩溃的问题。</li><li>修正了尝试开始自定义战役任务时的磁盘空间错误。</li><li>修正了自定义战役中不支持可变难度标志的问题。</li><li>修正了编辑器中的战役缩略图不显示的问题。</li><li>玩家档案:查看其他玩家的档案会偶尔显示他们是你的战队成员，即使他们不是。</li><li>阻止加载与官方战役同名的自定义战役，以防止存档冲突。</li><li>修正了一个玩家在杜隆塔尔的建立战役中改变区域时会被冻结窗口的问题。</li></ul></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-1350-notes-january-19/29812" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 1.35.0 补丁说明</a></div></section>
+
+<section class="panel" id="v134" data-v="1.34" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.34</h2><div class="pmeta"><span class="d">2022-12-01</span><span class="b">构建 19632</span><span class="k">补丁</span></div></div><div class="pbody"><h3>战队</h3>
+<ul><li>玩家现在可以创建和加入一个战队。</li><li>战队选项可通过社交选项卡访问</li><li>战队成员将有以下等级：<ul><li>牛头人酋长</li><li>萨满</li><li>兽人步兵</li><li>苦工</li></ul></li><li>酋长和萨满可以选择踢、提拔和屏蔽成员。</li><li>战队会有自己独特的战队聊天频道。</li><li>玩家档案现在显示你的战队、排名和战队标签。</li><li>玩家的战队标签显示在社交菜单和聊天中。</li></ul>
+<h3>玩家举报</h3>
+<ul><li>此次更新为游戏增加了自动化玩家举报功能。</li><li>玩家现在可以举报其他人:发言，战网昵称，战队名称，战队标签，战队描述，战队每日消息，战队聊天，作弊，游戏名称，攻击性内容或者破坏游戏玩法。</li></ul>
+<h3>自定义游戏</h3>
+<ul><li>添加了按名称加入功能。<ul><li>玩家可以通过在自定义游戏列表底部的文本框中键入游戏名称来加入游戏。</li></ul></li></ul>
+<h3>BUG修复和改进</h3>
+<ul><li>团队游戏的后端匹配处理得到了改进。</li><li>增加了一个解释游戏内排名的信息界面。<ul><li>这可以通过对战菜单中的“I”图标来访问。</li></ul></li><li>切换账户时聊天会正确刷新</li><li>改进了右键快捷菜单的一致性，支持举报玩家、邀请组队和邀请加入战队</li><li>当你收到请求时，在社交按钮上会显示一个通知指示器。</li><li>排名徽章的各种视觉改进。</li><li>排行榜的各种视觉UI/UX改进。</li><li>现在可以从主菜单和单人模式页面访问玩家个人资料。</li><li>玩家战网昵称现在到处都可以看到。</li><li>匹配历史记录界面的视觉改进。</li></ul></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/23855" target="_blank" rel="noopener noreferrer">美服论坛蓝贴（1.32–1.34 汇总帖）</a></div></section>
+
+<section class="panel" id="v133" data-v="1.33" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.33</h2><div class="pmeta"><span class="d">2022-08-17</span><span class="b" title="蓝贴标注日期为 2022-08-17，首批构建于 2022-08-18 上线">构建 19194</span><span class="k">补丁</span></div></div><div class="pbody"><h3>排位对战</h3>
+<ul><li>玩家现在可以在排位和非排位之间进行选择<ul><li>任一模式下的自动匹配都将计入头像解锁所需的胜场。</li></ul></li><li>赛季已开启<ul><li>当一个赛季结束时，天梯将重置，玩家将能够通过他们的个人资料和排行榜查看他们的历史排位对战情况。</li><li>玩家的MMR会在每个赛季开始时重置。</li><li>你的每个种族都会有各自的 MMR ，包括随机种族。</li><li>要获得段位，玩家必须使用每个种族进行5场定级赛。</li></ul></li><li>在进行一场排位赛后，玩家将看到 MMR 的变化和自己的段位。</li><li>段位等级包括：<ul><li>Unranked</li><li>Combatant</li><li>Challenger</li><li>Rival</li><li>Duelist</li><li>Elite</li><li>Gladiator</li><li>Champion</li></ul></li></ul>
+<h3>游戏内统计</h3>
+<ul><li>增加了“!Stats”命令</li><li>!Stats显示当前比赛中的玩家的胜负记录和 MMR 信息。</li><li>如果玩家离开比赛，他们的统计数据将无法再通过“!stats”命令检索。</li><li>输入“!Stats + 用户名”将显示该玩家的战网昵称、胜负和 MMR 。</li><li>键入“!Stats”将显示您自己的段位、胜负和 MMR 。</li><li>输入部分昵称将提供最接近匹配昵称的统计信息。</li></ul>
+<h3>天梯排行榜</h3>
+<ul><li>玩家现在可以在排行榜中查看他们的排位名次，可以从对战界面进入排行榜。</li><li>通过预设的筛选器，您可以按照种族、好友和模式进行排序。</li></ul>
+<h3>玩家资料</h3>
+<ul><li>通过右键单击屏幕右下角的玩家图标可以访问玩家资料。</li><li>其他玩家的个人资料可以通过右键单击玩家姓名并选择“查看个人资料”来查看。</li><li>玩家资料显示玩家的当前排名是针对每场比赛、总统计数据和比赛历史的。</li></ul>
+<h3>经典头像</h3>
+<ul><li>添加了一系列经典对战头像。</li><li>头像是通过达到一定的总胜利来解锁的。</li><li>解锁标准是依照原始的魔兽争霸III。</li></ul>
+<h3>自定义游戏</h3>
+<ul><li>自定义游戏现在是全球性的，可以通过来自所有地区的 ping 进行过滤。</li><li>添加电脑玩家或关闭自定义游戏大厅中的插槽将不再增加自定义游戏列表中的玩家数量。</li></ul>
+<h3>重制版战役</h3>
+<ul><li>对多个战役地图进行了大量调整和平衡调整。</li></ul>
+<h3>游戏服务器</h3>
+<ul><li>已添加美国芝加哥的代理游戏服务器。</li></ul>
+<h3>粒子效果更新</h3>
+<ul><li>魔兽争霸II重制版的 PopcornFX 已升级至 2.5.1.63447 版本。<ul><li>在旧版本上烘焙自定义 FX 的自定义地图制作者必须将其资产重新烘焙到当前版本。</li><li>在编辑器中为自定义 FX 过时的用户添加了错误消息。</li></ul></li></ul>
+<h3>缩放功能</h3>
+<ul><li>添加了额外的镜头缩放功能以支持鼠标滚轮缩放。</li><li>镜头缩放默认禁用，可以通过游戏部分的选项菜单启用。</li><li>也可以使用 Page Up 和 Page Down 键调整缩放。</li><li>现在可以通过滑块选项设置默认缩放和最大缩放。</li><li>游戏将始终以您的默认缩放开始。</li><li>按 F5 将您的镜头回到您定义的默认缩放。</li><li>最大缩放允许您限制镜头使用鼠标滚轮可以缩小的最远距离。</li><li>最大缩放不能小于默认缩放。</li></ul>
+<h3>其他用户界面更新</h3>
+<ul><li>菜单按钮现在可以通过热键激活。</li><li>主用户界面已经过优化，响应速度更快。</li><li>为地图编辑器启用了 Windows 10 常用控件。</li><li>更新了 GPU 渲染器以提高性能，略微改变了字体的外观。 要启用旧字体渲染，请运行命令行参数“-legacykerning”。 这可以在战网启动器的设置选项中完成。</li></ul>
+<h3>BUG修复</h3>
+<ul><li>修复了导致 FileAliases.JSON 某些纹理的文件路径不正确的问题。</li><li>山丘之王的变身技能现在喊的是“为了卡兹莫丹！”(原来是“卡兹莫丹”)</li><li>对重制资产进行了各种动画碰撞更改，以匹配其对应的经典模型的碰撞。</li><li>修复了使用在旧版本的 Popcorn 上导出的自定义粒子 FX 时的崩溃问题。</li><li>修复了打开带有自定义地形的地形托盘菜单时编辑器崩溃的问题。</li><li>修复了当用户尝试通过双击打开具有无效对象 ID 的地图时，地图编辑器中的崩溃问题。</li><li>修复了在世界编辑器中排序导入列表的问题。</li><li>修复了从错误的播放列表播放游戏音乐的问题。</li><li>修复了单位语音不播放的问题。</li><li>修复了无法播放游戏内肖像动画的问题。</li><li>修复了游戏内菜单显示所有种族的人类 UI 的问题。</li><li>修复了阻止插入键按预期旋转相机的错误。</li><li>修复了使用单人游戏作弊码时“=”功能的错误。</li></ul></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/23855" target="_blank" rel="noopener noreferrer">美服论坛蓝贴（1.32–1.34 汇总帖）</a></div></section>
+
+<section class="panel" id="v13210" data-v="1.32.10" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.32.10</h2><div class="pmeta"><span class="d">2021-04-13</span><span class="b">构建 17165</span><span class="k">补丁</span></div></div><div class="pbody"><p>洛克拉！</p>
+<p>感谢社区在 PTR 阶段的全部测试与反馈。PTR 之初我们聚焦于亡灵对人类对阵与物品平衡，在与你们的合作下，我们又对兽人对暗夜精灵的对阵做了额外改动。</p>
+<p>感谢你们！</p>
+<h3>平衡性调整</h3>
+<h4>人类</h4>
+<ul><li>移除「强化伐木」科技的研究前置。</li><li>「高级伐木」科技的前置由城堡改为要塞。</li><li>骑士默认拥有「裂魂之刃」。</li><li>牧师「驱散」的射程由 600 提高到 700。</li><li>防御塔的修理速度加快 5 秒。</li><li>雷霆一击的作用范围由 300/350/400 降到 300/325/350。</li></ul>
+<h4>中立</h4>
+<ul><li>熊猫酒仙的力量与智力各提高 1 点。</li><li>火焰之息的最大伤害由 480/720/1080 提高到 480/800/1200。</li></ul>
+<h4>暗夜精灵</h4>
+<ul><li>利爪德鲁伊的初始法力由 100 提高到 125。</li><li>移除山岭巨人的第二次「嘲讽」。</li><li>山岭巨人「嘲讽」的冷却时间由 16 秒降到 14 秒。</li><li>法力闪耀每点法力造成的伤害由 3 提高到 4。</li><li>法力闪耀的最大伤害由 90 提高到 100。</li><li>精灵龙的基础伤害由 13 降到 12。</li></ul>
+<h4>兽人</h4>
+<ul><li>加速卷轴的花费由 50 提高到 70。</li><li>毒蛇结界的经验值由 12.5/20/30 提高到 12.5/30/42.5。</li></ul>
+<h4>亡灵</h4>
+<ul><li>侍僧在腐地上的生命回复由每秒 4 点降到 3 点。</li><li>亡灵权杖的冷却时间由 26 秒降到 24 秒。</li><li>仪式匕首的花费由 125 降到 100。</li><li>地穴领主「穿刺」对英雄的眩晕时间由 1/2/3 降到 1/1.5/2。</li><li>地穴领主「穿刺」的伤害由 75/120/165 降到 60/105/150。</li><li>埋骨地不再需要献祭深渊。</li><li>霜甲术被击中时的持续时间改为按 3/5/7 成长。</li></ul>
+<h4>物品</h4>
+<ul><li>奥蕾莉亚的精准长笛的加成由 0.1 降到 0.075。</li><li>远古坚韧杖鼓的加成由 0.05/0.1 降到 0.03/0.075。</li><li>卡德加的真知烟斗的加成由 0.75 降到 0.5。</li><li>军团末日号角的加成由 0.5/1.0 降到 0.3/0.075。</li><li>天灾骨钟的加成由 0.2 降到 0.15。</li><li>战歌战鼓的加成由 0.1 降到 0.075。</li><li>暴风城雄狮号角的加成由 2 降到 1.5。</li><li>所有物品的回收比例由原价的 50% 提高到 60%。</li><li>城镇传送卷轴的花费由 350 降到 325。</li></ul>
+<h3>错误修复</h3>
+<ul><li>修复了金矿集结旗帜行为不一致、可能在战争迷雾中暴露玩家位置的问题。</li></ul></div><div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes-version-13210/26961/1" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 1.32.10 补丁说明</a></div></section>
+
+<section class="panel" id="v1329" data-v="1.32.9" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.32.9</h2><div class="pmeta"><span class="d">2020-10-21</span><span class="b">构建 16207</span><span class="k">补丁</span></div></div><div class="pbody"><p>经过大量测试和对多项赛事的仔细观察，我们很高兴发布 1.32.9 平衡性更新。本次更新聚焦于改善人类对亡灵、兽人对暗夜精灵的对阵，同时包含一些体验优化，以及社区长期以来的若干诉求。</p>
+<p>非常感谢你们，社区的各位。你们对指引这些改动功不可没。我们通过帖子、视频和赛事收到的反馈令我们不胜感激。</p>
+<p>我们还要感谢 Back2Warcraft、DreamHack、ESL、WCG、WGL，以及在此期间制作了精彩比赛与内容的所有社区贡献者。你们的反馈弥足珍贵。</p>
+<h3>平衡性调整</h3>
+<h4>人类</h4>
+<ul><li>城堡的研究金币花费由 360 降到 320。<ul><li>开发者笔记：目标是提高人类升级城堡的意愿，同时鼓励一些单矿打法。</li></ul></li><li>农夫的生命值由 220 提高到 230。<ul><li>开发者笔记：略微提高生命值应能帮助玩家更好地应对前期骚扰。</li></ul></li><li>山丘之王的伤害由 60/115/160 降到 60/110/150。</li><li>火枪手的攻击间隔由 1.4 降到 1.35。<ul><li>开发者笔记：配合人类的其他改动，我们认为此前这一改动需要回调。</li></ul></li><li>破法者的护甲由 3 降到 2。<ul><li>开发者笔记：目标是让人族内战中大量破法者的打法不再占据主流。</li></ul></li><li>女巫「减速术」的移动速度降低由 60% 降到 55%。<ul><li>开发者笔记：略微降低减速强度。此举旨在改善兽人对人类的对抗，同时略微改善人类对暗夜精灵的对抗，以弥补人类缺乏驱散手段的问题。</li></ul></li><li>蒸汽坦克的经验值由 60 提高到 85。<ul><li>开发者笔记：近期对亡灵修理速度的改动可能提高攻城单位的可行性，因此我们提高了它偏低的经验值。</li></ul></li></ul>
+<h4>兽人</h4>
+<ul><li>大厅提供的补给由 10 提高到 11。<ul><li>开发者笔记：这应能为兽人对暗夜精灵提供前期侦查手段。</li></ul></li><li>剑圣「镜像」的法力消耗由 100 降到 80。<ul><li>开发者笔记：我们开始看到兽人玩家用镜像配合闪电之盾的新打法，非常有趣，也契合该种族的主题。但我们发现这一策略的主要阻碍是镜像的高法力消耗。配合小精灵自爆的改动，我们相信这能进一步促进该技能的使用。</li></ul></li><li>牛头人酋长「战争践踏」对英雄的眩晕时间由 2/3/4 秒降到 2/2.5/3 秒；「震荡波」的法力消耗由 100 降到 90。<ul><li>开发者笔记：战争践踏是对敌方部队极为强力的技能，但其「对英雄的眩晕锁定」潜力需要稍加约束；把震荡波的法力消耗降到 90，则可使其成为可行的替代选择。</li></ul></li></ul>
+<h4>亡灵</h4>
+<ul><li>幽魂之塔与蛛魔塔的修理速率由 35 提高到 45。<ul><li>开发者笔记：修理速率衡量建筑修好所需的时间，数值越高越慢。近期改动让亡灵更容易扩张，我们认为其塔的修理速率应与其他种族看齐。45 比兽人地洞少 5，考虑到通常最多只有 5 个侍僧同时修理，这个数值最合理。</li></ul></li><li>死亡骑士「邪恶光环」的移动速度加成由 10/20/30 改为 10/17.5/25。<ul><li>开发者笔记：我们注意到死亡骑士达到 2 级邪恶光环后，凭借更高的机动性与风筝潜力，能打赢本不该打的团战。</li></ul></li><li>地穴领主 2 级与 3 级腐尸甲虫：<ul><li>生命值由 275/410 提高到 300/440。</li><li>移动速度由 290 降到 280（全等级）。</li><li>「钻地」技能需要先研究钻地升级。</li><li>开发者笔记：我们乐于看到地穴领主被更多使用，但有几个问题需要处理。高机动性与免费钻地是让对抗腐尸甲虫体验不佳的主要因素。我们降低其机动性、用升级限制钻地，同时补偿甲虫的生命值，使地穴领主仍是可用之选。</li></ul></li><li>2 级腐尸甲虫的碰撞体积由 16 提高到 32。</li><li>毁灭者的施法前摇由 0.83 降到 0.66。<ul><li>开发者笔记：此改动提升毁灭者施放吞噬魔法的手感。</li></ul></li><li>石像鬼新增可切换技能「优先」：开启后会优先攻击空中单位而非地面单位；若玩家强制攻击地面单位，仍会执行。<ul><li>开发者笔记：应社区要求提升该单位的易用性。</li></ul></li><li>通灵师「邪恶狂热」的生命值消耗由每秒 3 点降到 2 点。<ul><li>开发者笔记：小幅改动，尝试促进亡灵使用辅助施法单位。</li></ul></li><li>亡灵权杖的冷却时间由 22 秒延长到 26 秒。<ul><li>开发者笔记：这是针对性的改动，帮助人类应对前期的骷髅骚扰。冷却延长后，亡灵权杖能让人类玩家在下一批骷髅到来前多一点反应与喘息时间。这也会对死亡骑士的少量单人打野路线产生轻微影响，我们认为可以接受。</li></ul></li></ul>
+<h4>暗夜精灵</h4>
+<ul><li>小精灵自爆时抽取的法力由 50 降到 40。<ul><li>开发者笔记：自爆变得过强，尤其对抗兽人时，因为兽人的施法单位缺乏回蓝手段。</li></ul></li><li>弓箭手的生命值由 260 降到 255。<ul><li>开发者笔记：这是对弓箭手此前改动的小幅校准，因为它们略显耐打，尤其考虑到「艾露恩的恩典」被动。</li></ul></li><li>利爪德鲁伊（熊形态）的基础伤害由 24 提高到 25。<ul><li>开发者笔记：暗夜精灵近期过度依赖 1 级单位，我们希望小精灵自爆的改动配合熊形态伤害的小幅提升，能促成更多战术变化。</li></ul></li><li>奇美拉不再造成友军伤害。<ul><li>开发者笔记：冰霜巨龙、狮鹫骑士与奇美拉三者中，只有奇美拉会误伤友军，我们认为这一设定令人沮丧。</li></ul></li></ul>
+<h4>中立</h4>
+<ul><li>深渊领主「火焰之雨」1 级的射程由 800 降到 700。<ul><li>开发者笔记：此改动专门针对亡灵深渊领主推进人类的打法。</li></ul></li></ul>
+<h4>物品</h4>
+<ul><li>勇气头盔、勇气勋章与狡诈兜帽的单项属性加成由 +4 提高到 +5。<ul><li>开发者笔记：这些物品相比同档其他物品偏弱。</li></ul></li><li>攻击之爪 +6 替换为攻击之爪 +5。<ul><li>开发者笔记：在 +6 时，远程英雄尤其是前期的强度波动过大，因此下调攻击加成。</li></ul></li><li>重修之书的花费由 300 降到 200。<ul><li>开发者笔记：社区强烈要求。我们希望鼓励新的打法，并可能在游戏各阶段创造更多的技能组合多样性。</li></ul></li><li>风之魔杖的充能次数由 3 降到 2。<ul><li>开发者笔记：3 次充能时，风之魔杖对单个英雄提供了过多的控制。</li></ul></li></ul>
+<h3>错误修复</h3>
+<h4>美术</h4>
+<ul><li>重制版模式下为工程师加兹鲁维的雪茄添加了发光效果。</li><li>补全了重制版模式下「垃圾堆」装饰物缺失的贴图。</li><li>修复了重制版模式下极地熊怪熊战士护甲的顺序问题，不再陷入面部。</li><li>移除了重制版模式下蓝色龙裔战士眼睛的队伍颜色。</li><li>补全了重制版模式下蓝色龙裔战士肩甲缺失的贴图。</li><li>修正了重制版模式下萨特与加里索斯领主说话动画中胡须的动作。</li><li>调整了重制版模式下骑乘与未骑乘状态的萨尔的配色，使二者一致。</li><li>为重制版模式下无面者欺诈者与怨灵的模型及头像眼睛添加了发光效果。</li><li>为重制版模式下火蜥蜴幼体的模型与头像眼睛添加了发光效果。</li><li>调整了重制版模式下海巨人的面部动画，使其与配音更匹配。</li><li>修正了重制版模式下小鸡小动物的脚印大小，使其更贴合模型。</li></ul>
+<h4>对战</h4>
+<ul><li>熊怪山食人魔营地的掉落表中，防护指环 +2 替换为防护指环 +3。</li><li>调整了隐蔽丘陵的地形，单位不再能到达非预期位置。</li></ul>
+<h4>自定义游戏</h4>
+<ul><li>为自定义游戏的高级选项添加了提示文本。</li><li>修复了经典模式下自定义单位不显示阴影的问题。</li></ul>
+<h4>战役</h4>
+<ul><li>为玛尔加尼斯使用的「灵魂保存」增益添加了提示文本。</li></ul>
+<h4>编辑器</h4>
+<ul><li>修复了 SetMapMusic 函数导致播放列表无法播放音乐的问题。</li><li>修复了设置玩家名称的函数导致改名在游戏内不生效的问题。</li><li>关闭「使用固定随机种子」后现在会正常随机化种子。</li></ul>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2020-12-14（Build 16551）</span></div><ul><li>本次更新修复了服务器问题，没有面向玩家的改动。</li></ul></div></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/23855" target="_blank" rel="noopener noreferrer">美服论坛蓝贴（1.32–1.34 汇总帖）</a></div></section>
+
+<section class="panel" id="v1328" data-v="1.32.8" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.32.8</h2><div class="pmeta"><span class="d">2020-08-11</span><span class="b">构建 15762</span><span class="k">补丁</span></div></div><div class="pbody"><h3>美术</h3>
+<ul><li>冰霜吐息的法术特效在重制版模式下以完整质量显示。</li><li>经典模式下海象人捕猎者的投掷物不再隐形。</li><li>调整了重制版模式下月之女祭司在选中圈内的位置。</li><li>修复了经典模式下血魔法师不显示的问题。</li><li>重制版模式下龙鹰骑士「空中枷锁」的法术特效更易看清。</li><li>重制版模式下精灵龙「法力闪耀」的法术特效更易看清。</li><li>重制版模式下毁灭者「毁灭宝珠」的特效放大，以更好地匹配其作用范围。</li><li>重制版模式下保护卷轴的法术特效更易看清。</li><li>重制版新增的许多单位在经典模式下现在有阴影。</li><li>调整了重制版模式下洛坎在选中圈内的位置。</li><li>炼金术士的图标现在显示为蓝色皮肤。</li><li>深水区下方不再显示地形贴图，与经典模式一致。</li><li>经典模式单位的头像光照现在一致。</li></ul>
+<h3>对战</h3>
+<ul><li>为 FFA 对局中的玩家名称加入混淆显示。</li><li>地穴领主 2 级与 3 级腐尸甲虫的生命值由 330/490 降到 275/410；腐尸甲虫的法力消耗由 45 提高到 50（全等级）。<ul><li>开发者笔记：本次补丁不做完整的平衡调整，但我们希望加入一处改动。地穴领主为亡灵带来了新的宏观开局思路，这点我们认可，但它向中期的过渡效率令人担心，特别是 2 级甲虫骚扰敌方工人的效率。同时我们希望保留甲虫的独特性——永久召唤物且可使用钻地。因此我们针对其承伤能力：降低生命值会迫使玩家更关注甲虫，减少其在被迫钻地前能造成的伤害。法力消耗提高约 11%，在 2 级与 3 级正好跨过阈值：满法力的地穴领主施放穿刺后再开始召唤甲虫，会比之前少一次召唤机会。这意味着战斗中 2 级只能维持 4 只甲虫、3 级 6 只，而非此前的 6 只与 8 只。这应能增加该英雄的法力压力，削弱其前期在法力紧张时的战斗表现。</li></ul></li></ul>
+<h3>自定义游戏</h3>
+<ul><li>调整了自定义游戏房间列表底部，避免列表最下方的房间被按钮遮挡。</li><li>为自定义游戏创建选项添加了提示文本。</li></ul>
+<h3>游戏性</h3>
+<ul><li>钻地状态下的地穴恶魔经亡者再临复活后，不再保留结网技能。<ul><li>开发者笔记：这是一个历史遗留错误。虽然属于极端情况——只有真正处于钻地状态、被击杀后再被施放亡者再临的地穴恶魔才会触发——但它违背了亡者再临的设计规则，因此我们仍然修正。</li></ul></li><li>为瘟疫结界的疾病之云技能添加了提示文本。</li></ul>
+<h3>界面</h3>
+<ul><li>录像下载成功后新增提示。</li></ul>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2020-08-12（Build 15801）</span></div><ul><li>修复了载入画面与比赛结算中玩家槽位显示异常的问题。</li><li>修复了重制版保护卷轴法术特效的问题。</li></ul></div></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/23855" target="_blank" rel="noopener noreferrer">美服论坛蓝贴（1.32–1.34 汇总帖）</a></div></section>
+
+<section class="panel" id="v1327" data-v="1.32.7" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.32.7</h2><div class="pmeta"><span class="d">2020-07-07</span><span class="b">构建 15572</span><span class="k">补丁</span></div></div><div class="pbody"><h3>战役</h3>
+<ul><li>战役任务的结算画面现在会准确显示该任务的实际耗时。</li></ul>
+<h3>自定义游戏</h3>
+<ul><li>修复了自定义载入画面会显示默认载入文本的问题。</li><li>修复了创建自定义游戏时界面不显示输入法状态指示的问题。</li></ul>
+<h3>游戏性</h3>
+<ul><li>修复了经典模式玩家与重制版模式玩家同局、且场上有同时处于嗜血与妖术或变形状态的单位时发生的不同步。</li><li>修复了重制版模式下安纳斯特里安·逐日者有时会使用死亡骑士阿尔萨斯模型的问题。</li></ul>
+<h3>对战</h3>
+<ul><li>冰霜巨龙幻象的普通攻击不再附带冰霜吐息被动。<ul><li>开发者笔记：让幻象的普通攻击附带减速效果是近期意外加入的。此修复对整体平衡影响不大。</li></ul></li></ul>
+<h3>界面</h3>
+<ul><li>结算画面的音乐现在只播放一次。</li></ul></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/23855" target="_blank" rel="noopener noreferrer">美服论坛蓝贴（1.32–1.34 汇总帖）</a></div></section>
+
+<section class="panel" id="v1326" data-v="1.32.6" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.32.6</h2><div class="pmeta"><span class="d">2020-06-02</span><span class="b">构建 15355</span><span class="k">补丁</span></div></div><div class="pbody"><p>这次平衡性补丁有几个不同的目标。就英雄而言，我们关注的是英雄终极技能的花费，有时还有其功能，让它们与英雄的基础技能和法力值相比更具竞争力。</p>
+<p>物品是本次补丁的另一个重点。充能等级 5 和 6 将迎来一次调整，看看能否鼓励大家在今后更多地使用这两类物品。</p>
+<p>此外，我们希望通过对雇佣兵营地所提供的单位进行一次平衡性调整，来支持地图作者们未来的创作。最后，在 1v1 对战中，我们想要处理人类对暗夜精灵中的火枪手推进打法，并略微调整人类对亡灵的前期对局。</p>
+<p>本次补丁还将进行一次地图池轮换。每种游戏模式各有一张地图被轮出、一张新地图轮入。这一次，所有地图都出自我们出色的社区地图作者之手。</p>
+<h3>美术</h3>
+<ul><li>重制版模式下，浣熊的死亡动画不再出现不自然的淡出。</li><li>修复了诺森德树墙装饰物在小地图上显示为白色的问题。</li></ul>
+<h3>战役</h3>
+<ul><li>解决了部分战役地图中行走动画速度异常的问题。</li></ul>
+<h3>编辑器</h3>
+<ul><li>修复了一个历史遗留问题：反馈类技能的「召唤伤害」数据字段上限被限制为 10。该问题不影响竞技对战，但对自定义地图作者不便。</li></ul>
+<h3>单位平衡</h3>
+<h4>人类</h4>
+<ul><li>雷霆一击的冷却时间由 6 秒提高到 7 秒（全等级）。<ul><li>开发者笔记：过去一年山丘之王的雷霆一击表现略强。虽然 1v1 环境变化使其使用率下降，但在团队战中依然很强。我们希望降低其可用频率，也让对手在两次施放之间有更多时间走位应对。</li></ul></li><li>火枪手攻击间隔由 1.35 提高到 1.4。<ul><li>开发者笔记：此改动针对人类对暗夜精灵的火枪手推进。我们并不想让火枪推进彻底消失，也不希望火枪手强度掉太多，而是让进攻方与防守方的强弱更均衡。双方都会调整，这一条是其中人类一侧的改动。</li></ul></li><li>复活术的法力消耗由 200 降低到 150。<ul><li>开发者笔记：复活术本身已受「部队阵亡后才能施放」的限制，同时圣骑士往往要花大量法力用圣光术保单位。降低消耗可缓解法力紧张，提升这个终极技能的吸引力。</li></ul></li></ul>
+<h4>兽人</h4>
+<ul><li>巫毒狂舞的法力消耗由 200 降低到 150。<ul><li>开发者笔记：通过降低消耗缓解法力紧张。技能本身未作改动，我们希望保留其独特机制，只是提高可用性，看能否提高选取率。</li></ul></li><li>地震术持续时间由 25 秒缩短到 20 秒；建筑每秒伤害由 50 提高到 60；法力消耗由 150 降低到 125；不再影响友方单位与建筑。<ul><li>开发者笔记：地震术不再影响友军后，先知的玩家多了一个可用于战斗的减速手段。缩短持续时间、维持总伤害大致不变，使对手对地震术的反应更重要，伤害量也更稳定。</li></ul></li><li>战争践踏的冷却时间由 6/6/6 秒提高到 7/7/7 秒。<ul><li>开发者笔记：近几个月战争践踏表现相当强势。我们认为这更多来自牛头人酋长稳定打出眩晕的能力，而不是伤害提升。单纯降低伤害未必能削弱战争践踏，因此把 3 级时的空窗期翻倍，给对手更多反制时间，同时削弱其前期，让对手更容易争夺地图控制权。</li></ul></li><li>静滞陷阱的启动延迟由 10 秒缩短到 9 秒；探测范围由 250 缩小到 175；启动时间由 1.0 秒缩短到 0.5 秒。<ul><li>地图编辑器中新增数据变量：引爆延迟。</li><li>开发者笔记：巫医在高水平对局中仍较少见。我们希望强化静滞陷阱，因此研究了怎样困住更多单位：更小的引爆范围配合更短的延迟，意味着单位穿过作用区域的时间更少，陷阱显形后可供击打的时间也更短。</li></ul></li></ul>
+<h4>暗夜精灵</h4>
+<ul><li>纠缠根须 3 级的施法距离由 600 提高到 800。<ul><li>开发者笔记：我们认可丛林守护者的前期强度，但希望这个技能在后期稍强一些。部队规模会变大，团队战尤其如此，恢复此前的射程能让丛林守护者在后期更顺手。</li></ul></li><li>宁静的施法无敌效果移除；持续时间由 15 秒缩短到 12 秒；治疗量由 40 提高到 48。<ul><li>开发者笔记：过去我们尝试过为引导类技能提供无敌，测试后决定放弃，因为这会削弱引导类技能的个性。理想情况下，引导技能威力很大，代价是可被打断；正是这一弱点塑造了它们的特点，何时何地施放以取得最大收益，才是使用它们的核心玩法。加入无敌会让它更像「放完就不用管」的普通技能，还能附带额外收益，同时还会充当反减益机制，这是我们不想要的。若改成不驱散减益，又会形成与常规无敌不同的特例，增加玩家的记忆负担。因此我们改为进一步缩短持续时间、提高效果强度：即使被对手打断也能有更多收益，同时促使对手尽快对引导技能作出反应。</li></ul></li><li>利爪德鲁伊熊形态的基础伤害由 23 提高到 24。<ul><li>开发者笔记：我们认为熊在中后期整体上可以更强一些，尤其是对抗亡灵时。此外，人类对暗夜精灵的火枪推进往往发生在只出了几只熊的时候，小幅强化熊能让防守方多撑一点。</li></ul></li><li>猛禽德鲁伊的金币花费由 145 降低到 135。<ul><li>开发者笔记：此前因兽人对暗夜精灵的对局平衡考虑，猛禽德鲁伊的金币花费被提高。此后环境变化很大，我们希望把花费调回旧值，鼓励使用。</li></ul></li></ul>
+<h4>亡灵</h4>
+<ul><li>穿刺不再会被打断；被击飞至空中的单位现在可以受到伤害、也可以被攻击。<ul><li>地图编辑器中新增两个数据变量：空中单位可被攻击、不可打断。</li><li>地穴领主的施法前摇由 0.4 提高到 0.5。</li></ul></li><li>腐尸甲虫的法力消耗由 30 提高到 45；现在一次生成 2 只（原为 1 只）；数量上限由 5 提高到 6；冷却时间由 6 秒延长到 9 秒。<ul><li>开发者笔记：这位「力量无可匹敌」的英雄本次得到调整。此前穿刺被硬编码为可打断，且被击空的单位处于无敌状态；与其他引导技能不同，给包含施放穿刺的地穴领主的编队下达移动命令会使其移动并打断技能。本次改动去掉了这一恼人设定。此外，让空中单位可被攻击后，单位不会再因穿刺而丢失自动攻击目标；不过空中单位仍不能被技能指定为目标，这是出于避免引入意外错误的谨慎考虑。</li><li>追加开发者笔记：说到错误，对腐尸甲虫的强化应能大幅鼓励玩家尝试这个冷门技能。现在地穴领主可以更早、投入更少法力就召唤出一群甲虫，用于侦查或前期推进。我们会观察这是否在前期过强，但整体上这些改动让该技能的个性鲜明得多。</li></ul></li><li>亡者再临的法力消耗由 175 降低到 125。<ul><li>开发者笔记：我们经常收到反馈说这个技能属于较弱的终极技能。此时直接大幅强化并不明智，因为死亡骑士本身就是亡灵最优体系的核心，继续强化会进一步固化这一点。不过我们认为至少可以把法力消耗降到与其强度相称的水平。</li></ul></li><li>兽人骷髅勇士的基础生命值由 190 降低到 180。<ul><li>开发者笔记：此改动主要针对人类对亡灵的极端前期。在最高水平对局中，快速开矿期间杀掉的每个农夫都极其关键，围绕它的战斗往往差之毫厘。把骷髅勇士的生命值调回此前水平，能帮助人类（以及其他种族）在前期更稳地站住。</li></ul></li><li>仪式匕首每次充能恢复的总生命值由 125 提高到 175。<ul><li>开发者笔记：仪式匕首在高水平亡灵开局中始终没能找到位置。提高恢复量可以让它更好地与再生卷轴等物品竞争：175 点生命、每件两充能，总计可恢复 350 点生命。从更高层面看，这一改动加上腐尸甲虫的强化，可能让这件物品成为地穴领主首发玩家的有趣选择。</li></ul></li></ul>
+<h4>中立</h4>
+<ul><li>召唤巨熊的法力消耗由 125 降低到 100。<ul><li>开发者笔记：在最高水平对局中，兽王的出场率随时间下滑。我们认为主因是环境变化，但仍希望强化一个即使兽王常见时也少被使用的技能。特别是：满法力的 2 级兽王在冷却结束后不断召唤，若配合召唤豪猪可多召唤一只豪猪，配合召唤战鹰则可多召唤一只熊。</li></ul></li><li>受末日降临影响的单位移动速度降低 50%。<ul><li>地图编辑器中新增两个数据变量：移动速度系数、野怪等级上限。</li><li>开发者笔记：深渊领主近来的地位提升不少，已不只是「秀操作」的冷门选择。借这次审视终极技能的机会，我们希望给它再加一点强度，减少对手把中招单位拉去偏僻甚至有利位置的余地。同时我们也放出了一个长期隐藏的变量，用于控制可被末日降临影响的野怪等级上限。这不影响竞技对战，但对自定义游戏作者有帮助。</li></ul></li><li>火山爆发的喷发波次由 8 波减少到 5 波；波次间隔由 5 秒缩短到 3 秒；建筑伤害系数由 2 提高到 3；不再影响友方单位与建筑。<ul><li>开发者笔记：我们认为火山爆发的主要问题是不够稳定、且以最大伤害输出为平衡基准，这对引导类终极技能并不现实。本次改动降低其总伤害潜力，换取更高的稳定性与更快的命中速度。不再影响友军也应让它在战斗中更实用——不必再向拉格纳罗斯祈祷火石别砸到自己人。</li></ul></li><li>龙卷风的随机游走行为移除；法力消耗由 200 降低到 125；持续时间由 40 秒缩短到 20 秒；近距建筑每秒伤害由 50 提高到 100；远距建筑每秒伤害由 7 提高到 14。<ul><li>开发者笔记：与本次更新中的其他引导类终极技能一样，我们认为该技能的主要问题是相对其机会成本，取得收益所需时间太长。因此提高伤害、缩短持续时间。法力消耗也下调，因为海巫本身是法力消耗较大的英雄，很容易挤掉施放终极技能的机会。总体而言，玩家应始终感觉自己在指挥单位、单位会严格服从命令；随机游走虽然视觉上很酷，却违背这一原则，也让技能所需的微操远超其回报。</li></ul></li><li>新增一个被动图标，表示该单位的攻击会减速目标。<ul><li>单位提示文本更新，说明这些单位拥有冰霜攻击。</li><li>开发者笔记：这是体验优化改动，我们希望明确这些单位确实拥有冰霜攻击。</li></ul></li><li>该技能的范围与形状调整为与火焰之息一致。<ul><li>开发者笔记：该技能仅由蓝色龙裔监工使用。此前它的视觉效果看起来像锥形（与火焰之息相同），实际使用的却是震荡波的范围与形状，现已改为与火焰之息一致。</li></ul></li></ul>
+<h3>物品</h3>
+<ul><li>大法力药水恢复的法力由 300 降低到 250。</li><li>法力药水恢复的法力由 150 降低到 125；金币花费由 200 降低到 150。<ul><li>开发者笔记：我们希望收敛大法力药水的强度，同时顺带试验普通法力药水。它目前被当作应急物品，本次改动略微提高了它的金币效率，并把价格与治疗药水拉平，便于直接比较。</li></ul></li><li>能量坠饰提供的法力由 150 降低到 100。<ul><li>开发者笔记：除大法力药水外，能量坠饰也常被反馈为在其掉落档位中提供过多法力。降低所提供的法力后，它与同档其他物品更匹配。</li></ul></li><li>红色幼龙蛋从默认的 5 级充能物品掉落表中移除。</li><li>蓝色幼龙蛋是新增的 5 级充能物品，可召唤一只蓝色幼龙，持续 180 秒，1 次充能。</li><li>荒野护符从默认的 5 级充能物品掉落表中移除。</li><li>荒野神像是新增的 5 级充能物品，可召唤一名熊怪追踪者，持续 180 秒，1 次充能。<ul><li>开发者笔记：5 级充能物品中明显有两件较不受欢迎——荒野护符与红色幼龙蛋。两者召唤出的单位只提供少量伤害与一些承伤能力，被击杀后还会给对手经验。我们希望保留「召唤生物」类物品的趣味，但改变召唤对象：蓝色幼龙提供冰霜吐息，熊怪追踪者带来精灵之火，这两者与岩石傀儡、恶魔潜猎者一样，除伤害与承伤外还能提供功能性。</li></ul></li><li>恢复卷轴恢复的生命值由 300 降低到 150。<ul><li>开发者笔记：荒野护符与红色幼龙蛋或许被视为 5 级充能物品中最弱的，但恢复卷轴无疑是最强的，团队战尤其如此。把治疗量降到与治疗卷轴相同，应能让它回到该档位的正常水平。</li></ul></li><li>亡者再临卷轴从默认的 6 级充能掉落表中移除。</li><li>统御权杖是 6 级充能物品，可永久控制一个敌方单位，射程 600，1 次充能。不能对英雄或 5 级以上野怪使用。</li><li>复活卷轴从默认的 6 级充能掉落表中移除。</li><li>贪婪权杖是新增的 6 级充能物品，可立即杀死一个敌方单位，射程 600，1 次充能，并获得相当于其造价 75% 的金币。不能对英雄或 5 级以上野怪使用。<ul><li>开发者笔记：与 5 级充能物品类似，6 级充能物品中也有两件显得明显偏弱。这两张卷轴只有在战斗已经打响、双方损失增加时才真正有用，因此价值难以评估；而召唤类物品的灵活性要高得多。我们延续该档位「充能物品即终极技能」的思路，为点金术与蛊惑提供了对应物——立即剥夺对手一个单位，与召唤一个单位更直接可比。</li></ul></li><li>地狱火之石的掉落档位由 6 级充能提升为 7 级神器。</li><li>刻纹鳞片是新增的 6 级充能物品，可召唤一名蓝色龙裔监工，持续 180 秒，1 次充能。<ul><li>开发者笔记：地狱火之石常被认为是游戏中最强的物品之一，也常是 6 级充能物品在 1v1 中失衡的焦点。我们尝试把它上调一档，并以新的召唤物品替代，看能否提高地图作者对这一档物品的使用，同时让目前使用它的团队图与自由混战图更平衡。蓝色龙裔监工相当于熊怪熊战士的防守型对照：提供虔诚光环，并自带被动闪避；冰霜吐息也让它在群体效果上与其他同档召唤物相当。</li></ul></li></ul>
+<h3>非天梯</h3>
+<h4>运输船</h4>
+<ul><li>不再瞬间卸载，改为 0.5 秒延迟，与地精飞艇一致。</li><li>等级由 2 降到 1。</li><li>生命值由 1500 降到 900。</li><li>护甲类型由重型改为轻型。</li><li>船坞的最大存量由 3 降到 2。</li><li>初始库存延迟由 0 秒提高到 120 秒。</li><li>库存补充间隔由 110 秒缩短到 30 秒，与地精飞艇一致。</li><li>修理时间由 25 秒延长到 30 秒，与地精飞艇一致。<ul><li>开发者笔记：虽然当前天梯地图未使用该单位，我们希望为偏好水上玩法的地图作者更新它。多个社区赛事中，船作为地图要素有过一些有前景的用法，但需要调整。运输船目前的数值是按单人模式设计的，作为竞技对战选项过于超模。不过本次的核心改动是单位改为逐个卸载而非一次性全部卸载——此前这会让船方在发动激进机动时优势过大，尤其是在敌方基地附近投放攻城单位时。</li></ul></li></ul>
+<h3>雇佣兵营地更新</h3>
+<h4>营地构成</h4>
+<ul><li>洛丹伦夏季：未改动。</li><li>城市 / 达拉然：未改动。</li><li>地下 / 地牢：<ul><li>原：狗头人地卜师、燃烧弓箭手、野禽。</li><li>现：狗头人地卜师、燃烧弓箭手、野禽、冰霜亡魂。</li></ul></li><li>灰谷：<ul><li>原：萨特暗影舞者、熊怪萨满、雷霆蜥蜴。</li><li>现：萨特暗影舞者、黑暗巨魔狂战士、黑暗巨魔暗影祭司、巨狼。</li></ul></li><li>贫瘠之地：<ul><li>原：半人马先驱者、鹰身人盗贼、刺鬃巫医、鹰身人风女巫。</li><li>现：半人马先驱者、野猪人猎手、半人马弓箭手、鹰身人风女巫。</li></ul></li><li>黑石城堡 / 外域：<ul><li>原：恶魔野兽、德莱尼信徒、虚空行者、德莱尼暗杀者。</li><li>现：血魔、德莱尼信徒、虚空行者、骷髅兽人步兵。</li></ul></li><li>费伍德：<ul><li>原：鱼人食肉者、淤泥喷洒者、萨特窃魂者。</li><li>现：鱼人食肉者、淤泥怪物、萨特暗影舞者、吐丝蜘蛛。</li></ul></li><li>冰冠冰川：<ul><li>原：带刺蛛魔、蓝色龙裔干涉者、猛犸人战士、极地熊怪萨满。</li><li>现：冰霜巨魔狂战士、蓝色龙裔战士、海象人治疗者、不屈暗织者。</li></ul></li><li>洛丹伦秋季：未改动。</li><li>洛丹伦冬季：<ul><li>原：豺狼人监工、冰霜巨魔狂战士、冰霜巨魔捕猎者、泥浆石魔像。</li><li>现：食人魔力士、冰霜巨魔狂战士、冰霜巨魔祭司、泥浆石魔像。</li></ul></li><li>诺森德：<ul><li>原：蛛魔战士、冰霜巨魔狂战士、冰霜亡魂、蛛魔织网者。</li><li>现：蛛魔战士、冰霜巨魔狂战士、冰霜亡魂、蛛魔先知。</li></ul></li><li>沉没的废墟：<ul><li>原：鱼人诱捕者、龙虾人钳击者、龙虾人深视者、巨型海龟。</li><li>现：鱼人诱捕者、鱼人血鳃、风暴掠夺者隐士、骷髅兽人步兵。</li></ul></li><li>村庄 / 村庄秋季：<ul><li>原：狗头人、鱼人猎手、刺客、狗头人地卜师。</li><li>现：狗头人掘地者、狗头人监工、刺客、狗头人地卜师。</li></ul></li></ul>
+<h4>营地单位</h4>
+<ul><li>刺客<ul><li>初始库存延迟 110 秒 → 220 秒。</li><li>金币 250 → 260。</li></ul></li><li>血魔<ul><li>初始库存延迟 0 秒 → 220 秒。</li><li>最大存量 3 → 1。</li><li>金币 170 → 240。</li></ul></li><li>蓝色龙裔战士<ul><li>金币 255 → 300。</li><li>木材 30 → 0。</li></ul></li><li>燃烧弓箭手<ul><li>初始库存延迟 60 秒 → 220 秒。</li></ul></li><li>半人马弓箭手<ul><li>初始库存延迟 440 秒 → 120 秒。</li></ul></li><li>半人马先驱者<ul><li>初始库存延迟 60 秒 → 220 秒。</li></ul></li><li>黑暗巨魔狂战士<ul><li>初始库存延迟 440 秒 → 220 秒。</li><li>金币 255 → 245。</li></ul></li><li>黑暗巨魔暗影祭司<ul><li>初始库存延迟 440 秒 → 120 秒。</li><li>金币 195 → 175。</li></ul></li><li>德莱尼信徒<ul><li>初始库存延迟 135 秒 → 120 秒。</li><li>补充间隔 90 秒 → 110 秒。</li><li>金币 155 → 195。</li><li>木材 15 → 10。</li></ul></li><li>巨狼<ul><li>初始库存延迟 440 秒 → 220 秒。</li><li>金币 255 → 215。</li><li>木材 30 → 0。</li></ul></li><li>豺狼人蛮兵<ul><li>初始库存延迟 60 秒 → 120 秒。</li><li>金币 215 → 140。</li><li>木材 20 → 0。</li></ul></li><li>豺狼人守卫<ul><li>初始库存延迟 180 秒 → 220 秒。</li><li>金币 215 → 180。</li></ul></li><li>鹰身人风女巫<ul><li>初始库存延迟 640 秒 → 440 秒。</li></ul></li><li>冰霜巨魔祭司<ul><li>初始库存延迟 440 秒 → 120 秒。</li><li>金币 195 → 175。</li></ul></li><li>狗头人地卜师<ul><li>金币 255 → 215。</li></ul></li><li>狗头人掘地者<ul><li>初始库存延迟 440 秒 → 120 秒。</li><li>金币 215 → 150。</li><li>木材 20 → 0。</li></ul></li><li>鱼人血鳃<ul><li>初始库存延迟 440 秒 → 120 秒。</li><li>金币 105 → 195。</li><li>木材 0 → 10。</li></ul></li><li>鱼人诱捕者<ul><li>金币 215 → 265。</li><li>木材 20 → 30。</li></ul></li><li>鱼人食肉者<ul><li>初始库存延迟 60 秒 → 120 秒。</li></ul></li><li>蛛魔战士<ul><li>初始库存延迟 60 秒 → 120 秒。</li><li>金币 215 → 205。</li></ul></li><li>野猪人猎手<ul><li>初始库存延迟 440 秒 → 220 秒。</li></ul></li><li>盗贼<ul><li>初始库存延迟 60 秒 → 120 秒。</li></ul></li><li>萨特暗影舞者<ul><li>初始库存延迟 330 秒 → 440 秒。</li><li>金币 255 → 200。</li><li>木材 30 → 20。</li></ul></li><li>吐丝蜘蛛<ul><li>初始库存延迟 440 秒 → 220 秒。</li><li>金币 215 → 235。</li><li>木材 20 → 30。</li></ul></li><li>风暴掠夺者隐士<ul><li>初始库存延迟 440 秒 → 220 秒。</li><li>金币 180 → 190。</li></ul></li><li>海象人治疗者<ul><li>初始库存延迟 440 秒 → 120 秒。</li><li>木材 20 → 10。</li></ul></li><li>不屈暗织者<ul><li>金币 255 → 320。</li><li>木材 30 → 50。</li></ul></li><li>虚空行者<ul><li>金币 155 → 245。</li><li>木材 15 → 30。</li></ul></li></ul>
+<h3>平衡相关错误修复</h3>
+<ul><li>龙虾人深视者野怪在被单个单位或英雄攻击时，不再有时停止对敌方单位作出反应。<ul><li>开发者笔记：顺带一提，这个错误源自「召唤小虾」技能。与许多技能一样，它会影响所属单位的行为，通常用于决定何时施放技能、以谁为目标。该错误在多人对战中只影响龙虾人深视者，但本次修复也应改善自定义游戏中使用该技能的单位的一些 AI 异常。</li></ul></li><li>物品在英雄物品栏中时，不再被飞行道具摧毁。<ul><li>开发者笔记：我们确实想保留「击杀物品以剥夺对手」这一反制手段，但希望解决这一具体的怪异行为。目前只要飞行道具在途中，无论物品是否已被捡起，都会对物品造成伤害。高速英雄捡起物品后走开，却因缓慢的飞行道具落在物品原位置而突然失去物品，这尤其怪异。此外，修复后该行为与单位被地精飞艇装载时一致。</li></ul></li><li>酒仙的火焰之息 2 级起始投射物尺寸由 120 提高到 125，与 1 级、3 级一致。<ul><li>开发者笔记：这个历史遗留问题没有造成可观察到的影响，但我们希望消除各级之间的不一致。</li></ul></li></ul>
+<h3>地图</h3>
+<h4>地图池轮换</h4>
+<ul><li>1v1：移除达拉然</li><li>1v1：加入清水绿洲<ul><li>开发者笔记：清水绿洲包含一个有趣的新地图特征。双方各有 1 个地精商店与 1 个地精实验室，但它们会在两个位置中的一个生成。这为根据地图情况调整打野与进攻路线增加了变化。两个位置相互关联且对称，因此不会出现一方到商店距离更短的不平衡。</li></ul></li><li>2v2：移除幽灵丛林 LV</li><li>2v2：加入陨落英雄之环</li><li>3v3：移除起伏丘陵</li><li>3v3：加入守护者</li><li>4v4：移除毒木沼泽 LV</li><li>4v4：加入北费伍德</li><li>自由混战：移除鱼人绿洲 LV</li><li>自由混战：加入绿谷林地</li></ul>
+<h4>地图更新</h4>
+<ul><li>泰瑞纳斯据点 LV：地图上新增小动物。</li><li>扭曲草甸：玩家起始位置附近的绿色豺狼人营地新增一只 1 级豺狼人，豺狼人蛮兵掉落 1 级能量道具。<ul><li>开发者笔记：我们希望打豺狼人营地的收益稍高一些。这也正好跨过一个阈值：英雄只需清掉起始位置「正面」的豺狼人营地与两个黄色营地即可到 3 级。此前只有两个起始位置能做到，另外两个会差一点到 3 级。</li></ul></li><li>回音群岛：在西南分矿后方新增树木与装饰物，解决玩家使用城镇传送卷轴后单位卡在不可通行位置的问题</li><li>填补了地图外缘的多处寻路空洞<ul><li>开发者笔记：虽然单位卡在西南分矿后方并不常见，且可通过砍树解救，但我们希望更直接地解决该问题。</li></ul></li><li>庇护所 LV：地图上新增小动物</li><li>南北两处红色营地各移除 2 名学徒法师，食人魔法师掉落的物品由 6 级充能降为 5 级充能<ul><li>开发者笔记：有反馈称，地图南北中部的红色营地中的食人魔法师在前期太容易被拉出击杀，导致强力 6 级充能物品过早掉落，使速攻战术过强。为此我们降低了物品等级，同时把营地整体略微削弱，与其掉落等级相称。</li></ul></li><li>暮色废墟 LV：中部各处红色野怪营地各移除 1 名骷髅兽人步兵，替换为 2 名燃烧弓箭手。<ul><li>开发者笔记：此前这些营地除死亡缠绕外没有任何防空手段，这让速出空中单位的玩家（尤其是亡灵）在打野时优势过大。本次改动应让这些营地需要更多时间与投入才能清掉。</li></ul></li></ul><h3>系统</h3>
+<ul><li>不同构建版本的魔兽争霸III：重制版安装现在使用 .shared 容器技术。</li></ul>
+<h3>用户界面</h3>
+<ul><li>队伍颜色的生命条对新用户不再默认「开启」。</li></ul>
+</div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/23855" target="_blank" rel="noopener noreferrer">美服论坛蓝贴（1.32–1.34 汇总帖）</a></div></section>
+
+<section class="panel" id="v1325" data-v="1.32.5" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.32.5</h2><div class="pmeta"><span class="d">2020-04-29</span><span class="b">构建 15129</span><span class="k">补丁</span></div></div><div class="pbody"><h3>错误修复</h3>
+<ul><li>修复了收藏中多人对战胜场被清零的问题。</li><li>修复了部分地区的玩家无法加入自定义游戏的问题。</li><li>修复了部分地区的玩家无法开始任何游戏的问题。</li><li>俄语环境下重新可以创建单人自定义游戏。</li><li>「减少暴力」模式在需要的地区重新启用。</li></ul></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/23855" target="_blank" rel="noopener noreferrer">美服论坛蓝贴（1.32–1.34 汇总帖）</a></div></section>
+
+<section class="panel" id="v1324" data-v="1.32.4" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.32.4</h2><div class="pmeta"><span class="d">2020-04-28</span><span class="b">构建 15098</span><span class="k">补丁</span></div></div><div class="pbody"><h3>美术</h3>
+<ul><li>所有近战单位与建筑完成了一轮队伍颜色优化，色彩更鲜明、战场辨识度更高。</li><li>女性恶魔猎手的模型放大，轮廓更接近男性恶魔猎手。</li><li>瀑布改用可替换贴图，色调会根据地图地形集自动调整。</li><li>建筑第一阶段的受损特效由烟雾改为火焰，辨识度更高。</li><li>调整了城镇大厅、要塞与城堡的火焰特效位置，使其在受损状态下更易辨认。</li><li>诺森德的树木已更新为与经典版一致的视觉效果。现在共有四套外观明显不同的树墙：<ul><li>诺森德冰霜树墙</li><li>诺森德树墙</li><li>雪地树墙</li><li>焦土树墙</li></ul></li><li>以下群体的脚印已更新：<ul><li>巨魔拥有专属脚印。</li><li>此前缺失脚印的亡灵单位已修复。</li><li>载具现在拥有连续的滚动脚印。</li></ul></li><li>修复了女性恶魔猎手处于恶魔形态时被禁用、英雄图标显示错误的问题。</li><li>海象人捕猎者攻击时现在投掷自己的长矛。</li><li>以下单位的头像动画已更新：农夫、女巫、高等精灵、巫妖、恐惧魔王、巴纳扎尔、玛尔加尼斯、丛林守护者、暗夜精灵信使、塞纳留斯、伊利丹（恶魔形态）、生命之树、岁月之树、永恒之树及其腐化版本。</li><li>「减少暴力」模式更新：<ul><li>女性死亡骑士更新了正确的法术施放特效。</li><li>食人魔法师不再在攻击动画中途消失。</li></ul></li></ul>
+<h3>自定义游戏</h3>
+<ul><li>重新开放单人模式，可从主菜单的「创建游戏」中进入。</li><li>修复了若干自定义地图（如 Custom Hero Survival）的崩溃问题。</li><li>针对与单位攻击相关的 Instance API 原生函数做了若干修复。</li><li>计算存档校验和时不再计入 Blizzard.j 与 common.j。</li></ul>
+<h3>编辑器</h3>
+<ul><li>资源管理器中的「全部导出」选项现已正常工作。</li></ul>
+<h3>游戏性</h3>
+<ul><li>标记为「可通行」的可破坏物不再导致经典与重制版之间不同步。</li><li>重制版巨魔雇佣兵的选中圈已缩小，更接近经典版。</li><li>所有中立单位的选中圈现在与重制版模型正确匹配。</li><li>小地图上的野怪营地更易辨认。</li><li>黑曜石雕像等永久变形单位在变形时不再短暂显示被禁用的变形技能图标。</li></ul>
+<h3>画面</h3>
+<ul><li>调整了游戏光照，提升重制版的辨识度与色彩表现。</li></ul>
+<h3>音效</h3>
+<ul><li>末日守卫的空中与地面攻击现在使用正确音效。</li><li>重制版模式下，森林、黑暗与冰霜巨魔捕猎者施放诱捕时不再播放狂暴音效。</li><li>更新了炼金术士的面部动画与应答音效。</li><li>更新了血肉傀儡的面部动画与应答音效。</li></ul>
+<h3>界面</h3>
+<ul><li>经典模式下的深褐色调背景已还原。</li><li>Mac 上的「使用指令按钮作为快捷键」选项现已按预期工作。</li></ul></div><div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/23855" target="_blank" rel="noopener noreferrer">美服论坛蓝贴（1.32–1.34 汇总帖）</a></div></section>
+
+<section class="panel" id="v1323" data-v="1.32.3" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.32.3</h2><div class="pmeta"><span class="d">2020-03-18</span><span class="b">构建 14857</span><span class="k">补丁</span></div></div><div class="pbody"><h3>美术</h3>
+<ul><li>纳迦单位在重制版模式下现在有脚印。</li><li>通过单位面板放置的随机物品不再在游戏内隐形。</li><li>修复了海巫「龙卷风」技能的动画问题。</li><li>玛瑟里顿在移动速度被降低时动画表现正常。</li><li>重制版模式下死亡骑士的模型缩放到正确体型。</li><li>修复了重制版中升级中途取消建造的建筑有时会在游戏内残留显示的问题。</li><li>经典模式下看门狗小动物不再隐形。</li><li>修复了恶魔猎手在恶魔形态下死亡后，复活图标仍为恶魔形态图标的问题。</li><li>为火焰领主的「焚化」技能补上了自动施放边框。</li><li>所有中立地面单位的选中圈已调整到与单位体型匹配。</li><li>重制版中剑圣的攻击动画减少了横向位移，交互判定更稳定。</li></ul>
+<h3>音频</h3>
+<ul><li>修复了经典模式下会播放部分重制版战斗音效的问题。</li><li>修复了重制版中绞肉车有时无法正常播放死亡音效的问题。</li></ul>
+<h3>战役</h3>
+<ul><li>重制版「天灾的进军」过场动画中，牧师与女巫不再使用血精灵模型。</li><li>重制版「驯服这片土地」从子地图返回主地图时，玩家英雄现在会被自动选中。</li><li>修复了「驯服这片土地」中加兹洛任务可能卡住进度的问题：特定情况下工兵无法以支撑柱为目标。</li><li>「洛丹伦的新势力」中不再有城门阻挡 AI 进攻玩家。</li><li>《血精灵的诅咒》战役中，血精灵弓箭手与剑士的指令卡图标已更新为绿眼版本。</li><li>「达拉然的地牢」中的血精灵中尉现在使用正确的指令卡图标。</li></ul>
+<h3>自定义游戏</h3>
+<ul><li>平滑了退出自定义房间时的菜单过渡。</li><li>修复了物品堆叠导致部分自定义游戏出错的问题。</li></ul>
+<h3>编辑器</h3>
+<ul><li>修复了物品堆叠不会在脚本中触发物品拾取事件的问题。</li></ul>
+<h3>游戏性</h3>
+<ul><li>修复了重制版画面客户端与经典画面客户端同局时桥梁可能不同步的问题。</li><li>使用自定义快捷键时，游戏除英文外还会检测玩家的键盘布局，使 CustomKeys.txt 中可使用非英文字符。</li><li>受龙卷风与飓风影响的单位，其选中音量现在更准确。</li><li>修复了部分语言环境下使用特定技能时会出现调试文本的问题。</li><li>修正了通灵师学徒的提示文本，应提及「亡者再临」而非「残废术」。</li><li>模型路径无效或缺失的装饰物在游戏内改为隐形显示，不再显示为绿色方块；编辑器中仍显示为绿色方块。</li></ul>
+<h3>画面</h3>
+<ul><li>提升了重制版模式下使用地形变形技能时的性能。</li><li>修复了重制版模式下透过战争迷雾观察某些特效时闪烁的问题。</li></ul>
+<h3>非天梯地图</h3>
+<ul><li>修复了「丛林狂热」与「稻田」中部分野怪隐形的问题。</li></ul>
+<h3>界面</h3>
+<ul><li>修复了超宽屏显示器上菜单错位的问题。</li></ul>
+<h3>对战</h3>
+<ul><li>修正了木喉要塞与市场广场部分野怪的物品掉落表。<ul><li>市场广场的狗头人地卜师现在掉落 1 级能量道具。</li><li>木喉要塞中把守金矿的萨特营地现在掉落 3 级永久道具与 2 级能量道具。</li><li>木喉要塞的龙类营地现在还会掉落 2 级能量道具。</li></ul></li><li>以下地图重新加入天梯：斯坦索姆废墟（3v3）、毒木沼泽 LV（4v4）、操纵之泉（FFA）。</li></ul>
+<div class="hx"><div class="hx-h"><span class="hx-t">热修 · 2020-03-23（Build 14883）</span></div><ul><li>修复了自定义法术导致部分热门自定义地图崩溃的问题。</li><li>毒木沼泽_LV 重新加入 4v4 对战地图池。</li><li>解决了毒木沼泽与毒木沼泽_LV 在游戏中使用错误近战数据的问题。</li><li>修复了物品堆叠影响部分热门自定义地图的问题。</li></ul></div></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/23855" target="_blank" rel="noopener noreferrer">美服论坛蓝贴（1.32–1.34 汇总帖）</a></div></section>
+
+<section class="panel" id="v1322" data-v="1.32.2" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.32.2</h2><div class="pmeta"><span class="d">2020-02-24</span><span class="b">构建 14722</span><span class="k">补丁</span></div></div><div class="pbody"><h3>改动与错误修复</h3>
+<h4>战役</h4>
+<ul><li>调整了部分对白的音量。</li><li>微调了部分过场动画的动作、触发器与镜头。</li><li>修复了多个战役任务中单位隐形的问题。</li><li>修复了雷克萨战役中的多处物品栏问题。</li><li>修复了《混乱之治》与《冰封王座》战役中的多处错误。</li><li>更新了过场对话面板，使对话切换更顺畅。</li><li>修复了重制版战役中「诸神的黄昏」比设计意图更易通关的问题。</li><li>经典版战役中，泰兰德在「月之女儿」与「怒风之觉醒」任务里不再缺失物品栏。</li></ul>
+<h4>自定义游戏</h4>
+<ul><li>修复了多处缺失资源影响自定义游戏的问题。</li><li>更新了自定义游戏列表，优化了搜索表现。</li></ul>
+<h4>游戏性</h4>
+<ul><li>修复了玩家连续退出多局并切换画面设置后，出现「已找到比赛」但游戏无法开始的问题。</li><li>女性恶魔猎手变身后现在使用其专属模型。</li><li>修复了「宁静小径」中野怪隐形的问题。</li><li>更新了重制版中火焰领主「焚化」的技能图标，该技能仍可正常自动施放。</li><li>守卫石魔像的普通攻击现在有命中音效。</li><li>修复了剑圣使用剑刃风暴时免疫诱捕等非魔法技能的问题。</li><li>瓦丝琪女士的头部做了小幅调整，处理其人类耳朵的问题。</li><li>魅魔模型在视觉上现在可区分。</li><li>修复了经典模式下播放重制版新增死亡音效的问题。</li><li>由于稳定性问题，三张地图暂时移出各自的地图池：斯坦索姆废墟（3v3）、毒木沼泽 LV（4v4）、操纵之泉（FFA）。问题解决后可能回归。</li></ul>
+<h4>界面</h4>
+<ul><li>对战模式中玩家可以退出匹配队列。</li><li>修复了队伍解散时取消排队导致队员进入异常状态的问题。</li><li>玩家离开比赛后，其余玩家不再收到「暴雪已离开游戏」的额外提示。</li><li>从过场动画过渡到任务时不再短暂显示战役选择界面。</li><li>队伍邀请界面现在会稳定显示战网昵称。</li><li>FFA 对战模式的地图屏蔽现在会保存。</li><li>选项菜单中的超宽屏选项现可正常使用。</li><li>「网格」快捷键选项现在对战役与英雄单位正常生效。</li><li>修复了战役与在线对战中多处文本、字幕与截断的本地化问题。</li><li>聊天频道新增了禁言功能。</li><li>修复了战役与在线对战中多处单位头像问题。</li></ul>
+<h4>编辑器</h4>
+<ul><li>修复了使用自定义数据时，仅近战可用技能在编辑器中显示为隐藏的问题。</li></ul>
+<h4>系统</h4>
+<ul><li>修复了在「低」材质设置下进行战役、对战或自定义游戏时可能发生的崩溃。</li><li>修复了逻辑处理器数量较多的系统上可能发生的崩溃。</li></ul></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/23855" target="_blank" rel="noopener noreferrer">美服论坛蓝贴（1.32–1.34 汇总帖）</a></div></section>
+
+<section class="panel" id="v1321" data-v="1.32.1" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.32.1</h2><div class="pmeta"><span class="d">2020-02-06</span><span class="b">构建 14604</span><span class="k">补丁</span></div></div><div class="pbody"><h3>改动与错误修复</h3>
+<h4>战役</h4>
+<ul><li>载入任务后不应再出现「失败」结算画面。</li><li>调整了部分对白的音量。</li><li>微调了部分过场动画的动作、触发器与镜头。</li><li>断线或登出后不再改变存档文件夹路径。</li><li>修复了若干会阻断流程、或完成任务后不予结算的问题。<ul><li>开发者笔记：为此类修复而更新地图会使既有存档失效，这与旧版本客户端的录像不再可用类似。战役进度不会丢失。</li></ul></li></ul>
+<h4>自定义游戏</h4>
+<ul><li>多面板不再导致自定义游戏崩溃。</li><li>加入同一张地图的房间时不再生成重复的地图副本。<ul><li>开发者笔记：这也解决了因地图名称不合规而导致的断线问题。</li></ul></li></ul>
+<h4>游戏性</h4>
+<ul><li>更新了经典模式的渲染。</li><li>修复了首次建造建筑或训练单位时的卡顿。</li><li>修复了重制版模式下通灵塔升级动画的问题。</li><li>调整了多个单位与建筑的动画与头像。</li><li>在屏幕外完成训练的单位恢复语音。</li><li>起始位置重新被战争迷雾遮蔽。</li></ul>
+<h4>界面</h4>
+<ul><li>密语中会显示发送者名称。</li><li>音频与字幕的语言设置可在启动游戏前于战网中分别调整。</li><li>非拉丁字符不再重叠。</li><li>悬停被截断的文本时会显示提示框。</li><li>聊天会自动滚动到最新消息。</li><li>结算画面上的英雄不再超出边界。</li><li>不同画面设置下的菜单样式已作区分。<ul><li>开发者笔记：我们实现了一个临时方案，以便更好地提示你当前处于重制版还是经典模式——为经典模式的背景图加上深褐色调。</li></ul></li></ul></div>
+<div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/23855" target="_blank" rel="noopener noreferrer">美服论坛蓝贴（1.32–1.34 汇总帖）</a></div></section>
+
+<section class="panel" id="v1320" data-v="1.32.0" role="tabpanel" hidden=""><div class="phead"><h2>版本 1.32.0</h2><div class="pmeta"><span class="d">2020-01-28</span><span class="b">构建 14481</span><span class="k">补丁</span></div></div><div class="pbody"><p>重温《魔兽争霸III：混乱之治》与《魔兽争霸III：冰封王座》的故事。在魔兽争霸III：重制版中，以更精美的方式体验魔兽宇宙的史诗起源——每个英雄、单位、建筑与环境都得到重新演绎，比以往任何时候都更生动。</p>
+<h3>更新内容</h3>
+<h4>战网</h4>
+<ul><li>魔兽争霸III 的安装、更新与启动均可通过暴雪战网桌面应用完成。</li><li>内置群组与聊天功能。</li></ul>
+<h4>战役</h4>
+<ul><li>恢复初代试玩版中的三个序章任务：风暴中的骑士、地底之火、灭绝倒计时。</li><li>更新了地形与任务难度，并为所有任务加入自动存档。</li><li>重做了三座标志性城市的美术与布局：达拉然、银月城、斯坦索姆。</li><li>更新了全部战役角色与视觉资源。</li></ul>
+<h4>收藏</h4>
+<ul><li>可装备英雄皮肤、选择头像，并浏览战役与匹配模式中可解锁的奖励。</li></ul>
+<h4>语言</h4>
+<ul><li>新增西班牙语（拉丁美洲）与葡萄牙语（巴西）支持。</li><li>更新了简体中文、繁体中文、法语、德语、意大利语、韩语、波兰语、俄语与西班牙语（西班牙）的本地化支持。</li></ul>
+<h4>菜单与选项</h4>
+<ul><li>新增「网格」与传统两种快捷键布局。</li><li>新增单位生命条、队伍颜色、英雄状态条与冷却显示的显示设置。</li><li>支持关联经典版账号，以保留历史战绩。<ul><li>旧版账号将在 90 天后失效，请尽快关联。</li></ul></li><li>可在经典模式与重制版模式之间切换画面与战役内容。</li></ul>
+<h4>对战 · 竞技匹配</h4>
+<ul><li>通过新的匹配系统排队进行 1v1、2v2、3v3、4v4 或四人自由混战的正面交锋。</li><li>可组建队伍，以 2v2、3v3 或 4v4 组队加入。</li></ul>
+<h4>已知问题</h4>
+<ul><li>请在本版本的错误报告论坛查看我们的已知问题帖子。</li></ul></div><div class="psrc"><span class="psrc-k">来源</span><a href="https://us.forums.blizzard.com/en/warcraft3/t/warcraft-iii-reforged-patch-notes/14023/1" target="_blank" rel="noopener noreferrer">美服论坛蓝贴 · 1.32 补丁说明（2020-01-28）</a></div></section>
+
+  <div class="pfoot">
+    <button class="nav" type="button" data-dir="prev" disabled="">← 上一版本</button>
+    <button class="nav" type="button" data-dir="next">下一版本 →</button>
+  </div>
+
+  
+
+</main>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab')),
+      panels=[].slice.call(document.querySelectorAll('.panel')),
+      cur=0;
+  function show(i,push){
+    if(i<0||i>=tabs.length) return;
+    cur=i;
+    tabs.forEach(function(t,k){t.classList.toggle('on',k===i);t.setAttribute('aria-selected',k===i?'true':'false')});
+    panels.forEach(function(p,k){p.classList.toggle('on',k===i);if(k===i){p.removeAttribute('hidden')}else{p.setAttribute('hidden','')}});
+    var key=tabs[i].getAttribute('data-v');
+    document.title='补丁说明 · 版本 '+key;
+    if(push!==false){try{history.replaceState(null,'','#'+key)}catch(e){}}
+    var nb=document.querySelectorAll('.nav');
+    nb[0].disabled=(i===0); nb[1].disabled=(i===tabs.length-1);
+    window.scrollTo({top:0,behavior:'auto'});
+    if(typeof reveal==='function') reveal(i);
+  }
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){show(i)})});
+  document.querySelectorAll('.nav').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(b.getAttribute('data-dir')==='prev') show(cur-1); else show(cur+1);
+    });
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.target.tagName==='INPUT') return;
+    if(e.key==='ArrowLeft') show(cur-1);
+    if(e.key==='ArrowRight') show(cur+1);
+  });
+  /* ---- 标签单行折叠 ---- */
+  var tw=document.querySelector('.tabwrap'), tb=tw.querySelector('.tabbar'), more=tw.querySelector('.tabmore');
+  function foldLabel(){
+    var open=tw.classList.contains('open');
+    more.textContent=open?'收起 ▴':'展开全部 ▾';
+    more.setAttribute('aria-expanded',open?'true':'false');
+  }
+  function measure(){
+    var open=tw.classList.contains('open');
+    tw.classList.remove('open'); tw.classList.add('hasmore');
+    var over=tb.scrollWidth>tb.clientWidth+2;
+    tw.classList.toggle('hasmore',over);
+    if(over&&open) tw.classList.add('open');
+    foldLabel();
+  }
+  more.addEventListener('click',function(){tw.classList.toggle('open');foldLabel();
+    if(!tw.classList.contains('open')) reveal(cur);});
+  function reveal(i){
+    if(tw.classList.contains('open')||!tw.classList.contains('hasmore')) return;
+    var t=tabs[i], tr=t.getBoundingClientRect(), br=tb.getBoundingClientRect();
+    if(tr.left<br.left) tb.scrollLeft+=tr.left-br.left-8;
+    else if(tr.right>br.right-100) tb.scrollLeft+=tr.right-(br.right-100)+8;
+  }
+  var rt=null;
+  window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(measure,120)});
+
+  var h=(location.hash||'').replace('#','');
+  var idx=tabs.findIndex(function(t){return t.getAttribute('data-v')===h});
+  show(idx>-1?idx:0,false);
+  measure();
+  window.addEventListener('hashchange',function(){
+    var k=(location.hash||'').replace('#','');
+    var i=tabs.findIndex(function(t){return t.getAttribute('data-v')===k});
+    if(i>-1&&i!==cur) show(i,false);
+  });
+})();
+</script>
+<script>
+(function(){var d=document,b=d.getElementById('themeBtn');
+function icon(){b.textContent=d.documentElement.getAttribute('data-theme')==='light'?'🌙':'☀️'}
+b.addEventListener('click',function(){var t=d.documentElement.getAttribute('data-theme')==='light'?'dark':'light';
+d.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('site-theme',t)}catch(e){}icon()});
+icon()})();
+</script>
+
+
+</body></html>
