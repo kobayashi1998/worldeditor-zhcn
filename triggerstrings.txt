@@ -59,7 +59,7 @@ TriggerRegisterPlayerChatEventHint="使用'事件响应 - 输入/匹配的聊天
 
 TriggerRegisterPlayerEventEndCinematicHint="玩家按下'Esc'键时即发生该事件(无论其是否正在观看过场动画)."
 
-TriggerRegisterPlayerSelectionEventBJHint="使用'事件响应 - 触发单位'来获取被选择/取消选择的单位."
+TriggerRegisterPlayerSelectionEventBJHint="使用'事件响应 - 触发单位'来获取被选中/取消选中的单位."
 
 TriggerRegisterPlayerKeyEventBJHint=
 
@@ -99,9 +99,9 @@ TriggerRegisterLeaveRectSimpleHint="使用'事件响应 - 离开的单位'来响
 
 TriggerRegisterUnitInRangeSimpleHint="使用'事件响应 - 触发单位'来获取接近指定单位的单位."
 
-TriggerRegisterUnitLifeEventHint="从不成立变为成立时触发该事件. 注意:该参照值在注册事件时即被确定为常量,是不会变动的."
+TriggerRegisterUnitLifeEventHint="从不成立变为成立时触发该事件. 注意:该参照值在注册事件时即固定为常量,是不会变动的."
 
-TriggerRegisterUnitManaEventHint="从不成立变为成立时触发该事件. 注意:该参照值在注册事件时即被确定为常量,是不会变动的."
+TriggerRegisterUnitManaEventHint="从不成立变为成立时触发该事件. 注意:该参照值在注册事件时即固定为常量,是不会变动的."
 
 
 //***************************************************************************
@@ -247,7 +247,7 @@ StartMeleeAIHint="只能用于电脑控制的玩家槽位.使用该动作时,建
 
 StartCampaignAIHint="只能用于电脑控制的玩家槽位.使用该动作时,建议启用玩家组属性中的'固定玩家设置'."
 
-CommandAIHint="发送的AI命令将被AI脚本所使用."
+CommandAIHint="该动作供 AI 脚本内部使用."
 
 RemoveGuardPositionHint="单位将不会自动返回原警戒点. 一个很有用的功能就是刷怪进攻时忽视单位警戒范围的话,怪就不会想家了."
 
@@ -314,7 +314,7 @@ SmartCameraPanBJHint="如果距离过远则直接跳转镜头,如果过近则不
 
 SetCameraFieldForPlayerHint=
 
-SetCameraFieldControlledByInputForPlayerHint="该动作可确保被脚本覆盖的数值不会在收到玩家输入时立即被重置."
+SetCameraFieldControlledByInputForPlayerHint="该动作可确保被脚本覆盖的数值不会在收到玩家输入时立即重置."
 
 RotateCameraAroundLocBJHint=
 
@@ -413,7 +413,7 @@ ShowInterfaceForceOffHint="使用电影镜头模式,隐藏游戏界面."
 
 ShowInterfaceForceOnHint="关闭信箱模式,返回游戏界面."
 
-SetUserControlForceOffHint="被禁用后玩家的鼠标会消失,除 ALT + F4 与切换桌面外,其余游戏快捷键均不响应.对电脑玩家(AI)无效."
+SetUserControlForceOffHint="禁用后,玩家的鼠标会消失,除 ALT + F4 与切换桌面外,其余游戏快捷键均不响应.对电脑玩家(AI)无效."
 
 SetUserControlForceOnHint=
 
@@ -455,7 +455,7 @@ RemoveDestructableHint="将可破坏物从游戏中彻底移除,此后无法复�
 
 DestructableRestoreLifeHint="生命值为 0 或超过其最大生命值时,将设为最大生命值;低于 0.5 时,将设为 0.5.若该可破坏物并未死亡,则不产生任何效果."
 
-ShowDestructableBJHint="隐藏的可破坏物不被显示,但仍影响通行和视线."
+ShowDestructableBJHint="不显示隐藏的可破坏物,但仍影响通行和视线."
 
 SetDestructableLifePercentBJHint=
 
@@ -499,7 +499,7 @@ EnableWeatherEffectHint="可以使用'环境 - 创建天气效果'动作来创�
 
 RemoveWeatherEffectBJHint=
 
-TerrainDeformationCraterBJHint="使用'最后创建的地形变化'来获取该变化. 深度可取负数. 永久地形变化在保存游戏时不会被记录."
+TerrainDeformationCraterBJHint="使用'最后创建的地形变化'来获取该变化. 深度可取负数. 永久地形变化在保存游戏时不会记入存档."
 
 TerrainDeformationRippleBJHint="使用'最后创建的地形变化'来获取该变化."
 
@@ -518,7 +518,7 @@ SetTerrainTypeBJHint="地形样式-1表示随机样式. 范围即地形编辑器
 SetTerrainPathableBJHint="例:设置'建造'通行状态为开,则该点可以建造建筑. 一个单元点范围为32x32."
 SetWaterBaseColorBJHint="颜色格式为(红,绿,蓝).100%透明的水完全不可见.此动作用于SD水面,对HD和DE水面同样有效,但建议在那些模式下使用覆盖选项."
 
-SetHDWaterParamsExBJHint="颜色值为(红,绿,蓝).将覆盖设为关闭会禁用颜色行为.仅对高清版和决定版水体有效.如需进一步调整单项参数,请使用其它动作."
+SetHDWaterParamsExBJHint="颜色值为(红,绿,蓝).将覆盖设为关闭会禁用颜色行为.仅对高清版和决定版水体有效.如需进一步调整单项参数,请使用其他动作."
 
 BlzSetHDWaterColorBJHint="颜色值为(红,绿,蓝).该动作会自动启用颜色覆盖.仅对高清版和决定版水体有效.它会覆盖由「设置水体着色」动作设定的着色."
 
@@ -617,7 +617,7 @@ PauseGameOffHint=
 
 SetGameSpeedHint="你可以通过'游戏 - 锁定游戏速度'动作来锁定游戏速度."
 
-LockGameSpeedBJHint="防止游戏速度被更改. 就算是触发也不可以."
+LockGameSpeedBJHint="防止游戏速度被修改. 就算是触发也不可以."
 
 UnlockGameSpeedBJHint="解除'游戏 - 锁定游戏速度'对游戏速度的锁定."
 
@@ -655,7 +655,7 @@ SaveAndChangeLevelBJHint=
 
 RenameSaveDirectoryBJHint=
 
-RemoveSaveDirectoryBJHint="文件夹内的内容都会被删除."
+RemoveSaveDirectoryBJHint="将删除指定的存档文件夹及其中的全部内容."
 
 CopySaveGameBJHint="该动作只在响应'保存/读取进度'时有效,每个事件中最多能用16次."
 
@@ -703,7 +703,7 @@ BlzEndRecordingHint="未运行战网客户端时该函数无效,不会生成任�
 BlzHideCinematicPanelsHint="隐藏标题栏,字幕及头像框体."
 
 // Game Cache actions
-InitGameCacheBJHint="游戏缓存可在不同地图之间,或同一地图的多次游戏之间存储数据.若指定文件不存在,将会被创建."
+InitGameCacheBJHint="游戏缓存可在不同地图之间,或同一地图的多次游戏之间存储数据.若指定文件不存在,将自动创建."
 
 SaveGameCacheBJHint="只对单机游戏有效,保存缓存数据到本地硬盘,主要用来实现战役关卡间的数据传递."
 
@@ -717,9 +717,9 @@ StoreBooleanBJHint="使用'游戏缓存 - 读取布尔值'来读取该值. 名�
 
 StoreStringBJHint="使用'游戏缓存 - 读取字符串'来读取该值. 名称和类别名不能包含空格."
 
-RestoreUnitLocFacingAngleBJHint="使用'最后读取的单位'来获取该单位. 如果不存在该缓存数据,则'最后读取的单位'将被设为null."
+RestoreUnitLocFacingAngleBJHint="使用'最后读取的单位'来获取该单位. 如果不存在该缓存数据,则'最后读取的单位'将被设为'无单位'."
 
-RestoreUnitLocFacingPointBJHint="使用'最后读取的单位'来获取该单位. 如果不存在该缓存数据,则'最后读取的单位'将被设为null."
+RestoreUnitLocFacingPointBJHint="使用'最后读取的单位'来获取该单位. 如果不存在该缓存数据,则'最后读取的单位'将被设为'无单位'."
 
 ReloadGameCachesFromDiskHint="只对单机游戏有效,从本地硬盘读取缓存数据,主要用来实现战役关卡间的数据传递."
 
@@ -851,15 +851,15 @@ ModifyHeroStatHint=
 
 ModifyHeroSkillPointsHint=
 
-SetReservedLocalHeroButtonsHint="因为共享单位而被控制的其他玩家英雄的图标将在保留位置之后开始显示."
+SetReservedLocalHeroButtonsHint="通过共享单位控制操作的玩家英雄,不会占用本动作保留的按钮槽."
 
 UnitAddItemSwappedHint=
 
-UnitAddItemByIdSwappedHint="若该单位没有物品栏或物品栏已满,物品会被创建在该单位所在的位置."
+UnitAddItemByIdSwappedHint="若该单位没有物品栏或物品栏已满,物品将出现在该单位所在位置."
 
-UnitRemoveItemSwappedHint="物品将被丢弃在英雄脚下."
+UnitRemoveItemSwappedHint="物品将掉落在英雄脚下."
 
-UnitRemoveItemFromSlotSwappedHint="如果物品存在则会被丢弃在英雄脚下."
+UnitRemoveItemFromSlotSwappedHint="如果该格有物品,则将其掉落在英雄脚下."
 
 UnitUseItemTargetHint="以建筑等为目标时,需要指定位置的物品(如逃脱匕首)不会施放,因为其实际目标是地图位置而非该建筑."
 
@@ -892,9 +892,9 @@ SetItemChargesHint="设置为0可以使物品能无限次使用."
 
 SetItemInvulnerableBJHint=
 
-SetItemPawnableHint="不可抵押物品不能被卖到商店."
+SetItemPawnableHint="可抵押物品可以在物品商店出售."
 
-SetItemDroppableBJHint="不可掉落物品在被捡起之后就不能移动和丢弃.(但可通过触发实现)"
+SetItemDroppableBJHint="不可掉落物品被捡起后,无法再从英雄物品栏中移出.(但可通过触发实现)"
 
 SetItemDropOnDeathBJHint=
 
@@ -1120,9 +1120,9 @@ QuestMessageBJHint=
 
 CreateQuestBJHint=
 
-DestroyQuestBJHint="被删除的任务将不再显示在任务列表."
+DestroyQuestBJHint="删除任务后,它将从任务记录中移除."
 
-QuestSetEnabledBJHint="被禁用的任务将不会显示在任务列表."
+QuestSetEnabledBJHint="禁用任务后,它将不再显示在任务记录中."
 
 QuestSetCompletedBJHint=
 
@@ -1142,7 +1142,7 @@ QuestItemSetDescriptionBJHint=
 
 CreateDefeatConditionBJHint="失败条件会在每个任务中显示."
 
-DestroyDefeatConditionBJHint="被删除的失败条件会从每个任务中移除."
+DestroyDefeatConditionBJHint="删除失败条件会将其从任务记录中移除."
 
 DefeatConditionSetDescriptionBJHint=
 
@@ -1259,16 +1259,16 @@ AddSpecialEffectTargetUnitBJHint=
 
 DestroyEffectBJHint="删除特效时会先播放其消散动画,然后将其移除."
 
-DestroyEffectAfterTimeBJHint="特效会在时间结束后被移除."
+DestroyEffectAfterTimeBJHint="特效将在时间结束后销毁."
 
 RemoveEffectBJHint="移除特效会立即生效,不播放动画."
 
-RemoveEffectAfterTimeBJHint="特效在经过指定时间后被移除."
+RemoveEffectAfterTimeBJHint="特效将在指定时间后被移除."
 
 // Trigger actions
 DisableTriggerHint="不会中断触发器正在进行的执行,但会阻止其今后再次执行."
 
-EnableTriggerHint="允许触发器被执行."
+EnableTriggerHint="允许触发器运行."
 
 ConditionalTriggerExecuteHint="如果其触发条件成立则运行触发动作."
 
@@ -1280,7 +1280,7 @@ QueuedTriggerRemoveBJHint="如果触发正在运行,从队列移出该单位将�
 
 QueuedTriggerClearBJHint="从触发器队列中移除所有触发器."
 
-QueuedTriggerClearInactiveBJHint="只有正在运行的触发不会被移出队列."
+QueuedTriggerClearInactiveBJHint="该动作会清除所有等待中的触发器;正在运行的触发器不会被移出队列."
 
 AddTriggerEventHint="使用该功能可以在游戏中为其他触发添加事件."
 
@@ -1296,15 +1296,15 @@ CreatePermanentCorpseLocBJHint="肉态尸体经常会自动变为骨态尸体."
 
 KillUnitHint="立即杀死单位,会触发死亡事件并掉落物品,单位会留下尸体.与「删除」不同,被删除的单位不留尸体且英雄无法复活."
 
-RemoveUnitHint="被删除的单位不会留下尸体. 如果是英雄则不能再被复活."
+RemoveUnitHint="被删除的单位不会留下尸体. 如果是英雄则无法再被复活."
 
 ExplodeUnitBJHint="爆炸死亡不会留下尸体."
 
-ReplaceUnitBJHint="使用'最后替换的单位'来获取该单位. 如果是亡灵金矿被替换,经常还会留下一个普通的金矿. 实际上就是创建加删除单位,3个局部变量泄漏."
+ReplaceUnitBJHint="使用'最后替换的单位'来获取该单位. 如果替换的是亡灵金矿,经常还会留下一个普通的金矿. 实际上就是创建加删除单位,3个局部变量泄漏."
 
-ShowUnitHideHint="使用'单位 - 显示'来显示该单位. 隐藏单位不会被'区域内单位'所选取."
+ShowUnitHideHint="使用'单位 - 显示'来显示该单位. 隐藏单位不会出现在'区域内单位'的查询结果中."
 
-ShowUnitShowHint="使用'单位 - 隐藏'来显示该单位. 隐藏单位不会被'区域内单位'所选取."
+ShowUnitShowHint="使用'单位 - 隐藏'来隐藏该单位. 隐藏单位不会出现在'区域内单位'的查询结果中."
 
 SetUnitColorHint="改变队伍颜色并不会改变单位所属."
 
@@ -1394,7 +1394,7 @@ BlzSetDestructableSkinHint=
 
 BlzSetHeroProperNameHint="设置英雄的称谓(例如,圣骑士的'格拉尼丝黑锤')."
 
-BlzSetUnitArmorHint="设置的是单位的护甲总值.若单位已有光环或物品提供的额外护甲,其基础护甲会被相应削减以达到设定的总值."
+BlzSetUnitArmorHint="设置的是单位的护甲总值.若单位已有光环或物品提供的额外护甲,将相应削减其基础护甲以达到设定的总值."
 
 BlzUnitHideAbilityHint="该开关实际按计数器运作,并非单纯的隐藏开关."
 
@@ -1416,7 +1416,7 @@ BlzSetSpecialEffectColorByPlayerHint="并非所有模型都有可染色的表面
 
 BlzSetSpecialEffectColorHint="任一参数无效或超出范围时,该函数不产生任何效果."
 
-BlzSetSpecialEffectAlphaHint="只改变特效主模型的透明度.若特效附加在其他物体上,需改为设置被附加物体的透明度."
+BlzSetSpecialEffectAlphaHint="只改变特效主模型的透明度.若特效附加在其他物体上,需改为设置附加目标的透明度."
 
 BlzSetSpecialEffectScaleHint="若该特效已设置了矩阵缩放,最终缩放为两者相乘的结果.使用负值会使模型沿所有坐标轴镜像翻转,并可能因此渲染到地形下方."
 
@@ -1463,7 +1463,7 @@ BlzSetSpecialEffectTimeHint="该值不能为负数."
 
 SetUnitInvulnerableHint="该函数依赖 AbilityData.slk 中定义的无敌技能.若该技能缺失,调用会导致游戏崩溃."
 
-PauseUnitBJHint="被暂停的单位会停止行动并不再执行命令,但会记住当前命令,解除暂停后继续执行."
+PauseUnitBJHint="暂停的单位会停止行动并不再执行命令,但会记住当前命令,解除暂停后继续执行."
 
 PauseAllUnitsBJHint="该动作只作用于当前存在于地图的单位. 对于之后创建或复活的单位并不会受到影响."
 
@@ -1493,11 +1493,11 @@ RescueUnitBJHint=
 
 MakeUnitRescuableToForceBJHint=
 
-SetUnitRescueRangeHint="要使单位可被救援,可使用'单位 - 设为可救援'动作或将单位所有者设为'可救援'."
+SetUnitRescueRangeHint="要使单位可被营救,可使用'单位 - 设为可营救'动作或将单位所有者设为'可营救'."
 
-SetRescueUnitColorChangeBJHint="默认情况单位被营救时会改变颜色. 不影响已经被营救的单位."
+SetRescueUnitColorChangeBJHint="默认情况下,由'可营救'玩家拥有的单位被营救时不会改变颜色. 本动作不影响已经被营救的单位."
 
-SetRescueBuildingColorChangeBJHint="默认建筑被营救时不会改变颜色. 不影响已经被营救的建筑."
+SetRescueBuildingColorChangeBJHint="默认情况下,由'可营救'玩家拥有的建筑被营救时会改变颜色. 本动作不影响已经被营救的建筑."
 
 SetUnitUseFoodBJHint=
 
@@ -1762,11 +1762,11 @@ CheckItemStatusHint=
 
 CheckItemcodeStatusHint=
 
-IsItemHiddenBJHint="单位持有的物品也被认为是隐藏的. 建议使用物品可见"
+IsItemHiddenBJHint="单位持有的物品也视为隐藏. 建议改用'物品可见'判断"
 
-IsItemOwnedHint="在物品栏中的物品都是被持有的. 就算单位正处于死亡状态."
+IsItemOwnedHint="物品栏中的任何物品都算作被持有,即使单位已经死亡."
 
-RectContainsItemHint="单位持有的物品不会被计算在内."
+RectContainsItemHint="单位持有的物品不计入其中."
 
 IsItemInvulnerableHint=
 
@@ -1824,7 +1824,7 @@ IsUnitDeadBJHint="实际上该函数是判断单位血量是否<0,而不是判�
 
 IsUnitPausedBJHint=
 
-IsUnitHiddenBJHint="可通过'单位 - 隐藏'动作来析藏单位. 运输机,灵魂之球,祭坛中的单位都被认为是隐藏状态."
+IsUnitHiddenBJHint="可通过'单位 - 隐藏'动作来隐藏单位. 运输机,灵魂宝石,祭坛中的单位都视为隐藏状态."
 
 IsUnitIllusionBJHint=
 
@@ -1836,7 +1836,7 @@ UnitIsSleepingBJHint="中立生物才会睡眠. 不包括催眠魔法."
 
 DoesUnitGenerateAlarmsHint=
 
-IsUnitLoadedBJHint="被飞艇,船等有运输功能的单位装载."
+IsUnitLoadedBJHint="装载在飞艇,船等有运输功能的单位中."
 
 IsUnitInTransportBJHint=
 
@@ -1862,13 +1862,13 @@ IsUnitVisibleHint=
 
 IsUnitInvisibleHint=
 
-IsUnitFoggedHint="黑色阴影内的单位不被计算在内."
+IsUnitFoggedHint="黑色阴影内的单位不计入其中."
 
 IsUnitMaskedHint=
 
 IsLocationVisibleToPlayerHint=
 
-IsLocationFoggedToPlayerHint="黑色阴影内的点不被计算在内."
+IsLocationFoggedToPlayerHint="黑色阴影内的点不计入其中."
 
 IsLocationMaskedToPlayerHint=
 
@@ -1983,7 +1983,7 @@ GetTerrainCliffLevelBJHint="悬崖高度:深水区为0, 浅水区为1, 平原为
 
 GetTerrainVarianceBJHint=
 
-GetLearnedSkillLevelHint="响应'学习技能'单位事件,指代被学习技能的等级. 注意,该值为学习后的等级."
+GetLearnedSkillLevelHint="响应'学习技能'单位事件,指代所学习技能的等级. 注意,该值为学习后的等级."
 
 GetPlayersHint="地图编辑器中开启的玩家数量(1-12)."
 
@@ -2445,7 +2445,7 @@ BlzFourCC2SHint="将四字符码转换为字符串"
 
 StringIdentityHint="获取GlobalStrings.fdf中定义的字符串."
 
-StringCaseHint="字符串中的所有字母将被转换为选定的大小写."
+StringCaseHint="字符串中的所有字母将转换为选定的大小写."
 
 GetDestructableNameHint=
 
@@ -2574,7 +2574,7 @@ GetLastHauntedGoldMineHint="最后一个使用'中立建筑 - 创建亡灵金矿
 
 GetEnumUnitHint="使用'选取单位做动作'时, 指代相应的单位."
 
-GetFilterUnitHint="在'选取单位满足条件'之类功能的条件中,指代被判断单位."
+GetFilterUnitHint="在'选取单位满足条件'之类功能的条件中,指代正在判定的单位."
 
 GroupPickRandomUnitHint="受'设置下次销毁'影响."
 
@@ -2602,7 +2602,7 @@ GetEnteringUnitHint="响应'单位进入区域'单位事件."
 
 GetManipulatingUnitHint="响应'使用/获得/丢失物品'单位事件."
 
-GetKillingUnitBJHint="响应'死亡'单位事件. 如果不是被单位所杀(比如负数邪恶光环)则返回null."
+GetKillingUnitBJHint="响应'死亡'单位事件. 如果不是被单位杀死(比如负数邪恶光环)则返回'无单位'."
 
 GetLearningUnitHint="响应'学习技能'单位事件."
 
@@ -2626,7 +2626,7 @@ GetSellingUnitHint="响应'出售单位','出售物品'或'抵押物品'单位�
 
 GetSoldUnitHint="响应'出售单位'单位事件."
 
-GetSummonedUnitHint="响应'召唤单位'单位事件,指代被召唤单位."
+GetSummonedUnitHint="响应'召唤单位'单位事件,指代被召唤的单位."
 
 GetSummoningUnitHint="响应'召唤单位'单位事件."
 
@@ -2636,9 +2636,9 @@ GetSpellTargetUnitHint="响应'施放技能'单位事件并以单位为目标时
 
 GetEventTargetUnitHint="响应'注意到/获取攻击目标'单位事件,指代目标单位."
 
-GetTrainedUnitHint="响应'完成训练单位'单位事件,指代被训练单位."
+GetTrainedUnitHint="响应'完成训练单位'单位事件,指代被训练的单位."
 
-GetTransportUnitBJHint="响应'被装载'单位事件.指代作为载体的单位."
+GetTransportUnitBJHint="响应'被装载'单位事件.指代装载该单位的运输单位."
 
 GetTriggerUnitHint=
 
@@ -2676,7 +2676,7 @@ RandomDestructableInRectBJHint="使用'匹配的可破坏物'来指代条件中�
 
 GetEnumDestructableHint="使用'选取可破坏物做动作'时, 指代相应的可破坏物."
 
-GetFilterDestructableHint="在'选取可破坏物满足条件'之类功能的条件中,指代被判断的可破坏物."
+GetFilterDestructableHint="在'选取可破坏物满足条件'之类功能的条件中,指代正在判定的可破坏物."
 
 GetDyingDestructableHint="响应'可破坏物死亡'事件."
 
@@ -2696,9 +2696,9 @@ GetLastCreatedItemHint="最后一个使用'物品 - 创建'或'英雄 - 创建�
 
 GetLastRemovedItemHint="最后一个使用'英雄 - 丢弃物品'动作丢弃的物品."
 
-GetLastEquippedItemHint="这是最近一次通过「英雄 - 给英雄装备物品」或「英雄 - 为英雄创建装备」触发动作装备的物品."
+GetLastEquippedItemHint="这是最近一次通过「英雄 - 给英雄装备物品」或「英雄 - 为英雄创建并装备物品」触发动作装备的物品."
 
-GetLastUnequippedItemHint="这是最近一次通过「英雄 - 从英雄卸下物品」或「英雄 - 从英雄装备槽卸下物品」触发动作卸下的物品."
+GetLastUnequippedItemHint="这是最近一次通过「英雄 - 从英雄卸下物品」或「英雄 - 从英雄装备栏位卸下物品」触发动作卸下的物品."
 
 RandomItemInRectSimpleBJHint=
 
@@ -2706,7 +2706,7 @@ RandomItemInRectBJHint="使用'匹配物品'来指代条件中用于比较的物
 
 GetEnumItemHint="使用'选取物品做动作'时, 指代相应的物品."
 
-GetFilterItemHint="在'选取物品满足条件'之类功能的条件中,指代被判断单位."
+GetFilterItemHint="在'选取物品满足条件'之类功能的条件中,指代正在判定的物品."
 
 UnitItemInSlotBJHint=
 
@@ -2738,7 +2738,7 @@ GetResearchedHint="响应'开始/取消/完成科技研究'单位事件."
 
 
 // returns abilcode
-GetSpellAbilityIdHint="响应施放技能单位事件, 指代被施放的技能."
+GetSpellAbilityIdHint="响应施放技能单位事件, 指代正在被施放的技能."
 
 // returns ability
 BlzGetUnitAbilityHint=
@@ -2748,13 +2748,13 @@ BlzGetItemAbilityByIndexHint=
 BlzGetItemAbilityHint=
 
 // returns heroskillcode
-GetLearnedSkillBJHint="响应'学习技能'单位事件, 指代被学习的技能. 新函数在'技能'类别中."
+GetLearnedSkillBJHint="响应'学习技能'单位事件, 指代所学习的技能. 新函数在'技能'类别中."
 
 
 // returns player
 GetEnumPlayerHint="使用'选取玩家做动作'时, 指代相应的玩家."
 
-GetFilterPlayerHint="在'选取玩家满足条件'之类功能的条件中,指代被判断玩家."
+GetFilterPlayerHint="在'选取玩家满足条件'之类功能的条件中,指代正在判定的玩家."
 
 GetOwningPlayerHint=
 
@@ -2981,7 +2981,7 @@ GetTownUnitCountHint=
 
 GetMinesOwnedHint="AI玩家正在使用的金矿数量."
 
-GetGoldOwnedHint="未被采集保持满储金量的金矿."
+GetGoldOwnedHint="当前所有在用金矿中剩余黄金的总量."
 
 TownWithMineHint="返回编号最靠前的有金矿的基地"
 

@@ -1,0 +1,1796 @@
+[TileSets]
+A=WESTRING_LOCALE_ASHENVALE,TerrainArt\Blight\Ashen_Blight
+B=WESTRING_LOCALE_BARRENS,TerrainArt\Blight\Barrens_Blight
+//#LINENOBETA
+K=WESTRING_LOCALE_BLACKCITADEL,TerrainArt\Blight\Citadel_Blight
+Y=WESTRING_LOCALE_CITYSCAPE,TerrainArt\Blight\Village_Blight
+P=WESTRING_LOCALE_CITYSCAPE_RUINS,TerrainArt\Blight\Village_Blight
+X=WESTRING_LOCALE_DALARAN,TerrainArt\Blight\Village_Blight
+//#LINENOBETA
+J=WESTRING_LOCALE_DALARANRUINS,TerrainArt\Blight\DRuins_Blight
+D=WESTRING_LOCALE_DUNGEON,TerrainArt\Blight\Cave_Blight
+C=WESTRING_LOCALE_FELWOOD,TerrainArt\Blight\Felwood_Blight
+//#LINENOBETA
+I=WESTRING_LOCALE_ICECROWN,TerrainArt\Blight\Ice_Blight
+e=WESTRING_LOCALE_LORDAERON_CAPITAL,TerrainArt\Blight\Village_Blight
+R=WESTRING_LOCALE_LORDAERON_CAPITAL_RUINS,TerrainArt\Blight\Village_Blight
+F=WESTRING_LOCALE_LORDAERON_FALL,TerrainArt\Blight\Lordf_Blight
+L=WESTRING_LOCALE_LORDAERON_SUMMER,TerrainArt\Blight\Lords_Blight
+W=WESTRING_LOCALE_LORDAERON_WINTER,TerrainArt\Blight\Lordw_Blight
+N=WESTRING_LOCALE_NORTHREND,TerrainArt\Blight\North_Blight
+//#LINENOBETA
+O=WESTRING_LOCALE_OUTLAND,TerrainArt\Blight\Outland_Blight
+Z=WESTRING_LOCALE_RUINS,TerrainArt\Blight\Ruins_Blight
+G=WESTRING_LOCALE_DUNGEON2,TerrainArt\Blight\Dungeon_Blight
+V=WESTRING_LOCALE_VILLAGE,TerrainArt\Blight\Village_Blight
+Q=WESTRING_LOCALE_VILLAGEFALL,TerrainArt\Blight\VillageFall_Blight
+u=WESTRING_LOCALE_UNDERCITY,TerrainArt\Blight\Village_Blight
+M=WESTRING_MISCSET
+
+//***************************************************************//
+// Note do not delete these for the following time.  
+//ASK Dhale if you have question
+//
+//L=WESTRING_LOCALE_LORDAERON_SUMMER,TerrainArt\Blight\Lords_Blight
+//F=WESTRING_LOCALE_LORDAERON_FALL,TerrainArt\Blight\Lordf_Blight
+//W=WESTRING_LOCALE_LORDAERON_WINTER,TerrainArt\Blight\Lordw_Blight
+//B=WESTRING_LOCALE_BARRENS,TerrainArt\Blight\Barrens_Blight
+//A=WESTRING_LOCALE_ASHENVALE,TerrainArt\Blight\Ashen_Blight
+//C=WESTRING_LOCALE_FELWOOD,TerrainArt\Blight\Felwood_Blight
+//N=WESTRING_LOCALE_NORTHREND,TerrainArt\Blight\North_Blight
+//#LINENOBETA
+//I=WESTRING_LOCALE_ICECROWN,TerrainArt\Blight\Ice_Blight
+//Y=WESTRING_LOCALE_CITYSCAPE,TerrainArt\Blight\Village_Blight
+//X=WESTRING_LOCALE_DALARAN,TerrainArt\Blight\Village_Blight
+//#LINENOBETA
+//J=WESTRING_LOCALE_DALARANRUINS,TerrainArt\Blight\DRuins_Blight
+//V=WESTRING_LOCALE_VILLAGE,TerrainArt\Blight\Village_Blight
+//Q=WESTRING_LOCALE_VILLAGEFALL,TerrainArt\Blight\VillageFall_Blight
+//D=WESTRING_LOCALE_DUNGEON,TerrainArt\Blight\Cave_Blight
+//G=WESTRING_LOCALE_DUNGEON2,TerrainArt\Blight\Dungeon_Blight
+//Z=WESTRING_LOCALE_RUINS,TerrainArt\Blight\Ruins_Blight
+//#LINENOBETA
+//O=WESTRING_LOCALE_OUTLAND,TerrainArt\Blight\Outland_Blight
+//#LINENOBETA
+//K=WESTRING_LOCALE_BLACKCITADEL,TerrainArt\Blight\Citadel_Blight
+//***************************************************************//
+
+// Note: If a tileset does not have an entry for a terrain/unit light,
+//       it will use the hard-coded default (Lordaeron)
+[TerrainLights]
+L=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+F=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+W=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+B=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+A=Environment\DNC\DNCAshenvale\DNCAshenvaleTerrain\DNCAshenvaleTerrain.mdl
+C=Environment\DNC\DNCFelwood\DNCFelwoodTerrain\DNCFelwoodTerrain.mdl
+N=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+Y=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+X=Environment\DNC\DNCDalaran\DNCDalaranTerrain\DNCDalaranTerrain.mdl
+V=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+D=Environment\DNC\DNCDungeon\DNCDungeonTerrain\DNCDungeonTerrain.mdl
+Q=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+G=Environment\DNC\DNCUnderground\DNCUndergroundTerrain\DNCUndergroundTerrain.mdl
+Z=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+//#LINENOBETA
+I=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+//#LINENOBETA
+O=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+//#LINENOBETA
+K=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+//#LINENOBETA
+J=Environment\DNC\DNCDalaran\DNCDalaranTerrain\DNCDalaranTerrain.mdl
+u=Environment\DNC\DNCUnderground\DNCUndergroundTerrain\DNCUndergroundTerrain.mdl
+e=Environment\DNC\DNCLordaeron\DNCLordaeronTerrain\DNCLordaeronTerrain.mdl
+P=Environment\DNC\DNCDalaran\DNCDalaranTerrain\DNCDalaranTerrain.mdl
+R=Environment\DNC\DNCDalaran\DNCDalaranTerrain\DNCDalaranTerrain.mdl
+
+[UnitLights]
+L=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+F=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+W=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+B=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+A=Environment\DNC\DNCAshenvale\DNCAshenvaleUnit\DNCAshenvaleUnit.mdl
+C=Environment\DNC\DNCFelwood\DNCFelwoodUnit\DNCFelwoodUnit.mdl
+N=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+Y=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+X=Environment\DNC\DNCDalaran\DNCDalaranUnit\DNCDalaranUnit.mdl
+V=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+D=Environment\DNC\DNCDungeon\DNCDungeonUnit\DNCDungeonUnit.mdl
+Q=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+G=Environment\DNC\DNCUnderground\DNCUndergroundUnit\DNCUndergroundUnit.mdl
+Z=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+//#LINENOBETA
+I=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+//#LINENOBETA
+O=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+//#LINENOBETA
+K=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+//#LINENOBETA
+J=Environment\DNC\DNCDalaran\DNCDalaranUnit\DNCDalaranUnit.mdl
+e=Environment\DNC\DNCLordaeron\DNCLordaeronUnit\DNCLordaeronUnit.mdl
+u=Environment\DNC\DNCUnderground\DNCUndergroundUnit\DNCUndergroundUnit.mdl
+P=Environment\DNC\DNCDalaran\DNCDalaranUnit\DNCDalaranUnit.mdl
+R=Environment\DNC\DNCDalaran\DNCDalaranUnit\DNCDalaranUnit.mdl
+
+[DoodadCategories]
+O=WESTRING_DTYPE_PROPS,ReplaceableTextures\WorldEditUI\Doodad-Prop
+S=WESTRING_DTYPE_STRUCTURES,ReplaceableTextures\WorldEditUI\Doodad-Structures
+W=WESTRING_DTYPE_WATER,ReplaceableTextures\WorldEditUI\Doodad-Water
+C=WESTRING_DTYPE_CLIFF,ReplaceableTextures\WorldEditUI\Doodad-Cliff
+E=WESTRING_DTYPE_ENVIRONMENT,ReplaceableTextures\WorldEditUI\Doodad-Environment
+Z=WESTRING_DTYPE_CINEMATIC,ReplaceableTextures\WorldEditUI\Doodad-Cinematic
+
+[DestructibleCategories]
+D=WESTRING_DTYPE_DESTRUCTABLE,ReplaceableTextures\WorldEditUI\Doodad-Destructible
+P=WESTRING_DTYPE_PATHING,ReplaceableTextures\WorldEditUI\Doodad-Destructible
+B=WESTRING_DTYPE_BRIDGE,ReplaceableTextures\WorldEditUI\Doodad-Bridge
+
+[SkyModels]
+
+00=Environment\Sky\BlizzardSky\BlizzardSky.mdl,WESTRING_SKYMODEL_SKY08
+01=Environment\Sky\DalaranSky\DalaranSky.mdl,WESTRING_SKYMODEL_SKY02
+02=Environment\Sky\FelwoodSky\FelwoodSky.mdl,WESTRING_SKYMODEL_SKY06
+03=Environment\Sky\FoggedSky\FoggedSky.mdl,WESTRING_SKYMODEL_SKY07
+04=Environment\Sky\Sky\SkyLight.mdl,WESTRING_SKYMODEL_SKY01
+05=Environment\Sky\LordaeronFallSky\LordaeronFallSky.mdl,WESTRING_SKYMODEL_SKY03
+06=Environment\Sky\LordaeronSummerSky\LordaeronSummerSky.mdl,WESTRING_SKYMODEL_SKY04
+07=Environment\Sky\LordaeronWinterSky\LordaeronWinterSky.mdl,WESTRING_SKYMODEL_SKY05
+08=Environment\Sky\LordaeronWinterSkyBrightGreen\LordaeronWinterSkyBrightGreen.mdl,WESTRING_SKYMODEL_SKY09
+09=Environment\Sky\LordaeronWinterSkyPink\LordaeronWinterSkyPink.mdl,WESTRING_SKYMODEL_SKY10
+10=Environment\Sky\LordaeronWinterSkyPurple\LordaeronWinterSkyPurple.mdl,WESTRING_SKYMODEL_SKY11
+11=Environment\Sky\LordaeronWinterSkyRed\LordaeronWinterSkyRed.mdl,WESTRING_SKYMODEL_SKY12
+12=Environment\Sky\LordaeronWinterSkyYellow\LordaeronWinterSkyYellow.mdl,WESTRING_SKYMODEL_SKY13
+//#LINENOBETA
+13=Environment\Sky\Outland_Sky\Outland_Sky.mdl,WESTRING_SKYMODEL_SKY14
+14=Environment\Sky\PrologueSky\PrologueSky.mdl,WESTRING_SKYMODEL_SKY15
+15=Environment\Sky\AshenvaleSky\AshenvaleSky.mdl,WESTRING_SKYMODEL_SKY16
+16=Environment\Sky\BarrensSky\BarrensSky.mdl,WESTRING_SKYMODEL_SKY17
+17=Environment\Sky\IcecrownGlacierSky\IcecrownGlacierSky.mdl,WESTRING_SKYMODEL_SKY18
+18=Environment\Sky\DalaranRuinsSky\DalaranRuinsSky.mdl,WESTRING_SKYMODEL_SKY19
+19=Environment\Sky\NorthrendSky\NorthrendSky.mdl,WESTRING_SKYMODEL_SKY20
+20=Environment\Sky\VillageFallSky\VillageFallSky.mdl,WESTRING_SKYMODEL_SKY21
+21=Environment\Sky\VillageSky\VillageSky.mdl,WESTRING_SKYMODEL_SKY22
+22=Environment\Sky\ArcaneSky\ArcaneSky.mdl,WESTRING_SKYMODEL_SKY23
+
+[DayAmbience]
+L=LordaeronSummerDay
+F=LordaeronFallDay
+W=LordaeronWinterDay
+B=BarrensDay
+A=AshenvaleDay
+C=FelwoodDay
+N=NorthrendDay
+Y=CityScapeDay
+X=DalaranDay
+V=VillageDay
+Q=VillageFallDay
+D=DungeonDay
+G=DungeonDay
+Z=SunkenRuinsDay
+//#LINENOBETA
+I=IceCrownDay
+//#LINENOBETA
+O=BlackCitadelDay
+//#LINENOBETA
+K=BlackCitadelDay
+//#LINENOBETA
+J=DalaranRuinsDay
+E=DungeonCaveDay
+
+[NightAmbience]
+L=LordaeronSummerNight
+F=LordaeronFallNight
+W=LordaeronWinterNight
+B=BarrensNight
+A=AshenvaleNight
+C=FelwoodNight
+N=NorthrendNight
+Y=CityScapeNight
+X=DalaranNight
+V=VillageNight
+Q=VillageFallNight
+D=DungeonNight
+G=DungeonNight
+Z=SunkenRuinsNight
+//#LINENOBETA
+I=IceCrownNight
+//#LINENOBETA
+O=BlackCitadelNight
+//#LINENOBETA
+K=BlackCitadelNight
+//#LINENOBETA
+J=DalaranRuinsNight
+E=DungeonCaveNight
+
+[SoundEnvironment]
+// Specifies the default sound environment for each tileset
+// Environments are defined in UI\SoundInfo\EnvironmentSounds.slk
+L=Default
+F=Default
+W=Default
+B=Default
+A=Default
+C=Default
+N=Default
+Y=Default
+X=Default
+V=Default
+Q=Default
+D=Default
+G=Default
+Z=Default
+//#LINENOBETA
+I=Default
+//#LINENOBETA
+O=Default
+//#LINENOBETA
+K=Default
+//#LINENOBETA
+J=Default
+
+[MusicFiles]
+// File, Game Version (0 is default)
+00=Sound\Music\mp3Music\TragicConfrontation.mp3
+01=Sound\Music\mp3Music\DarkAgents.mp3
+02=Sound\Music\mp3Music\Human3.mp3
+03=Sound\Music\mp3Music\HumanDefeat.mp3
+04=Sound\Music\mp3Music\HumanVictory.mp3
+05=Sound\Music\mp3Music\Mainscreen.mp3
+06=Sound\Music\mp3Music\NightElf1.mp3
+07=Sound\Music\mp3Music\NightElf2.mp3
+08=Sound\Music\mp3Music\NightElf3.mp3
+09=Sound\Music\mp3Music\NightElfDefeat.mp3
+10=Sound\Music\mp3Music\NightElfVictory.mp3
+11=Sound\Music\mp3Music\Orc1.mp3
+12=Sound\Music\mp3Music\Orc2.mp3
+13=Sound\Music\mp3Music\Undead2.mp3
+14=Sound\Music\mp3Music\UndeadDefeat.mp3
+15=Sound\Music\mp3Music\UndeadVictory.mp3
+16=Sound\Music\mp3Music\Human1.mp3
+17=Sound\Music\mp3Music\SadMystery.mp3
+18=Sound\Music\mp3Music\Comradeship.mp3
+19=Sound\Music\mp3Music\DarkVictory.mp3
+20=Sound\Music\mp3Music\HeroicVictory.mp3
+21=Sound\Music\mp3Music\Credits.mp3
+22=Sound\Music\mp3Music\Orc3.mp3
+23=Sound\Music\mp3Music\OrcVictory.mp3
+24=Sound\Music\mp3Music\OrcDefeat.mp3
+25=Sound\Music\mp3Music\Undead1.mp3
+26=Sound\Music\mp3Music\Tension.mp3
+27=Sound\Music\mp3Music\Doom.mp3
+28=Sound\Music\mp3Music\War2IntroMusic.mp3
+29=Sound\Music\mp3Music\Human2.mp3
+30=Sound\Music\mp3Music\Undead3.mp3
+//#LINENOBETA
+31=Sound\Music\mp3Music\NightElfX1.mp3,1
+//#LINENOBETA
+32=Sound\Music\mp3Music\IllidansTheme.mp3,1
+//#LINENOBETA
+33=Sound\Music\mp3Music\ArthasTheme.mp3,1
+//#LINENOBETA
+34=Sound\Music\mp3Music\NagaTheme.mp3,1
+//#LINENOBETA
+35=Sound\Music\mp3Music\PursuitTheme.mp3,1
+//#LINENOBETA
+36=Sound\Music\mp3Music\LichKingTheme.mp3,1
+//#LINENOBETA
+37=Sound\Music\mp3Music\BloodElfTheme.mp3,1
+//#LINENOBETA
+38=Sound\Music\mp3Music\OrcTheme.mp3,1
+//#LINENOBETA
+39=Sound\Music\mp3Music\HumanX1.mp3,1
+//#LINENOBETA
+40=Sound\Music\mp3Music\OrcX1.mp3,1
+//#LINENOBETA
+41=Sound\Music\mp3Music\UndeadX1.mp3,1
+//#LINENOBETA
+42=Sound\Music\mp3Music\War3XMainScreen.mp3,1
+
+// Sound channels available for use in Sound Editor
+// Value 0: 0 or 1 - Can this channel play 3D sounds?
+// Value 1: Display text in editor
+[SoundChannels]
+00=1,WESTRING_SOUNDCHANNEL_GENERAL
+01=1,WESTRING_SOUNDCHANNEL_UNITSELECT
+02=1,WESTRING_SOUNDCHANNEL_UNITACK
+03=1,WESTRING_SOUNDCHANNEL_UNITMOVE
+04=1,WESTRING_SOUNDCHANNEL_UNITREADY
+05=1,WESTRING_SOUNDCHANNEL_COMBAT
+06=0,WESTRING_SOUNDCHANNEL_ERROR
+07=0,WESTRING_SOUNDCHANNEL_MUSIC
+08=0,WESTRING_SOUNDCHANNEL_UI
+09=1,WESTRING_SOUNDCHANNEL_LOOPMOVE
+10=1,WESTRING_SOUNDCHANNEL_LOOPAMB
+11=1,WESTRING_SOUNDCHANNEL_ANIM
+12=1,WESTRING_SOUNDCHANNEL_CONSTRUCTION
+13=1,WESTRING_SOUNDCHANNEL_BIRTH
+14=1,WESTRING_SOUNDCHANNEL_FIRE
+
+// Loading and Prologue screen info
+// Value 0: Game version in which this loading screen first appeared
+// Value 1: Display text for editor
+// Value 2: Integer indicating which animation sequence to use
+// Value 3: Model file for screen graphics
+[LoadingScreens]
+NumScreens=121
+00=0,WESTRING_LOADINGSCREEN_TUTORIAL01,0,UI\Glues\Loading\Backgrounds\Campaigns\TutorialBackground.mdl
+01=0,WESTRING_LOADINGSCREEN_TUTORIAL02,1,UI\Glues\Loading\Backgrounds\Campaigns\TutorialBackground.mdl
+02=0,WESTRING_LOADINGSCREEN_HUMAN01,0,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+03=0,WESTRING_LOADINGSCREEN_HUMAN02,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+04=0,WESTRING_LOADINGSCREEN_HUMAN02_INTERLUDE,0,UI\Glues\Loading\Backgrounds\Campaigns\DalaranBackground.mdl
+05=0,WESTRING_LOADINGSCREEN_HUMAN03,2,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+06=0,WESTRING_LOADINGSCREEN_HUMAN04,3,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+07=0,WESTRING_LOADINGSCREEN_HUMAN05,4,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+08=0,WESTRING_LOADINGSCREEN_HUMAN05_INTERLUDE,5,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+09=0,WESTRING_LOADINGSCREEN_HUMAN06,5,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+10=0,WESTRING_LOADINGSCREEN_HUMAN06_INTERLUDE,5,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+11=0,WESTRING_LOADINGSCREEN_HUMAN07,0,UI\Glues\Loading\Backgrounds\Campaigns\NorthrendBackground.mdl
+12=0,WESTRING_LOADINGSCREEN_HUMAN08,0,UI\Glues\Loading\Backgrounds\Campaigns\NorthrendBackground.mdl
+13=0,WESTRING_LOADINGSCREEN_HUMAN09,1,UI\Glues\Loading\Backgrounds\Campaigns\NorthrendBackground.mdl
+14=0,WESTRING_LOADINGSCREEN_UNDEAD01,1,UI\Glues\Loading\Backgrounds\Campaigns\DalaranBackground.mdl
+15=0,WESTRING_LOADINGSCREEN_UNDEAD02,6,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+16=0,WESTRING_LOADINGSCREEN_UNDEAD02_INTERLUDE,2,UI\Glues\Loading\Backgrounds\Campaigns\QuelThalasBackground.mdl
+17=0,WESTRING_LOADINGSCREEN_UNDEAD03,0,UI\Glues\Loading\Backgrounds\Campaigns\QuelthalasBackground.mdl
+18=0,WESTRING_LOADINGSCREEN_UNDEAD04,1,UI\Glues\Loading\Backgrounds\Campaigns\QuelthalasBackground.mdl
+19=0,WESTRING_LOADINGSCREEN_UNDEAD05,3,UI\Glues\Loading\Backgrounds\Campaigns\QuelthalasBackground.mdl
+20=0,WESTRING_LOADINGSCREEN_UNDEAD05_INTERLUDE,7,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+21=0,WESTRING_LOADINGSCREEN_UNDEAD06,8,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+22=0,WESTRING_LOADINGSCREEN_UNDEAD07,2,UI\Glues\Loading\Backgrounds\Campaigns\DalaranBackground.mdl
+23=0,WESTRING_LOADINGSCREEN_UNDEAD08,2,UI\Glues\Loading\Backgrounds\Campaigns\DalaranBackground.mdl
+24=0,WESTRING_LOADINGSCREEN_ORC01,0,UI\Glues\Loading\Backgrounds\Campaigns\BarrensBackground.mdl
+25=0,WESTRING_LOADINGSCREEN_ORC02,1,UI\Glues\Loading\Backgrounds\Campaigns\BarrensBackground.mdl
+26=0,WESTRING_LOADINGSCREEN_ORC02_INTERLUDE,9,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+27=0,WESTRING_LOADINGSCREEN_ORC03,2,UI\Glues\Loading\Backgrounds\Campaigns\BarrensBackground.mdl
+28=0,WESTRING_LOADINGSCREEN_ORC04,3,UI\Glues\Loading\Backgrounds\Campaigns\BarrensBackground.mdl
+29=0,WESTRING_LOADINGSCREEN_ORC04_INTERLUDE,3,UI\Glues\Loading\Backgrounds\Campaigns\BarrensBackground.mdl
+30=0,WESTRING_LOADINGSCREEN_ORC05,3,UI\Glues\Loading\Backgrounds\Campaigns\BarrensBackground.mdl
+31=0,WESTRING_LOADINGSCREEN_ORC06,4,UI\Glues\Loading\Backgrounds\Campaigns\BarrensBackground.mdl
+32=0,WESTRING_LOADINGSCREEN_ORC07,5,UI\Glues\Loading\Backgrounds\Campaigns\BarrensBackground.mdl
+33=0,WESTRING_LOADINGSCREEN_ORC08,6,UI\Glues\Loading\Backgrounds\Campaigns\BarrensBackground.mdl
+34=0,WESTRING_LOADINGSCREEN_NIGHTELF01,2,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleBackground.mdl
+35=0,WESTRING_LOADINGSCREEN_NIGHTELF02,3,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleBackground.mdl
+36=0,WESTRING_LOADINGSCREEN_NIGHTELF03,4,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleBackground.mdl
+37=0,WESTRING_LOADINGSCREEN_NIGHTELF04,5,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleBackground.mdl
+38=0,WESTRING_LOADINGSCREEN_NIGHTELF05,6,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleBackground.mdl
+39=0,WESTRING_LOADINGSCREEN_NIGHTELF06,7,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleBackground.mdl
+40=0,WESTRING_LOADINGSCREEN_NIGHTELF06_INTERLUDE,8,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleBackground.mdl
+41=0,WESTRING_LOADINGSCREEN_NIGHTELF07,9,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleBackground.mdl
+42=0,WESTRING_LOADINGSCREEN_NIGHTELF07_INTERLUDE,9,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleBackground.mdl
+43=0,WESTRING_LOADINGSCREEN_NIGHTELF08,10,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleBackground.mdl
+44=0,WESTRING_LOADINGSCREEN_CREDITS,0,UI\Glues\Loading\Backgrounds\Load-Credits\Load-Credits.mdl
+45=0,WESTRING_LOADINGSCREEN_GENERIC,0,UI\Glues\Loading\Load-Generic\Load-Generic.mdl
+//#LINENOBETA
+46=1,WESTRING_LOADINGSCREEN_NIGHTELFX01,0,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleExpansionBackground.mdl
+//#LINENOBETA
+47=1,WESTRING_LOADINGSCREEN_NIGHTELFX02,0,UI\Glues\Loading\Backgrounds\Campaigns\DrownedRuinsExpansionBackground.mdl
+//#LINENOBETA
+48=1,WESTRING_LOADINGSCREEN_NIGHTELFX03,1,UI\Glues\Loading\Backgrounds\Campaigns\DrownedRuinsExpansionBackground.mdl
+//#LINENOBETA
+49=1,WESTRING_LOADINGSCREEN_NIGHTELFX04,2,UI\Glues\Loading\Backgrounds\Campaigns\DrownedRuinsExpansionBackground.mdl
+//#LINENOBETA
+50=1,WESTRING_LOADINGSCREEN_NIGHTELFX04_INTERLUDE,1,UI\Glues\Loading\Backgrounds\Campaigns\AshenvaleExpansionBackground.mdl
+//#LINENOBETA
+51=1,WESTRING_LOADINGSCREEN_NIGHTELFX05,3,UI\Glues\Loading\Backgrounds\Campaigns\DrownedRuinsExpansionBackground.mdl
+//#LINENOBETA
+52=1,WESTRING_LOADINGSCREEN_NIGHTELFX06,0,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+53=1,WESTRING_LOADINGSCREEN_NIGHTELFX06_INTERLUDE,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+54=1,WESTRING_LOADINGSCREEN_NIGHTELFX07,2,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+55=1,WESTRING_LOADINGSCREEN_NIGHTELFX08,4,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+56=1,WESTRING_LOADINGSCREEN_NIGHTELFX08_FINALE,5,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+57=1,WESTRING_LOADINGSCREEN_HUMANX01,6,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+58=1,WESTRING_LOADINGSCREEN_HUMANX02,7,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+59=1,WESTRING_LOADINGSCREEN_HUMANX03,9,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+60=1,WESTRING_LOADINGSCREEN_HUMANX03_SECRET,10,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+61=1,WESTRING_LOADINGSCREEN_HUMANX03_INTERLUDE,0,UI\Glues\Loading\Backgrounds\Campaigns\OutlandExpansionBackground.mdl
+//#LINENOBETA
+62=1,WESTRING_LOADINGSCREEN_HUMANX04,1,UI\Glues\Loading\Backgrounds\Campaigns\OutlandExpansionBackground.mdl
+//#LINENOBETA
+63=1,WESTRING_LOADINGSCREEN_HUMANX04_INTERLUDE,2,UI\Glues\Loading\Backgrounds\Campaigns\OutlandExpansionBackground.mdl
+//#LINENOBETA
+64=1,WESTRING_LOADINGSCREEN_HUMANX05,3,UI\Glues\Loading\Backgrounds\Campaigns\OutlandExpansionBackground.mdl
+//#LINENOBETA
+65=1,WESTRING_LOADINGSCREEN_HUMANX06,4,UI\Glues\Loading\Backgrounds\Campaigns\OutlandExpansionBackground.mdl
+//#LINENOBETA
+66=1,WESTRING_LOADINGSCREEN_HUMANX06_FINALE,5,UI\Glues\Loading\Backgrounds\Campaigns\OutlandExpansionBackground.mdl
+//#LINENOBETA
+67=1,WESTRING_LOADINGSCREEN_UNDEADX01,11,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+68=1,WESTRING_LOADINGSCREEN_UNDEADX01_INTERLUDE,12,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+69=1,WESTRING_LOADINGSCREEN_UNDEADX02,13,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+70=1,WESTRING_LOADINGSCREEN_UNDEADX02_INTERLUDE,14,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+71=1,WESTRING_LOADINGSCREEN_UNDEADX03,15,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+72=1,WESTRING_LOADINGSCREEN_UNDEADX04,0,UI\Glues\Loading\Backgrounds\Campaigns\IcecrownExpansionBackground.mdl
+//#LINENOBETA
+73=1,WESTRING_LOADINGSCREEN_UNDEADX05,16,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+74=1,WESTRING_LOADINGSCREEN_UNDEADX06,17,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronExpansionBackground.mdl
+//#LINENOBETA
+75=1,WESTRING_LOADINGSCREEN_UNDEADX07A,1,UI\Glues\Loading\Backgrounds\Campaigns\IcecrownExpansionBackground.mdl
+//#LINENOBETA
+76=1,WESTRING_LOADINGSCREEN_UNDEADX07B,2,UI\Glues\Loading\Backgrounds\Campaigns\IcecrownExpansionBackground.mdl
+//#LINENOBETA
+77=1,WESTRING_LOADINGSCREEN_UNDEADX07C,3,UI\Glues\Loading\Backgrounds\Campaigns\IcecrownExpansionBackground.mdl
+//#LINENOBETA
+78=1,WESTRING_LOADINGSCREEN_UNDEADX07_INTERLUDE,4,UI\Glues\Loading\Backgrounds\Campaigns\IcecrownExpansionBackground.mdl
+//#LINENOBETA
+79=1,WESTRING_LOADINGSCREEN_UNDEADX08,5,UI\Glues\Loading\Backgrounds\Campaigns\IcecrownExpansionBackground.mdl
+//#LINENOBETA
+80=1,WESTRING_LOADINGSCREEN_UNDEADX08_FINALE,5,UI\Glues\Loading\Backgrounds\Campaigns\IcecrownExpansionBackground.mdl
+//#LINENOBETA
+81=1,WESTRING_LOADINGSCREEN_ORCX01_01,0,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionQuest01Background.mdl
+//#LINENOBETA
+82=1,WESTRING_LOADINGSCREEN_ORCX01_02,0,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+83=1,WESTRING_LOADINGSCREEN_ORCX01_03,4,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+84=1,WESTRING_LOADINGSCREEN_ORCX01_04,3,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+85=1,WESTRING_LOADINGSCREEN_ORCX01_05,1,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+86=1,WESTRING_LOADINGSCREEN_ORCX02_01,0,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionQuest02Background.mdl
+//#LINENOBETA
+87=1,WESTRING_LOADINGSCREEN_ORCX02_02,5,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+88=1,WESTRING_LOADINGSCREEN_ORCX02_03,6,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+89=1,WESTRING_LOADINGSCREEN_ORCX02_04,8,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+90=1,WESTRING_LOADINGSCREEN_ORCX02_05,7,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+91=1,WESTRING_LOADINGSCREEN_ORCX02_06,9,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+92=1,WESTRING_LOADINGSCREEN_ORCX02_07,10,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+93=1,WESTRING_LOADINGSCREEN_ORCX02_08,11,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+94=1,WESTRING_LOADINGSCREEN_ORCX02_09,12,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+95=1,WESTRING_LOADINGSCREEN_ORCX02_10,13,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+96=1,WESTRING_LOADINGSCREEN_ORCX03A,14,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+//#LINENOBETA
+97=1,WESTRING_LOADINGSCREEN_ORCX03B,15,UI\Glues\Loading\Backgrounds\Campaigns\BarrensExpansionBackground.mdl
+98=1,WESTRING_LOADINGSCREEN_TUTORIAL03,1,UI\Glues\Loading\Backgrounds\Campaigns\TutorialBackground.mdl
+99=1,WESTRING_LOADINGSCREEN_TUTORIAL04,1,UI\Glues\Loading\Backgrounds\Campaigns\TutorialBackground.mdl
+100=1,WESTRING_LOADINGSCREEN_TUTORIAL05,1,UI\Glues\Loading\Backgrounds\Campaigns\TutorialBackground.mdl
+101=1,WESTRING_LOADINGSCREEN_HUMANR01,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+102=1,WESTRING_LOADINGSCREEN_HUMANR02,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+103=1,WESTRING_LOADINGSCREEN_HUMANR03_INTERLUDE,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+104=1,WESTRING_LOADINGSCREEN_HUMANR03,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+105=1,WESTRING_LOADINGSCREEN_HUMANR04,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+106=1,WESTRING_LOADINGSCREEN_UNDEADR01,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+107=1,WESTRING_LOADINGSCREEN_UNDEADR01_02,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+108=1,WESTRING_LOADINGSCREEN_UNDEADR01_03,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+109=1,WESTRING_LOADINGSCREEN_UNDEADR01_04,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+110=1,WESTRING_LOADINGSCREEN_UNDEADR01_05,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+111=1,WESTRING_LOADINGSCREEN_UNDEADR01_06,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+112=1,WESTRING_LOADINGSCREEN_UNDEADR02,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+113=1,WESTRING_LOADINGSCREEN_UNDEADR02_01,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+114=1,WESTRING_LOADINGSCREEN_UNDEADR02_02,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+115=1,WESTRING_LOADINGSCREEN_UNDEADR02_03,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+116=1,WESTRING_LOADINGSCREEN_UNDEADR02_04,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+117=1,WESTRING_LOADINGSCREEN_UNDEADR02_06,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+118=1,WESTRING_LOADINGSCREEN_UNDEADR03_INTERLUDE,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+119=1,WESTRING_LOADINGSCREEN_UNDEADR03A,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+120=1,WESTRING_LOADINGSCREEN_UNDEADR03B,1,UI\Glues\Loading\Backgrounds\Campaigns\LordaeronBackground.mdl
+
+[PrologueScreens]
+NumScreens=1
+00=0,WESTRING_UNKNOWN,0,UI\Glues\Loading\LoadGlue.mdl
+
+[CampaignScreens]
+NumScreens=14
+00=0,WESTRING_CAMPAIGNSCREEN_TUTORIAL,0,UI\Glues\SinglePlayer\TutorialCampaign3D\TutorialCampaign3D.mdl
+01=0,WESTRING_CAMPAIGNSCREEN_HUMAN,0,UI\Glues\SinglePlayer\HumanCampaign3D\HumanCampaign3D.mdl
+02=0,WESTRING_CAMPAIGNSCREEN_ORC,0,UI\Glues\SinglePlayer\OrcCampaign3D\OrcCampaign3D.mdl
+03=0,WESTRING_CAMPAIGNSCREEN_UNDEAD,0,UI\Glues\SinglePlayer\UndeadCampaign3D\UndeadCampaign3D.mdl
+04=0,WESTRING_CAMPAIGNSCREEN_NIGHTELF,0,UI\Glues\SinglePlayer\NightElfCampaign3D\NightElfCampaign3D.mdl
+05=0,WESTRING_CAMPAIGNSCREEN_MAINMENU,0,UI\Glues\MainMenu\MainMenu3D\MainMenu3D.mdl
+06=0,WESTRING_CAMPAIGNSCREEN_BATTLENET,0,UI\Glues\BattleNet\BattlenetLoginGlue\BattlenetLoginGlue.mdl
+07=0,WESTRING_CAMPAIGNSCREEN_SCORESCREEN,0,UI\Glues\ScoreScreen\ScoreScreen-Background\ScoreScreen-Background.mdl
+//#LINENOBETA
+08=1,WESTRING_CAMPAIGNSCREEN_NIGHTELFEXPANSION,0,UI\Glues\SinglePlayer\NightElf_Exp\NightElf_Exp.mdl
+//#LINENOBETA
+09=1,WESTRING_CAMPAIGNSCREEN_HUMANEXPANSION,0,UI\Glues\SinglePlayer\Alliance_Exp\Alliance_Exp.mdl
+//#LINENOBETA
+10=1,WESTRING_CAMPAIGNSCREEN_UNDEADEXPANSION,0,UI\Glues\SinglePlayer\Undead3D_Exp\Undead3D_Exp.mdl
+//#LINENOBETA
+11=1,WESTRING_CAMPAIGNSCREEN_ORCEXPANSION,0,UI\Glues\SinglePlayer\Orc_Exp\Orc_Exp.mdl
+//#LINENOBETA
+12=1,WESTRING_CAMPAIGNSCREEN_HUMANREBIRTH,0,UI\Glues\SinglePlayer\HumanRECampaign3D\HumanRECampaign3D.mdl
+//#LINENOBETA
+13=1,WESTRING_CAMPAIGNSCREEN_UNDEADREBIRTH,0,UI\Glues\SinglePlayer\UndeadRECampaign3D\UndeadRECampaign3D.mdl
+
+[CampaignScreenTags]
+// Optional extra entries for each CampaignScreens entry to reference data from
+// the CampaignStrings.txt files
+// Value 0: 0 = CampaignStrings.txt, 1 = CampaignStrings_exp.txt
+// Value 1: section name within the CampaignStrings profile
+00=0,Tutorial
+01=0,Human
+02=0,Orc
+03=0,Undead
+04=0,NightElf
+08=1,NightElf
+09=1,Human
+
+[CampaignImages]
+NumImages=5
+00=WESTRING_CAMPAIGNIMAGE_HUMAN,UI\Widgets\Glues\Minimap-CustomCampaign-Human
+01=WESTRING_CAMPAIGNIMAGE_ORC,UI\Widgets\Glues\Minimap-CustomCampaign-Orc
+02=WESTRING_CAMPAIGNIMAGE_UNDEAD,UI\Widgets\Glues\Minimap-CustomCampaign-Undead
+03=WESTRING_CAMPAIGNIMAGE_NIGHTELF,UI\Widgets\Glues\Minimap-CustomCampaign-NightElf
+04=WESTRING_CAMPAIGNIMAGE_ORCCAMPAIGN,UI\Widgets\Glues\Minimap-Campaign-Orc
+
+[AmbientSounds]
+NumSounds=8
+00=0,WESTRING_AMBIENTSOUND_TUTORIAL,TutorialGlueScreenLoop
+01=0,WESTRING_AMBIENTSOUND_HUMAN,HumanGlueScreenLoop
+02=0,WESTRING_AMBIENTSOUND_ORC,OrcGlueScreenLoop
+03=0,WESTRING_AMBIENTSOUND_UNDEAD,UndeadGlueScreenLoop
+04=0,WESTRING_AMBIENTSOUND_NIGHTELF,NightElfGlueScreenLoop
+05=1,WESTRING_AMBIENTSOUND_NIGHTELFEXP,ExpansionNightElfGlueScreenLoop
+06=1,WESTRING_AMBIENTSOUND_HUMANEXP,ExpansionHumanGlueScreenLoop
+07=1,WESTRING_AMBIENTSOUND_UNDEADEXP,ExpansionUndeadGlueScreenLoop
+
+// Field categories for Object Editor
+// These are referenced from the various meta data SLKs
+[ObjectEditorCategories]
+abil=WESTRING_OE_CAT_ABILITIES
+art=WESTRING_OE_CAT_ART
+combat=WESTRING_OE_CAT_COMBAT
+data=WESTRING_OE_CAT_DATA
+editor=WESTRING_OE_CAT_EDITOR
+move=WESTRING_OE_CAT_MOVEMENT
+path=WESTRING_OE_CAT_PATHING
+sound=WESTRING_OE_CAT_SOUND
+stats=WESTRING_OE_CAT_STATS
+tech=WESTRING_OE_CAT_TECHTREE
+text=WESTRING_OE_CAT_TEXT
+
+// Map Sizes - Defines map size categories
+// Value 0: Maximum area, in cells
+// Value 1: Description text
+[MapSizes]
+NumSizes=9
+Size00=6600,WESTRING_MAPSIZE_TINY
+Size01=12800,WESTRING_MAPSIZE_EXTRASMALL
+Size02=21000,WESTRING_MAPSIZE_SMALL
+Size03=31000,WESTRING_MAPSIZE_MEDIUM
+Size04=43500,WESTRING_MAPSIZE_LARGE
+Size05=74000,WESTRING_MAPSIZE_EXTRALARGE
+Size06=135000,WESTRING_MAPSIZE_HUGE
+Size07=215000,WESTRING_MAPSIZE_EPIC
+Size08=999999,WESTRING_MAPSIZE_LEGENDARY
+
+[Palette]
+ButtonSize_Small=16
+ButtonSize_Medium=24
+ButtonSize_Large=32
+
+[CliffBrushes]
+0=WESTRING_DECTWO,ReplaceableTextures\WorldEditUI\CliffBrush07
+1=WESTRING_DECONE,ReplaceableTextures\WorldEditUI\CliffBrush06
+2=WESTRING_SAMELEVEL,ReplaceableTextures\WorldEditUI\CliffBrush02
+3=WESTRING_INCONE,ReplaceableTextures\WorldEditUI\CliffBrush03
+4=WESTRING_INCTWO,ReplaceableTextures\WorldEditUI\CliffBrush04
+
+[PathingBrushes]
+0=WESTRING_PASSABLE,ReplaceableTextures\WorldEditUI\PathingBrush00
+1=WESTRING_IMPASSABLE,ReplaceableTextures\WorldEditUI\PathingBrush01
+
+[PathingTypeBrushes]
+0=WESTRING_PATHTYPE_GROUND,ReplaceableTextures\WorldEditUI\PathingTypeBrush00
+1=WESTRING_PATHTYPE_AIR,ReplaceableTextures\WorldEditUI\PathingTypeBrush01
+2=WESTRING_PATHTYPE_BUILDINGS,ReplaceableTextures\WorldEditUI\PathingTypeBrush02
+
+[RegionBrushes]
+0=WESTRING_ADD,ReplaceableTextures\WorldEditUI\LocationBrush00
+
+[HeightBrushes]
+0=WESTRING_BRUSH_RAISE,ReplaceableTextures\WorldEditUI\HeightBrush00
+1=WESTRING_BRUSH_LOWER,ReplaceableTextures\WorldEditUI\HeightBrush04
+2=WESTRING_BRUSH_PLATEAU,ReplaceableTextures\WorldEditUI\HeightBrush01
+3=WESTRING_BRUSH_NOISE,ReplaceableTextures\WorldEditUI\HeightBrush03
+4=WESTRING_BRUSH_SMOOTH,ReplaceableTextures\WorldEditUI\HeightBrush02
+
+[MiscBrushes]
+Ramp=WESTRING_BRUSH_RAMP,ReplaceableTextures\WorldEditUI\RampBrush00
+DeepWater=WESTRING_DEEPWATER,ReplaceableTextures\WorldEditUI\CliffBrush00
+ShallowWater=WESTRING_SHALLOWWATER,ReplaceableTextures\WorldEditUI\CliffBrush01
+Blight=WESTRING_BLIGHT,TerrainArt\Blight\Lords_Blight
+Nothing=WESTRING_NOTHINGTILE,ReplaceableTextures\WorldEditUI\BoundaryPlace
+Unnothing=WESTRING_REMOVENOTHINGTILE,ReplaceableTextures\WorldEditUI\BoundaryRemove
+Alpha=WESTRING_ALPHATILE,ReplaceableTextures\WorldEditUI\AlphaBrush
+
+
+[BrushShapes]
+0=WESTRING_BRUSH_CIRCLE,ReplaceableTextures\WorldEditUI\TextureBrush03
+1=WESTRING_BRUSH_SQUARE,ReplaceableTextures\WorldEditUI\SquareSizeBrush03
+
+// Circle
+[BrushSizes00]
+0=WESTRING_1,ReplaceableTextures\WorldEditUI\TextureBrush00
+1=WESTRING_2,ReplaceableTextures\WorldEditUI\TextureBrush01
+2=WESTRING_3,ReplaceableTextures\WorldEditUI\TextureBrush02
+3=WESTRING_5,ReplaceableTextures\WorldEditUI\TextureBrush04
+4=WESTRING_8,ReplaceableTextures\WorldEditUI\TextureBrush07
+
+// Square
+[BrushSizes01]
+0=WESTRING_1,ReplaceableTextures\WorldEditUI\SquareSizeBrush00
+1=WESTRING_2,ReplaceableTextures\WorldEditUI\SquareSizeBrush01
+2=WESTRING_3,ReplaceableTextures\WorldEditUI\SquareSizeBrush02
+3=WESTRING_5,ReplaceableTextures\WorldEditUI\SquareSizeBrush04
+4=WESTRING_8,ReplaceableTextures\WorldEditUI\SquareSizeBrush07
+
+[TerrainCellRarity]
+// Rarity table for the 18 possible terrain cells
+// 
+//  <cell id> = <rarity value>
+//
+// The rarity values are normalized by their sum
+// The id numbers correspond to the texture cells as follows:
+//
+// 0-15: extra variations --> 00 01 02 03
+//                            04 05 06 07
+//                            08 09 10 11
+//                            12 13 14 15
+// 16: original lower right
+// 17: original upper left
+
+// Common
+16=85
+17=85
+
+00=85
+04=85
+08=85
+12=85
+
+// Uncommon
+01=10
+05=10
+09=10
+13=10
+
+02=4
+06=4
+10=4
+14=4
+
+// Rare
+03=1
+07=1
+11=1
+15=1
+
+[DNCSpeeds]
+// Defines speeds for Day/Night cycle modification
+min=0.5
+max=8.0
+
+[MinimapGeneration]
+MedianRadius=2
+BlurRadius=.5
+NoisePercent=10
+
+[WorldEditMisc]
+CampAcquireRadius=200
+DropTableIndicatorBaseSize=96.0
+DropTableIndicatorScale=0.25
+DropTableIndicatorHeight=10
+MouseWheelZoomFactor=1.10
+DefaultMapSize=64,64
+MinimumMapSize=32
+MaximumMapSize=480
+DefaultDoodadCategory=D
+DefaultTileset=L
+ClickHelperScale=0.4
+
+// Help documentation
+HelpFile_V0=support\Layout\Index2.html
+HelpFile_V0_Mac=ReadMe/Layout/Index2.html
+HelpFile_V1=support\Layout\(PC)WEHIndex.html
+HelpFile_V1_Mac=ReadMe/Layout/(Mac)WEHIndex.html
+HelpFile_CampaignEditor=support\Layout\(PC)WEHIndex.html
+HelpFile_CampaignEditor_Mac=ReadMe/Layout/(Mac)WEHIndex.html
+
+BlizzardLink=http://www.blizzard.com/
+
+// Terrain height smoothing brush weights
+// New terrain height will be computed as:
+//
+//   w1 * oldZ + w2 * avgZ
+//
+// where: oldZ = the original vertex height
+//        avgZ = the average vertex height of all neighboring vertices
+//        w1, w2 are the weights given below for the normal and reverse (shift)
+//        versions of the smoothing brush
+
+SmoothBrushWeightsNormal=0.80,0.20
+SmoothBrushWeightsReverse=1.00,0.05
+
+// Ally priority distances
+//  Represent the factor of the smallest distance
+//
+//  ex: A setting of 0.25 means that all locations within a distance
+//      of 125% of the smallest distance from the location in question will be used
+
+AllyPriorityDist_High=0.25
+AllyPriorityDist_Low=0.50
+
+StartLocPathingTexture=PathTextures\16x16Simple.blp
+RandomBuildingPathingTexture=PathTextures\12x12Simple.blp
+
+RandomUnitCollisionRadius=32
+RandomUnitScale=2.5
+RandomBuildingScale=5.0
+RandomItemScale=1.5
+
+RandomUnitMarkerScale=1.0
+RandomBuildingMarkerScale=2.0
+RandomItemMarkerScale=1.0
+
+DefaultTestAIMap="Maps\(2)PlunderIsle.w3m"
+
+[WorldEditColors]
+// Map size dialog
+MapSizeDlg_NewTerrain=255,0,192,0
+MapSizeDlg_BorderOverlay=128,255,255,255
+MapSizeDlg_CameraBounds=255,0,0,255
+
+CampVertexColor=255,16,16,255
+DropTableIndicatorColor=255,255,255,255
+StartLocGhostColor=64,255,255,255
+SelectedButtonOverlay=96,0,255,0
+ClickHelperColor=96,255,255,255
+
+[WorldEditArt]
+// Models
+StartLocation=Objects\StartLocation\StartLocation.mdl
+InvalidObject=Objects\InvalidObject\InvalidObject.mdl
+InvalidModel=Objects\Invalidmodel\Invalidmodel.mdl
+CameraModel=Objects\CameraHelper\CameraHelper.mdl
+DropTableIndicator=Objects\StartLocation\StartLocation.mdl
+RandomUnitModel=Objects\RandomObject\RandomObject.mdl
+ClickHelper=Objects\InvalidObject\InvalidObject.mdl
+
+// Various palette icons
+StartLocationIcon=ReplaceableTextures\WorldEditUI\StartingLocation.blp
+InvalidIcon=ReplaceableTextures\WorldEditUI\DoodadPlaceholder.blp
+RandomUnitIcon=ReplaceableTextures\WorldEditUI\Editor-Random-Unit.blp
+RandomBuildingIcon=ReplaceableTextures\WorldEditUI\Editor-Random-Building.blp
+RandomItemIcon=ReplaceableTextures\WorldEditUI\Editor-Random-Item.blp
+TexSpaceOne=ReplaceableTextures\WorldEditUI\TextureSpaceOne
+TexSpaceTwo=ReplaceableTextures\WorldEditUI\TextureSpaceTwo
+
+// Brush Tree icons
+BTIcon_Category=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+BTIcon_CategoryOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open.blp
+
+// DP = Doodad Palette buttons
+DP_RandomRotation=ReplaceableTextures\WorldEditUI\RandomRotation
+DP_RandomScaleSym=ReplaceableTextures\WorldEditUI\RandomScale-Symmetric
+DP_RandomScaleZ=ReplaceableTextures\WorldEditUI\RandomScale-AsymmetricZ
+DP_RandomScaleXY=ReplaceableTextures\WorldEditUI\RandomScale-AsymmetricXY
+
+// Minimap icons
+MinimapIconGold=UI\MiniMap\MinimapIcon\MinimapIconGold.blp
+MinimapIconNeutralBuilding=UI\MiniMap\MinimapIcon\MinimapIconNeutralBuilding.blp
+MinimapIconStartLoc=UI\MiniMap\MinimapIcon\MinimapIconStartLoc.blp
+MinimapIconCreepCampSmall=UI\Minimap\MinimapIconCreepLoc.blp
+MinimapIconCreepCampLarge=UI\Minimap\MinimapIconCreepLoc2.blp
+
+// Multiple selection icons
+UnitMultipleIcon=ReplaceableTextures\WorldEditUI\Editor-MultipleUnits.blp
+DoodadMultipleIcon=ReplaceableTextures\WorldEditUI\Editor-MultipleDoodads.blp
+RegionIcon=ReplaceableTextures\WorldEditUI\LocationBrush00
+
+// Script editor icons
+SEIcon_Map=ReplaceableTextures\WorldEditUI\CampaignEditor-Map
+SEIcon_MapEx=ReplaceableTextures\WorldEditUI\CampaignEditor-ExpMap
+SEIcon_Library=ReplaceableTextures\WorldEditUI\Editor-TriggerLibrary
+SEIcon_TriggerCategory=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+SEIcon_TriggerCategoryOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open.blp
+SEIcon_Trigger=ReplaceableTextures\WorldEditUI\Editor-Trigger.blp
+SEIcon_TriggerPartial=ReplaceableTextures\WorldEditUI\Editor-TriggerPartial.blp
+SEIcon_TriggerDisabled=ReplaceableTextures\WorldEditUI\Editor-TriggerDisabled.blp
+SEIcon_TriggerUnused=ReplaceableTextures\WorldEditUI\Editor-TriggerUnused.blp
+SEIcon_TriggerUnusedPartial=ReplaceableTextures\WorldEditUI\Editor-TriggerPartialUnused.blp
+SEIcon_TriggerUnusedDisabled=ReplaceableTextures\WorldEditUI\Editor-TriggerUnusedDisabled.blp
+SEIcon_TriggerComment=ReplaceableTextures\WorldEditUI\Editor-Toolbar-TriggerComment
+SEIcon_TriggerScript=ReplaceableTextures\WorldEditUI\Editor-TriggerScript
+SEIcon_TriggerScriptDisable=ReplaceableTextures\WorldEditUI\Editor-TriggerScriptDisable
+SEIcon_TriggerLua=ReplaceableTextures\WorldEditUI\Editor-TriggerLua
+SEIcon_TriggerLuaDisable=ReplaceableTextures\WorldEditUI\Editor-TriggerLuaDisable
+SEIcon_TriggerGlobalVariable=ReplaceableTextures\WorldEditUI\Actions-SetVariables
+SEIcon_Function=ReplaceableTextures\WorldEditUI\Editor-TriggerFunction.blp
+SEIcon_FunctionDisabled=ReplaceableTextures\WorldEditUI\Editor-TriggerFunctionDisabled.blp
+SEIcon_Event=ReplaceableTextures\WorldEditUI\Editor-TriggerEvent.blp
+SEIcon_Condition=ReplaceableTextures\WorldEditUI\Editor-TriggerCondition.blp
+SEIcon_Action=ReplaceableTextures\WorldEditUI\Editor-TriggerAction.blp
+SEIcon_Cut=ReplaceableTextures\WorldEditUI\Editor-Toolbar-Cut.blp
+
+// Unit editor icons
+UEIcon_UnitCategory=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+UEIcon_UnitCategoryOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open.blp
+
+// Item editor icons
+IEIcon_ItemCategory=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+IEIcon_ItemCategoryOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open.blp
+
+// Destructible editor icons
+BEIcon_DestructableCategory=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+BEIcon_DestructableCategoryOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open.blp
+
+// Doodad editor icons
+DEIcon_DoodadCategory=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+DEIcon_DoodadCategoryOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open.blp
+
+// Ability editor icons
+AEIcon_AbilityCategory=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+AEIcon_AbilityCategoryOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open.blp
+
+// Upgrade editor icons
+GEIcon_UpgradeCategory=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+GEIcon_UpgradeCategoryOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open.blp
+
+// Sound Editor icons
+SnEIcon_SoundCategory=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+SnEIcon_SoundCategoryOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open.blp
+SnEIcon_SoundFile=ReplaceableTextures\WorldEditUI\SoundEditor-UseSound
+SnEIcon_MusicFile=ReplaceableTextures\WorldEditUI\SoundEditor-UseMusic
+
+// Light Editor icons
+LightEIcon_Category=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+LightEIcon_CategoryOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open.blp
+LightEIcon_File=ReplaceableTextures\WorldEditUI\LightEditor-Light.blp
+
+// Object Group Editor Icons
+OGEIcon_Group=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+OGEIcon_Unit=ReplaceableTextures\WorldEditUI\Actions-Unit.blp
+
+// Campaign Editor icons
+CEIcon_Campaign=ReplaceableTextures\WorldEditUI\Editor-Campaign
+CEIcon_Map=ReplaceableTextures\WorldEditUI\CampaignEditor-Map
+CEIcon_MapEx=ReplaceableTextures\WorldEditUI\CampaignEditor-ExpMap
+
+// Object Manager icons
+OMIcon_Folder=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup
+OMIcon_FolderOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open
+OMIcon_Doodad=ReplaceableTextures\WorldEditUI\Actions-Destructibles
+OMIcon_Region=ReplaceableTextures\WorldEditUI\Actions-Region
+OMIcon_Camera=ReplaceableTextures\WorldEditUI\Actions-Camera
+OMIcon_Sound=ReplaceableTextures\WorldEditUI\SoundEditor-UseSound
+OMIcon_Music=ReplaceableTextures\WorldEditUI\SoundEditor-UseMusic
+OMIcon_Variable=ReplaceableTextures\WorldEditUI\Actions-SetVariables
+
+// Miscellaneous icons
+Icon_Force=ReplaceableTextures\WorldEditUI\Editor-Force.blp
+Icon_ItemSet=ReplaceableTextures\WorldEditUI\Editor-ItemSet.blp
+Icon_ItemTable=ReplaceableTextures\WorldEditUI\Editor-ItemSet.blp
+Icon_AllyPri_High=ReplaceableTextures\WorldEditUI\Editor-Ally-HighPriority.blp
+Icon_AllyPri_Low=ReplaceableTextures\WorldEditUI\Editor-Ally-LowPriority.blp
+Icon_AllyPri_None=ReplaceableTextures\WorldEditUI\Editor-Ally-NoPriority.blp
+GemAct=ReplaceableTextures\WorldEditUI\EditorGemAct.blp
+GemDeact=ReplaceableTextures\WorldEditUI\EditorGemDeact.blp
+
+// Region textures
+Region_Center=ReplaceableTextures\WorldEditUI\Regions\RegionCenter.blp
+Region_HorSide=ReplaceableTextures\WorldEditUI\Regions\RegionTop.blp
+Region_VerSide=ReplaceableTextures\WorldEditUI\Regions\RegionSide.blp
+Region_Corner=ReplaceableTextures\WorldEditUI\Regions\RegionCorner.blp
+Region_HorSide_Sel=ReplaceableTextures\WorldEditUI\Regions\RegionTopSelected.blp
+Region_VerSide_Sel=ReplaceableTextures\WorldEditUI\Regions\RegionSideSelected.blp
+Region_Corner_Sel=ReplaceableTextures\WorldEditUI\Regions\RegionCornerSelected.blp
+Region_Corner_Resize=ReplaceableTextures\WorldEditUI\Regions\RegionCornerSelectedScale.blp
+Region_TwoSide=ReplaceableTextures\WorldEditUI\Regions\RegionTwoSide.blp
+Region_TwoSide_Sel=ReplaceableTextures\WorldEditUI\Regions\RegionTwoSideSelected.blp
+Region_TwoCorner=ReplaceableTextures\WorldEditUI\Regions\RegionTwoCornerSide.blp
+Region_TwoCorner_Sel=ReplaceableTextures\WorldEditUI\Regions\RegionTwoCornerSelected.blp
+Region_FourCorner=ReplaceableTextures\WorldEditUI\Regions\RegionFourCorner.blp
+Region_FourCorner_Sel=ReplaceableTextures\WorldEditUI\Regions\RegionFourCornerSelected.blp
+
+// Toolbar Icons
+ToolBarIcon_New=ReplaceableTextures\WorldEditUI\Editor-Toolbar-NewMap.blp
+ToolBarIcon_Open=ReplaceableTextures\WorldEditUI\Editor-Toolbar-OpenMap.blp
+ToolBarIcon_Save=ReplaceableTextures\WorldEditUI\Editor-Toolbar-SaveMap.blp
+ToolBarIcon_Cut=ReplaceableTextures\WorldEditUI\Editor-Toolbar-Cut.blp
+ToolBarIcon_Copy=ReplaceableTextures\WorldEditUI\Editor-Toolbar-Copy.blp
+ToolBarIcon_Paste=ReplaceableTextures\WorldEditUI\Editor-Toolbar-Paste.blp
+ToolBarIcon_Undo=ReplaceableTextures\WorldEditUI\Editor-Toolbar-Undo.blp
+ToolBarIcon_Redo=ReplaceableTextures\WorldEditUI\Editor-Toolbar-Redo.blp
+ToolBarIcon_Select=ReplaceableTextures\WorldEditUI\ToolBar07
+ToolBarIcon_Module_Terrain=ReplaceableTextures\WorldEditUI\Editor-Terrain.blp
+ToolBarIcon_Module_Script=ReplaceableTextures\WorldEditUI\Editor-Script.blp
+ToolBarIcon_Module_Sound=ReplaceableTextures\WorldEditUI\Editor-Toolbar-SoundEditor.blp
+ToolBarIcon_Module_ObjectEditor=ReplaceableTextures\WorldEditUI\Editor-Unit.blp
+ToolBarIcon_Module_Campaign=ReplaceableTextures\WorldEditUI\Editor-Campaign.blp
+ToolBarIcon_Module_AIEditor=ReplaceableTextures\WorldEditUI\Editor-Toolbar-AIEditor
+ToolBarIcon_Module_ObjectManager=ReplaceableTextures\WorldEditUI\Editor-Toolbar-ObjectManager.blp
+ToolBarIcon_Module_AssetManager=ReplaceableTextures\WorldEditUI\Editor-Toolbar-ImportManager
+ToolBarIcon_Module_SoundSet=ReplaceableTextures\WorldEditUI\Editor-Toolbar-SoundSetManager
+ToolBarIcon_Module_LightEditor=ReplaceableTextures\WorldEditUI\LightEditor-Light.blp
+ToolBarIcon_Module_ObjectGroupEditor=ReplaceableTextures\WorldEditUI\Editor-MultipleDoodads.blp
+ToolBarIcon_TestMap=ReplaceableTextures\WorldEditUI\Editor-TestMap.blp
+ToolBarIcon_SE_Variables=ReplaceableTextures\WorldEditUI\Editor-ScriptVariable.blp
+ToolBarIcon_SE_NewCategory=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup.blp
+ToolBarIcon_SE_NewTrigger=ReplaceableTextures\WorldEditUI\Editor-Trigger.blp
+ToolBarIcon_SE_NewTriggerComment=ReplaceableTextures\WorldEditUI\Editor-Toolbar-TriggerComment
+ToolBarIcon_SE_NewEvent=ReplaceableTextures\WorldEditUI\Editor-TriggerEvent.blp
+ToolBarIcon_SE_NewCondition=ReplaceableTextures\WorldEditUI\Editor-TriggerCondition.blp
+ToolBarIcon_SE_NewAction=ReplaceableTextures\WorldEditUI\Editor-TriggerAction.blp
+ToolBarIcon_SE_ValidateMap=ReplaceableTextures\WorldEditUI\Editor-Toolbar-MapValidation.blp
+ToolBarIcon_SE_NewTriggerScript=ReplaceableTextures\WorldEditUI\Editor-TriggerScript
+ToolBarIcon_SE_NewLuaScript=ReplaceableTextures\WorldEditUI\Editor-TriggerLua
+ToolBarIcon_SE_AddVariable=ReplaceableTextures\WorldEditUI\Editor-Toolbar-TriggerAddVariable
+ToolBarIcon_SE_EditVariable=ReplaceableTextures\WorldEditUI\Editor-Toolbar-TriggerEditVariable
+ToolBarIcon_SE_DeleteVariable=ReplaceableTextures\WorldEditUI\Editor-Toolbar-TriggerDeleteVariable
+ToolBarIcon_OE_NewObject=ReplaceableTextures\WorldEditUI\UnitEditor-CustomUnit
+ToolBarIcon_OE_NewUnit=ReplaceableTextures\WorldEditUI\ObjectEditor-CustomUnit
+ToolBarIcon_OE_NewItem=ReplaceableTextures\WorldEditUI\ObjectEditor-CustomItem
+ToolBarIcon_OE_NewDood=ReplaceableTextures\WorldEditUI\ObjectEditor-CustomDoodad
+ToolBarIcon_OE_NewDest=ReplaceableTextures\WorldEditUI\ObjectEditor-CustomDestructible
+ToolBarIcon_OE_NewAbil=ReplaceableTextures\WorldEditUI\ObjectEditor-CustomAbility
+ToolBarIcon_OE_NewBuff=ReplaceableTextures\WorldEditUI\ObjectEditor-CustomAbility
+ToolBarIcon_OE_NewUpgr=ReplaceableTextures\WorldEditUI\ObjectEditor-CustomUpgrade
+ToolBarIcon_UseSound=ReplaceableTextures\WorldEditUI\SoundEditor-UseSound
+ToolBarIcon_ImportSound=ReplaceableTextures\WorldEditUI\SoundEditor-ImportSound
+ToolBarIcon_ExportSound=ReplaceableTextures\WorldEditUI\SoundEditor-ExportSound
+ToolBarIcon_UseMusic=ReplaceableTextures\WorldEditUI\SoundEditor-UseMusic
+ToolBarIcon_ImportMusic=ReplaceableTextures\WorldEditUI\SoundEditor-ImportMusic
+ToolBarIcon_ExportMusic=ReplaceableTextures\WorldEditUI\SoundEditor-ExportMusic
+ToolBarIcon_PlaySound=ReplaceableTextures\WorldEditUI\SoundEditor-Play
+ToolBarIcon_StopPlayback=ReplaceableTextures\WorldEditUI\SoundEditor-Stop
+ToolBarIcon_AM_Import=ReplaceableTextures\WorldEditUI\ImportManager-ImportFile
+ToolBarIcon_AM_Export=ReplaceableTextures\WorldEditUI\ImportManager-ExportFile
+ToolBarIcon_CE_AddMap=ReplaceableTextures\WorldEditUI\CampaignEditor-AddMap
+ToolBarIcon_CE_RemoveMap=ReplaceableTextures\WorldEditUI\CampaignEditor-RemoveMap
+ToolBarIcon_CE_EditMap=ReplaceableTextures\WorldEditUI\Editor-Toolbar-EditMap
+ToolBarIcon_CE_ExportMap=ReplaceableTextures\WorldEditUI\Editor-Toolbar-ExportMap
+
+// Misc art
+War3Logo=ReplaceableTextures\WorldEditUI\WarcraftIIILogo
+War3XLogo=ReplaceableTextures\WorldEditUI\WarcraftIIIFTLogo
+War3ReforgedLogo=ReplaceableTextures\WorldEditUI\WarcraftIIIReforgedLogo
+BlizzardLogo=ReplaceableTextures\WorldEditUI\BlizzardLogo
+
+// File Tree View
+FileTreeView_UpDir=ReplaceableTextures\CommandButtons\BTNNagaUnBurrow.blp
+FileTreeView_DownDir=ReplaceableTextures\CommandButtons\BTNNagaBurrow.blp
+
+// Open Document Dialog
+OpenDoc_Folder=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup
+OpenDoc_FolderOpen=ReplaceableTextures\WorldEditUI\Editor-TriggerGroup-Open
+OpenDoc_W3m=ReplaceableTextures\WorldEditUI\CampaignEditor-Map
+OpenDoc_W3x=ReplaceableTextures\WorldEditUI\CampaignEditor-ExpMap
+
+[WorldEditSounds]
+PlaceObject=Sound\Interface\RallyPointPlace1.wav
+DeleteObject=Sound\Destructibles\CrateDeath1.wav
+Undo=Abilities\Weapons\DryadMissile\DryadMissile1.wav
+Redo=Abilities\Weapons\DryadMissile\DryadMissile2.wav
+AboutDialog=Abilities\Spells\NightElf\Tranquility\Tranquility.wav
+MeSoHungy=Units\Creeps\Ogre\OgrePissed1.wav
+CakeEaten=Units\Orc\HeadHunter\HeadHunterYes4.wav
+WelcomeFirstRun=Sound\Interface\GameFound.wav
+WelcomeFirstRunDone=Units\Orc\Peon\PeonReady1.wav
+Welcome=Sound\Ambient\DoodadEffects\UtherReturns.wav
+
+// Extra files for use by custom data
+// Value 0: Game version in which this data was introduced
+// Value 1: File path
+// Value 2: Display text
+//
+// 汉化补丁 0.5.1 说明：
+// 1. 显示名直接写中文，不引用 WESTRING_ 键（编辑器图标/模型选择器不解析键名）
+// 2. 键号连续编号；原有 00-36（图标）、00-09（模型）的索引位置保持不变
+// 3. 模型段原 19000-19028 共 29 条 broken/incomplete 模型（cocoon、gear*、
+//    citycliffwall*、herolich_v1、putress 等）已剔除，勿由生成脚本自动加回
+// 4. 命名规则：括号标点一律半角；中英都同名的加数字后缀（英雄光辉 1 / 2）；
+//    英文不同、中文相同的在括号里放英文区分（穿刺之箭(Passive)、牧师(White)）；
+//    科技图标用科技名而不是物品名（BTNEnchantedCrows=猛禽之印、BTNSunderingBlades=裂甲之刃）
+
+[ExtraIcons]
+000=1,ReplaceableTextures\CommandButtons\BTNResStone.blp,复活石
+001=1,ReplaceableTextures\CommandButtons\BTNBarrel.blp,桶
+002=1,ReplaceableTextures\CommandButtons\BTNOtherBarrel.blp,其他桶
+003=1,ReplaceableTextures\CommandButtons\BTNBox.blp,箱子
+004=1,ReplaceableTextures\CommandButtons\BTNCrate.blp,板条箱
+005=0,ReplaceableTextures\WorldEditUI\StartingLocation.blp,开始点
+006=0,ReplaceableTextures\WorldEditUI\DoodadPlaceholder.blp,未知物体
+007=0,ReplaceableTextures\WorldEditUI\Editor-Random-Unit.blp,随机单位
+008=0,ReplaceableTextures\WorldEditUI\Editor-Random-Building.blp,随机建筑
+009=0,ReplaceableTextures\WorldEditUI\Editor-Random-Item.blp,随机物品
+010=0,UI\MiniMap\MinimapIcon\MinimapIconGold.blp,小地图 - 黄金
+011=0,UI\MiniMap\MinimapIcon\MinimapIconNeutralBuilding.blp,小地图 - 建筑
+012=0,UI\MiniMap\MinimapIcon\MinimapIconStartLoc.blp,小地图 - 开始点
+013=1,UI\Minimap\MinimapIconCreepLoc.blp,小地图 - 中立生物营地(小)
+014=1,UI\Minimap\MinimapIconCreepLoc2.blp,小地图 - 中立生物营地(大)
+015=0,ReplaceableTextures\WorldEditUI\Editor-MultipleUnits.blp,多个单位
+016=0,ReplaceableTextures\WorldEditUI\Editor-MultipleDoodads.blp,多个装饰物
+017=0,ReplaceableTextures\WorldEditUI\Editor-Force.blp,队伍
+018=0,ReplaceableTextures\WorldEditUI\Editor-ItemSet.blp,物品设置
+019=0,ReplaceableTextures\WorldEditUI\Editor-Ally-HighPriority.blp,联盟优先权 - 高
+020=0,ReplaceableTextures\WorldEditUI\Editor-Ally-LowPriority.blp,联盟优先权 - 低
+021=0,ReplaceableTextures\WorldEditUI\Editor-Ally-NoPriority.blp,联盟优先权 - 无
+022=1,ReplaceableTextures\WorldEditUI\Doodad-Prop.blp,装饰物 - 道具
+023=1,ReplaceableTextures\WorldEditUI\Doodad-Structures.blp,装饰物 - 建筑
+024=1,ReplaceableTextures\WorldEditUI\Doodad-Water.blp,装饰物 - 水
+025=1,ReplaceableTextures\WorldEditUI\Doodad-Cliff.blp,装饰物 - 悬崖/地形
+026=1,ReplaceableTextures\WorldEditUI\Doodad-Environment.blp,装饰物 - 环境
+027=1,ReplaceableTextures\WorldEditUI\Doodad-Cinematic.blp,装饰物 - 电影
+028=1,ReplaceableTextures\WorldEditUI\Doodad-Destructible.blp,装饰物 - 树木/可破坏物
+029=1,ReplaceableTextures\WorldEditUI\Doodad-Bridge.blp,装饰物 - 桥/斜坡
+030=0,ReplaceableTextures\CommandButtons\BTNLoadDwarf.blp,载入矮人
+031=0,ReplaceableTextures\CommandButtons\BTNUnloadDwarf.blp,卸载矮人
+032=1,ReplaceableTextures\CommandButtons\BTNAcorn.blp,橡树果实
+033=1,UI\Minimap\MiniMap-Entrance.blp,小地图入口
+034=1,UI\Minimap\MiniMapIconEntrance.blp,小地图入口(小)
+035=1,UI\Glues\ScoreScreen\scorescreen-player-naga.blp,计分屏玩家 - 纳迦
+036=1,UI\Glues\ScoreScreen\scorescreen-player-bloodelf.blp,计分屏玩家 - 血精灵
+
+// ---- 单位图标 Unit icons ----
+037=0,ReplaceableTextures\CommandButtons\BTNAnastarienSunstrider.blp,阿纳斯塔里安·逐日者
+038=0,ReplaceableTextures\CommandButtons\BTNBallista.blp,弩炮
+039=0,ReplaceableTextures\CommandButtons\BTNCage2.blp,笼子 2
+040=0,ReplaceableTextures\CommandButtons\BTNCage3.blp,笼子 3
+041=0,ReplaceableTextures\CommandButtons\BTNCatapult.blp,投石车
+042=0,ReplaceableTextures\CommandButtons\BTNCenariusNightmare.blp,塞纳留斯(梦魇形态)
+043=0,ReplaceableTextures\CommandButtons\BTNDiabloCar.blp,暗黑战车
+044=0,ReplaceableTextures\CommandButtons\BTNDwarfCar.blp,矮人飞艇
+045=0,ReplaceableTextures\CommandButtons\BTNFallenKingArthas.blp,堕落的阿尔萨斯
+046=0,ReplaceableTextures\CommandButtons\BTNFemaleMetamorphosis.blp,女性变形
+047=0,ReplaceableTextures\CommandButtons\BTNHeroFemaleDeathKnight.blp,英雄女性死亡骑士
+048=0,ReplaceableTextures\CommandButtons\BTNHeroFemaleDemonHunter.blp,英雄女性恶魔猎人
+049=0,ReplaceableTextures\CommandButtons\BTNHighElfArchMage.blp,高等精灵大法师
+050=0,ReplaceableTextures\CommandButtons\BTNHighElfRunner.blp,高等精灵信使
+051=0,ReplaceableTextures\CommandButtons\BTNIllidanPrisonWagon.blp,伊利丹囚车
+052=0,ReplaceableTextures\CommandButtons\BTNJainaSea.blp,吉安娜(海)
+053=0,ReplaceableTextures\CommandButtons\BTNJennallaDeemspring.blp,珍娜拉·迪姆斯普林
+054=0,ReplaceableTextures\CommandButtons\BTNNightElfFishingBoat.blp,暗夜精灵渔船
+055=0,ReplaceableTextures\CommandButtons\BTNOrcCar.blp,兽人战车
+056=0,ReplaceableTextures\CommandButtons\BTNPriest.blp,牧师
+057=0,ReplaceableTextures\CommandButtons\BTNSorceress.blp,女巫
+058=0,ReplaceableTextures\CommandButtons\BTNThalorienDawnseeker.blp,萨洛里恩·曙光追寻者
+059=0,ReplaceableTextures\CommandButtons\BTNThrallChampion.blp,萨尔勇士
+060=0,ReplaceableTextures\CommandButtons\BTNUndeadCar.blp,亡灵战车
+061=0,ReplaceableTextures\CommandButtons\BTNVolcanus.blp,伏尔卡努斯
+062=0,ReplaceableTextures\CommandButtons\BTNVengeanceIncarnate.blp,复仇化身
+063=0,ReplaceableTextures\CommandButtons\BTNHighElvenArcher_V1.dds,高等精灵弓箭手
+064=0,ReplaceableTextures\CommandButtons\BTNSwordsman_V1.dds,高等精灵剑士
+// ---- 技能/其他图标 Misc icons ----
+065=1,replaceabletextures\commandbuttons\btnapprehend2.blp,拘捕 2
+066=1,replaceabletextures\commandbuttons\btncartwheel.blp,侧翻
+067=1,replaceabletextures\commandbuttons\btncorpse.blp,尸体
+068=1,replaceabletextures\commandbuttons\btncultzealot.blp,狂热信徒
+069=1,replaceabletextures\commandbuttons\btnexposeddefenses.blp,暴露防御
+070=1,replaceabletextures\commandbuttons\btngarithosabominationawakened.blp,加瑞索斯憎恶苏醒
+071=1,replaceabletextures\commandbuttons\btninspirecourage4.blp,鼓舞勇气 4
+072=1,replaceabletextures\commandbuttons\btnpetalbasket.blp,花瓣篮
+073=1,replaceabletextures\commandbuttons\btnwarcry2.blp,战斗呐喊 2
+074=0,ReplaceableTextures\CommandButtons\BTNGenericSpellImmunity.blp,通用法术免疫
+075=0,ReplaceableTextures\CommandButtons\BTNGLExchange.blp,地精交换(GL)
+076=0,ReplaceableTextures\CommandButtons\BTNPebble.blp,卵石
+077=0,ReplaceableTextures\CommandButtons\BTNForceOfNature.blp,自然之力
+078=0,ReplaceableTextures\CommandButtons\BTNFlamingArrows.blp,燃烧之箭
+079=0,ReplaceableTextures\CommandButtons\BTNFeedback.blp,法力反馈
+080=0,ReplaceableTextures\CommandButtons\BTNExpandedView.blp,扩展视野
+081=0,ReplaceableTextures\CommandButtons\BTNEredarRed.blp,埃雷达尔之红
+082=0,ReplaceableTextures\CommandButtons\BTNElunesBlessing.blp,艾露恩的祝福
+083=0,ReplaceableTextures\CommandButtons\BTNDrain.blp,汲取
+084=0,ReplaceableTextures\CommandButtons\BTNDenOfWonders.blp,奇迹之巢
+085=0,ReplaceableTextures\CommandButtons\BTNChime.blp,报时铃
+086=0,ReplaceableTextures\CommandButtons\BTNMalfurion.blp,玛法里奥
+087=0,ReplaceableTextures\CommandButtons\BTNMGExchange.blp,地精交换(MG)
+088=0,ReplaceableTextures\CommandButtons\BTNLamp.blp,灯
+089=0,ReplaceableTextures\CommandButtons\BTNLament.blp,哀叹
+090=0,ReplaceableTextures\CommandButtons\BTNLGExchange.blp,地精交换(LG)
+091=0,ReplaceableTextures\CommandButtons\BTNInn.blp,旅店
+092=0,ReplaceableTextures\CommandButtons\BTNImprovedMining.blp,改良采掘
+093=0,ReplaceableTextures\PassiveButtons\PASBTNImpalingBolt.blp,穿刺之箭(Passive)
+094=0,ReplaceableTextures\CommandButtons\BTNHoldPosition.blp,保持原位
+095=0,ReplaceableTextures\CommandButtons\BTNHeroMoonPriestess.blp,月之女祭司
+096=0,ReplaceableTextures\CommandButtons\BTNGuardianWard.blp,守护者守卫
+097=0,ReplaceableTextures\CommandButtons\BTNPickupItem.blp,拾取物品
+098=0,ReplaceableTextures\CommandButtons\BTNPatrol.blp,巡逻
+099=0,ReplaceableTextures\CommandButtons\BTNOrcLumberUpgradeTwo.blp,兽人木材升级二
+100=0,ReplaceableTextures\CommandButtons\BTNOrbOfDeath.blp,死亡宝珠
+101=0,ReplaceableTextures\CommandButtons\BTNOrb.blp,宝珠
+102=0,ReplaceableTextures\CommandButtons\BTNMove.blp,移动
+103=0,ReplaceableTextures\CommandButtons\BTNMeatapult.blp,绞肉车
+104=0,ReplaceableTextures\CommandButtons\BTNTome2.blp,书 2
+105=0,ReplaceableTextures\CommandButtons\BTNMantle.blp,斗篷
+106=0,ReplaceableTextures\CommandButtons\BTNManaShield.blp,魔法护盾
+107=0,ReplaceableTextures\CommandButtons\BTNReplay-SpeedUp.blp,重播 - 加速
+108=0,ReplaceableTextures\CommandButtons\BTNReplay-SpeedDown.blp,重播 - 减速
+109=0,ReplaceableTextures\CommandButtons\BTNReplay-Play.blp,重播 - 播放
+110=0,ReplaceableTextures\CommandButtons\BTNReplay-Pause.blp,重播 - 暂停
+111=0,ReplaceableTextures\CommandButtons\BTNReplay-Loop.blp,重播 - 循环
+112=0,ReplaceableTextures\CommandButtons\BTNRepair.blp,修理
+113=0,ReplaceableTextures\CommandButtons\BTNRejuvenationPotion.blp,回春药水
+114=0,ReplaceableTextures\CommandButtons\BTNRegeneration.blp,再生
+115=0,ReplaceableTextures\CommandButtons\BTNProudmoore.blp,普罗德摩尔
+116=0,ReplaceableTextures\CommandButtons\BTNPotionBlue.blp,蓝色药水
+117=0,ReplaceableTextures\CommandButtons\BTNPoisonArrow.blp,毒箭
+118=0,ReplaceableTextures\CommandButtons\BTNUpgradeRegenerationAura.blp,再生光环升级
+119=0,ReplaceableTextures\CommandButtons\BTNThornyShieldOff.blp,荆棘光环(Off)
+120=0,ReplaceableTextures\CommandButtons\BTNThievesGuild.blp,盗贼公会
+121=0,ReplaceableTextures\CommandButtons\BTNStop.blp,停止
+122=0,ReplaceableTextures\CommandButtons\BTNSpiderling.blp,幼蜘蛛
+123=0,ReplaceableTextures\CommandButtons\BTNSkillz.blp,技能
+124=0,ReplaceableTextures\CommandButtons\BTNShoveler.blp,铁锹
+125=0,ReplaceableTextures\CommandButtons\BTNShadowMeld.blp,影遁
+126=0,ReplaceableTextures\CommandButtons\BTNScrollOfRegeneration.blp,再生卷轴
+127=0,ReplaceableTextures\CommandButtons\BTNResistMagic.blp,魔法抗性
+128=0,ReplaceableTextures\PassiveButtons\PASBTNWarStomp.blp,战争践踏(Passive)
+129=0,ReplaceableTextures\CommandButtons\BTNWindWalkOff.blp,疾风步(Off)
+130=0,ReplaceableTextures\CommandButtons\BTNCancel.blp,取消
+131=0,ReplaceableTextures\CommandButtons\BTNBronzeBowlFull.blp,青铜碗满
+132=0,ReplaceableTextures\CommandButtons\BTNBronzeBowl.blp,青铜碗
+133=0,ReplaceableTextures\PassiveButtons\PASBTNBattleRoar.blp,战斗咆哮(Passive)
+134=0,ReplaceableTextures\CommandButtons\BTNBarkSkinOff.blp,树皮术(Off)
+135=0,ReplaceableTextures\CommandButtons\BTNAvengingAssassin.blp,复仇刺客
+136=0,ReplaceableTextures\CommandButtons\BTNAuraOfDarkness.blp,黑暗光环
+137=0,ReplaceableTextures\CommandButtons\BTNAttackGround.blp,攻击地面
+138=0,ReplaceableTextures\CommandButtons\BTNAttack.blp,攻击
+139=0,ReplaceableTextures\CommandButtons\BTNAdvStruct.blp,高级建筑
+140=0,ReplaceableTextures\CommandButtons\BTNAncestralStaff.blp,先祖法杖
+141=0,ReplaceableTextures\CommandButtons\BTNAssassinsBlade.blp,刺客之刃
+142=0,ReplaceableTextures\CommandButtons\BTNAvengingAssassinOff.blp,复仇刺客(Off)
+143=0,ReplaceableTextures\CommandButtons\BTNBladebaneArmor.blp,克刃护甲
+144=0,ReplaceableTextures\CommandButtons\BTNBlood&GhostKey.blp,血与魂之钥
+145=0,ReplaceableTextures\CommandButtons\BTNDrektharsSpellbook.blp,德雷克塔尔之书
+146=0,ReplaceableTextures\CommandButtons\BTNFireGauntlets.blp,火焰护手
+147=0,ReplaceableTextures\CommandButtons\BTNFrostguard.blp,冰霜卫士
+148=0,ReplaceableTextures\CommandButtons\BTNKillmaim.blp,杀戮残废
+149=0,ReplaceableTextures\CommandButtons\BTNMindstaff.blp,心灵权杖
+150=0,ReplaceableTextures\CommandButtons\BTNPhatLewt.blp,丰厚战利品
+151=0,ReplaceableTextures\CommandButtons\BTNRunedGauntlets.blp,符文护手
+152=0,ReplaceableTextures\CommandButtons\BTNRustyMiningPick.blp,锈蚀矿镐
+153=0,ReplaceableTextures\CommandButtons\BTNSacredRelic.blp,神圣遗物
+154=0,ReplaceableTextures\CommandButtons\BTNScepterOfTheSea.blp,海洋权杖
+155=0,ReplaceableTextures\CommandButtons\BTNSerathil.blp,塞拉希尔
+156=0,ReplaceableTextures\CommandButtons\BTNShamanClaws.blp,萨满之爪
+157=0,ReplaceableTextures\CommandButtons\BTNShimmerglazeRoast.blp,闪光烤肉
+158=0,ReplaceableTextures\CommandButtons\BTNSturdyWarAxe.blp,坚固战斧
+159=0,ReplaceableTextures\CommandButtons\BTNThunderLizardDiamond.blp,雷蜥钻石
+160=0,ReplaceableTextures\CommandButtons\BTNGloveOfSpellMastery.blp,法术精通手套
+161=0,ReplaceableTextures\CommandButtons\BTNGemFragment.blp,宝石碎片
+162=0,ReplaceableTextures\CommandButtons\BTNAirAttackON.blp,对空攻击(On)
+163=0,ReplaceableTextures\CommandButtons\BTNAirAttackOFF.blp,对空攻击(Off)
+164=0,ReplaceableTextures\CommandButtons\BTNEnchantedCrows.blp,猛禽之印
+165=0,ReplaceableTextures\CommandButtons\BTNEnchantedVial.blp,附魔小瓶
+166=0,ReplaceableTextures\CommandButtons\BTNEssenceOfAszune.blp,艾苏恩精华
+167=0,ReplaceableTextures\CommandButtons\BTNFlaregun.blp,信号枪
+168=0,ReplaceableTextures\CommandButtons\BTNFlute.blp,长笛
+169=0,ReplaceableTextures\CommandButtons\BTNGrimoireOfSouls.blp,灵魂魔典
+170=0,ReplaceableTextures\CommandButtons\BTNHelmOfBattlethirst.blp,战斗渴望头盔
+171=0,ReplaceableTextures\CommandButtons\BTNJainaNote.blp,吉安娜的书信
+172=0,ReplaceableTextures\CommandButtons\BTNKegOfThunderwater.blp,雷鸣水桶
+173=0,ReplaceableTextures\CommandButtons\BTNMogrinsReport.blp,莫格林的报告
+174=0,ReplaceableTextures\CommandButtons\BTNOrbOfKiljaeden.blp,基尔加丹之球
+175=0,ReplaceableTextures\CommandButtons\BTNRejuvPotion.blp,回春药水(Campaign)
+176=0,ReplaceableTextures\CommandButtons\BTNRingOfTheArchmagi.blp,大法师之戒
+177=0,ReplaceableTextures\CommandButtons\BTNScepterOfHealing.blp,治疗权杖
+178=0,ReplaceableTextures\CommandButtons\BTNScrollUber.blp,高级卷轴
+179=0,ReplaceableTextures\CommandButtons\BTNSearingBlade.blp,灼热之刃
+180=0,ReplaceableTextures\CommandButtons\BTNShadowOrbFragment.blp,暗影宝珠碎片
+181=0,ReplaceableTextures\CommandButtons\BTNShieldOfDeathlord.blp,死亡领主之盾
+182=0,ReplaceableTextures\CommandButtons\BTNShieldOfHonor.blp,荣誉之盾
+183=0,ReplaceableTextures\CommandButtons\BTNSkeletalArtifact.blp,骸骨神器
+184=0,ReplaceableTextures\CommandButtons\BTNSkeletonMinion.blp,骷髅仆从
+185=0,ReplaceableTextures\CommandButtons\BTNSkullShield.blp,骷髅盾
+186=0,ReplaceableTextures\CommandButtons\BTNThickFur.blp,厚毛皮
+187=0,ReplaceableTextures\PassiveButtons\PASBTNThickFur.blp,厚毛皮(Passive)
+188=0,ReplaceableTextures\CommandButtons\BTNThunderBloomBulb.blp,雷鸣花球茎
+189=0,ReplaceableTextures\CommandButtons\BTNTomeOfAgility.blp,敏捷之书
+190=0,ReplaceableTextures\CommandButtons\BTNTomeOfIntelligence.blp,智力之书
+191=0,ReplaceableTextures\CommandButtons\BTNTomeOfPower.blp,威力之书
+192=0,ReplaceableTextures\CommandButtons\BTNTomeOfSacrifices.blp,牺牲之书
+193=0,ReplaceableTextures\CommandButtons\BTNTomeOfStrength.blp,力量之书
+194=0,ReplaceableTextures\CommandButtons\BTNTotemOfMight.blp,力量图腾
+195=0,ReplaceableTextures\CommandButtonsDisabled\BTNDevotion 1.blp,奉献 1
+196=0,ReplaceableTextures\CommandButtonsDisabled\BTNDevotion 2.blp,奉献 2
+197=0,ReplaceableTextures\CommandButtons\BTNSunderingBlades.blp,裂甲之刃
+198=0,ReplaceableTextures\CommandButtons\BTNStaffOfPreservation2.blp,保全法杖
+199=0,ReplaceableTextures\CommandButtons\BTNStaffOfPurification.blp,净化法杖 1
+200=0,ReplaceableTextures\CommandButtons\BTNStaffOfReanimation.blp,复生法杖
+201=0,ReplaceableTextures\CommandButtons\BTNStasisTrapSkill.blp,静滞陷阱
+202=0,ReplaceableTextures\CommandButtons\BTNHolyWater.blp,圣水
+203=0,ReplaceableTextures\CommandButtons\BTNSteamTank.blp,蒸汽坦克
+204=0,ReplaceableTextures\CommandButtons\BTNBTNStaffOfPurification.blp,净化法杖 2
+205=0,ReplaceableTextures\CommandButtons\BTNAkama.blp,阿卡玛
+206=0,ReplaceableTextures\CommandButtons\BTNEntangleMine.blp,纠缠矿洞
+207=0,ReplaceableTextures\CommandButtons\BTNGyrocopter.blp,飞行机器
+208=0,ReplaceableTextures\CommandButtons\BTNHeroLich.blp,巫妖
+209=0,ReplaceableTextures\CommandButtons\BTNHydra.blp,九头蛇
+210=0,ReplaceableTextures\CommandButtons\BTNImpalingBolt.blp,穿刺之箭
+211=0,ReplaceableTextures\CommandButtons\BTNManual2.blp,手册
+212=0,ReplaceableTextures\CommandButtons\BTNMarine.blp,陆战队员
+213=0,ReplaceableTextures\CommandButtons\BTNQuillbeastGod.blp,豪猪之神
+214=0,ReplaceableTextures\CommandButtons\BTNTuskaarNomad.blp,巨魔游牧者
+215=0,ReplaceableTextures\PassiveButtons\PASBTNRegenerate.blp,再生(Passive)
+216=0,ReplaceableTextures\CommandButtons\glyph.blp,雕文
+217=0,ReplaceableTextures\CommandButtons\Charm.blp,魅惑
+// ---- 界面图片 UI images ----
+218=1,ui\console\reforged\ui-paperdoll-slot-chest.dds,纸娃娃槽位 - 胸甲
+219=1,ui\console\reforged\ui-paperdoll-slot-feet.dds,纸娃娃槽位 - 靴子
+220=1,ui\console\reforged\ui-paperdoll-slot-finger.dds,纸娃娃槽位 - 戒指
+221=1,ui\console\reforged\ui-paperdoll-slot-hands.dds,纸娃娃槽位 - 手套
+222=1,ui\console\reforged\ui-paperdoll-slot-head.dds,纸娃娃槽位 - 头部
+223=1,ui\console\reforged\ui-paperdoll-slot-legs.dds,纸娃娃槽位 - 腿部
+224=1,ui\console\reforged\ui-paperdoll-slot-mainhand.dds,纸娃娃槽位 - 主手
+225=1,ui\console\reforged\ui-paperdoll-slot-neck.dds,纸娃娃槽位 - 颈部
+226=1,ui\console\reforged\ui-paperdoll-slot-relic.dds,纸娃娃槽位 - 遗物
+227=1,ui\console\reforged\ui-paperdoll-slot-secondaryhand.dds,纸娃娃槽位 - 副手
+228=1,ui\console\reforged\ui-paperdoll-slot-shoulder.dds,纸娃娃槽位 - 肩部
+229=1,ui\console\reforged\ui-paperdoll-slot-trinket.dds,纸娃娃槽位 - 饰品
+230=1,ui\console\reforged\ui-paperdoll-slot-waist.dds,纸娃娃槽位 - 腰部
+231=0,UI\Feedback\Resources\ResourceManaStone.blp,资源图标 - 魔法石
+232=0,UI\Feedback\Resources\ResourceNightElf.blp,资源图标 - 暗夜精灵
+233=0,UI\Feedback\Resources\ResourceHuman.blp,资源图标 - 人类
+234=0,UI\Feedback\Resources\ResourceOrc.blp,资源图标 - 兽人
+235=0,UI\Feedback\Resources\ResourceSupply.blp,资源图标 - 人口
+236=0,UI\Feedback\Resources\ResourceUndead.blp,资源图标 - 亡灵
+
+[ExtraModels]
+000=0,Objects\StartLocation\StartLocation,开始点
+001=0,Objects\InvalidObject\InvalidObject,紫色方块
+002=0,Objects\Invalidmodel\Invalidmodel,绿色方块
+003=0,Objects\CameraHelper\CameraHelper,镜头对象
+004=0,Objects\RandomObject\RandomObject,问号
+005=0,Abilities\Spells\Other\TalkToMe\TalkToMe,感叹号
+//#LINENOBETA
+006=1,Units\NightElf\MalFurion\MalFurionNoStag,没有坐骑的玛法里奥
+//#LINENOBETA
+007=1,Doodads\Cinematic\ArthasIllidanFight\ArthasIllidanFight,电影场景 阿尔萨斯vs伊利丹
+//#LINENOBETA
+008=1,Doodads\Cinematic\IllidanVictoryCinematic\IllidanVictoryCinematic,电影模型 伊利丹
+009=1,Objects\InventoryItems\Rune\Rune,符文石
+
+// ---- 单位 Units ----
+010=1,units\creeps\darkhound\darkhound,黑暗猎犬
+011=1,units\creeps\maggot\maggot,蛆虫
+012=1,units\creeps\plaguebear\plaguebear,瘟疫熊
+013=1,units\forsaken\heroleonid\heroleonidscourge,莱昂尼德(天灾形态)
+014=1,units\forsaken\lexington\lexington,列克星敦
+015=1,units\human\herolordmaxwellsilverhand\herolordmaxwellsilverhand,麦克斯韦·银手领主
+016=1,units\human\heropaladinvariant\heropaladinvariant,圣骑士(Variant)
+017=1,units\human\herorenaultmograine\herorenaultmograineboss,雷诺·莫格莱尼(首领)
+018=1,units\human\priestwhite\priest_white,牧师(White)
+019=1,units\human\scarletinvoker\scarletinvokerhero,猩红召唤师(英雄)
+020=1,units\human\scarletknight\scarletknighthero,猩红骑士(英雄)
+021=1,units\other\carriage\carriage,马车
+022=1,units\other\fleshgolemboss\fleshgolemboss,憎恶首领
+023=1,units\other\goblincart\goblincart,地精推车
+024=1,units\other\goblincart\wheelbl,地精推车车轮(左后)
+025=1,units\other\goblincart\wheelbr,地精推车车轮(右后)
+026=1,units\other\goblincart\wheelfl,地精推车车轮(左前)
+027=1,units\other\goblincart\wheelfr,地精推车车轮(右前)
+028=1,units\other\goblincrowd\goblincrowd0,地精人群 0
+029=1,units\other\goblincrowd\goblincrowd1,地精人群 1
+030=1,units\other\scarletcannon\scarletcannon,猩红加农炮
+031=1,units\undead\banshee\bansheeboss,女妖首领
+032=1,units\undead\cultbruteclub\cultbruteclub,狂热者(蛮力棒)
+033=1,units\undead\cultzealot\cultzealot,狂热信徒
+034=0,Buildings\Other\TempArtB\TempArtB,临时美术模型 B
+035=0,Buildings\Other\WyvernCage3\WyvernCage3,双足飞龙笼 3
+036=0,Buildings\Other\WyvernCage4\WyvernCage4,双足飞龙笼 4
+037=0,Buildings\Undead\GargoyleSpire\GargoyleSpire,石像鬼尖塔
+038=0,SharedModels\IllidanImprisoned,被囚禁的伊利丹
+039=0,Units\Creeps\EngineerGazlowe\EngineerGazlowe,工程师加兹鲁维
+040=0,Units\Creeps\Marinnoggenfogger\Marinnoggenfogger,马林·诺格弗格
+041=0,Units\NightElf\CenariusNightmare\CenariusNightmare,塞纳留斯(梦魇形态)
+042=0,Units\NightElf\Owl\Owl,猫头鹰
+043=0,Units\Creeps\BloodElfEngineer\BloodElfEngineer,血精灵工程师
+044=0,Units\Creeps\Jennalla\Jennalla,珍娜拉
+045=0,Units\Creeps\NeutralBallista\NeutralBallista,中立弩炮
+046=0,Units\Creeps\NeutralCatapult\NeutralCatapult,中立投石车
+047=0,Units\Creeps\TempArt\TempArt,临时美术模型
+048=0,Units\Creeps\Volcanus\Volcanus,伏尔卡努斯
+049=0,Units\Creeps\WarCart\WarCart,战车
+050=0,Units\Critters\BloodElfPeasant\BloodElfPeasant,血精灵农民
+051=0,Units\Human\HighElfSwordsman\HighElfSwordsman_V1,高等精灵剑士
+052=0,Units\Human\JainaSea\JainaSea,吉安娜(海)
+053=0,Units\Human\Priest\Priest,牧师
+054=0,Units\Human\Sorceress\Sorceress,女巫
+055=0,Units\NightElf\HeroFemaleDemonHunter\HeroDemonHunter,英雄恶魔猎人
+056=0,Units\NightElf\HeroFemaleDemonHunter\HeroFemaleDemonHunter,英雄女性恶魔猎人
+057=0,Units\Nightelf\MaievAvatar\MaievAvatar,玛维化身
+058=0,Units\Nightelf\NightElfFishingBoat\NightElfFishingBoat,暗夜精灵渔船
+059=0,Units\Orc\AncestralGuardian\AncestralGuardian,先祖守护者
+060=0,Units\Orc\OrcWarlord\OrcWarlord,兽人军阀
+061=0,Units\Orc\ThrallChampion\ThrallChampion,萨尔勇士
+062=0,Units\Other\AnasterianSunstrider\AnasterianSunstrider,阿纳斯塔里安·逐日者
+063=0,Units\Other\DiabloCar\DiabloCar,暗黑战车
+064=0,Units\Other\DwarfCar\DwarfCar,矮人战车
+065=0,Units\Other\HighElfArchMage\HighElfArchMage,高等精灵大法师
+066=0,Units\Other\HighElfRunner\HighElfRunner,高等精灵信使
+067=0,Units\Other\IllidanWagon\IllidanWagon,伊利丹车
+068=0,Units\Other\JennallaDeemspring\JennallaDeemspring,珍娜拉·迪姆斯普林
+069=0,Units\Other\OrcCar\OrcCar,兽人战车
+070=0,Units\Other\ThalorienDawnseeker\ThalorienDawnseeker,萨洛里恩·曙光追寻者
+071=0,Units\Other\UndeadCar\UndeadCar,亡灵战车
+072=0,Units\Undead\EvilArthasMountless\EvilArthasMountless,邪恶阿尔萨斯(无坐骑)
+073=0,Units\Undead\FallenKingArthas\FallenKingArthas,堕落的阿尔萨斯
+074=0,Units\Undead\HeroFemaleDeathKnight\HeroFemaleDeathKnight,英雄女性死亡骑士
+075=0,SharedModels\EntangleWisp,纠缠小精灵
+076=0,units\human\WarWagon\WarWagon,战争机器
+077=0,Units\Creeps\BurningArcher\BurningArcher,燃烧弓箭手
+078=0,Units\NightElf\Ballista\Ballista,弩炮
+079=0,Units\Demon\ChaosOrcRange\ChaosOrcRange,混乱兽人(远程)
+080=0,units\human\Gyrocopter\Gyrocopter,飞行机器
+081=0,Units\Orc\Catapult\Catapult,投石车
+082=0,Units\Creeps\MurlocFlesheater\MurlocFlesheater,食肉鱼人
+083=0,Units\Creeps\MurlocWarrior\MurlocWarrior,鱼人战士
+084=0,units\creeps\MurlocMutant\MurlocMutant,变异鱼人
+085=0,units\creeps\MurlocNightcrawler\MurlocNightcrawler,夜行鱼人
+086=0,units\creeps\Murloc\Murloc,鱼人
+// ---- 物品/装备 Items ----
+087=1,doodads\undercity\props\corpse\corpse2,尸体 2
+088=1,objects\inventoryitems\abominationhead\abominationhead,憎恶的头颅
+089=1,objects\inventoryitems\bagitem\bagitem,背包
+090=1,objects\inventoryitems\treasurechest\treasurechestblue,宝箱(蓝)
+091=1,objects\inventoryitems\treasurechest\treasurechestgold,宝箱(金)
+092=1,objects\inventoryitems\treasurechest\treasurechestgreen,宝箱(绿)
+093=1,objects\inventoryitems\treasurechest\treasurechestgrey,宝箱(灰)
+094=1,objects\inventoryitems\treasurechest\treasurechestpurple,宝箱(紫)
+095=1,objects\inventoryitems\itemboots\itemboots,靴子(队伍染色)
+096=1,objects\inventoryitems\itemboots\itemboots4,靴子(强光)
+097=1,objects\inventoryitems\itemchest\itemchest,胸甲(队伍染色)
+098=1,objects\inventoryitems\itemchest\itemchest4,胸甲(强光)
+099=1,objects\inventoryitems\itemgloves\itemgloves,手套(队伍染色)
+100=1,objects\inventoryitems\itemgloves\itemgloves4,手套(强光)
+101=1,objects\inventoryitems\itemhelmet\itemhelmet,头盔(队伍染色)
+102=1,objects\inventoryitems\itemhelmet\itemhelmet4,头盔(强光)
+103=1,objects\inventoryitems\itemoffhand\itemoffhand,副手(队伍染色)
+104=1,objects\inventoryitems\itemring\itemring,戒指(队伍染色)
+105=1,objects\inventoryitems\itemring\itemring4,戒指(强光)
+106=1,objects\inventoryitems\itemtrinket\itemtrinket,饰品(队伍染色)
+107=1,objects\inventoryitems\itemweapon\itemweapon,武器(队伍染色)
+108=1,objects\inventoryitems\treasurechest\treasurechesttg1,队伍染色宝箱 1
+109=1,objects\inventoryitems\treasurechest\treasurechesttg2,队伍染色宝箱 2
+110=1,objects\inventoryitems\treasurechest\treasurechesttg3,队伍染色宝箱 3
+111=1,objects\inventoryitems\treasurechest\treasurechesttg4,队伍染色宝箱 4
+112=1,objects\inventoryitems\treasurechest\treasurechesttg5,队伍染色宝箱 5
+113=0,Objects\InventoryItems\BundleofGifts\BundleofGifts,礼物包
+114=0,Objects\InventoryItems\ThunderbloomBulb\ThunderbloomBulb,雷鸣花球茎
+// ---- 装饰物 Doodads ----
+115=1,doodads\ashenvale\props\scorchedremains\scorchedremains3,焦黑残骸 3
+116=1,doodads\cinematic\arcaneportal\arcaneportalblue,奥术传送门蓝
+117=1,doodads\cinematic\arcaneportal\arcaneportalcosmic,奥术传送门宇宙
+118=1,doodads\cinematic\arcaneportal\arcaneportalcyber,奥术传送门赛博
+119=1,doodads\cinematic\arcaneportal\arcaneportalgold,奥术传送门金
+120=1,doodads\cinematic\arcaneportal\arcaneportalgreen,奥术传送门绿
+121=1,doodads\cinematic\arcaneportal\arcaneportalpurple,奥术传送门紫
+122=1,doodads\cinematic\arcaneportal\arcaneportalred,奥术传送门红
+123=1,doodads\cinematic\fuserope\fuserope,引信绳
+124=1,doodads\cinematic\garithosabomination_pieces\garithosabomination_pieces,加瑞索斯憎恶碎片
+125=1,doodads\cinematic\goblinblimp\goblinblimp,地精飞艇
+126=1,doodads\cinematic\scarletmonastery\scarletmonastery,猩红修道院
+127=1,doodads\cinematic\shadowblocker\shadowblocker1,阴影遮挡物 1
+128=1,doodads\cinematic\shadowblocker\shadowblocker2,阴影遮挡物 2
+129=1,doodads\cinematic\shadowblocker\shadowblocker3,阴影遮挡物 3
+130=1,doodads\cinematic\shadowblocker\shadowblocker4,阴影遮挡物 4
+131=1,doodads\cinematic\shadowblocker\shadowblocker5,阴影遮挡物 5
+132=1,doodads\cinematic\shadowblocker\shadowblocker6,阴影遮挡物 6
+133=1,doodads\cityscape\structures\cityalonsuschapel\cityalonsuschapeltc,阿隆努斯教堂队伍染色
+134=1,doodads\cityscape\structures\modularhouse\modularhouse10,模块化房屋 10
+135=1,doodads\cityscape\structures\modularhouse\modularhouse11,模块化房屋 11
+136=1,doodads\cityscape\structures\modularhouse\modularhouse12,模块化房屋 12
+137=1,doodads\cityscape\structures\modularhouse\modularhouse13,模块化房屋 13
+138=1,doodads\cityscape\structures\modularhouse\modularhouse14,模块化房屋 14
+139=1,doodads\dungeon\props\minewall\minewall,矿洞墙
+140=1,doodads\dungeon\props\orcaxe\orcaxe,兽人斧
+141=1,doodads\dungeon\terrain\cocoon\cocoon0,茧 0
+142=1,doodads\dungeon\terrain\cocoon\cocoon1,茧 1
+143=1,doodads\dungeon\terrain\cocoon\cocoon2,茧 2
+144=1,doodads\dungeon\terrain\cocoon\cocoon3,茧 3
+145=1,doodads\dungeon\terrain\eggsack\eggsackweb0,卵囊网 0
+146=1,doodads\dungeon\terrain\eggsack\eggsackweb1,卵囊网 1
+147=1,doodads\icecrown\terrain\icecrownrounddoor\icecrownrounddoor1,冰冠圆形门 1
+148=1,doodads\icecrown\terrain\icecrownrounddoor\icecrownrounddoor2,冰冠圆形门 2
+149=1,doodads\icecrown\terrain\icecrownrounddoor\icecrownrounddoor3,冰冠圆形门 3
+150=1,doodads\lordaeroncapital\props\scaffoldings\scaffoldings9,脚手架 9
+151=1,doodads\lordaeroncapital\structures\largeplane\largeplane,大型平面
+152=1,doodads\lordaeroncapital\structures\palacepillar\palacepillar2,宫殿立柱 2
+153=1,doodads\lordaeroncapital\structures\palacewallstatue\palacewallstatue2,宫殿墙雕像 2
+154=1,doodads\lordaeroncapital\structures\stairmodular\stairmodular3,模块化楼梯 3
+155=1,doodads\lordaeronfall\props\plankboard\plankboard,木板
+156=1,doodads\lordaeronfall\props\pumpkin\pumpkin,南瓜
+157=1,doodads\lordaeronsummer\props\cage\cage2,笼子 2
+158=1,doodads\lordaeronsummer\props\cage\cage3,笼子 3
+159=1,doodads\lordaeronsummer\props\miscprops\miscprops3,杂项道具 3
+160=1,doodads\lordaeronsummer\props\miscprops\miscprops4,杂项道具 4
+161=1,doodads\lordaeronsummer\props\miscprops\miscprops7,杂项道具 7
+162=1,doodads\lordaeronsummer\props\peltrack\peltrack,踏板轨道
+163=1,doodads\ruins\props\crow\crow,乌鸦
+164=1,doodads\terrain\cliffdoodad\waterfall\waterfallnomist,瀑布无雾
+165=1,doodads\terrain\invisplatform\invisplatform,隐形平台
+166=1,doodads\terrain\invisplatform\invisplatformhelper,隐形平台辅助
+167=1,doodads\terrain\stratholmebridgeextralarge90\stratholmebridgeextralarge90var,斯坦索姆大桥超大 90变体
+168=1,doodads\undercity\props\crypttomb\crypttomb,地穴墓穴
+169=1,doodads\undercity\props\ironcoffin\ironcoffin0,铁棺 0
+170=1,doodads\undercity\props\ironcoffin\ironcoffin1,铁棺 1
+171=1,doodads\undercity\structures\undercitybridge_a\undercitybridge_a1,幽暗城桥梁 1
+172=1,doodads\undercity\structures\undercitycircularelevator\undercitycircularelevator,幽暗城圆形升降梯
+173=1,doodads\undercity\structures\undercitycircularelevator\undercitycircularelevatorinvisible,幽暗城隐形升降梯
+174=1,doodads\undercity\structures\undercitytrapfloor\undercitytrapfloor0,幽暗城陷阱地板 0
+175=1,doodads\undercity\structures\undercitytrapfloor\undercitytrapfloor1,幽暗城陷阱地板 1
+176=1,doodads\undercity\structures\undercitytrapfloor\undercitytrapfloor2,幽暗城陷阱地板 2
+177=1,doodads\undercity\terrain\spiderwebgate45\spiderwebgate45,蜘蛛网门 45
+178=1,doodads\undercity\terrain\spiderwebgate\spiderwebgate,蜘蛛网门
+179=1,doodads\undercity\terrain\undercitybridge45\undercitybridge45,幽暗城桥梁 45
+180=1,doodads\undercity\terrain\undercitybridge90\undercitybridge90,幽暗城桥梁 90
+181=1,doodads\underground\rocks\undergroundsimplerock\undergoundsimplerock0,简易岩石 0
+182=1,doodads\underground\rocks\undergroundsimplerock\undergoundsimplerock1,简易岩石 1
+183=1,doodads\underground\rocks\undergroundsimplerock\undergoundsimplerock2,简易岩石 2
+184=1,doodads\underground\rocks\undergroundsimplerock\undergoundsimplerock3,简易岩石 3
+185=1,doodads\underground\rocks\undergroundsimplerock\undergoundsimplerock4,简易岩石 4
+186=1,doodads\underground\rocks\undergroundsimplerock\undergoundsimplerock5,简易岩石 5
+187=1,doodads\underground\rocks\undergroundsimplerock\undergoundsimplerock6,简易岩石 6
+188=1,doodads\underground\rocks\undergroundsimplerock\undergoundsimplerock7,简易岩石 7
+189=1,doodads\underground\rocks\undergroundsimplerock\undergoundsimplerock8,简易岩石 8
+190=1,doodads\underground\rocks\undergroundsimplerock\undergoundsimplerock9,简易岩石 9
+191=1,objects\spawnmodels\other\wolffootprintdecal\wolffootprintdecal,狼足迹贴花
+192=0,Buildings\Other\Frostmourne\Preview\Frostmourne_Arthas,霜之哀伤(阿尔萨斯)
+193=0,Doodads\Cityscape\Structures\MoreCityBuilding\MoreCitybuilding0,城市建筑 0
+194=0,Doodads\Cityscape\Structures\MoreCityBuilding\MoreCitybuilding1,城市建筑 1
+195=0,Doodads\Cityscape\Structures\MoreCityBuilding\MoreCitybuilding10,城市建筑 10
+196=0,Doodads\Cityscape\Structures\MoreCityBuilding\MoreCitybuilding8,城市建筑 8
+197=0,Doodads\Cityscape\Structures\MoreCityBuilding\MoreCitybuilding9,城市建筑 9
+198=0,Doodads\LordaeronFall\Structures\LordaeronWall90\LordaeronWall90,洛丹伦城墙 90°
+199=0,Doodads\LordaeronFall\Structures\LordaeronWallStraightLong\LordaeronWallStraightLong,洛丹伦城墙(长直)
+200=0,Doodads\LordaeronFall\Structures\LordaeronWallStraightShort\LordaeronWallStraightShort,洛丹伦城墙(短直)
+201=0,Doodads\LordaeronFall\Structures\LordaeronWallStraight\LordaeronWallStraight,洛丹伦城墙(直)
+202=0,Doodads\LordaeronFall\Structures\LordaeronWall_T\LordaeronWall_T,洛丹伦城墙(T形)
+203=0,Doodads\LordaeronSummer\Structures\BridgeLog\BridgeLog,木桥
+204=0,Doodads\Northrend\Structures\AncientZiggurat\AncientZiggurat0,远古通灵塔 0
+205=0,Doodads\Northrend\Structures\AncientZiggurat\AncientZiggurat1,远古通灵塔 1
+206=0,Doodads\Terrain\G_RockChunks\G_RockChunks0,岩石碎块 0
+207=0,Doodads\Terrain\G_RockChunks\G_RockChunks1,岩石碎块 1
+208=0,Doodads\Terrain\G_RockChunks\G_RockChunks2,岩石碎块 2
+209=0,Doodads\Terrain\G_RockChunks\G_RockChunks3,岩石碎块 3
+210=0,Doodads\Terrain\G_RockChunks\G_RockChunks4,岩石碎块 4
+211=0,Doodads\Terrain\G_RockChunks\G_RockChunks5,岩石碎块 5
+212=0,Doodads\Dungeon\Structures\PorticulisWallEndCap\PorticulisWallEndCap,闸门墙端盖
+213=0,Doodads\Ruins\Plants\Ruins_Rush\Ruins_Rush2,废墟灯心草 2
+214=0,Doodads\Ruins\Plants\Ruins_Rush\Ruins_Rush3,废墟灯心草 3
+215=0,Doodads\Ruins\Plants\Ruins_Shrub\Ruins_Shrub3,废墟灌木 3
+216=0,Doodads\Ruins\Plants\Ruins_Shrub\Ruins_Shrub4,废墟灌木 4
+217=0,Doodads\Underground\Structures\GPorticulisWallEndCap\GPorticulisWallEndCap,闸门墙端盖(Underground)
+218=0,Doodads\LordaeronSummer\Structures\LordaeronBridge\LordaeronBridge,洛丹伦桥梁
+219=0,Doodads\Ashenvale\Structures\PillarsRuined\PillarsRuined,残破石柱
+220=0,Doodads\LordaeronSummer\Structures\CityBridgeSmall\CityBridgeSmall,城市小桥
+221=0,Doodads\LordaeronSummer\Plants\GrassTuft\GrassTuft0,草丛 0
+222=0,Doodads\LordaeronSummer\Plants\GrassTuft\GrassTuft1,草丛 1
+223=0,Doodads\LordaeronSummer\Plants\GrassTuft\GrassTuft2,草丛 2
+224=0,Doodads\LordaeronSummer\Plants\GrassTuft\GrassTuft3,草丛 3
+225=0,Doodads\Cityscape\Structures\Morecitybuilding\MoreCitybuilding2,城市建筑 2
+226=0,Doodads\Cityscape\Structures\Morecitybuilding\MoreCitybuilding3,城市建筑 3
+227=0,Doodads\Cityscape\Structures\Morecitybuilding\MoreCitybuilding4,城市建筑 4
+228=0,Doodads\LordaeronSummer\Water\ShorelineWave\ShorelineWave0,岸线波浪 0
+229=0,Doodads\LordaeronSummer\Water\ShorelineWave\ShorelineWave1,岸线波浪 1
+230=0,Environment\Sky\Sky\SkyLight,天空光
+231=0,Doodads\LordaeronSummer\Props\Signpost\Signpost0,路标 0
+// ---- 技能特效 Spell effects ----
+232=1,abilities\spells\human\bash\bashtarget,重击目标
+233=1,abilities\spells\human\heavensgaze\heavensgaze,天堂之眼
+234=1,abilities\spells\human\kingsguardaura\kingsguardaura,王者护卫光环
+235=1,abilities\spells\human\radiance\radiancetarget,光辉目标
+236=1,abilities\spells\human\surgeoflight\surgeoflighthands,光涌双手
+237=1,abilities\spells\human\surgeoflight\surgeoflightpassive,光涌被动
+238=1,abilities\spells\human\thunderclap\holythunderclapcaster,神圣雷霆一击(施法者)
+239=1,abilities\spells\orc\bladestorm\bladestormtarget,剑刃风暴目标
+240=1,abilities\spells\orc\criticalstrike\criticalstriketarget,致命一击目标
+241=1,abilities\spells\other\breathoffrost\breathoffrostfiremissile,冰火呼吸导弹
+242=1,abilities\spells\other\cleave\cleavedamagehuman,人类顺劈
+243=1,abilities\spells\other\divinedisc\divinedisc,神圣圆盘
+244=1,abilities\spells\other\divinedisc\divinedischands,神圣圆盘双手
+245=1,abilities\spells\other\heroglow\heroglow,英雄光辉 1
+246=1,abilities\spells\other\impacts\impactdirt,泥土撞击
+247=1,abilities\spells\other\impacts\impactgrass,草地撞击
+248=1,abilities\spells\other\impacts\impactmetal,金属撞击
+249=1,abilities\spells\other\impacts\impactstone,石头撞击
+250=1,abilities\spells\other\impacts\impactwater,水面撞击
+251=1,abilities\spells\other\impacts\impactwood,木材撞击
+252=1,abilities\spells\other\mindcontrol\mindcontroltarget,精神控制目标
+253=1,abilities\spells\other\renault\chargefire,冲锋火焰
+254=1,abilities\spells\other\renault\consecration,奉献
+255=1,abilities\spells\other\renault\firenova,火焰新星
+256=1,abilities\spells\other\renault\judgementmark,审判印记
+257=1,abilities\spells\other\renault\judgementtarget,审判目标
+258=1,abilities\spells\other\renault\pillaroflight,光柱
+259=1,abilities\spells\other\renault\renaultspell,雷诺法术
+260=1,abilities\spells\other\renault\smitecircle,惩击法阵
+261=1,abilities\spells\other\renault\smitetarget,惩击目标
+262=1,abilities\spells\other\repair\repairhammer,修理锤
+263=1,abilities\spells\other\repair\repairwrench,修理扳手
+264=1,abilities\spells\other\reward\reward,奖励
+265=1,abilities\spells\other\sacredaegis\sacredaegis,神圣庇护
+266=1,abilities\spells\other\sacreddome\sacreddome,神圣穹顶
+267=1,abilities\spells\other\soulorbs\orbtg,队伍染色光球
+268=1,abilities\spells\other\spellmarker\spellarrowgold,金法术箭
+269=1,abilities\spells\other\spellmarker\spellarrowgreen,绿法术箭
+270=1,abilities\spells\other\spellmarker\spellarrowred,红法术箭
+271=1,abilities\spells\other\spellmarker\spellarrowwhite,白法术箭
+272=1,abilities\spells\other\spellmarker\spellmarkercone,锥形法术标记
+273=1,abilities\spells\other\spellmarker\spellmarkerconegold,金锥形法术标记
+274=1,abilities\spells\other\spellmarker\spellmarkergold,金法术标记
+275=1,abilities\spells\other\spellmarker\spellmarkergreen,绿法术标记
+276=1,abilities\spells\other\spellmarker\spellmarkerred,红法术标记
+277=1,abilities\spells\other\spellmarker\spellmarkershatteredred,碎裂红法术标记
+278=1,abilities\spells\other\spellmarker\spellmarkershatteredwhite,碎裂白法术标记
+279=1,abilities\spells\other\spellmarker\spellmarkerwhite,白法术标记
+280=1,abilities\spells\other\stampede\stampedeimpactdust,惊奔烟尘
+281=1,abilities\spells\other\thrusters\thrusterorange,橙色推进器
+282=1,abilities\spells\other\unstoppable\unstoppabletarget,不可阻挡目标
+283=1,abilities\spells\undead\bloodexplosion\bloodexplosion,鲜血爆炸
+284=1,abilities\spells\undead\consummation\consummationcaster,献祭施法者
+285=1,abilities\spells\undead\cultistflame\cultistflameembers,狂热者火焰余烬
+286=1,abilities\spells\undead\darkhorizon\darkhorizoncaster,黑暗地平线施法者
+287=1,abilities\spells\undead\darkhorizon\darkhorizoncasterred,黑暗地平线施法者红
+288=1,abilities\spells\undead\grimconviction\grimconvictionheal,冷酷信念治疗
+289=1,abilities\spells\undead\minddeath\mindcontroldeath,精神控制死亡
+290=1,abilities\spells\undead\relentlesscleave\relentlesscleavebleed,无情顺劈流血
+291=1,abilities\spells\undead\shadownova\shadownova,暗影新星
+292=1,abilities\spells\undead\witheringfire\witheringfireimpact,凋零之火撞击
+293=1,doodads\cinematic\energyfield\energyfieldholy,神圣能量场
+294=1,doodads\cinematic\firewall\firewall,火焰墙
+295=1,doodads\cinematic\firewall\firewall45,火焰墙 45
+296=1,doodads\cinematic\firewall\firewallgreen,绿色火焰墙
+297=1,doodads\cinematic\firewall\firewallgreen45,绿色火焰墙 45
+298=1,doodads\cinematic\firewall\firewallgreen45mini,绿色火焰墙 45小型
+299=1,doodads\cinematic\firewall\firewallgreenmini,小型绿色火焰墙
+300=1,doodads\cinematic\firewall\firewall45mini,火焰墙 45小型
+301=1,doodads\cinematic\firewall\firewallmini,小型火焰墙
+302=1,doodads\cinematic\glow\glow,光辉
+303=1,doodads\cinematic\glow\glow_large,光辉大
+304=1,doodads\cinematic\glow\glow_plane_large,光辉平面大
+305=1,doodads\cinematic\godray\godray,神光
+306=1,doodads\cinematic\godray\godray0,神光 0
+307=1,doodads\cinematic\godray\godray1,神光 1
+308=1,doodads\cinematic\godray\godray2,神光 2
+309=1,doodads\cinematic\godray\volumetric_godray,体积神光
+310=1,doodads\cinematic\haze\haze3,薄雾 3
+311=1,doodads\cinematic\lightwall\lightwall,光墙
+312=1,doodads\cinematic\lightwall\lightwall45,光墙 45
+313=1,doodads\cinematic\lightwall\lightwall45mini,光墙 45小型
+314=1,doodads\cinematic\lightwall\lightwallmini,小型光墙
+315=1,doodads\cinematic\overheadomnilight\overheadomnilight,顶部全向光
+316=1,doodads\cinematic\townburningfireemitter\townburningfireemittergreen,城镇燃烧火焰绿
+317=1,doodads\cinematic\townburningfireemitter\townburningfireemitterne,城镇燃烧火焰中立
+318=1,doodads\cinematic\townburningfireemitter\townburningfireemitterpurple,城镇燃烧火焰紫
+319=1,doodads\cinematic\townburningfireemitter\townburningfireemitterud,城镇燃烧火焰亡灵
+320=1,doodads\cinematic\watersplash\watersplash,水花
+321=1,doodads\lordaeronsummer\props\miscprops\miscprops5,杂项道具 5
+322=1,doodads\lordaeronsummer\props\miscprops\miscprops6,杂项道具 6
+323=1,doodads\undercity\cinematic\naxxramasbeam\naxxramasbeam,纳克萨玛斯光束
+324=1,doodads\underground\props\pitfumes\pitfumes,地坑毒气
+325=1,doodads\underground\props\poisongas\poisonexplosion,毒气爆炸
+326=1,doodads\underground\props\poisongas\poisonrise,毒气升腾
+327=1,objects\inventoryitems\itemrarity\itemraritygold,金色稀有度光效
+328=1,sharedfx\building_smoke_large\smokeblacklarge,大黑烟
+329=1,sharedfx\building_smoke_small\smokeblacksmall,小黑烟
+330=1,sharedfx\controlpoints\controlpointindicator,控制点指示器
+331=1,sharedfx\controlpoints\controlpointindicatorline,控制点指示线
+332=1,sharedfx\fire_brazier\fire_brazier,火焰火盆
+333=1,sharedfx\fire_brazier\fire_brazier_large,火焰火盆大
+334=1,sharedfx\fire_brazier\fire_brazier_wide,火焰火盆宽
+335=1,sharedfx\fire_brazier_green\fire_brazier_green,火焰火盆绿
+336=1,sharedfx\fire_brazier_green\fire_brazier_green_large,火焰火盆绿大
+337=1,sharedfx\fire_brazier_green\fire_brazier_green_wide,火焰火盆绿宽
+338=1,sharedfx\fire_brazier_purple\fire_brazier_purple,火焰火盆紫
+339=1,sharedfx\fire_brazier_purple\fire_brazier_purple_large,火焰火盆紫大
+340=1,sharedfx\fire_brazier_purple\fire_brazier_purple_wide,火焰火盆紫宽
+341=1,sharedfx\hero_glow\hero_glow,英雄光辉 2
+342=1,units\human\gryphonrider\gryphonriderspark,狮鹫骑士火花
+343=1,units\human\heromountainking\heromountainkingslam,山丘之王重击
+344=1,units\human\inquisitor\inquisitorchannel,审判者引导
+345=0,Abilities\Spells\Demon\ReviveDemon\ReviveDemon,复活恶魔
+346=0,Abilities\Spells\Human\FlameStrike\FlameStrike2,烈焰风暴 2
+347=0,Abilities\Spells\Items\ClarityPotion\ClarityTarget,清晰药剂(目标)
+348=0,Abilities\Spells\NightElf\MoonWell\CorruptedMoonWellTarget,腐化月亮井(目标)
+349=0,Abilities\Spells\Orc\Berserker\BerserkerTarget,狂战士(目标)
+350=0,Abilities\Spells\Orc\Bloodlust\BloodLustSpecial,嗜血(特殊)
+351=0,Abilities\Spells\Orc\TrollBerserk\HeadhunterWeaponsRight,猎头者武器(右)
+352=0,Abilities\Spells\Other\BreathOfFire\BreathOfFireTarget,火焰呼吸(目标)
+353=0,Abilities\Spells\Other\HealTarget2\HealTarget2,治疗(目标)
+354=0,Abilities\Spells\Other\TempSpellArt\TempSpellArt,临时法术美术
+355=0,Abilities\Weapons\Mortar\ScatterShotTarget,散射(目标)
+356=0,Doodads\Cinematic\Campaign_Human09\FrostShockwave,冰霜冲击波
+357=0,Doodads\Cinematic\Campaign_Human09\MalganisDeath,玛尔加尼斯之死
+358=0,Doodads\Cinematic\Campaign_Human09\FrostmourneCharging,霜之哀伤充能
+359=0,Doodads\Cinematic\Campaign_Undead05\CorruptEnergy,腐化能量
+360=0,Doodads\Cinematic\Campaign_Undead05\EnergyOutro,能量尾声
+361=0,Doodads\Cinematic\Campaign_Undead05\HolyEnergy,神圣能量
+362=0,Doodads\Cinematic\Campaign_Undead05\IcebridgeBirth,冰桥生成
+363=0,Doodads\Cinematic\Campaign_Undead05\KelthuzadBegin,克尔苏加德现身
+364=0,Doodads\Cinematic\Campaign_Undead05\KelthuzadEnd,克尔苏加德终结
+365=0,Doodads\Cinematic\Campaign_Undead05\SylvanasBirth,希尔瓦娜斯降临
+366=0,Doodads\Cinematic\Campaign_Undead05\WaterfallTransitionPlanes,瀑布过渡平面
+367=0,Doodads\Cinematic\Campaign_Undead08\ArchimondeBirth,阿克蒙德降临
+368=0,Doodads\Cinematic\Campaign_Undead08\ArchimondeBorn,阿克蒙德降生
+369=0,Doodads\Cinematic\Campaign_Undead08\LichChannel,巫妖引导
+370=0,SharedModels\NEBirth,暗夜精灵出生特效
+371=0,SharedModels\UBirth,亡灵出生特效
+372=0,SharedModels\Lightning2,闪电 2
+373=0,Abilities\Spells\NightElf\SpiritOfVengeance\SpiritOfVengeanceOrbs2,复仇之魂光球 2
+374=0,Abilities\Spells\NightElf\SpiritOfVengeance\SpiritOfVengeanceOrbs3,复仇之魂光球 3
+375=0,Abilities\Spells\NightElf\SpiritOfVengeance\SpiritOfVengeanceOrbs4,复仇之魂光球 4
+376=0,Abilities\Spells\NightElf\SpiritOfVengeance\SpiritOfVengeanceOrbs5,复仇之魂光球 5
+377=0,Abilities\Spells\NightElf\SpiritOfVengeance\SpiritOfVengeanceOrbs6,复仇之魂光球 6
+378=0,Abilities\Spells\Items\ScrollOfRejuvenation\ScrollManaHealth,卷轴魔法生命
+379=0,Abilities\Spells\Orc\CommandAura\CommandAuraTarget,命令光环(目标)
+380=0,Objects\Spawnmodels\Other\PandarenBrewmasterExplosionUltimate\PandarenBrewmasterExplosionUltimate,熊猫酒仙终极爆炸
+381=0,Abilities\Weapons\BallistaMissile\BallistaImpact,弩炮撞击
+382=0,Abilities\Weapons\BallistaMissile\BallistaMissileTarget,弩炮导弹(目标)
+383=0,Abilities\Spells\Other\ForkedLightning\ForkedLightningTarget,叉状闪电(目标)
+384=0,Abilities\Spells\Human\MarkOfChaos\MarkOfChaosDone,混沌标记(完成)
+385=0,SharedModels\Glow1_Red,光辉(红)
+386=0,Abilities\Spells\Other\ANsa\ANsaTarget,纳迦法术(目标)
+387=0,Abilities\Spells\Items\ScrollOfRegeneration\Scroll_Regen_Target,再生卷轴(目标)
+388=0,Abilities\Weapons\PoisonSting\Rings_Green,光环绿
+389=0,Abilities\Spells\Undead\ThornyShield\ThornyShieldTargetChestMountLeft,荆棘光环(胸甲左)
+390=0,Abilities\Spells\Undead\ThornyShield\ThornyShieldTargetChestMountRight,荆棘光环(胸甲右)
+391=0,Abilities\Spells\Undead\ThornyShield\ThornyShieldTargetChestRight,荆棘光环(胸甲右侧)
+392=0,SharedModels\Smoke1_Green,烟雾(绿)
+393=0,Abilities\Spells\Items\StaffOfPurification\PurificationCaster,净化(施法者)
+394=0,Abilities\Spells\Items\StaffOfPurification\PurificationTarget,净化(目标)
+395=0,Abilities\Spells\Human\FlameStrike\FlameStrike,烈焰风暴
+396=0,SharedModels\Leaves,树叶
+397=0,SharedModels\ObsidianFeather,黑曜石羽毛
+398=0,SharedModels\Bones1,骸骨
+399=0,SharedModels\rocks1,岩石 1
+400=0,SharedModels\Feather1,羽毛 1
+401=0,SharedModels\Feather2,羽毛 2
+402=0,SharedModels\FeatherPurple,羽毛(紫) 1
+403=0,SharedModels\FeatherPurple1,羽毛(紫) 2
+404=0,SharedModels\BuildingParticleBeam,建筑粒子光束
+// ---- 导弹 Missiles ----
+405=1,abilities\spells\human\stormbolt\holystormboltmissile,神圣风暴之锤导弹
+406=1,abilities\spells\other\soulorbs\greenghost,绿色幽魂
+407=1,abilities\spells\undead\cultistflame\cultistflamemissile,狂热者火焰导弹
+408=1,abilities\weapons\apothecarymissile\apothecarymissile,药剂师导弹
+409=1,abilities\weapons\blightweavermissile\blightweavermissile,枯萎织者导弹
+410=0,Abilities\Weapons\BoatMissile\BoatMissile,船只导弹
+411=0,Abilities\Weapons\DemolisherMissile\DemolisherMissile,攻城坦克导弹
+412=0,Abilities\Weapons\FlamingArrow\FlamingArrowMissile,燃烧之箭导弹
+413=0,Abilities\Weapons\Mortar\ScatterShotMissile,散射导弹
+414=0,Abilities\Weapons\RangerMissile\RangerMissile,游侠导弹
+415=0,Abilities\Weapons\ShadowHunterMissile\ShadowHunterMissile,暗影猎人导弹
+416=0,Abilities\Weapons\TuskarSpear\TuskarSpear,巨魔长矛
+417=0,Units\Creeps\StormPandarenBrewmaster\StormPandarenBrewmaster_Missile,风暴熊猫酒仙导弹
+418=0,Abilities\Weapons\MurgulMagicMissile\MurgulMagicMissile,穆格尔魔法导弹
+419=0,Abilities\Weapons\WardenMissile\WardenMissile,守望者导弹
+420=0,Abilities\Weapons\BallistaMissile\BallistaMissile,弩炮导弹
+421=0,Abilities\Weapons\BallsOfFireMissile\BallsOfFireMissile,弹球火焰导弹
+422=0,Abilities\Spells\Human\FragmentationShards\FragMissile,破片导弹
+423=0,Abilities\Weapons\FlyingMachine\FlyingMachineMissile,飞行机器导弹
+424=0,Abilities\Weapons\SteamMissile\SteamMissile,蒸汽导弹
+425=0,Abilities\Spells\Human\HolyBolt\HolyBoltMissile,神圣之光导弹
+426=0,Abilities\Weapons\TreantMissile\TreantMissile,树人导弹
+427=0,Units\Creeps\StormPandarenBrewmaster\EarthPandarenBrewmaster_Missile,土熊猫酒仙导弹
+// ---- 环境/天空/光照 Environment ----
+428=1,environment\sky\naxxnightsky\naxxnightsky,纳克萨玛斯夜空
+429=1,environment\sky\undercitysky\undercitysky,幽暗城天空
+430=1,environment\dnc\dnccampaign\act2outdoordnc,幕 2室外昼夜循环
+431=1,environment\dnc\dnccampaign\cloudydnc,多云昼夜循环
+432=1,environment\dnc\dnccampaign\dncundercityfinal,幽暗城终章昼夜循环
+// ---- 空间扭曲 Distortions ----
+433=1,doodads\cinematic\distortion\distortion0,扭曲 0
+434=1,doodads\cinematic\distortion\distortion1,扭曲 1
+435=1,doodads\cinematic\distortion\distortion2,扭曲 2
+436=1,doodads\cinematic\distortion\distortion3,扭曲 3
+437=1,doodads\cinematic\distortion\distortion4,扭曲 4
+438=1,doodads\cinematic\distortion\distortion5,扭曲 5
+439=1,doodads\cinematic\distortion\distortionplane,平面扭曲
+// ---- 建筑出生特效 Birth effects ----
+440=1,buildings\orc\orcbirth\orcbirth,兽人出生特效
+441=1,buildings\orc\orcbirthsmall\orcbirthsmall,小型兽人出生特效
+442=1,buildings\undead\altarofdarkness\undead_altarofdarkness_birth,亡灵黑暗祭坛出生特效
+443=1,buildings\undead\boneyard\boneyardbirth,埋骨地出生特效
+444=1,buildings\undead\boneyard\undead_boneyard_birth,亡灵埋骨地出生特效
+445=1,buildings\undead\crypt\cryptbirth,地穴出生特效
+446=1,buildings\undead\crypt\undead_crypt_birth,亡灵地穴出生特效
+447=1,buildings\undead\graveyard\graveyardbirth,墓地出生特效
+448=1,buildings\undead\graveyard\undead_graveyard_birth,亡灵墓地出生特效
+449=1,buildings\undead\hauntedmine\hauntedgoldminebirth,闹鬼金矿出生特效
+450=1,buildings\undead\hauntedmine\undead_hauntedgoldmine_birth,亡灵闹鬼金矿出生特效
+451=1,buildings\undead\necropolis\fx_necropolis_tower,特效大墓地塔
+452=1,buildings\undead\necropolis\necropolis_spirit,大墓地灵魂
+453=1,buildings\undead\necropolis\-d_3_blackcitadel,黑色城堡 3
+454=1,buildings\undead\sacrificialpit\sacrificialpitbirth,献祭深渊出生特效
+455=1,buildings\undead\sacrificialpit\undead_sacrificialpit_birth,亡灵献祭深渊出生特效
+456=1,buildings\undead\slaughterhouse\slaughterhousebirth,屠宰场出生特效
+457=1,buildings\undead\templeofthedamned\templeofthedamnedbirth,诅咒神殿出生特效
+458=1,buildings\undead\tombofrelics\tombofrelicsbirth,遗物之墓出生特效
+459=1,buildings\undead\tombofrelics\undead_tombofrelics_birth,亡灵遗物之墓出生特效
+460=1,buildings\undead\ziggurat\erubiantowerbirth,蛛网塔出生特效
+461=1,buildings\undead\ziggurat\rig\undead_nerubiantower_rig_birth,亡灵蛛网塔骨架出生特效
+462=1,buildings\undead\ziggurat\spirittowerbirth,幽魂塔出生特效
+463=1,buildings\undead\ziggurat\undead_ziggurat_birth,亡灵通灵塔出生特效
+464=1,buildings\undead\ziggurat\zigguratbirth,通灵塔出生特效
+// ---- 模型变体 Variants ----
+465=1,doodads\lordaeroncapital\structures\entrance\entrance2,入口 2
+466=1,doodads\lordaeroncapital\structures\palacewallarch\palacewallarch,宫殿拱门
+467=1,doodads\lordaeronsummer\props\brazier\braziergreen,绿色火盆
+468=1,doodads\lordaeronsummer\props\brazier\brazierpurple,紫色火盆
+469=1,doodads\lordaeronsummer\structures\barn\barntc,谷仓队伍染色
+470=1,doodads\northrend\structures\northrendcrypt\northrendcrypt1,诺森德地穴 1
+471=1,units\forsaken\ranger\forsakenranger,被遗忘者游侠
+472=1,units\forsaken\ranger\rangerhat,游侠(带帽)
+473=1,units\human\gyrocopter\flyingmachine,飞行机器(Classic)
+474=1,units\human\warwagon\siegeengine,攻城坦克
+475=1,units\nightelf\hippogryphrider\hippogryphrider,狮鹫骑士
+476=1,units\orc\headhunter\berserker_v1,狂战士(v1)
+477=1,units\orc\headhunter\berserker,狂战士
+478=1,units\undead\abomination\abominationfixed,憎恶(修正版)
+
+[DayEnvironmentMap]
+//A=Environment/EnvironmentMap/Ashenvale/day_ibl.tif
+//B=Environment/EnvironmentMap/Barrens/day_ibl.tif
+//K=Environment/EnvironmentMap/BlackCitadel/day_ibl.tif
+//Y=Environment/EnvironmentMap/Cityscape/day_ibl.tif
+//X=Environment/EnvironmentMap/Dalaran/day_ibl.tif
+//J=Environment/EnvironmentMap/DalaranRuins/day_ibl.tif
+D=Environment/EnvironmentMap/Dungeon/night_ibl.tif
+//C=Environment/EnvironmentMap/Felwood/day_ibl.tif
+//I=Environment/EnvironmentMap/IceCrown/day_ibl.tif
+//F=Environment/EnvironmentMap/LordaeronFall/day_ibl.tif
+L=Environment/EnvironmentMap/LordaeronSummer/day_ibl.tif
+//W=Environment/EnvironmentMap/LordaeronWinter/day_ibl.tif
+//N=Environment/EnvironmentMap/Northrend/day_ibl.tif
+//O=Environment/EnvironmentMap/Outland/day_ibl.tif
+//Z=Environment/EnvironmentMap/SunkenRuins/day_ibl.tif
+//G=Environment/EnvironmentMap/Underground/day_ibl.tif
+//V=Environment/EnvironmentMap/Village/day_ibl.tif
+//Q=Environment/EnvironmentMap/VillageFall/day_ibl.tif
+Default=Environment/EnvironmentMap/LordaeronSummer/day_ibl.tif
+
+[NightEnvironmentMap]
+//A=Environment/EnvironmentMap/Ashenvale/night_ibl.tif
+//B=Environment/EnvironmentMap/Barrens/night_ibl.tif
+//K=Environment/EnvironmentMap/BlackCitadel/night_ibl.tif
+//Y=Environment/EnvironmentMap/Cityscape/night_ibl.tif
+//X=Environment/EnvironmentMap/Dalaran/night_ibl.tif
+//J=Environment/EnvironmentMap/DalaranRuins/night_ibl.tif
+D=Environment/EnvironmentMap/Dungeon/night_ibl.tif
+//C=Environment/EnvironmentMap/Felwood/night_ibl.tif
+//I=Environment/EnvironmentMap/IceCrown/night_ibl.tif
+//F=Environment/EnvironmentMap/LordaeronFall/night_ibl.tif
+L=Environment/EnvironmentMap/LordaeronSummer/night_ibl.tif
+//W=Environment/EnvironmentMap/LordaeronWinter/night_ibl.tif
+//N=Environment/EnvironmentMap/Northrend/night_ibl.tif
+//O=Environment/EnvironmentMap/Outland/night_ibl.tif
+//Z=Environment/EnvironmentMap/SunkenRuins/night_ibl.tif
+//G=Environment/EnvironmentMap/Underground/night_ibl.tif
+//V=Environment/EnvironmentMap/Village/night_ibl.tif
+//Q=Environment/EnvironmentMap/VillageFall/night_ibl.tif
+Default=Environment/EnvironmentMap/LordaeronSummer/night_ibl.tif
+
+[PortraitEnvironmentMap]
+//A=Environment/EnvironmentMap/Ashenvale/night_ibl.tif
+Default=Environment/EnvironmentMap/Portraits/PortraitDefault_IBL.tif
+
+[DayWaterEnvironmentMap]
+Default=Environment/EnvironmentMap/LordaeronSummer/water_ibl.tif
+
+[NightWaterEnvironmentMap]
+Default=Environment/EnvironmentMap/LordaeronSummer/water_ibl.tif
